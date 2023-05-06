@@ -1,2 +1,2 @@
 # [vNext] (release 2023-)
-- [#1] [MINOR] Initialize a Qwik website
+- [#1](https://github.com/iamvijaydev/vijaydev.com/issues/1) [MINOR] Initialize a Qwik website
