@@ -2,6 +2,8 @@ import type { Root } from 'react-dom/client';
 import {
   hydrateRoot,
   CONST,
+} from 'main';
+import {
   dispatchHistoryChange,
   dispatchMetaPropsChange,
   dispatchFetchingStart,
@@ -9,7 +11,7 @@ import {
   dispatchFetchingFailed,
   dispatchShowPageMask,
   dispatchHidePageMask
-} from 'main';
+} from './fireCustomEvents';
 
 import { updateHeadMeta } from './updateHeadMeta';
 
@@ -30,7 +32,7 @@ export const loadPageComponent = async (path: string, isPush: boolean = true) =>
     dispatchFetchingStart();
     dispatchShowPageMask();
 
-    const { metaProps, PageComponent, tableOfContents } = await import(scriptPath);
+    const { metaProps, PageComponent } = await import(scriptPath);
 
     if (isPageHydratePending) {
       appRoot = hydrateRoot(
@@ -48,7 +50,7 @@ export const loadPageComponent = async (path: string, isPush: boolean = true) =>
       }
 
       updateHeadMeta(metaProps);
-      dispatchMetaPropsChange(metaProps, tableOfContents);
+      dispatchMetaPropsChange(metaProps);
       window.scrollTo(0, 0);
 
       /** @todo: implement document.startViewTransition */

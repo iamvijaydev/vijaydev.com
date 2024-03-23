@@ -2,13 +2,12 @@ import type {
   MetaProps,
   HistoryChangeEventData,
   PageChangeEventData,
-  MetaPropsAndTocEventData,
+  MetaPropsEventData,
   ThemeChangeEventData,
   ThemeType,
   PageMaskEventData,
 } from "types";
 import { CONST } from "consts";
-import { TocEntry } from "@stefanprobst/rehype-extract-toc";
 
 export const dispatchHistoryChange = (
   pathname: string,
@@ -62,13 +61,11 @@ export const dispatchFetchingFailed = () => {
 
 export const dispatchMetaPropsChange = (
   metaProps: MetaProps,
-  tableOfContents?: TocEntry[]
 ) => {
   window.dispatchEvent(
-    new CustomEvent<MetaPropsAndTocEventData>(CONST.onMetaPropsAndTocChange, {
+    new CustomEvent<MetaPropsEventData>(CONST.onMetaPropsAndTocChange, {
       detail: {
         metaProps,
-        tableOfContents,
       },
     })
   );

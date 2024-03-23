@@ -8,7 +8,6 @@ let isHeaderFooterHydrated = false;
 export const hydrateHeaderFooter = ({
   pathname,
   title,
-  tableOfContents,
 }: HydrateHeaderFooterProps) => {
   if (isHeaderFooterHydrated) {
     return;
@@ -20,7 +19,6 @@ export const hydrateHeaderFooter = ({
       <Header
         pathname={pathname}
         pageTitle={title}
-        tableOfContents={tableOfContents}
       />
     );
     hydrateRoot(document.getElementById("footer-island")!, <Footer />);

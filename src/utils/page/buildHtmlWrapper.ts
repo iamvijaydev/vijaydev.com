@@ -6,7 +6,6 @@ export const buildHtmlWrapper = ({
   header,
   body,
   footer,
-  tableOfContents,
 }: BuildHtmlWrapperProps) => {
   return [
     "<!DOCTYPE html>",
@@ -50,7 +49,7 @@ export const buildHtmlWrapper = ({
     /****/`<div id="footer-island" class="island-container">${footer}</div>`,
     /****/'<script type="module">',
     /******/'import { hydrateHeaderFooter, loadPageComponent } from "main";',
-    /******/`hydrateHeaderFooter({pathname: '${metaProps.pathname}', title: '${metaProps.title}', ${tableOfContents && tableOfContents.length ? "tableOfContents:" + JSON.stringify(tableOfContents) : ""}});`,
+    /******/`hydrateHeaderFooter({pathname: '${metaProps.pathname}', title: '${metaProps.title}'});`,
     /******/`loadPageComponent('${metaProps.pathname}');`,
     /****/"</script>",
     /**/"</body>",

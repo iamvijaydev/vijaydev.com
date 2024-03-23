@@ -86,12 +86,10 @@ export interface ChapterPageProps {
 export interface MakeServerInitProps {
   metaProps: MetaProps;
   PageComponent: PostComponent;
-  tableOfContents?: TocEntry[];
 }
 
 export interface BuildHtmlWrapperProps {
   metaProps: MetaProps;
-  tableOfContents?: TocEntry[];
   body: string;
   header: string;
   footer: string;
@@ -100,7 +98,6 @@ export interface BuildHtmlWrapperProps {
 export interface HydrateHeaderFooterProps {
   pathname: string;
   title: string;
-  tableOfContents?: TocEntry[];
 }
 
 export interface LearnPageProps {
@@ -121,9 +118,8 @@ export type PageChangeEventData = {
   type: string;
 }
 
-export type MetaPropsAndTocEventData = {
+export type MetaPropsEventData = {
   metaProps: MetaProps;
-  tableOfContents?: TocEntry[];
 }
 
 export type ThemeType = 'light' | 'dark';

@@ -10,7 +10,6 @@ import { buildHtmlWrapper } from "./buildHtmlWrapper";
 export const makeServerInit = async ({
   metaProps,
   PageComponent,
-  tableOfContents,
 }: MakeServerInitProps) => {
   console.time(`Built - ${metaProps.permalink}`);
 
@@ -18,7 +17,6 @@ export const makeServerInit = async ({
     <Header
       pathname={metaProps.pathname}
       pageTitle={metaProps.title}
-      tableOfContents={tableOfContents}
     />
   );
   const footer = renderToString(<Footer />);
@@ -27,7 +25,6 @@ export const makeServerInit = async ({
     metaProps,
     body,
     header,
-    tableOfContents,
     footer,
   });
 
