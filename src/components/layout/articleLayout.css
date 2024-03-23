@@ -1,0 +1,9 @@
+@media (max-width: 1200px) {
+  .max-xl\:article-rows {
+    grid-template-rows: [aside-start] auto [header-start] auto [header-end] max-content [aside-end];
+  }
+
+  .max-xl\:article-rows-aside {
+    grid-row: aside;
+  }
+}

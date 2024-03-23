@@ -11,7 +11,7 @@ interface TocProps {
 
 export const Toc = ({ title, toc, contentSiblingId, className }: TocProps) => {
   return toc && toc.length ? (
-    <aside className={`${className || ''} max-xl:article-first-item max-xl:toc xl:toc`}>
+    <aside className={`${className || ''} max-xl:article-rows-aside max-xl:toc xl:toc`}>
       <FloatingToc title={title} toc={toc} />
       <AsideToc title={title} toc={toc} contentSiblingId={contentSiblingId} />
     </aside>

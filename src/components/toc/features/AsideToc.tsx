@@ -25,14 +25,9 @@ export const AsideToc = (props: Props) => {
     enabled: matches,
     nodeId: props.contentSiblingId,
   });
-  const lastActiveId = useRef<string | undefined>(undefined);
 
   const navRef = useRef<HTMLElement>(null);
   const asideRef = useRef<HTMLDivElement>(null);
-  const [indicatorOffset, setIndicatorOffset] = useState({
-    topOffset: 0,
-    rowHeight: 0,
-  });
 
   const [styles, setStyles] = useState(defaultStyle);
 
@@ -45,10 +40,11 @@ export const AsideToc = (props: Props) => {
 
     const setIndicatorStyles = () => {
       if (!asideRef.current) {
+        setStyles(defaultStyle);
         return;
       }
 
-      if (!activeId) {
+      if (!activeId || !activeId.length) {
         setStyles(defaultStyle);
         return;
       }
@@ -70,7 +66,7 @@ export const AsideToc = (props: Props) => {
     };
     const optimizedSetStyles = () => {
       clearTimeout(timer);
-      timer = setTimeout(setIndicatorStyles, 0);
+      timer = setTimeout(setIndicatorStyles, 200);
     }
 
     const controller = new AbortController();

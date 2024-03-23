@@ -1,6 +1,9 @@
 .island-container {
   display: grid;
-  grid-template-columns: [full-width-start] minmax(0, 1fr) [content-start] minmax(min-content, var(--grid-max-width)) [content-end] minmax(0, 1fr) [full-width-end];
+  grid-template-columns: [full-width-start] minmax(0, 1fr) [content-start] minmax(
+      min-content,
+      var(--grid-max-width)
+    ) [content-end] minmax(0, 1fr) [full-width-end];
 }
 
 .island-container > .full-width {
