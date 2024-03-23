@@ -1,0 +1,44 @@
+
+.flex {
+  display: flex;
+}
+
+.f-row {
+  flex-direction: row;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.f-grow {
+  flex-grow: 1;
+}
+
+.f-shrink {
+  flex-shrink: 1;
+}
+
+.f-auto {
+  flex: 0 0 auto;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.a-end {
+  align-items: flex-end;
+}
+
+.a-start {
+  align-items: flex-start;
+}

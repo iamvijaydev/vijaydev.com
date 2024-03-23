@@ -1,0 +1,79 @@
+.theme-toggle {
+  --theme-toggle-duration: 500ms;
+
+  all: unset;
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+
+.toggle-icon * {
+  transform-origin: center;
+  transition: transform calc(var(--theme-toggle-duration) * .6) ease
+}
+
+.toggle-icon>g g circle {
+  transition-duration: calc(var(--theme-toggle-duration) * .2)
+}
+
+.toggle-icon>g g :nth-child(1) {
+  transition-delay: calc(var(--theme-toggle-duration)*0.253)
+}
+
+.toggle-icon>g g :nth-child(2) {
+  transition-delay: calc(var(--theme-toggle-duration)*0.348)
+}
+
+.toggle-icon>g g :nth-child(3) {
+  transition-delay: calc(var(--theme-toggle-duration)*0.443)
+}
+
+.toggle-icon>g g :nth-child(4) {
+  transition-delay: calc(var(--theme-toggle-duration)*0.538)
+}
+
+.toggle-icon>g g :nth-child(5) {
+  transition-delay: calc(var(--theme-toggle-duration)*0.633)
+}
+
+.toggle-icon>g g :nth-child(6) {
+  transition-delay: calc(var(--theme-toggle-duration)*0.728)
+}
+
+.toggle-icon>:first-child path {
+  transition-property: transform, d
+}
+
+.theme-toggled.theme-toggle .toggle-icon * {
+  transition-delay: 0s;
+  transition-duration: var(--theme-toggle-duration)
+}
+
+.theme-toggled.theme-toggle .toggle-icon>g>circle {
+  transform: scale(1.4)
+}
+
+.theme-toggled.theme-toggle .toggle-icon>g g circle {
+  transform: scale(0);
+  transition-duration: calc(var(--theme-toggle-duration) * .4)
+}
+
+.theme-toggled.theme-toggle .toggle-icon>:first-child {
+  transform: rotate(-90deg)
+}
+
+.theme-toggled.theme-toggle .toggle-icon>:first-child path {
+  d: path("M-12-14h42v30a1 1 0 00-16 13H0Z")
+}
+
+@supports not (d:path("")) {
+  .theme-toggled.theme-toggle .toggle-icon:first-child path {
+    transform: translate3d(-12px, -14px, 0)
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .theme-toggle * {
+    transition: none !important
+  }
+}

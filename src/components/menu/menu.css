@@ -1,0 +1,55 @@
+.menu {
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-hover-area {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  margin-right: var(--space-2xs);
+  margin-left: var(--space-3xs);
+}
+
+.menu-options-chevron {
+  transform: rotate(90deg);
+  transition-property: transform;
+  transition-duration: var(--standard-decelerate-duration);
+  transition-timing-function: var(--standard-decelerate-easing);
+}
+
+.menu.no-js:hover .menu-options,
+.menu.open .menu-options {
+  display: flex;
+}
+
+.menu.no-js:hover .menu-options-chevron,
+.menu.open .menu-options-chevron {
+  transform: rotate(270deg);
+  transition-duration: var(--standard-accelerate-duration);
+  transition-timing-function: var(--standard-accelerate-easing);
+}
+
+.menu-options {
+  display: none;
+  right: 0;
+  top: 100%;
+  background: white;
+  flex-flow: column;
+  overflow: hidden;
+  background-color: var(--md-sys-color-surface-container-highest);
+  box-shadow: var(--elevation-shadow-2);
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+.menu-item .link,
+.menu-item .button {
+  display: block;
+  border-radius: 0;
+  white-space: nowrap;
+  padding: var(--space-xs) var(--space-s);
+}

@@ -1,0 +1,24 @@
+:root {
+  --background-color: var(--md-sys-color-surface);
+  --text-color: var(--md-sys-color-on-surface);
+  --text-dim-color: var(--md-sys-color-on-surface-variant);
+
+  --text-emphasis-color: var(--md-sys-color-primary);
+  --text-secondary-color: var(--md-sys-color-secondary);
+
+  --app-bar-bg-color: var(--md-sys-color-surface-container);
+  --app-bar-text-color: var(--md-sys-color-on-surface);
+
+  --link-color: color-mix(in srgb, var(--md-sys-color-tertiary) 90%, white);
+  --link-hover-color: var(--md-sys-color-on-tertiary);
+  --link-hover-bg-color: var(--md-sys-color-tertiary);
+
+  --label-bg-color: var(--md-sys-color-surface-container-highest);
+  --label-text-color: var(--md-sys-color-on-surface);
+
+  --link-card-bg-color: var(--md-sys-color-surface-container-high);
+  --link-card-text-dim-color: var(--md-sys-color-on-surface-variant);
+
+  --link-card-hover-bg-color: var(--md-sys-color-tertiary);
+  --link-card-hover-text-dim-color: var(--md-sys-color-on-tertiary);
+}

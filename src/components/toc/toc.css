@@ -1,0 +1,100 @@
+@media (max-width: 1200px) {
+  .max-xl\:toc {
+    opacity: 0;
+    position: sticky;
+    top: var(--space-s);
+
+    --duration: var(--standard-decelerate-duration);
+    --timing: var(--standard-decelerate-easing);
+
+    transition-property: opacity;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing);
+  }
+
+  html:not([data-scroll="0"]) .max-xl\:toc {
+    --duration: var(--standard-accelerate-duration);
+    --timing: var(--standard-accelerate-easing);
+
+    opacity: 1;
+  }
+
+  .max-xl\:toc-item {
+    --bg-color: var(--md-sys-color-surface);
+    --color: var(--text-color);
+    --box-shadow: var(--elevation-shadow-0);
+    --duration: var(--standard-decelerate-duration);
+    --timing: var(--standard-decelerate-easing);
+
+    background-color: var(--bg-color);
+    color: var(--color);
+    box-shadow: var(--box-shadow);
+
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
+    width: 100%;
+
+    transition-property: all;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing);
+  }
+
+  html:not([data-scroll="0"]) .max-xl\:toc-item {
+    --bg-color: var(--md-sys-color-surface-container-high);
+    --color: var(--app-bar-text-color);
+    --box-shadow: var(--elevation-shadow-1);
+    --duration: var(--standard-accelerate-duration);
+    --timing: var(--standard-accelerate-easing);
+
+    top: calc(-1 * var(--space-s));
+    left: calc(-1 * var(--grid-gutter));
+    padding-left: var(--grid-gutter);
+    padding-right: var(--grid-gutter);
+    width: calc(100% + var(--grid-gutter) * 2);
+  }
+
+  .with-logo,
+  html[data-scroll="0"] .with-logo {
+    display: none;
+  }
+  html:not([data-scroll="0"]) .with-logo {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl\:toc {
+    position: sticky;
+    top: var(--space-s);
+  }
+
+  .toc-item {
+    position: relative;
+  }
+
+  .toc-indicator {
+    --bg-color: var(--link-color);
+
+    position: absolute;
+    width: 3px;
+    background-color: var(--bg-color);
+    height: 1.5rem;
+    left: -2px;
+    transition-property: top, opacity, height;
+    transition-duration: var(--toc-transition-duration, 250ms);
+    transition-timing-function: var(--toc-transition-easing, cubic-bezier(0.2, 0.0, 0, 1.0));
+  }
+
+  .toc-indicator[data-opacity="1"] {
+    --toc-transition-duration: var(--standard-duration);
+    --toc-transition-easing: var(--standard-easing);
+  }
+
+  .toc-indicator:not([data-opacity="0"]) {
+    --toc-transition-duration: var(--standard-decelerate-duration);
+    --toc-transition-easing: var(--standard-decelerate-easing);
+  }
+}

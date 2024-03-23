@@ -1,0 +1,16 @@
+.link.link-card {
+  --property: color, background-color, border-color;
+  --border-radius: var(--border-radius-l);
+
+  --bg-color: var(--link-card-bg-color);
+  --border-color: var(--border-color-surface);
+
+  border: 1px solid var(--border-color);
+}
+
+.link-card:hover,
+.link-card:focus-visible,
+.link-card.active {
+  --bg-color: var(--link-card-hover-bg-color);
+  --border-color: var(--link-card-hover-bg-color);
+}

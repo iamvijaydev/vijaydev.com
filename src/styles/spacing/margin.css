@@ -1,0 +1,87 @@
+/* top */
+
+.mt-xs {
+  margin-top: var(--space-xs);
+}
+
+.mt-s {
+  margin-top: var(--space-s);
+}
+
+.mt-m {
+  margin-top: var(--space-m);
+}
+
+.mt-l {
+  margin-top: var(--space-l);
+}
+
+.mt-xl {
+  margin-top: var(--space-xl);
+}
+
+/* right */
+
+.mr-xs {
+  margin-right: var(--space-xs);
+}
+
+/* bottom */
+
+.mb-3xs {
+  margin-bottom: var(--space-3xs);
+}
+
+.mb-2xs {
+  margin-bottom: var(--space-2xs);
+}
+
+.mb-xs {
+  margin-bottom: var(--space-xs);
+}
+
+.mb-s {
+  margin-bottom: var(--space-s);
+}
+
+.mb-m {
+  margin-bottom: var(--space-m);
+}
+
+.mb-l {
+  margin-bottom: var(--space-l);
+}
+
+.mb-xl {
+  margin-bottom: var(--space-xl);
+}
+
+.mb-2xl {
+  margin-bottom: var(--space-2xl);
+}
+
+/* left */
+.ml-0 {
+  margin-left: 0;
+}
+
+.ml-2xs {
+  margin-left: var(--space-2xs);
+}
+
+.ml-xs {
+  margin-left: var(--space-xs);
+}
+
+.ml-s {
+  margin-left: var(--space-s);
+}
+
+.ml-m {
+  margin-left: var(--space-m);
+}
+
+/* custom: grid gutter */
+.mb-gutter {
+  margin-bottom: var(--grid-gutter);
+}

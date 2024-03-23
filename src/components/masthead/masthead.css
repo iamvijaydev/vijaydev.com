@@ -1,0 +1,8 @@
+.masthead {
+  --bg-from-color: var(--md-sys-color-surface-container-lowest);
+  --bg-to-color: var(--md-sys-color-surface);
+
+  background-image: linear-gradient(180deg,
+      var(--bg-from-color),
+      var(--bg-to-color));
+}

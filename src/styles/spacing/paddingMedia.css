@@ -1,0 +1,11 @@
+@media (min-width: 1200px) {
+  .xl\:pt-s {
+    padding-top: var(--space-s);
+  }
+  .xl\:pt-xl {
+    padding-top: var(--space-xl);
+  }
+  .xl\:pt-2xl {
+    padding-top: var(--space-2xl);
+  }
+}

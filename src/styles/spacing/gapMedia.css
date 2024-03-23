@@ -1,0 +1,15 @@
+@media (min-width: 576px) {
+  .sm\:gapx-xs {
+    column-gap: var(--space-xs);
+  }
+
+  .sm\:gapx-s {
+    column-gap: var(--space-s);
+  }
+}
+
+@media (min-width: 992px) {
+  .lg\:gapy-0 {
+    row-gap: 0;
+  }
+}

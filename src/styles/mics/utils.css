@@ -1,0 +1,43 @@
+.enter-animation {
+  animation-duration: var(--standard-duration);
+  animation-timing-function: var(--standard-easing);
+}
+
+.enter-transition {
+  transition-duration: var(--standard-duration);
+  transition-timing-function: var(--standard-easing);
+}
+
+.exit-animation {
+  animation-duration: var(--standard-duration);
+  animation-timing-function: var(--standard-easing);
+}
+
+.exit-transition {
+  transition-duration: var(--standard-duration);
+  transition-timing-function: var(--standard-easing);
+}
+
+.elevation-0 {
+  box-shadow: var(--elevation-shadow-0);
+}
+
+.elevation-1 {
+  box-shadow: var(--elevation-shadow-1);
+}
+
+.elevation-2 {
+  box-shadow: var(--elevation-shadow-2);
+}
+
+.elevation-3 {
+  box-shadow: var(--elevation-shadow-3);
+}
+
+.elevation-4 {
+  box-shadow: var(--elevation-shadow-4);
+}
+
+.elevation-5 {
+  box-shadow: var(--elevation-shadow-5);
+}

@@ -1,0 +1,15 @@
+.b-outline {
+  border-color: var(--border-color-outline);
+}
+
+.b-variant {
+  border-color: var(--border-color-variant);
+}
+
+.b-surface {
+  border-color: var(--border-color-surface);
+}
+
+.b-surface-dim {
+  border-color: var(--border-color-surface-dim);
+}

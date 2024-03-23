@@ -1,0 +1,25 @@
+.text-color {
+  color: var(--text-color);
+}
+
+.text-dim-color {
+  color: var(--text-dim-color);
+  fill: var(--text-dim-color);
+}
+
+.app-bar {
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+}
+
+.label-chip {
+  background-color: var(--label-bg-color);
+  color: var(--label-text-color);
+}
+
+.grad-1 {
+  /**/
+  --bg-from-color: var(--md-sys-color-surface-container-lowest);
+  --bg-to-color: var(--md-sys-color-surface);
+  background-image: linear-gradient(180deg, var(--bg-to-color) 10rem, var(--bg-to-color));
+}

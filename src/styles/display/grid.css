@@ -1,0 +1,53 @@
+.island-container {
+  display: grid;
+  grid-template-columns: [full-width-start] minmax(0, 1fr) [content-start] minmax(min-content, var(--grid-max-width)) [content-end] minmax(0, 1fr) [full-width-end];
+}
+
+.island-container > .full-width {
+  grid-column: full-width;
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+.content-grid {
+  grid-column: content;
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  /**/
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  column-gap: var(--grid-gutter);
+}
+
+.content-block {
+  grid-column: content;
+  padding-inline: var(--grid-gutter);
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.col-3 {
+  grid-column: span 3;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-9 {
+  grid-column: span 9;
+}
+
+.col-10 {
+  grid-column: span 10;
+}
+
+.col-12 {
+  grid-column: span 12;
+}
+
+.p-center {
+  place-content: center;
+}

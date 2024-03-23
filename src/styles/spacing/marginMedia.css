@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  .md\:mb-l {
+    margin-bottom: var(--space-l);
+  }
+  .md\:mb-xl {
+    margin-bottom: var(--space-xl);
+  }
+}
+
+@media (min-width: 992px) {
+  .lg\:mb-l {
+    margin-bottom: var(--space-l);
+  }
+  .lg\:mb-xl {
+    margin-bottom: var(--space-xl);
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl\:mt-0 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .max-xl\:mt-l {
+    margin-top: var(--space-l);
+  }
+}

@@ -1,0 +1,10 @@
+.logo {
+  #logoName { color: var(--link-color); }
+  #logoCircle { fill: var(--link-color); }
+  #logoPath { stroke: var(--background-color); }
+}
+
+.link.logo:hover,
+.link-focus-visible.logo:focus-visible {
+  --bg-color: transparent;
+}

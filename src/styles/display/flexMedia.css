@@ -1,0 +1,21 @@
+@media (min-width: 576px) {
+  .sm\:flex {
+    display: flex;
+  }
+}
+
+@media (min-width: 992px) {
+  .lg\:f-row {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl\:flex {
+    display: flex;
+  }
+
+  .xl\:a-self-start {
+    align-self: start;
+  }
+}

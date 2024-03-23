@@ -1,0 +1,39 @@
+.b,
+.bt,
+.bb,
+.bl,
+.by {
+  border-style: solid;
+}
+
+.b {
+  border-width: 1px;
+}
+
+.bt {
+  border-width: 1px 0 0 0;
+}
+
+.bb {
+  border-width: 0 0 1px 0;
+}
+
+.bl {
+  border-width: 0 0 0 1px;
+}
+
+.by {
+  border-width: 0 1px;
+}
+
+.r-s {
+  border-radius: var(--border-radius-s);
+}
+
+.r-m {
+  border-radius: var(--border-radius-m);
+}
+
+.r-full {
+  border-radius: var(--border-radius-full);
+}

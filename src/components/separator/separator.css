@@ -1,0 +1,42 @@
+.separator {
+  position: relative;
+}
+
+.separator.outline {
+  --bg-color: var(--border-color-outline);
+}
+.separator.variant {
+  --bg-color: var(--border-color-variant);
+}
+.separator.surface {
+  --bg-color: var(--border-color-surface);
+}
+.separator.surface-dim {
+  --bg-color: var(--border-color-surface-dim);
+}
+
+.separator:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: var(--bg-color);
+}
+
+.separator.vertical {
+  width: 1px;
+  align-self: stretch;
+}
+
+.separator.vertical.half:after {
+  top: 25%;
+  bottom: 25%;
+}
+
+.separator.horizontal {
+  height: 1px;
+  justify-self: stretch;
+}

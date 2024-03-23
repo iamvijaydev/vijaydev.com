@@ -1,0 +1,23 @@
+@media (min-width: 576px) {
+  .sm\:none {
+    display: none;
+  }
+
+  .sm\:none\! {
+    display: none !important;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl\:none {
+    display: none;
+  }
+
+  .xl\:inline-grid {
+    display: inline-grid;
+  }
+}

@@ -1,0 +1,25 @@
+.static {
+  position: static;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.site-header-level {
+  position: relative;
+  z-index: var(--site-header-level);
+}
+
+.menu-dropdown-level {
+  position: absolute;
+  z-index: var(--menu-dropdown-level);
+}

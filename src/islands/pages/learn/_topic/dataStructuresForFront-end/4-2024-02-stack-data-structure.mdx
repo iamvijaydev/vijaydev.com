@@ -1,0 +1,104 @@
+---
+description: A first in last out or a last in first out, data structure.
+image: isEs2FS
+promoted: false
+featured: false
+---
+
+import { StaticSandbox, StaticExplorerSandbox, ConsoleSandbox } from "main";
+import { StackGame } from './components/StackGame'
+
+
+<StackGame />
+
+
+Did you enjoyed the game? Hope you did, and hope got a basic idea of stacks and how a stack data structure would work. You can reset the game and play again if you want.
+
+At first impression stack feels like the first item to enter a stack is the last item to leave it. But we prefer to think of it as a last in first out (LIFO) data structure, as it is more intuitive and applicable in real life.
+
+## How to implement a stack?
+We know that we are only adding and removing items from the top of the stack. To simplify we could say we are pushing and poping items from the stack. JavaScript arrays have built in methods to do this. We can use `push` to add an item to the top of the stack and `pop` to remove an item from the top of the stack.
+
+
+<StaticSandbox
+  editorHeight={220}
+  options={{
+    visibleFiles: ['/stack.js'],
+    activeFile: '/stack.js',
+  }}
+  files={{
+    '/stack.js': `const stack = [];
+
+stack.push("Hey!"); // stack is now ["Hey!"]
+stack.push("Ho!"); // stack is now ["Hey!", "Ho!"]
+stack.push("Let's go"); // stack is now ["Hey!", "Ho!", "Let's go"]
+
+stack.pop(); // stack is now ["Hey!", "Ho!"]
+`
+  }}
+/>
+
+
+But let's try to implement our own stack without using arrays. Since we will only be poping and pushing data all other methods of arrays are not required. We can use a simple link list to implement our stack. However we would use `next` as `previous` and `head` as `top` to make it more intuitive.
+
+
+<StaticSandbox
+  editorHeight={400}
+  options={{
+    visibleFiles: ['/stack.js', '/usage.js'],
+    activeFile: '/stack.js',
+  }}
+  files={{
+      "/stack.js": `let head = null;
+let length = 0;
+
+export const push = (value) => {
+const node = { value, previous: null };
+
+if (!head) {
+  head = node;
+  return length;
+}
+
+node.previous = head;
+head = node;
+return ++length;
+}
+
+export const pop = () => {
+if (!head) {
+  return undefined;
+}
+
+const value = head.value;
+
+head = head.previous;
+length--;
+
+return value;
+}`,
+      "/usage.js": `import { push, pop } from './stack';
+
+push("Hey!"); // 1 (length returned)
+push("Ho!"); // 2
+push("Let's go"); // 3
+
+pop(); // "Ho!"
+pop(); // "Hey!"
+pop(); // "Let's go!"
+pop(); // undefined
+`
+    }}
+/>
+
+
+:::note
+You can learn about link list [here](/data-structures/link-list).
+:::
+
+## Real world example
+Another game below.
+
+## Quiz
+
+## Assignments
