@@ -12,7 +12,7 @@ const clearTmp = () => new Promise((resolve) => {
 })
 
 export const clearBeforeBuild = async () => {
-  // await clearDist();
+  await clearDist();
   await clearTmp();
 }
 

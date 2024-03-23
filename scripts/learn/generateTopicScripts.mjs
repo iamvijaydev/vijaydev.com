@@ -17,6 +17,10 @@ export const generateTopicScripts = async () => {
       chapters
     } = topic;
 
+    if (!chapters.length) {
+      continue;
+    }
+
     if (!meta) {
       throw new Error(`Topic "${slug}" is missing introduction.yml file`);
     }

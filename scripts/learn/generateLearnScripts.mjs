@@ -1,29 +1,28 @@
-import * as esbuild from 'esbuild';
+import * as esbuild from "esbuild";
 
-import { getTopics, getFeaturedChapters } from './store.learn.mjs';
-import { addImport } from '../store.importmap.mjs';
-import { pushHtmlScript } from '../store.buildHtml.mjs';
-import { baseClientBuildConfig, baseServerBuildConfig } from '../config.esbuild.mjs';
+import { getTopics, getFeaturedChapters } from "./store.learn.mjs";
+import { addImport } from "../store.importmap.mjs";
+import { pushHtmlScript } from "../store.buildHtml.mjs";
+import {
+  baseClientBuildConfig,
+  baseServerBuildConfig,
+} from "../config.esbuild.mjs";
 
 export const generateLearnScripts = async () => {
   const allProps = {
-    topicData: Array.from(getTopics()).map(({
-      slug,
-      title,
-      description,
-      image,
-      lastUpdated,
-    }) => ({
-      slug,
-      title,
-      description,
-      image,
-      lastUpdated,
-    })),
-    featuredData: getFeaturedChapters()
+    topicData: Array.from(getTopics())
+      .filter(({ chapters }) => chapters.length > 0)
+      .map(({ slug, title, description, image, lastUpdated }) => ({
+        slug,
+        title,
+        description,
+        image,
+        lastUpdated,
+      })),
+    featuredData: getFeaturedChapters(),
   };
 
-  addImport('/learn', '/assets/mjs/learn.mjs');
+  addImport("/learn", "/assets/mjs/learn.mjs");
 
   await esbuild.build({
     ...baseClientBuildConfig,
@@ -37,11 +36,11 @@ export const generateLearnScripts = async () => {
         return <BaseComponent topicData={parsed.topicData} featuredData={parsed.featuredData} />
       };
       `,
-      resolveDir: './src',
-      sourcefile: 'learn.mjs',
-      loader: 'tsx',
+      resolveDir: "./src",
+      sourcefile: "learn.mjs",
+      loader: "tsx",
     },
-    outfile: 'dist/assets/mjs/learn.mjs',
+    outfile: "dist/assets/mjs/learn.mjs",
   });
 
   await esbuild.build({
@@ -53,12 +52,12 @@ export const generateLearnScripts = async () => {
 
       makeServerPage(parsed);
       `,
-      resolveDir: './src',
-      sourcefile: 'learn.mjs',
-      loader: 'tsx',
+      resolveDir: "./src",
+      sourcefile: "learn.mjs",
+      loader: "tsx",
     },
-    outfile: '.tmp/learn.cjs',
+    outfile: ".tmp/learn.cjs",
   });
 
-  pushHtmlScript('learn.cjs');
-}
+  pushHtmlScript("learn.cjs");
+};

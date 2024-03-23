@@ -1,5 +1,5 @@
 import type { MetaProps, LearnPageProps } from "types";
-import { Layout, Masthead, LinkCard, mdxComponents, H3, H4 } from "main";
+import { Layout, Masthead, LinkCard, H3, H4 } from "main";
 
 export const metaProps: MetaProps = {
   pathname: "/learn",
