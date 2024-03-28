@@ -24,7 +24,7 @@ export const PageComponent = ({ topicData }: TopicPageProps) => {
             className="mb-gutter col-12 lg:col-6"
           >
             {/* <img src="" /> */}
-            <H4>
+            <H4 presentAs="h5" className="pb-3xs">
               {chapter.order}. {chapter.title}
             </H4>
             <p className="text-dim-color hover:text-link-color">

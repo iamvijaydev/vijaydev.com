@@ -15,6 +15,7 @@ export type Props = {
 
 const defaultStyle = {
   opacity: 1,
+  left: "0px",
   top: "0px",
   height: "0px",
 };
@@ -32,8 +33,8 @@ export const AsideToc = (props: Props) => {
   const [styles, setStyles] = useState(defaultStyle);
 
   const elements = useMemo(() => {
-    return makeTocNodes(props.toc ?? [], 0, []);
-  }, [props.toc]);
+    return makeTocNodes(activeId, props.toc ?? [], 0, []);
+  }, [activeId, props.toc]);
 
   useIsomorphicLayoutEffect(() => {
     let timer: NodeJS.Timeout;
@@ -60,19 +61,16 @@ export const AsideToc = (props: Props) => {
 
       setStyles({
         opacity: 1,
-        top: found.getBoundingClientRect().top - 19 + "px",
+        left: asideRef.current.getBoundingClientRect().left - 1 + "px",
+        top: found.getBoundingClientRect().top + "px",
         height: found.getBoundingClientRect().height + "px",
       });
     };
-    const optimizedSetStyles = () => {
-      clearTimeout(timer);
-      timer = setTimeout(setIndicatorStyles, 200);
-    }
 
     const controller = new AbortController();
 
-    optimizedSetStyles();
-    window.addEventListener("resize", optimizedSetStyles, { signal: controller.signal });
+    setIndicatorStyles();
+    window.addEventListener("resize", setIndicatorStyles, { signal: controller.signal });
 
     return () => {
       clearTimeout(timer);

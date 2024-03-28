@@ -21,3 +21,23 @@
 @import url(base.css);
 
 @import url(../components/components.css);
+
+.test {
+  --white: hsl(0deg 0% 100%);
+  --black: hsl(0deg 0% 0%);
+
+
+  --md-sys-color-surface-dim: rgb(18 20 14);
+  --md-sys-color-surface: rgb(18 20 14);
+  --md-sys-color-surface-bright: rgb(56 58 50);
+
+  --md-sys-color-surface-container-lowest: rgb(12 15 9);
+  --md-sys-color-surface-container-low: rgb(26 28 22);
+  --md-sys-color-surface-container: rgb(30 32 26);
+  --md-sys-color-surface-container-high: rgb(40 43 36);
+  --md-sys-color-surface-container-highest: rgb(51 54 46);
+
+  --md-sys-color-on-surface: rgb(226 227 216);
+  --md-sys-color-surface-variant: rgb(68 72 61);
+  --md-sys-color-on-surface-variant: rgb(197 200 186);
+}

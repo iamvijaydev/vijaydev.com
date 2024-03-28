@@ -1,12 +1,20 @@
-import { PropsWithChildren } from "react";
+import {
+  DetailedHTMLProps,
+  AnchorHTMLAttributes,
+  PropsWithChildren,
+} from "react";
 import { Layout } from "main";
 
-export type Props = {
+export interface Props
+  extends DetailedHTMLProps<
+    AnchorHTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   className?: string;
 }
 
 export const ArticleLayout = (props: PropsWithChildren<Props>) => {
-  return (
-    <Layout className='max-xl:article-rows'>{props.children}</Layout>
-  )
-}
+  const { className, children, ...rest } = props;
+
+  return <Layout {...rest} className={`${className || ''} max-xl:article-rows`}>{children}</Layout>;
+};

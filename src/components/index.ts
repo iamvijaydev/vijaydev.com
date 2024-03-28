@@ -6,6 +6,7 @@ export { Label } from './label/Label';
 export { Layout } from './layout/Layout';
 export { ArticleLayout } from './layout/ArticleLayout';
 export { Link } from './link/Link';
+export type { AnchorAttributes } from './link/Link';
 export { LinkCard } from './linkCard/LinkCard';
 export { Logo } from './logo/Logo';
 export { Masthead } from './masthead/Masthead';

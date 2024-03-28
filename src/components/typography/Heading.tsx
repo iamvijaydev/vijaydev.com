@@ -42,3 +42,4 @@ export const H1 = heading("h1");
 export const H2 = heading("h2");
 export const H3 = heading("h3");
 export const H4 = heading("h4");
+export const H5 = heading("h5");

@@ -33,9 +33,9 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build:css": "lightningcss --minify --bundle --targets '>= 0.25%' ./src/styles/styles.css -o ./dist/assets/css/style.css",
-    "build:pages": "node ./scripts/pages/build.pages.mjs & pnpm run build:css",
-    "build": "NODE_ENV=development node ./scripts/build.mjs & pnpm run build:css",
-    "build:prod": "NODE_ENV=production node ./scripts/build.mjs & pnpm run build:css",
+    "build:pages": "node ./scripts/build.mjs",
+    "build": "NODE_ENV=development pnpm run build:pages && pnpm run build:css",
+    "build:prod": "NODE_ENV=production pnpm run build:pages && pnpm run build:css",
     "preview": "serve dist/"
   },
   "dependencies": {

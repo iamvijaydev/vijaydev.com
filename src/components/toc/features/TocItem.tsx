@@ -4,16 +4,15 @@ import { marginSpace } from "../utils/makeTocList";
 
 interface TocItemProps {
   entry: TocEntry;
-  className: string;
-  url: string;
+  activeId: string;
 }
 
-export const TocItem = ({ entry, className }: TocItemProps): JSX.Element => {
+export const TocItem = ({ entry, activeId }: TocItemProps): JSX.Element => {
   return entry.id ? (
-    <Link href={`#${entry.id}`} className={marginSpace[entry.depth]}>
+    <Link href={`#${entry.id}`} className={`${marginSpace[entry.depth]} ${activeId === entry.id ? 'active' : ''}`}>
       {entry.value}
     </Link>
   ) : (
-    <span className={className}>{entry.value}</span>
+    <span className="">{entry.value}</span>
   );
 };

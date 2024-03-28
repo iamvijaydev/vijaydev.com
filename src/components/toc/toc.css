@@ -78,11 +78,10 @@
   .toc-indicator {
     --bg-color: var(--link-color);
 
-    position: absolute;
+    position: fixed;
     width: 3px;
     background-color: var(--bg-color);
     height: 1.5rem;
-    left: -2px;
     transition-property: top, opacity, height;
     transition-duration: var(--toc-transition-duration, 250ms);
     transition-timing-function: var(--toc-transition-easing, cubic-bezier(0.2, 0.0, 0, 1.0));
