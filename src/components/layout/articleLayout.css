@@ -7,3 +7,7 @@
     grid-row: aside;
   }
 }
+
+.grad {
+  background-image: linear-gradient(to right, #202124 0, transparent 100px), linear-gradient(to left, #202124 0, transparent 100px), linear-gradient(var(--m3c5) 0, #202124 80px)
+}
