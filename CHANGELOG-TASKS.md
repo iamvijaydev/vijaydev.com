@@ -1,7 +1,10 @@
-## 102 Robot.txt
-- [ ] Add a `robot.txt`
-- [ ] By default all traffic to preview and tag site must be disallowed
+## 103 Allow robots
+- [ ] Allow robots to crawl the production website
 - [ ] On merge to `main` branch (new release), the content of `robot.txt` must be commented
+
+## 102 Robot.txt
+- [x] Add a `robot.txt`
+- [x] By default all traffic to preview and tag site must be disallowed
 
 ## 101 Setup
 - [x] Setup a Remix run website
