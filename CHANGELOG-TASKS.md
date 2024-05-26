@@ -1,3 +1,6 @@
+## 104 Generate sitemap
+- [ ] Generate sitemap for all pages
+
 ## 103 Allow robots
 - [ ] Allow robots to crawl the production website
 - [ ] On merge to `main` branch (new release), the content of `robot.txt` must be commented
