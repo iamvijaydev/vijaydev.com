@@ -3,3 +3,4 @@
 - [#1002](./BACKLOG.md#1002) Create folder based routing and components
 - [#1003](./BACKLOG.md#1003) Create script to parse, transform and generate data base on routes
 - [#1004](./BACKLOG.md#1004) Create script to build client and server js files
+- [#1005](./BACKLOG.md#1005) Create script to generate html files and for SSG

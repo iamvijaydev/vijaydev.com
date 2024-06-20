@@ -1,5 +1,5 @@
-import type { AnchorAttributes } from "~components/Link";
-import { LinkCard } from "~components/LinkCard";
+import type { AnchorAttributes } from "~components/core/Link";
+import { LinkCard } from "~components/core/LinkCard";
 
 export interface Props
   extends AnchorAttributes {

@@ -1,5 +1,5 @@
 import { useRouteContext } from "~store/route/context";
-import { ErrorBoundary } from "~components/ErrorBoundary";
+import { ErrorBoundary } from "~components/core/ErrorBoundary";
 
 export const Outlet = () => {
   const store = useRouteContext();

@@ -1,6 +1,6 @@
 import { PropsWithChildren, useRef, useState } from "react";
-import { Button } from "~components/Button";
-import { Link } from "~components/Link";
+import { Button } from "~components/core/Button";
+import { Link } from "~components/core/Link";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
 
 export interface Props {

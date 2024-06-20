@@ -1,10 +1,10 @@
 import { PropsWithChildren, useState } from "react";
 import type { TocEntry } from "@stefanprobst/rehype-extract-toc";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
-import { Toc } from "~components/toc/Toc";
-import { RelatedItemCard } from "~components/RelatedItemCard";
-import { Masthead } from "~components/Masthead";
-import type { BreadcrumbNode } from "~components/Breadcrumb";
+import { Toc } from "~components/core/toc/Toc";
+import { RelatedItemCard } from "~components/core/RelatedItemCard";
+import { Masthead } from "~components/core/Masthead";
+import type { BreadcrumbNode } from "~components/core/Breadcrumb";
 import { getLocaleDateString } from "~utils/getLocalDateString";
 import { ContentItemDetailed } from "~types";
 

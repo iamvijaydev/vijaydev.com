@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Layout as DefaultLayout } from "~components/Layout";
+import { Layout as DefaultLayout } from "~components/core/Layout";
 import {
   type RouteState,
   type RouteLayoutType,

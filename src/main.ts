@@ -3,11 +3,12 @@ export { useRouteContext } from "~store/route/context";
 export { useBlogContext } from "~store/blog/context";
 export { useLearnContext } from "~store/learn/context";
 
-export { Layout } from '~components/Layout';
-export { type AnchorAttributes, Link } from '~components/Link';
-export { LinkCard } from '~components/LinkCard';
-export * from '~components/Heading';
-export { HeadingDescription } from '~components/HeadingDescription';
-export { PostWrapper } from '~components/PostWrapper';
+export { Layout } from '~components/core/Layout';
+export { type AnchorAttributes, Link } from '~components/core/Link';
+export { LinkCard } from '~components/core/LinkCard';
+export * from '~components/core/Heading';
+export { HeadingDescription } from '~components/core/HeadingDescription';
+export { PostWrapper } from '~components/core/PostWrapper';
+export { Masthead } from '~components/core/Masthead';
 
 export { makeHydrate } from './entry.client';

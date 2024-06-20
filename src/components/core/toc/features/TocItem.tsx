@@ -1,5 +1,5 @@
 import type { TocEntry } from "@stefanprobst/rehype-extract-toc";
-import { Link } from "~components/Link";
+import { Link } from "~components/core/Link";
 import { marginSpace } from "../utils/makeTocList";
 
 export interface TocItemProps {
