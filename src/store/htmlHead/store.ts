@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MetaLink, Meta } from "~types";
 import {
   type HtmlHeadState,
+  type Imports,
   getHtmlHeadState,
 } from "./state";
 
@@ -12,9 +13,13 @@ export interface HtmlHeadStore {
   replaceMeta: (meta: Meta[]) => void;
 }
 
-export const useHtmlHeadStore = (): HtmlHeadStore => {
+export const useHtmlHeadStore = (
+  imports?: Imports,
+  links?: MetaLink[],
+  meta?: Meta[]
+): HtmlHeadStore => {
   const [state, setState] = useState<HtmlHeadState>(
-    getHtmlHeadState()
+    getHtmlHeadState(imports, links, meta)
   );
 
   const replaceMetaLinks = (links: MetaLink[]) => {

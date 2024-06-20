@@ -8,8 +8,12 @@ export type HtmlHeadState = {
   meta: Meta[];
 };
 
-export const getHtmlHeadState = (): HtmlHeadState => ({
-  imports: {},
-  links: [],
-  meta: [],
+export const getHtmlHeadState = (
+  imports: Imports = {},
+  links: MetaLink[] = [],
+  meta: Meta[] = []
+): HtmlHeadState => ({
+  imports: imports,
+  links: links,
+  meta: meta,
 });

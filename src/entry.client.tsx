@@ -1,6 +1,28 @@
 import { hydrateRoot } from "react-dom/client";
-import { App } from "~App";
+import { type AppProps, App } from "~App";
 
-export const hydrate = () => {
-  hydrateRoot(document, <App />);
+export const makeHydrate = (data: AppProps) => async () => {
+  try {
+    const pathname = window.location.pathname;
+    const scriptPath = pathname === "/" ? "/home" : pathname;
+
+    const { RouteComponent, links, meta, layoutType } = await import(
+      scriptPath
+    );
+
+    const props: AppProps = {
+      imports: data.imports,
+      blogs: data.blogs,
+      learn: data.learn,
+    };
+
+    if (links) props.links = links;
+    if (meta) props.meta = meta;
+    if (layoutType) props.layoutType = layoutType;
+    if (RouteComponent) props.Outlet = RouteComponent;
+
+    hydrateRoot(document, <App {...props} />);
+  } catch (error) {
+    console.log("hydration failed", error);
+  }
 };

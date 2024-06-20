@@ -8,8 +8,8 @@ export interface LearnStore {
   getTopic: (pathname: string) => TopicList | undefined;
 }
 
-export const useLearnStore = (): LearnStore => {
-  const [state, setState] = useState<LearnState>(getLearnState());
+export const useLearnStore = (data: Partial<LearnState>): LearnStore => {
+  const [state, setState] = useState<LearnState>(getLearnState(data));
 
   const update = (data: Partial<LearnState>) => {
     setState((prev) => ({ ...prev, ...data }));
