@@ -21,7 +21,7 @@ export const parseRoutes = async () => {
 
     // third level routes
     if (file) {
-      parseTopLevel(split);
+      await parseGroupedDynamicLevel(split);
       continue;
     }
 
@@ -34,7 +34,7 @@ export const parseRoutes = async () => {
 
     // top level routes with direct files
     if (fileOrFolder) {
-      parseGroupedDynamicLevel(split);
+      parseTopLevel(split);
       continue;
     }
   }
