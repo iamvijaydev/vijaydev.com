@@ -1,4 +1,12 @@
 import React from "react";
+import { Importmap } from "~components/Importmap";
+import { Links } from "~components/Links";
+import { Meta } from "~components/Meta";
+import { Outlet } from "~components/Outlet";
+import { BlogContextProvider } from "~store/blog/Provider";
+import { HtmlHeadContextProvider } from "~store/htmlHead/Provider";
+import { LearnContextProvider } from "~store/learn/Provider";
+import { RouteContextProvider } from "~store/route/Provider";
 
 export const App = () => {
   return (
@@ -14,13 +22,10 @@ export const App = () => {
             <BlogContextProvider>
               <LearnContextProvider>
                 <RouteContextProvider>
-                  <GlobalLoader />
                   <Outlet />
-                  <PopState />
                 </RouteContextProvider>
               </LearnContextProvider>
             </BlogContextProvider>
-            <Script />
           </body>
         </HtmlHeadContextProvider>
       </html>
