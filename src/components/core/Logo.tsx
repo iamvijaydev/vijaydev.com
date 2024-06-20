@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import { Link } from "~components/Link";
+import { Link } from "~components/core/Link";
 
 export type LogoProps = {
   className?: string;

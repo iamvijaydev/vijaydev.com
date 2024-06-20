@@ -1,8 +1,10 @@
+import { Imports, BlogData, LearnData } from "../types";
+
 export type ServerAppTemplateProps = {
   clientInputMjs: string;
-  imports: Record<string, unknown>;
-  blogs: Record<string, unknown>;
-  learn: Record<string, unknown>;
+  imports: Imports;
+  blogs: BlogData;
+  learn: LearnData;
   outputHtml: string;
 };
 
@@ -32,7 +34,7 @@ import { resolve } from 'node:path';
 
 import * as route from './${clientInputMjs}';
 import { Layout } from './src/components/Layout.tsx';
-import { render } from './src/entry-server.tsx';
+import { render } from './src/entry.server.tsx';
 
 function reviver(key: string, value) {
   if(typeof value === 'object' && value !== null) {

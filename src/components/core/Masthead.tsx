@@ -1,7 +1,7 @@
-import { type BreadcrumbNode, Breadcrumb } from "~/components/Breadcrumb";
-import { H1 } from "~/components/Heading";
-import { HeadingDescription } from "~/components/HeadingDescription";
-import { Label } from "~/components/Label";
+import { type BreadcrumbNode, Breadcrumb } from "~components/core/Breadcrumb";
+import { H1 } from "~components/core/Heading";
+import { HeadingDescription } from "~components/core/HeadingDescription";
+import { Label } from "~components/core/Label";
 
 export interface Props {
   breadcrumbNodes?: BreadcrumbNode[];

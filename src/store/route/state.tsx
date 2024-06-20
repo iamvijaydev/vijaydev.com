@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react";
-import { Layout as DefaultLayout } from "~components/Layout";
+import { Layout as DefaultLayout } from "~components/core/Layout";
 
 export type RouteLayoutType = "DEFAULT_LAYOUT" | "HOME_LAYOUT";
 

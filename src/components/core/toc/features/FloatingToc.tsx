@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import type { TocEntry } from "@stefanprobst/rehype-extract-toc";
-import { Separator } from '~components/Separator';
-import { Logo } from '~components/Logo';
-import { Menu } from "~components/Menu";
+import { Separator } from '~components/core/Separator';
+import { Logo } from '~components/core/Logo';
+import { Menu } from "~components/core/Menu";
 import { makeTocList } from "../utils/makeTocList";
 
 export type Props = {
