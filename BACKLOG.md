@@ -1,13 +1,12 @@
 ## 1001
   - Create a simple React code base
   - Create a backlog and changelog tracking system
-  - Add a GNU GENERAL PUBLIC LICENSE
-  - Add a fav.icon and robot.txt in /public
+  - Create store to manage data used in the website
 
 ## 1002
-  - Create a folder based routing POC
+  - Create a folder based routing
   - Create a mechanism to manage dynamic pages
-  - Create stores for routing, import-map, and, content
+  - Create components for the pages
 
 ## 1003
   - Create script to parse routes 
