@@ -1,0 +1,17 @@
+{
+  "name": "vijaydev.com",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "echo build",
+    "preview": "echo preview"
+  },
+  "devDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@types/node": "20.14.2",
+    "@types/react": "18.2.66",
+    "@types/react-dom": "18.2.22"
+  }
+}
