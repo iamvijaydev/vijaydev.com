@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import { type LearnStore } from "./store";
-import { useValidContext } from "~utils/useValidContext";
+import { useValidContext } from "~hooks/useValidContent";
 
 export const LearnContext = createContext<LearnStore | undefined>(undefined);
 

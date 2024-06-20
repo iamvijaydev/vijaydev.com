@@ -73,3 +73,7 @@ export type TopicList = {
 }
 
 export type { LearnState as LearnData } from './store/learn/state';
+
+/* */
+
+export type { AppProps } from './App';

@@ -9,7 +9,7 @@ export type Props = {
 };
 
 export const RouteContextProvider = (props: PropsWithChildren<Props>) => {
-  const store = useRouteStore();
+  const store = useRouteStore(props.layoutType, props.Outlet);
 
   const value = useMemo(() => store, [store]);
 

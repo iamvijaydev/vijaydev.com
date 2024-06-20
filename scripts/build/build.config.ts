@@ -20,7 +20,7 @@ export const baseClientBuildConfig: BuildOptions = {
   format: 'esm',
   outExtension: { '.js': '.mjs' },
   external: ['main', 'react', 'react-dom', 'react-dom/client'],
-  minify: true,
+  minify: process.env.NODE_ENV === 'production',
 }
 
 export const baseServerBuildConfig: BuildOptions = {

@@ -16,8 +16,11 @@ export interface RouteState {
   loading: boolean;
 }
 
-export const getRouteState = (): RouteState => ({
-  layout: DefaultLayout,
-  outlet: () => <div />,
+export const getRouteState = (
+  layoutType?: RouteLayoutType,
+  Outlet?: RouteOutLet
+): RouteState => ({
+  layout: layoutType === "DEFAULT_LAYOUT" ? DefaultLayout : DefaultLayout,
+  outlet: Outlet || (() => <div />),
   loading: false,
 });

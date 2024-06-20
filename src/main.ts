@@ -10,4 +10,4 @@ export * from '~components/Heading';
 export { HeadingDescription } from '~components/HeadingDescription';
 export { PostWrapper } from '~components/PostWrapper';
 
-export { hydrate } from './entry.client';
+export { makeHydrate } from './entry.client';

@@ -1,7 +1,7 @@
 import * as esbuild from "esbuild";
 import mdx from "@mdx-js/esbuild";
 
-import { AppProps } from "../types";
+import { AppProps, ContentItemDetailed } from "../types";
 import { baseClientBuildConfig, mdxPlugins } from "./build.config";
 import {
   getRoutes,
@@ -13,7 +13,7 @@ import { getMainTemplate } from "../templates/getMainTemplate";
 import { getContentItemTemplate } from "../templates/getContentItemTemplate";
 import { getContentListingTemplate } from "../templates/getContentListingTemplate";
 
-export const buildFiles = async () => {
+export const buildClientFiles = async () => {
   console.time("client mjs files built");
 
   const appData: AppProps = {
@@ -43,7 +43,7 @@ export const buildFiles = async () => {
     outfile: "dist/client/assets/main.mjs",
   });
 
-  for await (const route of getRoutes().values()) {
+  for await (const route of getRoutes<ContentItemDetailed>().values()) {
     if (!route.input.template) {
       await esbuild.build({
         ...baseClientBuildConfig,

@@ -14,9 +14,12 @@ export interface RouteStore {
   replaceOutlet: (outlet: RouteOutLet) => void;
 }
 
-export const useRouteStore = (): RouteStore => {
+export const useRouteStore = (
+  layoutType?: RouteLayoutType,
+  Outlet?: RouteOutLet
+): RouteStore => {
   const [state, setState] = useState<RouteState>(
-    getRouteState()
+    getRouteState(layoutType, Outlet)
   );
 
   const setLayout = (layoutType: RouteLayoutType) => {

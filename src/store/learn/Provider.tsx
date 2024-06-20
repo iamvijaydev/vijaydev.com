@@ -1,9 +1,14 @@
 import { PropsWithChildren, useMemo } from "react";
+import type { LearnState } from "./state";
 import { useLearnStore } from "./store";
 import { LearnContext } from "./context";
 
-export const LearnContextProvider = (props: PropsWithChildren) => {
-  const store = useLearnStore();
+export type Props = {
+  learn: Partial<LearnState>;
+};
+
+export const LearnContextProvider = (props: PropsWithChildren<Props>) => {
+  const store = useLearnStore(props.learn);
   const value = useMemo(() => store, [store]);
 
   return (

@@ -6,8 +6,8 @@ export interface BlogStore {
   update: (data: Partial<BlogState>) => void;
 }
 
-export const useBlogStore = (): BlogStore => {
-  const [state, setState] = useState<BlogState>(getBlogState());
+export const useBlogStore = (data: Partial<BlogState>): BlogStore => {
+  const [state, setState] = useState<BlogState>(getBlogState(data));
 
   const update = (data: Partial<BlogState>) => {
     setState((prev) => ({ ...prev, ...data }));

@@ -5,7 +5,10 @@ export interface BlogState {
   list: ContentItemDetailed[];
 }
 
-export const getBlogState = (): BlogState => ({
-  featured: [],
-  list: [],
+export const getBlogState = ({
+  featured,
+  list,
+}: Partial<BlogState>): BlogState => ({
+  featured: featured || [],
+  list: list || [],
 });

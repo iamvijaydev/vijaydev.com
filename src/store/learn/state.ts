@@ -5,7 +5,10 @@ export interface LearnState {
   list: Map<string, TopicList>;
 }
 
-export const getLearnState = (): LearnState => ({
-  featured: [],
-  list: new Map(),
+export const getLearnState = ({
+  featured,
+  list,
+}: Partial<LearnState>): LearnState => ({
+  featured: featured || [],
+  list: list || new Map(),
 });
