@@ -33,8 +33,8 @@ export const getServerAppTemplate = ({
 import { resolve } from 'node:path';
 
 import * as route from './${clientInputMjs}';
-import { Layout } from './src/components/Layout.tsx';
-import { render } from './src/entry.server.tsx';
+import { Layout } from './app/components/Layout.tsx';
+import { render } from './app/entry.server.tsx';
 
 function reviver(key: string, value) {
   if(typeof value === 'object' && value !== null) {

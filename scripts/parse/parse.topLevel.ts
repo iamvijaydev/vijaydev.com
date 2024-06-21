@@ -13,7 +13,7 @@ export const parseTopLevel = (split: string[]) => {
       chunkPath: `/assets/${routeChunkPath}.mjs`,
     };
     const input = {
-      source: `./src/routes/${file}`,
+      source: `./app/routes/${file}`,
     };
     const output = {
       cjs: `dist/server/${routeChunkPath}.cjs`,
@@ -39,7 +39,7 @@ export const parseTopLevel = (split: string[]) => {
     chunkPath: `/assets/${routeChunkPath}.mjs`,
   };
   const input = {
-    source: `./src/routes/${file}`,
+    source: `./app/routes/${file}`,
   };
   const output = {
     cjs: `dist/server/${routeChunkPath}.cjs`,

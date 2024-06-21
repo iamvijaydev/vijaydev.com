@@ -19,7 +19,7 @@ export const parseDynamicLevel = async (split: string[]) => {
       chunkPath: `/assets/${routeChunkPath}.mjs`,
     };
     const input = {
-      source: `./src/routes/${folder}/${file}`,
+      source: `./app/routes/${folder}/${file}`,
     };
     const output = {
       cjs: `dist/server/${routeChunkPath}.cjs`,
@@ -40,7 +40,7 @@ export const parseDynamicLevel = async (split: string[]) => {
   const fileAsPath = fileWithout.replaceAll(".", "/");
 
   if (fileExt === ".mdx") {
-    const content = await read(path.resolve(`src/routes/${folder}/${file}`));
+    const content = await read(path.resolve(`app/routes/${folder}/${file}`));
 
     getMatter(content, { strip: true });
 
@@ -92,7 +92,7 @@ export const parseDynamicLevel = async (split: string[]) => {
     chunkPath: `/assets/${routeChunkPath}.mjs`,
   };
   const input = {
-    source: `./src/routes/${folder}/${file}`,
+    source: `./app/routes/${folder}/${file}`,
   };
   const output = {
     cjs: `dist/server/${routeChunkPath}.cjs`,
