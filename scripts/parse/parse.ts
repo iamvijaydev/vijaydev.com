@@ -5,7 +5,7 @@ import { parseDynamicLevel } from './parse.dynamicLevel';
 import { parseGroupedDynamicLevel } from './parse.groupedDynamicLevel';
 
 export const parseRoutes = async () => {
-  const files = new Glob("src/routes/**/*", {
+  const files = new Glob("app/routes/**/*", {
     nodir: true,
   });
 
@@ -14,7 +14,7 @@ export const parseRoutes = async () => {
       continue;
     }
 
-    const inner = fullPath.replace("src/routes/", "");
+    const inner = fullPath.replace("app/routes/", "");
 
     const split = inner.split("/");
     const [fileOrFolder, innerFileOrFolder, file] = split;

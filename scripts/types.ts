@@ -3,8 +3,8 @@ import {
   BlogData,
   LearnData,
   ContentItemDetailed,
-} from "../src/types";
-export * from '../src/types';
+} from "../app/types";
+export * from '../app/types';
 
 export type MatterContentItem = {
   data: {

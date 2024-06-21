@@ -17,7 +17,7 @@ export const parseGroupedDynamicLevel = async (split: string[]) => {
     const routeChunkPath = `${folder}.${innerFolder}`;
 
     const content = await readFile(
-      path.resolve("src", `./routes/${folder}/${innerFolder}/${file}`),
+      path.resolve("app", `./routes/${folder}/${innerFolder}/${file}`),
       "utf8"
     );
 
@@ -54,7 +54,7 @@ export const parseGroupedDynamicLevel = async (split: string[]) => {
 
   if (fileExt === ".mdx") {
     const content = await read(
-      path.resolve(`src/routes/${folder}/${innerFolder}/${file}`)
+      path.resolve(`app/routes/${folder}/${innerFolder}/${file}`)
     );
 
     getMatter(content, { strip: true });

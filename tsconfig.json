@@ -17,10 +17,10 @@
     "jsx": "react-jsx",
     "paths": {
       "main": [
-        "./src/main.ts"
+        "./app/main.ts"
       ],
-      "~*": ["./src/*"],
+      "~*": ["./app/*"],
     },
   },
-  "include": ["src"],
+  "include": ["app"],
 }
