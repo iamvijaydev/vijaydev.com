@@ -7,7 +7,7 @@ export const buildRobotsTxt = async () => {
   await outputFile("dist/client/robots.txt", `User-agent: *
 Disallow: /
 
-Sitemap: https://www.example.com/sitemap.xml`);
+Sitemap: https://vijaydev.com/sitemap.xml`);
 
 console.timeEnd('robot.txt feed built');
 }
