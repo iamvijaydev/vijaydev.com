@@ -25,7 +25,7 @@ export const RouteComponent = () => {
       <H3>Featured</H3>
       {
         store.state.featured.map((topic) => (
-          <LinkCard key={topic.pathname} to={topic.pathname}>
+          <LinkCard key={topic.pathname} href={topic.pathname}>
             <H3>{topic.title}</H3>
             <p>{topic.description}</p>
             {
@@ -44,10 +44,10 @@ export const RouteComponent = () => {
       {
         Array.from(store.state.list.entries()).map(([id, topic]) => (
           <div key={id}>
-            <H4>{topic.matter.title} <Link to={topic.matter.pathname}>View chapters</Link></H4>
+            <H4>{topic.matter.title} <Link href={topic.matter.pathname}>View chapters</Link></H4>
             {
               topic.chapters.map((chapter) => (
-                <LinkCard key={chapter.pathname} to={chapter.pathname}>
+                <LinkCard key={chapter.pathname} href={chapter.pathname}>
                   <H3>{chapter.title}</H3>
                   <p>{chapter.description}</p>
                 </LinkCard>

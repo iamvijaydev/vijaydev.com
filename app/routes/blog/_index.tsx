@@ -23,7 +23,7 @@ export const RouteComponent = () => {
     <div>
       {
         store.state.list.map((item) => (
-          <LinkCard key={item.pathname} to={item.pathname}>
+          <LinkCard key={item.pathname} href={item.pathname}>
             <H3>{item.title}</H3>
             <p>{item.description}</p>
           </LinkCard>

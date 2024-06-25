@@ -10,5 +10,7 @@ export * from '~components/core/Heading';
 export { HeadingDescription } from '~components/core/HeadingDescription';
 export { PostWrapper } from '~components/core/PostWrapper';
 export { Masthead } from '~components/core/Masthead';
+export { type TextProps, Text } from '~components/core/text/Text';
+export { Button } from '~components/core/Button';
 
 export { makeHydrate } from './entry.client';

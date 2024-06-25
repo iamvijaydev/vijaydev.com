@@ -5,6 +5,7 @@ import {
   HTMLAttributes,
 } from "react";
 import { Link } from "~components/core/Link";
+import { Text } from "~components/core/text/Text";
 
 export interface BreadcrumbNode {
   label: string;
@@ -30,11 +31,11 @@ export const Breadcrumb = (props: PropsWithChildren<Props>) => {
     >
       {nodes.reduce<ReactNode[]>((acc, item, index) => {
         const node = item.href ? (
-          <Link to={item.href} key={index + "-b"}>
+          <Link href={item.href} key={index + "-b"} textProps={{ variant: 'label' }}>
             {item.label}
           </Link>
         ) : (
-          <span key={index + "-b"}>{item.label}</span>
+          <Text as="span" dim>{item.label}</Text>
         );
 
         return index === 0

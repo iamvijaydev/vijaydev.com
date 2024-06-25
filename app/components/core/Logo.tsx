@@ -32,7 +32,7 @@ export const Logo = (props: LogoProps): JSX.Element => {
   }
 
   return (
-    <Link to="/" className={className}>
+    <Link href="/" className={className}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={size + 'px'}

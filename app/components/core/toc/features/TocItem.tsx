@@ -9,7 +9,7 @@ export interface TocItemProps {
 
 export const TocItem = ({ entry, activeId }: TocItemProps): JSX.Element => {
   return entry.id ? (
-    <Link to={`#${entry.id}`} className={`${marginSpace[entry.depth]} ${activeId === entry.id ? 'active' : ''}`}>
+    <Link href={`#${entry.id}`} className={`${marginSpace[entry.depth]} ${activeId === entry.id ? 'active' : ''}`}>
       {entry.value}
     </Link>
   ) : (

@@ -4,6 +4,7 @@ import {
   type HtmlHeadState,
   type Imports,
   getHtmlHeadState,
+  defaultLinks,
 } from "./state";
 
 export interface HtmlHeadStore {
@@ -23,8 +24,8 @@ export const useHtmlHeadStore = (
   );
 
   const replaceMetaLinks = (links: MetaLink[]) => {
-    setState((prev) => ({ ...prev, links }));
-  }
+    setState((prev) => ({ ...prev, links: [...defaultLinks, ...links] }));
+  };
 
   const replaceMeta = (meta: Meta[]) => {
     setState((prev) => ({ ...prev, meta }));

@@ -1,0 +1,31 @@
+/* This file is generated. Do not edit it directly. See /scripts/cssGenerate for more info. */
+
+.my-l {
+  margin-top: var(--space-l);margin-bottom: var(--space-l);
+}.mt-2xs {
+  margin-top: var(--space-2xs);
+}.mt-s {
+  margin-top: var(--space-s);
+}@media (min-width: 992px) {
+  .lg:mb-xl {
+    margin-bottom: var(--space-xl);
+  }
+}
+.p-2xs {
+  padding: var(--space-2xs);
+}.p-s {
+  padding: var(--space-s);
+}@media (min-width: 992px) {
+  .lg:px-xl {
+    padding-left: var(--space-xl);padding-right: var(--space-xl);
+  }
+}
+.gap-2xs {
+  gap: var(--space-2xs);
+}.gap-s {
+  gap: var(--space-s);
+}@media (min-width: 992px) {
+  .lg:gap-xl {
+    gap: var(--space-xl);
+  }
+}

@@ -41,7 +41,7 @@ export const RouteComponent = ({ pathname }: PropsWithChildren<Props>) => {
       />
       <ul>
         {chapters.map((chapter) => (
-          <LinkCard key={chapter.pathname} to={chapter.pathname}>
+          <LinkCard key={chapter.pathname} href={chapter.pathname}>
             <H3>{chapter.title}</H3>
             <p>{chapter.description}</p>
           </LinkCard>

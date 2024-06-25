@@ -1,0 +1,77 @@
+.link,
+.link:visited {
+  --duration: var(--standard-decelerate-duration);
+  --easing: var(--standard-decelerate-easing);
+  --property: color, background-color, border-color, box-shadow;
+
+  --color: var(--link-color);
+  --bg-color: transparent;
+  --border-radius: var(--border-radius-s);
+
+  color: var(--color);
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+
+  transition-property: var(--property);
+  transition-duration: var(--duration);
+  transition-timing-function: var(--easing);
+}
+
+.link:active {
+  --duration: var(--standard-accelerate-duration);
+  --easing: var(--standard-accelerate-easing);
+
+  --color: var(--link-hover-color);
+  --bg-color: var(--link-hover-bg-color);
+}
+
+.link.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (hover:hover) {
+  .link:hover {
+    --duration: var(--standard-accelerate-duration);
+    --easing: var(--standard-accelerate-easing);
+
+    --color: var(--link-hover-color);
+    --bg-color: var(--link-hover-bg-color);
+  }
+}
+
+.link-focus-visible:focus-visible {
+  --duration: var(--standard-accelerate-duration);
+  --easing: var(--standard-accelerate-easing);
+
+  --color: var(--link-hover-color);
+  --bg-color: var(--link-hover-bg-color);
+
+  --other: 1;
+  --offset-width: 2px;
+
+  text-decoration: none;
+  outline: var(--offset-width) solid transparent;
+  outline-offset: var(--offset-width);
+  box-shadow: 0 0 0 var(--offset-width) var(--background-color), 0 0 0 calc(var(--offset-width) + var(--offset-width)) var(--link-color);
+}
+
+.text-link-color {
+  text-decoration: underline;
+  color: var(--link-color);
+  fill: var(--link-color);
+}
+
+@media (hover:hover) {
+  *:hover>.hover\:text-link-color {
+    color: var(--link-hover-color);
+    fill: var(--link-hover-color);
+  }
+}
+
+*:focus-visible>.hover\:text-link-color {
+  text-decoration: none;
+  color: var(--link-hover-color);
+  fill: var(--link-hover-color);
+}

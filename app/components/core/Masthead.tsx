@@ -2,6 +2,7 @@ import { type BreadcrumbNode, Breadcrumb } from "~components/core/Breadcrumb";
 import { H1 } from "~components/core/Heading";
 import { HeadingDescription } from "~components/core/HeadingDescription";
 import { Label } from "~components/core/Label";
+import { Text } from '~components/core/text/Text';
 
 export interface Props {
   breadcrumbNodes?: BreadcrumbNode[];
@@ -23,7 +24,7 @@ export const Masthead = ({
   return (
     <header className="col-12">
       {breadcrumbNodes?.length ? <Breadcrumb nodes={breadcrumbNodes} /> : null}
-      <H1 className="mb-3xs">{title}</H1>
+      <Text as="h1">{title}</Text>
       <HeadingDescription className="mb-2xs">{description}</HeadingDescription>
       {published && readTime ? (
         <div className="flex flex-wrap gap-xs mb-2xl">

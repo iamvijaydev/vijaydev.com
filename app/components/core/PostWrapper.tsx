@@ -50,14 +50,14 @@ export const PostWrapper = ({
             {matter.prev ? (
               <RelatedItemCard
                 type="⟵ Previous"
-                to={matter.prev.pathname}
+                href={matter.prev.pathname}
                 label={matter.prev.title}
               />
             ) : null}
             {matter.next ? (
               <RelatedItemCard
                 type="Up Next ⟶"
-                to={matter.next.pathname}
+                href={matter.next.pathname}
                 label={matter.next.title}
                 rightAlign
               />

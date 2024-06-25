@@ -50,6 +50,9 @@ importers:
       glob:
         specifier: 10.4.2
         version: 10.4.2
+      lightningcss-cli:
+        specifier: 1.25.1
+        version: 1.25.1
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -764,6 +767,11 @@ packages:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
 
+  detect-libc@1.0.3:
+    resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
+    engines: {node: '>=0.10'}
+    hasBin: true
+
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
 
@@ -1020,6 +1028,65 @@ packages:
 
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
+
+  lightningcss-cli-darwin-arm64@1.25.1:
+    resolution: {integrity: sha512-T+8n8AtfRnNxI97dKLT3+FpYDyioH0KLkoAjBxnUZVdyScmgqsBGtqXsdObLxyiNpLCJUfrL4oSQbMI1Fq5KVw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [darwin]
+
+  lightningcss-cli-darwin-x64@1.25.1:
+    resolution: {integrity: sha512-x0N9I4f4NXUesFQa03EmOb3kIg/4TPAGPNY/UZDMAEhGA8bDTOgesvMdQqD4dss1ADsbWA5kIMeUyPKS8A12SQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [darwin]
+
+  lightningcss-cli-freebsd-x64@1.25.1:
+    resolution: {integrity: sha512-uzEwexbRy/GkaPhW1GbTgXB6CKQhR7abVcp1uuMP1G9yICy8o6bCC941xCPtICDW6VfimPrAe9a9xt6UJwKI1A==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [freebsd]
+
+  lightningcss-cli-linux-arm-gnueabihf@1.25.1:
+    resolution: {integrity: sha512-Wgu0WoEPgGzdB4pSmfsiTnyQf2/nzz794R9YMa0tOReW/JP75pvTdv6vjUGvo0L9sasMKEehWAKoWi8s86YuMg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm]
+    os: [linux]
+
+  lightningcss-cli-linux-arm64-gnu@1.25.1:
+    resolution: {integrity: sha512-nwCPUmsbjtJaKfaqGc2Cbsc1An1e40wgWa1sWrIL6pjLGlCGAym37jbe54h9U9UuAjQAik14lRZ45n9jJgeojg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+
+  lightningcss-cli-linux-arm64-musl@1.25.1:
+    resolution: {integrity: sha512-Fj/XW+ahY5VXIWGjf4/GCMxVDn5W+qJKaa0V35qmjGmdGSeR/utCq7f4qDxzzPTgrAlQ/zxJ4M94eaQL3aac0w==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+
+  lightningcss-cli-linux-x64-gnu@1.25.1:
+    resolution: {integrity: sha512-ax5XP0ZIoA7A8JVbVmgjsNdyKzzRKVllBASpAJZq6a7BJWceZ/QM9ScUdjs15J4Q4FSsz1Uvk5JKq5y3/lOzFA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+
+  lightningcss-cli-linux-x64-musl@1.25.1:
+    resolution: {integrity: sha512-6OK8l3mNDStoAh6v1v5bZumfh4uGqu+8ZxrFVYplyKSKNZcGVvP3Vh5VlRfOIFyOHB0td8BOW/V3aOR8X//WxQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+
+  lightningcss-cli-win32-x64-msvc@1.25.1:
+    resolution: {integrity: sha512-78SN/Yn2alLEQd/PF4TvcRzIGeu1EXLV6XZZs4M+aEqn4IMEY/k6JWXDvighXpHOM2KyIDfmUA72pARQKFeAAg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [win32]
+
+  lightningcss-cli@1.25.1:
+    resolution: {integrity: sha512-rrAgDqDIcG3bPHG7a77jxqvLIXkm3nvMIFbfeD6GPjlIs+EtTMdKMKDR917RE5MGdLseRKf+3yu+1nsroMZHnQ==}
+    engines: {node: '>= 12.0.0'}
+    hasBin: true
 
   longest-streak@3.1.0:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
@@ -2102,6 +2169,8 @@ snapshots:
 
   dequal@2.0.3: {}
 
+  detect-libc@1.0.3: {}
+
   devlop@1.1.0:
     dependencies:
       dequal: 2.0.3
@@ -2434,6 +2503,47 @@ snapshots:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
+
+  lightningcss-cli-darwin-arm64@1.25.1:
+    optional: true
+
+  lightningcss-cli-darwin-x64@1.25.1:
+    optional: true
+
+  lightningcss-cli-freebsd-x64@1.25.1:
+    optional: true
+
+  lightningcss-cli-linux-arm-gnueabihf@1.25.1:
+    optional: true
+
+  lightningcss-cli-linux-arm64-gnu@1.25.1:
+    optional: true
+
+  lightningcss-cli-linux-arm64-musl@1.25.1:
+    optional: true
+
+  lightningcss-cli-linux-x64-gnu@1.25.1:
+    optional: true
+
+  lightningcss-cli-linux-x64-musl@1.25.1:
+    optional: true
+
+  lightningcss-cli-win32-x64-msvc@1.25.1:
+    optional: true
+
+  lightningcss-cli@1.25.1:
+    dependencies:
+      detect-libc: 1.0.3
+    optionalDependencies:
+      lightningcss-cli-darwin-arm64: 1.25.1
+      lightningcss-cli-darwin-x64: 1.25.1
+      lightningcss-cli-freebsd-x64: 1.25.1
+      lightningcss-cli-linux-arm-gnueabihf: 1.25.1
+      lightningcss-cli-linux-arm64-gnu: 1.25.1
+      lightningcss-cli-linux-arm64-musl: 1.25.1
+      lightningcss-cli-linux-x64-gnu: 1.25.1
+      lightningcss-cli-linux-x64-musl: 1.25.1
+      lightningcss-cli-win32-x64-msvc: 1.25.1
 
   longest-streak@3.1.0: {}
 

@@ -1,0 +1,18 @@
+:root {
+  /* custom colors vars */
+  --bg-color: var(--md-sys-color-surface);
+  --text-color: var(--md-sys-color-on-surface);
+  --text-dim-color: var(--md-sys-color-on-surface-dim);
+
+  --link-bg-color: transparent;
+  --link-text-color: var(--md-sys-color-primary);
+  --link-bg-color-hover: var(--md-sys-color-secondary-container);
+  --link-text-color-hover: var(--md-sys-color-on-secondary-container);
+
+  --card-bg-color: var(--md-sys-color-surface-container);
+  --card-text-color: var(--md-sys-color-on-surface-container);
+  --card-bg-color-hover: var(--md-sys-color-secondary-container);
+  --card-text-color-hover: var(--md-sys-color-on-secondary-container);
+
+  --label-text-color: var(--md-sys-color-on-surface-variant);
+}

@@ -1,3 +1,7 @@
+## 1007
+  - Add styles, use material theme css variables
+  - Create new components and add styles
+
 ## 1006
   - Improve output scripts, folder structure
   - Add CSS build

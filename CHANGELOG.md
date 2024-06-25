@@ -5,3 +5,4 @@
 - [#1004](./BACKLOG.md#1004) Create script to build client and server js files
 - [#1005](./BACKLOG.md#1005) Create script to generate html files and for SSG
 - [#1006](./BACKLOG.md#1006) Improve output scripts, folder structure, css build
+- [#1007](./BACKLOG.md#1007) Implement css build, brand and css helper classes
