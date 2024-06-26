@@ -1,0 +1,8 @@
+.app-bar {
+  --_shadow: var(--shadow-1);
+  box-shadow: var(--_shadow);
+}
+
+:where(html[data-scroll=0]) .app-bar {
+  --_shadow: var(--shadow-0);
+}

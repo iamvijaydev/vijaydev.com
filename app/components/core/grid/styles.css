@@ -1,0 +1,117 @@
+/* @link https://utopia.fyi/grid/calculator?c=420,16,1.2,1480,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=xs,l,2xl,12 */
+
+:root {
+  --grid-max-width: 92.50rem;
+  --grid-max-width: 82.50rem;
+  /* above needs tweaks */
+  --grid-gutter: var(--space-xs-l, clamp(0.75rem, 0.0566rem + 2.6415vw, 2.5rem));
+  --grid-columns: 12;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: [full-width-start] minmax(var(--space-m), 1fr) [content-start] minmax(
+      min-content,
+      var(--grid-max-width)
+    ) [content-end] minmax(var(--space-m), 1fr) [full-width-end];
+}
+
+.grid {
+  grid-column: content;
+  max-width: var(--grid-max-width);
+  /* padding-inline: var(--grid-gutter); */
+  /**/
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  column-gap: var(--grid-gutter);
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.col-3 {
+  grid-column: span 3;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-9 {
+  grid-column: span 9;
+}
+
+.col-10 {
+  grid-column: span 10;
+}
+
+.col-12 {
+  grid-column: span 12;
+}
+
+@media (min-width: 576px) {
+  .sm\:col-3 {
+    grid-column: span 3;
+  }
+  
+  .sm\:col-9 {
+    grid-column: span 9;
+  }
+}
+
+@media (min-width: 768px) {
+  /* .md\:content-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+    column-gap: var(--grid-gutter);
+  } */
+
+  .md\:col-4 {
+    grid-column: span 4;
+  }
+
+  .md\:col-8 {
+    grid-column: span 8;
+  }
+}
+
+@media (min-width: 992px) {
+  .lg\:col-3 {
+    grid-column: span 3;
+  }
+
+  .lg\:col-4 {
+    grid-column: span 4;
+  }
+
+  .lg\:col-6 {
+    grid-column: span 6;
+  }
+
+  .lg\:col-12 {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl\:col-8 {
+    grid-column: span 8;
+  }
+
+  .xl\:col-7 {
+    grid-column: span 7;
+  }
+
+  .xl\:col-start-9 {
+    grid-column-start: 9;
+  }
+
+  .xl\:col-start-10 {
+    grid-column-start: 10;
+  }
+
+  .xl\:col-end-13 {
+    grid-column-end: 13;
+  }
+}

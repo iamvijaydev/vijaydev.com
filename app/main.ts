@@ -13,4 +13,8 @@ export { Masthead } from '~components/core/Masthead';
 export { type TextProps, Text } from '~components/core/text/Text';
 export { Button } from '~components/core/Button';
 
+export { Grid, Cell } from '~components/core/grid/Grid';
+
+export { AppBar } from '~components/features/appBar/AppBar';
+
 export { makeHydrate } from './entry.client';
