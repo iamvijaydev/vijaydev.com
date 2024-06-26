@@ -10,6 +10,12 @@
   .lg:mb-xl {
     margin-bottom: var(--space-xl);
   }
+}.mb-2xs {
+  margin-bottom: var(--space-2xs);
+}.mb-3xs {
+  margin-bottom: var(--space-3xs);
+}.mt-xl {
+  margin-top: var(--space-xl);
 }
 .p-2xs {
   padding: var(--space-2xs);
@@ -19,6 +25,10 @@
   .lg:px-xl {
     padding-left: var(--space-xl);padding-right: var(--space-xl);
   }
+}.py-2xl {
+  padding-top: var(--space-2xl);padding-bottom: var(--space-2xl);
+}.py-3xl {
+  padding-top: var(--space-3xl);padding-bottom: var(--space-3xl);
 }
 .gap-2xs {
   gap: var(--space-2xs);

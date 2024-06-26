@@ -4,7 +4,7 @@ import {
   DetailedHTMLProps,
   HTMLAttributes,
 } from "react";
-import { Link } from "~components/core/Link";
+import { Link } from "~components/core/link/Link";
 import { Text } from "~components/core/text/Text";
 
 export interface BreadcrumbNode {

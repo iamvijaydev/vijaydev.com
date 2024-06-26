@@ -1,4 +1,4 @@
-import { Link, AnchorAttributes } from "~components/core/Link";
+import { Link, AnchorAttributes } from "~components/core/link/Link";
 
 export const LinkCard = (props: AnchorAttributes) => {
   const { className = "", children, to, ...rest } = props;

@@ -1,0 +1,38 @@
+:root {
+  --light-grad-1: linear-gradient(to top, #5235ab 0%, #9c36b5 100%); /* violet10 -> purple8 */
+  --dark-grad-1: linear-gradient(to top, #7950f2 0%, #da77f2 100%); /* v6 -> p3 */
+  --light-grad-2: linear-gradient(60deg, #2b8a3e 0%, #e67700 100%); /* green9 -> yellow9 */
+  --dark-grad-2: linear-gradient(60deg, #b2f2bb 0%, #ffe066 100%); /* green3 -> yellow3 */
+
+  --grad-1: var(--light-grad-1);
+  --grad-2: var(--light-grad-2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grad-1: var(--dark-grad-1);
+    --grad-2: var(--dark-grad-2);
+  }
+}
+
+/* exact same as -< :root { >- from above */
+[color-scheme="light"] {
+  color-scheme: light;
+
+  --grad-1: var(--light-grad-1);
+  --grad-2: var(--light-grad-2);
+}
+
+/* exact same as -< @media (prefers-color-scheme: dark) { >- from above */
+[color-scheme="dark"] {
+  --grad-1: var(--dark-grad-1);
+  --grad-2: var(--dark-grad-2);
+}
+
+.grad-1 {
+  background-image: var(--grad-1);
+}
+
+.grad-2 {
+  background-image: var(--grad-2);
+}

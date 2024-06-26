@@ -4,8 +4,8 @@
   --easing: var(--standard-decelerate-easing);
   --property: color, background-color, border-color, box-shadow;
 
-  --color: var(--link-color);
-  --bg-color: transparent;
+  --color: var(--link-text-color);
+  --bg-color: var(--link-bg-color);
   --border-radius: var(--border-radius-s);
 
   color: var(--color);

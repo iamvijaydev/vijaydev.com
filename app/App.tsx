@@ -6,6 +6,7 @@ import { GlobalLoader } from "~components/internal/GlobalLoader";
 import { Outlet } from "~components/internal/Outlet";
 import { PopState } from "~components/internal/PopState";
 import { Script } from "~components/internal/Script";
+import { ScrollManager } from "~components/internal/ScrollManager"
 import { BlogContextProvider } from "~store/blog/Provider";
 import { HtmlHeadContextProvider } from "~store/htmlHead/Provider";
 import { LearnContextProvider } from "~store/learn/Provider";
@@ -28,7 +29,7 @@ export type AppProps = {
 export const App = (props: AppProps = {}) => {
   return (
     <React.StrictMode>
-      <html>
+      <html data-scroll="0">
         <HtmlHeadContextProvider
           imports={props.imports}
           links={props.links}
@@ -53,6 +54,7 @@ export const App = (props: AppProps = {}) => {
               </LearnContextProvider>
             </BlogContextProvider>
             <Script />
+                  <ScrollManager />
           </body>
         </HtmlHeadContextProvider>
       </html>

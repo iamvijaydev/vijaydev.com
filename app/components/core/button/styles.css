@@ -87,7 +87,7 @@
   box-shadow: 0 0 0 var(--offset-width) var(--background-color), 0 0 0 calc(var(--offset-width) + var(--offset-width)) var(--md-sys-color-primary);
 }
 
-.button .text,
+.button .txt,
 .button .icon {
   opacity: var(--button-text-opacity);
   color: var(--button-text-color);
@@ -96,7 +96,7 @@
   z-index: 3;
 }
 
-.button .text {
+.button .txt {
   font-size: var(--label-size);
   font-weight: var(--label-weight);
   line-height: 1;

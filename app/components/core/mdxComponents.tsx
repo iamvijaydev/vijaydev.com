@@ -1,4 +1,4 @@
-import { Link } from '~components/core/Link';
+import { Link } from '~components/core/link/Link';
 import { type TextProps, Text } from '~components/core/text/Text';
 
 export const mdxComponents = {

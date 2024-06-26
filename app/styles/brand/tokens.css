@@ -9,8 +9,11 @@
   --link-bg-color-hover: var(--md-sys-color-secondary-container);
   --link-text-color-hover: var(--md-sys-color-on-secondary-container);
 
-  --card-bg-color: var(--md-sys-color-surface-container);
-  --card-text-color: var(--md-sys-color-on-surface-container);
+  --app-bar-bg-color: var(--md-sys-color-surface-container);
+  --app-bar-text-color: var(--md-sys-color-on-surface-container);
+
+  --card-bg-color: var(--app-bar-bg-color);
+  --card-text-color: var(--app-bar-text-color);
   --card-bg-color-hover: var(--md-sys-color-secondary-container);
   --card-text-color-hover: var(--md-sys-color-on-secondary-container);
 

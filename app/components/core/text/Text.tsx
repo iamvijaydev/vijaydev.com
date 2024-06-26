@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 
 export type TextProps = {
-  as: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "span";
+  as: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "span" | "div";
   variant?:
     | "display"
     | "description"
@@ -12,6 +12,7 @@ export type TextProps = {
     | "body"
     | "label";
   className?: string;
+  gradient?: boolean;
   ellipsis?: boolean;
   balance?: boolean;
   dim?: boolean;
@@ -35,6 +36,7 @@ export const getTextClassName = (props: Partial<TextProps>) => {
 
   if (props.className) className += props.className + " ";
   className += `text ${props.variant ?? classSet.get(props.as!)!}`;
+  if (props.gradient) className += " gradient";
   if (props.ellipsis) className += " ellipsis";
   if (props.balance) className += " balance";
   if (props.dim) className += " dim";
@@ -50,6 +52,7 @@ export const Text = (props: PropsWithChildren<TextProps>) => {
     as: Component = "p",
     variant,
     className: base,
+    gradient,
     ellipsis,
     balance,
     dim,
@@ -62,6 +65,7 @@ export const Text = (props: PropsWithChildren<TextProps>) => {
 
   const className = getTextClassName({
     variant,
+    gradient,
     ellipsis,
     balance,
     dim,

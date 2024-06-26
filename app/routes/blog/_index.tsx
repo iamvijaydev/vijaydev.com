@@ -1,4 +1,4 @@
-import { useBlogContext, LinkCard, H3 } from "main";
+import { useBlogContext, LinkCard, Text } from "main";
 import { MetaLink, Meta } from "~types";
 
 export const links: MetaLink[] = [
@@ -24,7 +24,7 @@ export const RouteComponent = () => {
       {
         store.state.list.map((item) => (
           <LinkCard key={item.pathname} href={item.pathname}>
-            <H3>{item.title}</H3>
+            <Text as="h3">{item.title}</Text>
             <p>{item.description}</p>
           </LinkCard>
         ))

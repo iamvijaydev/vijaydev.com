@@ -109,6 +109,10 @@
   &.right {
     text-align: right;
   }
+
+  &.center {
+    text-align: center;
+  }
   
   &.smaller {
     font-size: smaller
@@ -123,5 +127,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: initial;
+  }
+
+  &.gradient {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

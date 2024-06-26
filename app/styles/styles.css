@@ -1,9 +1,11 @@
 @import url(reset.css);
 
 @import url(brand/colors.css);
+@import url(brand/gradients.css);
 @import url(brand/font.css);
 @import url(brand/space.css);
 @import url(brand/box.css);
+@import url(brand/display.css);
 @import url(brand/shadow.css);
 @import url(brand/motion.css);
 @import url(brand/shadow.css);
@@ -11,9 +13,6 @@
 @import url(brand/tokens.css);
 
 @import url(generated/styles.css);
-
-@import url(components/link.css);
-@import url(components/button.css);
 
 @import url(../components/styles.css);
 

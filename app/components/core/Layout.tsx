@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { Link } from '~components/core/Link';
+import { Link } from '~components/core/link/Link';
 import { AppBar } from '~components/features/appBar/AppBar';
 
 export const Layout = ({ children }: PropsWithChildren) => (
