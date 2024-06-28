@@ -1,5 +1,5 @@
 import { type BreadcrumbNode, Breadcrumb } from "~components/core/Breadcrumb";
-import { Label } from "~components/core/Label";
+import { Label } from "~components/core/label/Label";
 import { Text } from "~components/core/text/Text";
 import { Grid } from "~components/core/grid/Grid";
 
@@ -63,7 +63,7 @@ export const Masthead = ({
         {description}
       </Text>
       {published && readTime ? (
-        <div className="flex flex-wrap gap-xs mt-xl">
+        <div className="flex flex-wrap gap-xs mt-2xs">
           <Label title={`Last update on: ${published}`}>
             Published: {published}
           </Label>

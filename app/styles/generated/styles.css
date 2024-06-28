@@ -1,7 +1,7 @@
 /* This file is generated. Do not edit it directly. See /scripts/cssGenerate for more info. */
 
 .my-l {
-  margin-top: var(--space-l);margin-bottom: var(--space-l);
+  margin: var(--space-l);
 }.mt-2xs {
   margin-top: var(--space-2xs);
 }.mt-s {
@@ -23,19 +23,25 @@
   padding: var(--space-s);
 }@media (min-width: 992px) {
   .lg:px-xl {
-    padding-left: var(--space-xl);padding-right: var(--space-xl);
+    padding: var(--space-xl);
   }
 }.py-2xl {
-  padding-top: var(--space-2xl);padding-bottom: var(--space-2xl);
+  padding: var(--space-2xl);
 }.py-3xl {
-  padding-top: var(--space-3xl);padding-bottom: var(--space-3xl);
+  padding: var(--space-3xl);
 }
-.gap-2xs {
+.gap-3xs {
+  gap: var(--space-3xs);
+}.gap-2xs {
   gap: var(--space-2xs);
+}.gap-xs {
+  gap: var(--space-xs);
 }.gap-s {
   gap: var(--space-s);
 }.gap-m {
   gap: var(--space-m);
+}.gapx-2xs {
+  column-gap: var(--space-2xs);
 }@media (min-width: 992px) {
   .lg:gap-xl {
     gap: var(--space-xl);

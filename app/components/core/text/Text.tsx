@@ -12,13 +12,14 @@ export type TextProps = {
     | "body"
     | "label";
   className?: string;
-  gradient?: boolean;
-  ellipsis?: boolean;
-  balance?: boolean;
-  dim?: boolean;
-  smaller?: boolean;
-  right?: boolean;
   center?: boolean;
+  right?: boolean;
+  height?: 'tight' | 'compact' | 'normal' | 'relaxed';
+  balance?: boolean;
+  ellipsis?: boolean;
+  smaller?: boolean;
+  dim?: boolean;
+  gradient?: boolean;
 };
 
 const classSet = new Map<string, string>([
@@ -31,11 +32,19 @@ const classSet = new Map<string, string>([
   ["span", "label"],
 ]);
 
+const height = new Map<TextProps["height"], string>([
+  ["tight", "tight"],
+  ["compact", "compact"],
+  ["normal", "normal"],
+  ["relaxed", "relaxed"],
+]);
+
 export const getTextClassName = (props: Partial<TextProps>) => {
   let className = "";
 
   if (props.className) className += props.className + " ";
   className += `text ${props.variant ?? classSet.get(props.as!)!}`;
+  if (props.height) className += ` ${height.get(props.height)}`;
   if (props.gradient) className += " gradient";
   if (props.ellipsis) className += " ellipsis";
   if (props.balance) className += " balance";
@@ -59,6 +68,7 @@ export const Text = (props: PropsWithChildren<TextProps>) => {
     smaller,
     right,
     center,
+    height,
     children,
     ...rest
   } = props;
@@ -72,6 +82,7 @@ export const Text = (props: PropsWithChildren<TextProps>) => {
     smaller,
     right,
     center,
+    height,
     as: Component,
     className: base,
   });

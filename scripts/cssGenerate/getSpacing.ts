@@ -1,4 +1,9 @@
-import { shortNameMap, directionMap, valueMap, breakpointMap } from "./mappings";
+import {
+  shortNameMap,
+  directionMap,
+  valueMap,
+  breakpointMap,
+} from "./mappings";
 
 const getSpacing = (propertyName: string) => (name: string) => {
   let [breakpoint, className] = name.split(":");
@@ -10,12 +15,15 @@ const getSpacing = (propertyName: string) => (name: string) => {
 
   let properties = [propertyName];
 
-  if (direction === "x") {
-    properties = [`${propertyName}-left`, `${propertyName}-right`];
-  }
-  if (direction === "y") {
-    properties = [`${propertyName}-top`, `${propertyName}-bottom`];
-  }
+  if (direction === "x")
+    propertyName === "gap"
+      ? (properties = ['column-gap'])
+      : [`${propertyName}-left`, `${propertyName}-right`];
+  if (direction === "y")
+    propertyName === "gap"
+      ? (properties = ['row-gap'])
+      : [`${propertyName}-top`, `${propertyName}-bottom`];
+
   if (directionMap.has(direction)) {
     properties = [`${propertyName}-${directionMap.get(direction)}`];
   }

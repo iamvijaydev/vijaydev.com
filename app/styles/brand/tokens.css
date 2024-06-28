@@ -22,5 +22,11 @@
   --card-bg-color-hover: var(--md-sys-color-secondary-container);
   --card-text-color-hover: var(--md-sys-color-on-secondary-container);
 
+  --label-bg-color: var(--app-bar-bg-color);
   --label-text-color: var(--md-sys-color-on-surface-variant);
+}
+
+.label-box {
+  background-color: var(--label-bg-color);
+  color: var(--label-text-color);
 }

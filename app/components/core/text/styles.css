@@ -133,4 +133,25 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  &.dim {
+    color: var(--text-dim-color);
+    fill: var(--text-dim-color);
+  }
+
+  &.tight {
+    line-height: var(--line-height-tight);
+  }
+
+  &.compact {
+    line-height: var(--line-height-compact);
+  }
+
+  &.normal {
+    line-height: var(--line-height-normal);
+  }
+
+  &.relax {
+    line-height: var(--line-height-relax);
+  }
 }
