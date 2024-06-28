@@ -35,7 +35,7 @@ export const RouteComponent = ({ pathname }: PropsWithChildren<Props>) => {
   return (
     <div>
       <Masthead
-        breadcrumbNodes={[{ href: "/learn", label: "Learn" }]}
+        breadcrumbNodes={[{ href: "/", label: "Home" }, { href: "/learn", label: "Learn" }]}
         title={matter.title}
         description={matter.description}
       />

@@ -1,38 +1,202 @@
-:root {
-  --light-grad-1: linear-gradient(to top, #5235ab 0%, #9c36b5 100%); /* violet10 -> purple8 */
-  --dark-grad-1: linear-gradient(to top, #7950f2 0%, #da77f2 100%); /* v6 -> p3 */
-  --light-grad-2: linear-gradient(60deg, #2b8a3e 0%, #e67700 100%); /* green9 -> yellow9 */
-  --dark-grad-2: linear-gradient(60deg, #b2f2bb 0%, #ffe066 100%); /* green3 -> yellow3 */
+/* @supports (background-color: lch(10% 100 240)) {
+  :root {
+    --light-grad-primary-title: linear-gradient(to top in lch, var(--light-grad-primary-title-from) 0%, var(--light-grad-primary-title-to) 100%);
+    --dark-grad-primary-title: linear-gradient(to top in lch, var(--dark-grad-primary-title-from) 0%, var(--dark-grad-primary-title-to) 100%);
 
-  --grad-1: var(--light-grad-1);
-  --grad-2: var(--light-grad-2);
+    --light-grad-brand-label: linear-gradient(to top in lch, var(--violet-12) 0%, var(--pink-9) 100%);
+    --dark-grad-brand-label: linear-gradient(to top in lch, var(--violet-3) 0%, var(--pink-0) 100%);
+  }
+} */
+
+:where(*) {
+  --from-color-0: oklch(99% 0.03 var(--from-hue, 0));
+  --from-color-1: oklch(95% 0.06 var(--from-hue, 0));
+  --from-color-2: oklch(88% 0.12 var(--from-hue, 0));
+  --from-color-3: oklch(80% 0.14 var(--from-hue, 0));
+  --from-color-4: oklch(74% 0.16 var(--from-hue, 0));
+  --from-color-5: oklch(68% 0.19 var(--from-hue, 0));
+  --from-color-6: oklch(63% 0.2 var(--from-hue, 0));
+  --from-color-7: oklch(58% 0.21 var(--from-hue, 0));
+  --from-color-8: oklch(53% 0.2 var(--from-hue, 0));
+  --from-color-9: oklch(49% 0.19 var(--from-hue, 0));
+  --from-color-10: oklch(42% 0.17 var(--from-hue, 0));
+  --from-color-11: oklch(35% 0.15 var(--from-hue, 0));
+  --from-color-12: oklch(27% 0.12 var(--from-hue, 0));
+  --from-color-13: oklch(20% 0.09 var(--from-hue, 0));
+  --from-color-14: oklch(14% 0.07 var(--from-hue, 0));
+  --from-color-15: oklch(11% 0.05 var(--from-hue, 0));
+  --from-color-bright: oklch(65% 0.3 var(--from-hue, 0));
+
+  --to-color-0: oklch(99% 0.03 var(--to-hue, 0));
+  --to-color-1: oklch(95% 0.06 var(--to-hue, 0));
+  --to-color-2: oklch(88% 0.12 var(--to-hue, 0));
+  --to-color-3: oklch(80% 0.14 var(--to-hue, 0));
+  --to-color-4: oklch(74% 0.16 var(--to-hue, 0));
+  --to-color-5: oklch(68% 0.19 var(--to-hue, 0));
+  --to-color-6: oklch(63% 0.2 var(--to-hue, 0));
+  --to-color-7: oklch(58% 0.21 var(--to-hue, 0));
+  --to-color-8: oklch(53% 0.2 var(--to-hue, 0));
+  --to-color-9: oklch(49% 0.19 var(--to-hue, 0));
+  --to-color-10: oklch(42% 0.17 var(--to-hue, 0));
+  --to-color-11: oklch(35% 0.15 var(--to-hue, 0));
+  --to-color-12: oklch(27% 0.12 var(--to-hue, 0));
+  --to-color-13: oklch(20% 0.09 var(--to-hue, 0));
+  --to-color-14: oklch(14% 0.07 var(--to-hue, 0));
+  --to-color-15: oklch(11% 0.05 var(--to-hue, 0));
+  --to-color-bright: oklch(65% 0.3 var(--to-hue, 0));
+
+  --hue-pink: 350;
+  --hue-violet: 290;
+  --hue-teal: 185;
+  --hue-green: 145;
+  --hue-lime: 125;
+  --hue-yellow: 100;
+}
+
+:where(*) {
+  --grad-title: linear-gradient(
+    to top in oklch,
+    var(--title-from) 0%,
+    var(--title-to) 100%
+  );
+  --grad-label: linear-gradient(
+    -45deg in oklch,
+    var(--label-from) 0%,
+    var(--label-to) 100%
+  );
+}
+
+.grad-primary-title,
+.grad-primary-label {
+  --from-hue: var(--hue-violet);
+  --to-hue: var(--hue-pink);
+
+  --title-from: var(--from-color-10);
+  --title-to: var(--to-color-7);
+
+  --label-from: var(--from-color-12);
+  --label-to: var(--to-color-7);
+}
+.grad-primary-title {
+  color: var(--title-from);
+  background-image: var(--grad-title);
+}
+.grad-primary-label {
+  color: var(--label-from);
+  background-image: var(--grad-label);
+}
+
+.grad-secondary-title,
+.grad-secondary-label {
+  --from-hue: var(--hue-violet);
+  --to-hue: var(--hue-green);
+
+  --title-from: var(--from-color-12);
+  --title-to: var(--to-color-7);
+
+  --label-from: var(--from-color-12);
+  --label-to: var(--to-color-8);
+}
+.grad-secondary-title {
+  color: var(--title-from);
+  background-image: var(--grad-title);
+}
+.grad-secondary-label {
+  color: var(--title-from);
+  background-image: var(--grad-label);
+}
+
+.grad-title,
+.grad-label {
+  --to-hue: var(--hue-green);
+
+  --title-from: var(--text-color);
+  --title-to: var(--to-color-12);
+
+  --label-from: var(--text-color);
+  --label-to: var(--to-color-12);
+}
+.grad-title {
+  color: var(--title-from);
+  background-image: var(--grad-title);
+}
+.grad-label {
+  color: var(--title-from);
+  background-image: var(--grad-label);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --grad-1: var(--dark-grad-1);
-    --grad-2: var(--dark-grad-2);
+  .grad-primary-title,
+  .grad-primary-label {
+    --title-from: var(--from-color-11);
+    --title-to: var(--to-color-3);
+    --label-from: var(--from-color-5);
+    --label-to: var(--to-color-0);
+  }
+
+  .grad-secondary-title,
+  .grad-secondary-label {
+    --title-from: var(--from-color-10);
+    --title-to: var(--to-color-6);
+    --label-from: var(--from-color-5);
+    --label-to: var(--to-color-1);
+  }
+
+  .grad-title,
+  .grad-label {
+    --title-to: var(--to-color-0);
+    --label-to: var(--to-color-0);
   }
 }
 
 /* exact same as -< :root { >- from above */
 [color-scheme="light"] {
-  color-scheme: light;
+  .grad-primary-title,
+  .grad-primary-label {
+    --title-from: var(--from-color-10);
+    --title-to: var(--to-color-7);
 
-  --grad-1: var(--light-grad-1);
-  --grad-2: var(--light-grad-2);
+    --label-from: var(--from-color-12);
+    --label-to: var(--to-color-7);
+  }
+
+  .grad-secondary-title,
+  .grad-secondary-label {
+    --title-from: var(--from-color-12);
+    --title-to: var(--to-color-7);
+
+    --label-from: var(--from-color-12);
+    --label-to: var(--to-color-8);
+  }
+
+  .grad-title,
+  .grad-label {
+    --title-to: var(--to-color-12);
+    --label-to: var(--to-color-12);
+  }
 }
 
 /* exact same as -< @media (prefers-color-scheme: dark) { >- from above */
 [color-scheme="dark"] {
-  --grad-1: var(--dark-grad-1);
-  --grad-2: var(--dark-grad-2);
-}
+  .grad-primary-title,
+  .grad-primary-label {
+    --title-from: var(--from-color-11);
+    --title-to: var(--to-color-3);
+    --label-from: var(--from-color-5);
+    --label-to: var(--to-color-0);
+  }
 
-.grad-1 {
-  background-image: var(--grad-1);
-}
+  .grad-secondary-title,
+  .grad-secondary-label {
+    --title-from: var(--from-color-10);
+    --title-to: var(--to-color-6);
+    --label-from: var(--from-color-5);
+    --label-to: var(--to-color-1);
+  }
 
-.grad-2 {
-  background-image: var(--grad-2);
+  .grad-title,
+  .grad-label {
+    --title-to: var(--to-color-0);
+    --label-to: var(--to-color-0);
+  }
 }

@@ -28,7 +28,7 @@ export const RouteComponent = (props: PropsWithChildren<Props>) => {
     <PostWrapper
       matter={matter}
       toc={props.toc}
-      breadcrumbNodes={[{ href: "/blog", label: "Blog" }]}
+      breadcrumbNodes={[{ href: "/", label: "Home" }, { href: "/blog", label: "Blog" }]}
     >
       {props.children}
     </PostWrapper>

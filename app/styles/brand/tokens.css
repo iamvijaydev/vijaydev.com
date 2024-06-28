@@ -2,7 +2,7 @@
   /* custom colors vars */
   --bg-color: var(--md-sys-color-surface);
   --text-color: var(--md-sys-color-on-surface);
-  --text-dim-color: var(--md-sys-color-on-surface-dim);
+  --text-dim-color: var(--md-sys-color-on-surface-variant);
 
   --link-bg-color: transparent;
   --link-text-color: var(--md-sys-color-primary);
