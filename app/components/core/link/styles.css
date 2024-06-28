@@ -1,77 +1,59 @@
-.link,
-.link:visited {
-  --duration: var(--standard-decelerate-duration);
-  --easing: var(--standard-decelerate-easing);
-  --property: color, background-color, border-color, box-shadow;
+.link {
+  --_bg-color: var(--link-bg-color);
+  --_text-color: var(--link-text-color);
+  --_border-radius: var(--border-radius-xs);
+  --_duration: var(--standard-decelerate-duration);
+  --_easing: var(--standard-decelerate-easing);
+  --_property: color, background-color, border-color, box-shadow;
 
-  --color: var(--link-text-color);
-  --bg-color: var(--link-bg-color);
-  --border-radius: var(--border-radius-s);
-
-  color: var(--color);
-  background-color: var(--bg-color);
-  border-radius: var(--border-radius);
   text-decoration: none;
-
-  transition-property: var(--property);
-  transition-duration: var(--duration);
-  transition-timing-function: var(--easing);
+  background-color: var(--_bg-color);
+  color: var(--_text-color);
+  border-radius: var(--_border-radius);
+  display: inline-block;
+  padding: 0 var(--space-3xs);
+  transition: var(--_property) var(--_duration) var(--_easing);
 }
 
-.link:active {
-  --duration: var(--standard-accelerate-duration);
-  --easing: var(--standard-accelerate-easing);
+.link:visited {
+  --_text-color: var(--link-text-color-visited);
+}
 
-  --color: var(--link-hover-color);
-  --bg-color: var(--link-hover-bg-color);
+.link:active,
+.link.active {
+  --_text-color: var(--link-text-color-hover);
+  --_bg-color: var(--link-bg-color-hover);
+  --_duration: var(--standard-accelerate-duration);
+  --_easing: var(--standard-accelerate-easing);
 }
 
 .link.active {
-  font-weight: 700;
-  text-decoration: underline;
+  outline: 1px solid transparent;
+  outline-offset: 0.1em;
+  box-shadow: 0 0 0 0.1em var(--_text-color);
 }
 
 @media (hover:hover) {
   .link:hover {
-    --duration: var(--standard-accelerate-duration);
-    --easing: var(--standard-accelerate-easing);
-
-    --color: var(--link-hover-color);
-    --bg-color: var(--link-hover-bg-color);
+    --_text-color: var(--link-text-color-hover);
+    --_bg-color: var(--link-bg-color-hover);
+    --_duration: var(--standard-accelerate-duration);
+    --_easing: var(--standard-accelerate-easing);
   }
 }
 
-.link-focus-visible:focus-visible {
-  --duration: var(--standard-accelerate-duration);
-  --easing: var(--standard-accelerate-easing);
+.link:not(.no-focus):focus-visible {
+  --_duration: var(--standard-accelerate-duration);
+  --_easing: var(--standard-accelerate-easing);
 
-  --color: var(--link-hover-color);
-  --bg-color: var(--link-hover-bg-color);
+  --_text-color: var(--link-text-color-hover);
+  --_bg-color: var(--link-bg-color-hover);
 
-  --other: 1;
-  --offset-width: 2px;
+  --_gap-offset-width: 0.1em;
+  --_shadow-offset-width: 0.2em;
 
   text-decoration: none;
-  outline: var(--offset-width) solid transparent;
-  outline-offset: var(--offset-width);
-  box-shadow: 0 0 0 var(--offset-width) var(--background-color), 0 0 0 calc(var(--offset-width) + var(--offset-width)) var(--link-color);
-}
-
-.text-link-color {
-  text-decoration: underline;
-  color: var(--link-color);
-  fill: var(--link-color);
-}
-
-@media (hover:hover) {
-  *:hover>.hover\:text-link-color {
-    color: var(--link-hover-color);
-    fill: var(--link-hover-color);
-  }
-}
-
-*:focus-visible>.hover\:text-link-color {
-  text-decoration: none;
-  color: var(--link-hover-color);
-  fill: var(--link-hover-color);
+  outline: var(--_gap-offset-width) solid transparent;
+  outline-offset: var(--_gap-offset-width);
+  box-shadow: 0 0 0 var(--_gap-offset-width) var(--bg-color), 0 0 0 var(--_shadow-offset-width) var(--_text-color);
 }

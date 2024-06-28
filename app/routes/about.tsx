@@ -1,5 +1,5 @@
 import { MetaLink, Meta } from "~types";
-import { Link, Button } from "main";
+import { Link, Button, Masthead } from "main";
 
 export const links: MetaLink[] = [
   {
@@ -9,7 +9,10 @@ export const links: MetaLink[] = [
 ];
 
 export const meta: Meta[] = [
-  { title: "About | vijaydev.com" },
+  {
+    name: "title",
+    content: "About | vijaydev.com",
+  },
   {
     name: "description",
     content: "About Vijay Dev",
@@ -19,7 +22,11 @@ export const meta: Meta[] = [
 export const RouteComponent = () => {
   return (
     <div>
-      <div>About</div>
+      <Masthead
+        title="About me"
+        description="I build world class web apps for enterprise products and services"
+        branding="secondary"
+      />
       <div className="my-l">
         <Link href="/home">Home</Link>
       </div>
@@ -30,7 +37,6 @@ export const RouteComponent = () => {
         <Button label="Text" as="Text" />
         <Button label="Icon" as="Icon" />
         <Button label="Menu" as="Menu" />
-
       </div>
     </div>
   );

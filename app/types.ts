@@ -3,16 +3,11 @@ export type MetaLink = {
   rel: string;
 };
 
-export type MetaTitle = {
-  title: string;
-};
-
-export type MetaTag = {
+export type Meta = {
   name: string;
   content: string;
+  pageContent?: string;
 };
-
-export type Meta = MetaTag | MetaTitle;
 
 export type { Imports } from './store/htmlHead/state';
 

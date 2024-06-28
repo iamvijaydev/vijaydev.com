@@ -1,9 +1,13 @@
 .app-bar {
-  --_shadow: var(--shadow-3);
+  --_shadow: var(--shadow-4);
   box-shadow: var(--_shadow);
   background-color: var(--app-bar-bg-color);
   color: var(--app-bar-text-color);
   transition: box-shadow 0.2s ease;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 html[data-scroll="0"] .app-bar {
@@ -11,7 +15,7 @@ html[data-scroll="0"] .app-bar {
 }
 
 .app-bar__height {
-  height: 60px;
+  height: var(--app-bar-height);
 }
 
 .logo {

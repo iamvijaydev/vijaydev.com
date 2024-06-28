@@ -10,7 +10,7 @@ export { type AnchorAttributes, Link } from '~components/core/link/Link';
 export { Button } from '~components/core/button/Button';
 export { LinkCard } from '~components/core/LinkCard';
 export { PostWrapper } from '~components/core/PostWrapper';
-export { Masthead } from '~components/core/Masthead';
+export { Masthead } from '~components/core/masthead/Masthead';
 
 export { AppBar } from '~components/features/appBar/AppBar';
 

@@ -13,7 +13,7 @@ export const AppBar = () => {
           </Link>
         </Cell>
         <Cell size={6}>
-          <nav className="app-bar__height flex flex-end align-center gap-s">
+          <nav className="app-bar__height flex flex-end align-center gap-m">
             <Link href="/about">About</Link>
             <Link href="/featured">Featured</Link>
             <Link href="/blog">Blog</Link>

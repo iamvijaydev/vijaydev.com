@@ -19,5 +19,6 @@ export const paddings = [
 export const gaps = [
   'gap-2xs',
   'gap-s',
+  'gap-m',
   'lg:gap-xl',
 ];

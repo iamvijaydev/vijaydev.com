@@ -10,6 +10,11 @@ export const defaultLinks: MetaLink[] = [{
   rel: "stylesheet",
 }]
 
+export const defaultMeta: Meta[] = [{
+  name: "viewport",
+  content: "width=device-width, initial-scale=1.0",
+}];
+
 export type HtmlHeadState = {
   imports: Imports;
   links: MetaLink[];
@@ -23,5 +28,5 @@ export const getHtmlHeadState = (
 ): HtmlHeadState => ({
   imports: imports,
   links: [...defaultLinks, ...links],
-  meta: meta,
+  meta: [...defaultMeta, ...meta],
 });

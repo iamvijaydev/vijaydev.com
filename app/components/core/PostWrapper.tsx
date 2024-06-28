@@ -3,7 +3,7 @@ import type { TocEntry } from "@stefanprobst/rehype-extract-toc";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
 import { Toc } from "~components/core/toc/Toc";
 import { RelatedItemCard } from "~components/core/RelatedItemCard";
-import { Masthead } from "~components/core/Masthead";
+import { Masthead } from "~components/core/masthead/Masthead";
 import type { BreadcrumbNode } from "~components/core/Breadcrumb";
 import { getLocaleDateString } from "~utils/getLocalDateString";
 import { ContentItemDetailed } from "~types";
@@ -34,15 +34,16 @@ export const PostWrapper = ({
 
   return (
     <div id="article-layout">
-      <Masthead
-        breadcrumbNodes={breadcrumbNodes}
-        title={matter.title}
-        description={matter.description}
-        published={date.published}
-        updated={date.updated}
-        readTime={matter.readTime}
-      />
       <article className="col-12 xl:col-7" id="article-content">
+        <Masthead
+          breadcrumbNodes={breadcrumbNodes}
+          title={matter.title}
+          description={matter.description}
+          published={date.published}
+          updated={date.updated}
+          readTime={matter.readTime}
+        />
+
         {children}
 
         <footer className="mt-7">

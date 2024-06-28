@@ -6,9 +6,14 @@
 
   --link-bg-color: transparent;
   --link-text-color: var(--md-sys-color-primary);
+
+  --link-bg-color-visited: transparent;
+  --link-text-color-visited: var(--md-sys-color-secondary);
+
   --link-bg-color-hover: var(--md-sys-color-secondary-container);
   --link-text-color-hover: var(--md-sys-color-on-secondary-container);
 
+  --app-bar-height: 60px;
   --app-bar-bg-color: var(--md-sys-color-surface-container);
   --app-bar-text-color: var(--md-sys-color-on-surface-container);
 

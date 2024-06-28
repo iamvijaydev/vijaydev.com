@@ -9,7 +9,10 @@ export const links: MetaLink[] = [
 ];
 
 export const meta: Meta[] = [
-  { title: "Learn" },
+  {
+    name: "title",
+    content: "Learn des",
+  },
   {
     name: "description",
     content: "Learn des",
@@ -21,7 +24,11 @@ export const RouteComponent = () => {
 
   return (
     <div>
-      <Masthead title="Learn" description="Learn FE" />
+      <Masthead
+        title="Learn Fe"
+        description="I build world class web apps for enterprise products and services"
+        branding="secondary"
+      />
       <Text as="h3">Featured</Text>
       {
         store.state.featured.map((topic) => (

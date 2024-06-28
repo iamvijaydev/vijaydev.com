@@ -21,7 +21,10 @@ import { RouteComponent as BaseRouteComponent } from '${template}';
 export { links } from '${template}';
 
 export const meta = ([
-  { title: matter.title },
+  {
+    name: "title",
+    content: matter.title,
+  },
   {
     name: "description",
     content: matter.description,

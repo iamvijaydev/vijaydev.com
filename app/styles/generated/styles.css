@@ -34,6 +34,8 @@
   gap: var(--space-2xs);
 }.gap-s {
   gap: var(--space-s);
+}.gap-m {
+  gap: var(--space-m);
 }@media (min-width: 992px) {
   .lg:gap-xl {
     gap: var(--space-xl);

@@ -17,7 +17,10 @@ export const links: MetaLink[] = [
 ];
 
 export const meta: Meta[] = [
-  { title: "Vijay Dev" },
+  {
+    name: "title",
+    content: "Vijay Dev",
+  },
   {
     name: "description",
     content: "Welcome to the personal website of Vijay Dev.",
@@ -29,9 +32,9 @@ export const RouteComponent = () => {
     <div>
       <section>
         <Masthead
-          title="Hi, I'm Vijay Dev, a web architect"
-          description="I build world class web apps for enterprise products and services"
-          center
+          title="Web Architect"
+          description="Vijay Dev builds world class web apps for enterprise products and services"
+          branding="primary"
         />
         <div>
           <h2>My roles</h2>
