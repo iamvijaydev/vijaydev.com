@@ -54,16 +54,12 @@
 }
 
 :where(*) {
-  --grad-title: linear-gradient(
-    to top in oklch,
-    var(--title-from) 0%,
-    var(--title-to) 100%
-  );
-  --grad-label: linear-gradient(
-    -45deg in oklch,
-    var(--label-from) 0%,
-    var(--label-to) 100%
-  );
+  --grad-title: linear-gradient(to top in oklch,
+      var(--title-from) 0%,
+      var(--title-to) 100%);
+  --grad-label: linear-gradient(-45deg in oklch,
+      var(--label-from) 0%,
+      var(--label-to) 100%);
 }
 
 .grad-primary-title,
@@ -77,19 +73,27 @@
   --label-from: var(--from-color-12);
   --label-to: var(--to-color-7);
 }
+
 .grad-primary-title {
   color: var(--title-from);
   background-image: var(--grad-title);
 }
+
 .grad-primary-label {
   color: var(--label-from);
   background-image: var(--grad-label);
 }
 
 .grad-secondary-title,
-.grad-secondary-label {
+.grad-secondary-label,
+.grad-title,
+.grad-label {
   --from-hue: var(--hue-violet);
   --to-hue: var(--hue-green);
+}
+
+.grad-secondary-title,
+.grad-secondary-label {
 
   --title-from: var(--from-color-12);
   --title-to: var(--to-color-7);
@@ -97,10 +101,12 @@
   --label-from: var(--from-color-12);
   --label-to: var(--to-color-8);
 }
+
 .grad-secondary-title {
   color: var(--title-from);
   background-image: var(--grad-title);
 }
+
 .grad-secondary-label {
   color: var(--title-from);
   background-image: var(--grad-label);
@@ -108,24 +114,25 @@
 
 .grad-title,
 .grad-label {
-  --to-hue: var(--hue-green);
+  --title-from: var(--from-color-12);
+  --title-to: var(--to-color-11);
 
-  --title-from: var(--text-color);
-  --title-to: var(--to-color-12);
-
-  --label-from: var(--text-color);
+  --label-from: var(--from-color-12);
   --label-to: var(--to-color-12);
 }
+
 .grad-title {
   color: var(--title-from);
   background-image: var(--grad-title);
 }
+
 .grad-label {
   color: var(--title-from);
   background-image: var(--grad-label);
 }
 
 @media (prefers-color-scheme: dark) {
+
   .grad-primary-title,
   .grad-primary-label {
     --title-from: var(--from-color-11);
@@ -144,13 +151,16 @@
 
   .grad-title,
   .grad-label {
-    --title-to: var(--to-color-0);
-    --label-to: var(--to-color-0);
+    --title-from: var(--from-color-2);
+    --title-to: var(--to-color-1);
+    --label-from: var(--from-color-2);
+    --label-to: var(--to-color-1);
   }
 }
 
 /* exact same as -< :root { >- from above */
 [color-scheme="light"] {
+
   .grad-primary-title,
   .grad-primary-label {
     --title-from: var(--from-color-10);
@@ -171,13 +181,17 @@
 
   .grad-title,
   .grad-label {
-    --title-to: var(--to-color-12);
+    --title-from: var(--from-color-12);
+    --title-to: var(--to-color-11);
+
+    --label-from: var(--from-color-12);
     --label-to: var(--to-color-12);
   }
 }
 
 /* exact same as -< @media (prefers-color-scheme: dark) { >- from above */
 [color-scheme="dark"] {
+
   .grad-primary-title,
   .grad-primary-label {
     --title-from: var(--from-color-11);
@@ -196,7 +210,9 @@
 
   .grad-title,
   .grad-label {
-    --title-to: var(--to-color-0);
-    --label-to: var(--to-color-0);
+    --title-from: var(--from-color-2);
+    --title-to: var(--to-color-1);
+    --label-from: var(--from-color-2);
+    --label-to: var(--to-color-1);
   }
 }
