@@ -1,7 +1,6 @@
 import { type BreadcrumbNode, Breadcrumb } from "~components/core/Breadcrumb";
 import { Label } from "~components/core/label/Label";
 import { Text } from "~components/core/text/Text";
-import { Grid } from "~components/core/grid/Grid";
 
 export interface Props {
   breadcrumbNodes?: BreadcrumbNode[];
@@ -25,7 +24,6 @@ export const Masthead = ({
   const padding = branding === "none" ? "py-2xl" : "py-3xl";
   const center = branding !== "none";
   const gradient = branding === "primary" || branding === "secondary";
-  const gridAs = branding === "none" ? "header" : "div";
 
   let titleGrad = " grad-title";
   let labelGrad = "grad-label";
@@ -43,14 +41,9 @@ export const Masthead = ({
   }
 
   return (
-    <Grid as={gridAs} size={12} className={padding}>
+    <div className={`flex flex-column align-center ${padding}`}>
       {breadcrumbNodes?.length ? <Breadcrumb nodes={breadcrumbNodes} /> : null}
-      <Text
-        as="h1"
-        gradient
-        center={center}
-        className={`mb-3xs${titleGrad}`}
-      >
+      <Text as="h1" gradient center={center} className={`mb-3xs${titleGrad}`}>
         {title}
       </Text>
       <Text
@@ -59,6 +52,7 @@ export const Masthead = ({
         gradient
         center={center}
         className={labelGrad}
+        // style={{ maxWidth: "50ch" }}
       >
         {description}
       </Text>
@@ -75,6 +69,6 @@ export const Masthead = ({
           <Label title={`${readTime}ing time`}>{readTime}</Label>
         </div>
       ) : null}
-    </Grid>
+    </div>
   );
 };

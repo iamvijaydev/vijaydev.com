@@ -15,17 +15,22 @@ const getSpacing = (propertyName: string) => (name: string) => {
 
   let properties = [propertyName];
 
-  if (direction === "x")
-    propertyName === "gap"
-      ? (properties = ['column-gap'])
-      : [`${propertyName}-left`, `${propertyName}-right`];
-  if (direction === "y")
-    propertyName === "gap"
-      ? (properties = ['row-gap'])
-      : [`${propertyName}-top`, `${propertyName}-bottom`];
-
-  if (directionMap.has(direction)) {
+  if (direction === "x") {
+    properties =
+      propertyName === "gap"
+        ? ["column-gap"]
+        : [`${propertyName}-left`, `${propertyName}-right`];
+  } else if (direction === "y") {
+    properties =
+      propertyName === "gap"
+        ? ["row-gap"]
+        : [`${propertyName}-top`, `${propertyName}-bottom`];
+  } else if (directionMap.has(direction)) {
     properties = [`${propertyName}-${directionMap.get(direction)}`];
+  }
+
+  if (name === "py-2xl") {
+    console.log("direction:", direction, properties);
   }
 
   const propertyValue = properties

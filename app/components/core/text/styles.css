@@ -56,7 +56,8 @@
   letter-spacing: var(--_spacing);
   line-height: var(--_height);
   text-wrap: var(--_wrap);
-  
+  text-align: var(--_align, left);
+
   &.display {
     --_size: var(--display-size);
     --_weight: var(--display-weight);
@@ -64,7 +65,7 @@
     --_height: var(--display-line-height);
     --_wrap: balance;
   }
-  
+
   &.description {
     --_size: var(--display-desc-size);
     --_weight: var(--display-desc-weight);
@@ -88,40 +89,40 @@
     --_size: var(--title-size-4);
     --_weight: var(--title-weight-4);
   }
-  
+
   &.title-5 {
     --_size: var(--title-size-5);
     --_weight: var(--title-weight-5);
     --_height: var(--title-5-line-height);
   }
-  
+
   &.body {
     --_size: var(--body-size);
     --_weight: var(--body-weight);
     --_height: var(--body-line-height);
   }
-  
+
   &.label {
     --_size: var(--label-size);
     --_weight: var(--label-weight);
   }
-  
+
   &.right {
-    text-align: right;
+    --_align: right;
   }
 
   &.center {
-    text-align: center;
+    --_align: center;
   }
-  
+
   &.smaller {
     font-size: smaller
   }
-  
+
   &.wrap-balance {
-    text-wrap: balance;
+    --_wrap: balance;
   }
-  
+
   &.ellipsis {
     white-space: nowrap;
     overflow: hidden;
@@ -140,18 +141,19 @@
   }
 
   &.tight {
-    line-height: var(--line-height-tight);
+    --_height: var(--line-height-tight);
+
   }
 
   &.compact {
-    line-height: var(--line-height-compact);
+    --_height: var(--line-height-compact);
   }
 
   &.normal {
-    line-height: var(--line-height-normal);
+    --_height: var(--line-height-normal);
   }
 
   &.relax {
-    line-height: var(--line-height-relax);
+    --_height: var(--line-height-relax);
   }
 }

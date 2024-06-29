@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {  
+  "scripts": {
     "css:generate": "esrun ./scripts/cssGenerate/generate.ts",
     "css:bundle": "lightningcss --minify --bundle --targets '>= 0.25%' ./app/styles/styles.css -o ./dist/client/assets/styles.css",
     "build:css": "pnpm css:generate && pnpm css:bundle",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@code-hike/mdx": "0.9.0",
     "@mdx-js/esbuild": "3.0.1",
+    "@mdx-js/react": "^3.0.1",
     "@rollup/plugin-terser": "0.4.4",
     "@stefanprobst/rehype-extract-toc": "2.2.0",
     "@types/fs-extra": "11.0.4",

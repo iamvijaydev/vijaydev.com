@@ -1,19 +1,40 @@
 import { PropsWithChildren } from "react";
 
+export type Size = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+
+export type ScreenSize = {
+  screen?: "sm" | "md" | "lg" | "xl";
+  size: Size;
+}
+
 export type CellProps = {
-  size: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+  as?: "section" | "article" | "header" | "footer" | "div";
+  size: Size | ScreenSize | ScreenSize[];
   className?: string;
 };
 
 export const Cell = ({
+  as: Component = "div",
   size,
-  className,
+  className: baseClassName = '',
   children,
 }: PropsWithChildren<CellProps>) => {
+  let className = baseClassName;
+
+  if (typeof size === "number") {
+    className += ` col-${size}`;
+  } else if (Array.isArray(size)) {
+    size.forEach((each) => {
+      className += ` ${each.screen ? each.screen + ':' : ''}col-${each.size}`;
+    });
+  } else {
+    className += ` ${size.screen ? size.screen + ':' : ''}col-${size.size}`;
+  }
+
   return (
-    <div className={className ? `${className} col-${size}` : `col-${size}`}>
+    <Component className={className}>
       {children}
-    </div>
+    </Component>
   );
 };
 

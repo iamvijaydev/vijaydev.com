@@ -1,12 +1,15 @@
 import { PropsWithChildren, useState } from "react";
+import { MDXProvider } from "@mdx-js/react";
 import type { TocEntry } from "@stefanprobst/rehype-extract-toc";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
 import { Toc } from "~components/core/toc/Toc";
 import { RelatedItemCard } from "~components/core/RelatedItemCard";
 import { Masthead } from "~components/core/masthead/Masthead";
+import { Grid, Cell } from "~components/core/grid/Grid";
 import type { BreadcrumbNode } from "~components/core/Breadcrumb";
 import { getLocaleDateString } from "~utils/getLocalDateString";
 import { ContentItemDetailed } from "~types";
+import { mdxComponents } from "~components/core/mdxComponents";
 
 export type Props = {
   matter: ContentItemDetailed;
@@ -33,8 +36,8 @@ export const PostWrapper = ({
   }, [matter.published, matter.updated]);
 
   return (
-    <div id="article-layout">
-      <article className="col-12 xl:col-7" id="article-content">
+    <Grid as="div">
+      <Cell as="article" size={[{ size: 12 }, { screen: "md", size: 7 }]}>
         <Masthead
           breadcrumbNodes={breadcrumbNodes}
           title={matter.title}
@@ -44,7 +47,7 @@ export const PostWrapper = ({
           readTime={matter.readTime}
         />
 
-        {children}
+        <MDXProvider components={mdxComponents}>{children}</MDXProvider>
 
         <footer className="mt-7">
           <nav className="flex f-column lg:f-row j-between gap-m">
@@ -65,13 +68,13 @@ export const PostWrapper = ({
             ) : null}
           </nav>
         </footer>
-      </article>
+      </Cell>
       <Toc
         title={matter.title}
         toc={toc}
         contentSiblingId="#article-content"
         className="col-12 xl:col-start-9 xl:col-end-13 xl:a-self-start"
       />
-    </div>
+    </Grid>
   );
 };
