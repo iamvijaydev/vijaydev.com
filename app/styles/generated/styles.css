@@ -16,6 +16,12 @@
   margin-bottom: var(--space-3xs);
 }.mt-xl {
   margin-top: var(--space-xl);
+}.mb-xs {
+  margin-bottom: var(--space-xs);
+}.mb-s {
+  margin-bottom: var(--space-s);
+}.mb-m {
+  margin-bottom: var(--space-m);
 }
 .p-2xs {
   padding: var(--space-2xs);
@@ -29,6 +35,8 @@
   padding-top: var(--space-2xl);padding-bottom: var(--space-2xl);
 }.py-3xl {
   padding-top: var(--space-3xl);padding-bottom: var(--space-3xl);
+}.pt-xs {
+  padding-top: var(--space-xs);
 }
 .gap-3xs {
   gap: var(--space-3xs);

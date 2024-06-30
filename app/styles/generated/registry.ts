@@ -6,6 +6,9 @@ export const margins = [
   'mb-2xs',
   'mb-3xs',
   'mt-xl',
+  'mb-xs',
+  'mb-s',
+  'mb-m',
 ];
 
 export const paddings = [
@@ -14,6 +17,7 @@ export const paddings = [
   'lg:px-xl',
   'py-2xl',
   'py-3xl',
+  'pt-xs'
 ];
 
 export const gaps = [

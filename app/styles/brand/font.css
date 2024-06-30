@@ -1,6 +1,6 @@
 /* @link https://utopia.fyi/type/calculator?c=420,16,1.2,2525,20,1.25,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
-:root {
+/* :root {
   --size--1: clamp(0.8333rem, 0.8001rem + 0.1267vi, 1rem);
   --size-0: clamp(1rem, 0.9501rem + 0.19vi, 1.25rem);
   --size-1: clamp(1.2rem, 1.1277rem + 0.2755vi, 1.5625rem);
@@ -48,4 +48,4 @@
 
   --label-size: var(--size--1);
   --label-weight: 400;
-}
+} */

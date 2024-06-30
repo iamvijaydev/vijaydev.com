@@ -36,9 +36,7 @@ export const meta = ([
 export const RouteComponent = () => {
   return (
     <BaseRouteComponent pathname="${pathname}" parentPathname="${parentPathname}" toc={toc}>
-      <MDXProvider components={mdxComponents}>
-        <RouteContentComponent />
-      </MDXProvider>
+      <RouteContentComponent components={mdxComponents} />
     </BaseRouteComponent>
   );
 };

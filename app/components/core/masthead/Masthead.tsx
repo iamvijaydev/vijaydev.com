@@ -21,7 +21,7 @@ export const Masthead = ({
   updated,
   readTime,
 }: Props) => {
-  const padding = branding === "none" ? "py-2xl" : "py-3xl";
+  let styles = branding === "none" ? "py-2xl" : "py-3xl";
   const center = branding !== "none";
   const gradient = branding === "primary" || branding === "secondary";
 
@@ -30,18 +30,20 @@ export const Masthead = ({
 
   if (gradient) {
     if (branding === "primary") {
+      styles += " align-center";
       titleGrad = " grad-primary-title";
       labelGrad = "grad-primary-label";
     }
 
     if (branding === "secondary") {
+      styles += " align-center";
       titleGrad = " grad-secondary-title";
       labelGrad = "grad-secondary-label";
     }
   }
 
   return (
-    <div className={`flex flex-column align-center ${padding}`}>
+    <div className={`flex flex-column ${styles}`}>
       {breadcrumbNodes?.length ? <Breadcrumb nodes={breadcrumbNodes} /> : null}
       <Text as="h1" gradient center={center} className={`mb-3xs${titleGrad}`}>
         {title}

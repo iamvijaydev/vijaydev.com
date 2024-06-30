@@ -29,10 +29,6 @@ const getSpacing = (propertyName: string) => (name: string) => {
     properties = [`${propertyName}-${directionMap.get(direction)}`];
   }
 
-  if (name === "py-2xl") {
-    console.log("direction:", direction, properties);
-  }
-
   const propertyValue = properties
     .map((property) => `${property}: var(${valueMap.get(value)})`)
     .join(";");
