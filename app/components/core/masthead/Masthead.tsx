@@ -6,7 +6,7 @@ export interface Props {
   breadcrumbNodes?: BreadcrumbNode[];
   title: string;
   description: string;
-  branding?: "primary" | "secondary" | "none";
+  branding?: "primary" | "secondary";
   published?: string;
   updated?: string;
   readTime?: string;
@@ -16,45 +16,44 @@ export const Masthead = ({
   breadcrumbNodes,
   title,
   description,
-  branding = "none",
+  branding,
   published,
   updated,
   readTime,
 }: Props) => {
-  let styles = branding === "none" ? "py-2xl" : "py-3xl";
-  const center = branding !== "none";
-  const gradient = branding === "primary" || branding === "secondary";
+  const center = branding !== undefined;
+  let styles = branding ? "py-2xl" : "py-3xl";
+  const descStyles = branding ? "w-40ch" : "";
 
-  let titleGrad = " grad-title";
-  let labelGrad = "grad-label";
+  if (branding === "primary") {
+    styles += " align-center";
+  }
 
-  if (gradient) {
-    if (branding === "primary") {
-      styles += " align-center";
-      titleGrad = " grad-primary-title";
-      labelGrad = "grad-primary-label";
-    }
-
-    if (branding === "secondary") {
-      styles += " align-center";
-      titleGrad = " grad-secondary-title";
-      labelGrad = "grad-secondary-label";
-    }
+  if (branding === "secondary") {
+    styles += " align-center";
   }
 
   return (
     <div className={`flex flex-column ${styles}`}>
       {breadcrumbNodes?.length ? <Breadcrumb nodes={breadcrumbNodes} /> : null}
-      <Text as="h1" gradient center={center} className={`mb-3xs${titleGrad}`}>
+      <Text
+        as="h1"
+        balance
+        gradient
+        branding={branding}
+        center={center}
+        className="mb-3xs"
+      >
         {title}
       </Text>
       <Text
         as="div"
         variant="description"
+        balance
         gradient
+        branding={branding}
         center={center}
-        className={labelGrad}
-        // style={{ maxWidth: "50ch" }}
+        className={descStyles}
       >
         {description}
       </Text>

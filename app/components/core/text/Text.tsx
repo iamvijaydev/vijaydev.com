@@ -20,6 +20,7 @@ export type TextProps = {
   smaller?: boolean;
   dim?: boolean;
   gradient?: boolean;
+  branding?: "primary" | "secondary";
 };
 
 const classSet = new Map<string, string>([
@@ -46,6 +47,7 @@ export const getTextClassName = (props: Partial<TextProps>) => {
   className += `text ${props.variant ?? classSet.get(props.as!)!}`;
   if (props.height) className += ` ${height.get(props.height)}`;
   if (props.gradient) className += " gradient";
+  if (props.gradient && props.branding) className += ` ${String(props.branding)}`;
   if (props.ellipsis) className += " ellipsis";
   if (props.balance) className += " balance";
   if (props.dim) className += " dim";
@@ -62,6 +64,7 @@ export const Text = (props: PropsWithChildren<TextProps>) => {
     variant,
     className: base,
     gradient,
+    branding,
     ellipsis,
     balance,
     dim,
@@ -76,6 +79,7 @@ export const Text = (props: PropsWithChildren<TextProps>) => {
   const className = getTextClassName({
     variant,
     gradient,
+    branding,
     ellipsis,
     balance,
     dim,
