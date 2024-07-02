@@ -13,6 +13,10 @@
   --link-bg-color-hover: var(--md-sys-color-secondary-container);
   --link-text-color-hover: var(--md-sys-color-on-secondary-container);
 
+  --link-aux-text-color: var(--text-dim-color);
+  --link-aux-bg-color-hover: var(--md-sys-color-surface-container);
+  --link-aux-text-color-hover: var(--md-sys-color-on-surface-container);
+
   --app-bar-height: 60px;
   --app-bar-bg-color: var(--md-sys-color-surface-container);
   --app-bar-text-color: var(--md-sys-color-on-surface-container);

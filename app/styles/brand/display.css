@@ -1,5 +1,14 @@
-.none {
+:where(.none) {
   display: none;
+}
+
+@media (min-width: 768px) {
+  :where(.md\:block) {
+    display: block;
+  }
+  :where(.md\:inline-block) {
+    display: inline-block;
+  }
 }
 
 .flex {

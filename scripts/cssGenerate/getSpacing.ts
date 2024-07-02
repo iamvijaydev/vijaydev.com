@@ -35,7 +35,7 @@ const getSpacing = (propertyName: string) => (name: string) => {
 
   if (breakpoint !== name && breakpointMap.has(breakpoint)) {
     return `${breakpointMap.get(breakpoint)} {
-  .${breakpoint}\:${className} {
+  .${breakpoint}\\:${className} {
     ${propertyValue};
   }
 }`;

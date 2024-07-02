@@ -2,7 +2,7 @@ import { PropsWithChildren, useState } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import type { TocEntry } from "@stefanprobst/rehype-extract-toc";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
-import { Toc } from "~components/core/toc/Toc";
+import { AsideToc } from "~components/core/toc/features/AsideToc";
 import { RelatedItemCard } from "~components/core/RelatedItemCard";
 import { Masthead } from "~components/core/masthead/Masthead";
 import { Grid, Cell } from "~components/core/grid/Grid";
@@ -37,7 +37,7 @@ export const PostWrapper = ({
 
   return (
     <Grid as="div">
-      <Cell as="article" size={[{ size: 12 }, { screen: "md", size: 7 }]}>
+      <Cell size={12}>
         <Masthead
           breadcrumbNodes={breadcrumbNodes}
           title={matter.title}
@@ -46,7 +46,8 @@ export const PostWrapper = ({
           updated={date.updated}
           readTime={matter.readTime}
         />
-
+      </Cell>
+      <Cell as="article" size={[{ size: 12 }, { screen: "md", size: 7 }]}id="article-content">
         <MDXProvider components={mdxComponents}>{children}</MDXProvider>
 
         <footer className="mt-7">
@@ -69,12 +70,26 @@ export const PostWrapper = ({
           </nav>
         </footer>
       </Cell>
-      <Toc
+      <Cell
+        as="aside"
+        size={[
+          { screen: "md", size: 9, position: "start" },
+          { screen: "md", size: 13, position: "end" },
+        ]}
+        className="none md:inline-block"
+      >
+        <AsideToc
+          title={matter.title}
+          toc={toc}
+          contentSiblingId="#article-content"
+        />
+      </Cell>
+      {/* <Toc
         title={matter.title}
         toc={toc}
         contentSiblingId="#article-content"
         className="col-12 xl:col-start-9 xl:col-end-13 xl:a-self-start"
-      />
+      /> */}
     </Grid>
   );
 };

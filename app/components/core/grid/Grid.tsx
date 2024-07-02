@@ -1,48 +1,69 @@
 import { PropsWithChildren } from "react";
 
-export type Size = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+export type Size = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13;
 
 export type ScreenSize = {
   screen?: "sm" | "md" | "lg" | "xl";
+  type?: "col" | "row";
+  position?: "start" | "end";
   size: Size;
+};
+
+export type SizeType = Size | ScreenSize | ScreenSize[];
+
+export interface CellProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
+  as?: "section" | "article" | "aside" | "header" | "footer" | "div";
+  size: SizeType;
+  className?: string;
 }
 
-export type CellProps = {
-  as?: "section" | "article" | "header" | "footer" | "div";
-  size: Size | ScreenSize | ScreenSize[];
-  className?: string;
+const getClassName = (size: SizeType) => {
+  const getConfigClassName = (size: ScreenSize) => {
+    const screen = size.screen ? `${size.screen}:` : "";
+    const type = size.type === "row" ? "row-" : "col-";
+    const position = size.position ? `${size.position}-` : "";
+
+    return `${screen}${type}${position}${size.size}`;
+  };
+
+  if (typeof size === "number") {
+    return `col-${size}`;
+  }
+
+  if (Array.isArray(size)) {
+    return size.map(getConfigClassName).join(" ");
+  }
+
+  return getConfigClassName(size);
 };
 
 export const Cell = ({
   as: Component = "div",
   size,
-  className: baseClassName = '',
+  className = "",
   children,
+  ...rest
 }: PropsWithChildren<CellProps>) => {
-  let className = baseClassName;
-
-  if (typeof size === "number") {
-    className += ` col-${size}`;
-  } else if (Array.isArray(size)) {
-    size.forEach((each) => {
-      className += ` ${each.screen ? each.screen + ':' : ''}col-${each.size}`;
-    });
-  } else {
-    className += ` ${size.screen ? size.screen + ':' : ''}col-${size.size}`;
-  }
-
   return (
-    <Component className={className}>
+    <Component className={(className += " " + getClassName(size))} {...rest}>
       {children}
     </Component>
   );
 };
 
-export type GridProps = {
+export interface GridProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   as?: "section" | "article" | "header" | "footer" | "div";
   size?: CellProps["size"];
   className?: string;
-};
+}
 
 export const Grid = ({
   as: Component = "div",

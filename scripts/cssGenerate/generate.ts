@@ -2,7 +2,8 @@ import { outputFile } from "fs-extra";
 import { resolve } from "node:path";
 
 import { getMargin, getPadding, getGap } from "./getSpacing";
-import { margins, paddings, gaps } from "../../app/styles/generated/registry";
+import { generateGridClassNames } from "./grid";
+import { margins, paddings, gaps, grid } from "../../app/styles/generated/registry";
 
 export const generate = async () => {
   console.time(`css generated`);
@@ -12,6 +13,7 @@ export const generate = async () => {
 ${margins.map(getMargin).join("")}
 ${paddings.map(getPadding).join("")}
 ${gaps.map(getGap).join("")}
+${grid.map(generateGridClassNames).join("")}
 `;
 
   await outputFile(

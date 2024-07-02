@@ -5,7 +5,7 @@ import type {
   TouchEvent as ReactTouchEvent,
 } from "react";
 import { useLoadRouteCommand } from "~commands/useLoadRoute";
-import { type TextProps, getTextClassName } from "~components/core/text/Text";
+import { type TextProps, getTextClassName, Text } from "~components/core/text/Text";
 
 export type ClickEvent =
   | ReactMouseEvent<HTMLAnchorElement, MouseEvent>
@@ -23,6 +23,7 @@ export interface AnchorAttributes
   onClick?: (e: ClickEvent) => void;
   isActive?: boolean;
   textProps?: Partial<TextProps>;
+  isAux?: boolean;
 }
 
 export const Link = (props: AnchorAttributes) => {
@@ -35,6 +36,7 @@ export const Link = (props: AnchorAttributes) => {
     children,
     className: propClassName,
     textProps,
+    isAux,
     ...anchorProps
   } = props;
 
@@ -49,6 +51,9 @@ export const Link = (props: AnchorAttributes) => {
   className.push('link');
   if (isActive) {
     className.push('active');
+  }
+  if (isAux) {
+    className.push('aux');
   }
 
   const onClick = (

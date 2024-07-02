@@ -1,59 +1,80 @@
-.link {
-  --_bg-color: var(--link-bg-color);
-  --_text-color: var(--link-text-color);
-  --_border-radius: var(--border-radius-xs);
-  --_duration: var(--standard-decelerate-duration);
-  --_easing: var(--standard-decelerate-easing);
-  --_property: color, background-color, border-color, box-shadow;
+:where(.link, .link:visited) {
+  --link-text-color: var(--md-sys-color-secondary);
+}
+
+:where(.link) {
+  --link-bg-color: transparent;
+  --link-padding: 0 var(--space-3xs);
+  --link-border-color: var(--link-text-color);
+  --link-border-radius: var(--border-radius-xs);
+  --link-border-width: 0.1em;
+  --link-shadow-width: 0.2em;
+  --link-transition-duration: var(--standard-decelerate-duration);
+  --link-transition-easing: var(--standard-decelerate-easing);
+  --link-transition-properties: color, background-color, box-shadow;
 
   text-decoration: none;
-  background-color: var(--_bg-color);
-  color: var(--_text-color);
-  border-radius: var(--_border-radius);
+  background-color: var(--link-bg-color);
+  color: var(--link-text-color);
+  border-radius: var(--link-border-radius);
   display: inline-block;
-  padding: 0 var(--space-3xs);
-  transition: var(--_property) var(--_duration) var(--_easing);
+  padding: var(--link-padding);
+  transition: var(--link-transition-properties) var(--link-transition-duration)
+    var(--link-transition-easing);
 }
 
-.link:visited {
-  --_text-color: var(--link-text-color-visited);
-}
+:where(.link.active, .link:focus-visible) {
+  --link-bg-color: var(--md-sys-color-secondary-container);
+  --link-text-color: var(--md-sys-color-on-secondary-container);
+  --link-border-color: var(--link-text-color);
+  --link-transition-duration: var(--standard-accelerate-duration);
+  --link-transition-easing: var(--standard-accelerate-easing);
 
-.link:active,
-.link.active {
-  --_text-color: var(--link-text-color-hover);
-  --_bg-color: var(--link-bg-color-hover);
-  --_duration: var(--standard-accelerate-duration);
-  --_easing: var(--standard-accelerate-easing);
-}
-
-.link.active {
   outline: 1px solid transparent;
-  outline-offset: 0.1em;
-  box-shadow: 0 0 0 0.1em var(--_text-color);
+  outline-offset: var(--link-border-width);
+  box-shadow: var(--link-border);
 }
 
-@media (hover:hover) {
-  .link:hover {
-    --_text-color: var(--link-text-color-hover);
-    --_bg-color: var(--link-bg-color-hover);
-    --_duration: var(--standard-accelerate-duration);
-    --_easing: var(--standard-accelerate-easing);
+:where(.link.active) {
+  --link-border-width: 1px;
+  --link-border: 0 0 0 var(--link-border-width) var(--link-border-color);
+}
+
+:where(.link:focus-visible) {
+  --link-border: 0 0 0 var(--link-border-width) var(--bg-color),
+  0 0 0 var(--link-shadow-width) var(--link-border-color);
+}
+
+@media (hover: hover) {
+  :where(.link):hover {
+    --link-bg-color: var(--md-sys-color-secondary-container);
+    --link-text-color: var(--md-sys-color-on-secondary-container);
+    --link-transition-duration: var(--standard-accelerate-duration);
+    --link-transition-easing: var(--standard-accelerate-easing);
   }
 }
 
-.link:not(.no-focus):focus-visible {
-  --_duration: var(--standard-accelerate-duration);
-  --_easing: var(--standard-accelerate-easing);
+.link:is(.aux) {
+  --link-border-width: 1px;
+  --link-shadow-width: 2px;
+  --link-padding: var(--space-2xs) var(--space-xs);
+  --link-border-radius: var(--border-radius-m);
+}
 
-  --_text-color: var(--link-text-color-hover);
-  --_bg-color: var(--link-bg-color-hover);
+.link:is(.aux, .aux:visited) {
+  --link-text-color: var(--md-sys-color-on-surface-variant);
+}
 
-  --_gap-offset-width: 0.1em;
-  --_shadow-offset-width: 0.2em;
+.link:is(.aux.active, .aux:focus-visible) {
+  --link-bg-color: var(--md-sys-color-surface-container-high);
+  --link-text-color: var(--md-sys-color-on-surface);
+  --link-border-color: var(--md-sys-color-outline-variant);
+}
 
-  text-decoration: none;
-  outline: var(--_gap-offset-width) solid transparent;
-  outline-offset: var(--_gap-offset-width);
-  box-shadow: 0 0 0 var(--_gap-offset-width) var(--bg-color), 0 0 0 var(--_shadow-offset-width) var(--_text-color);
+@media (hover: hover) {
+  .link:is(.aux:hover) {
+    --link-bg-color: var(--md-sys-color-surface-container-high);
+    --link-text-color: var(--md-sys-color-on-surface);
+    --link-border-color: var(--md-sys-color-outline-variant);
+  }
 }
