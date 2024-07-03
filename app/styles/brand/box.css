@@ -1,0 +1,27 @@
+:root {
+  --border-radius-xs: 0.19rem;
+  --border-radius-s: 0.32rem;
+  --border-radius-m: 0.63rem;
+  --border-radius-l: 0.94rem;
+  --border-radius-full: 99px;
+}
+
+.radius-xs {
+  border-radius: var(--border-radius-xs);
+}
+
+.radius-s {
+  border-radius: var(--border-radius-s);
+}
+
+.radius-m {
+  border-radius: var(--border-radius-m);
+}
+
+.radius-l {
+  border-radius: var(--border-radius-l);
+}
+
+.radius-full {
+  border-radius: var(--border-radius-full);
+}

@@ -1,0 +1,54 @@
+/* @supports (background-color: lch(10% 100 240)) {
+  :root {
+    --light-grad-primary-title: linear-gradient(to top in lch, var(--light-grad-primary-title-from) 0%, var(--light-grad-primary-title-to) 100%);
+    --dark-grad-primary-title: linear-gradient(to top in lch, var(--dark-grad-primary-title-from) 0%, var(--dark-grad-primary-title-to) 100%);
+
+    --light-grad-brand-label: linear-gradient(to top in lch, var(--violet-12) 0%, var(--pink-9) 100%);
+    --dark-grad-brand-label: linear-gradient(to top in lch, var(--violet-3) 0%, var(--pink-0) 100%);
+  }
+} */
+
+:where(*) {
+  --color-0: oklch(99% 0.03 var(--color-hue, 0));
+  --color-1: oklch(95% 0.06 var(--color-hue, 0));
+  --color-2: oklch(88% 0.12 var(--color-hue, 0));
+  --color-3: oklch(80% 0.14 var(--color-hue, 0));
+  --color-4: oklch(74% 0.16 var(--color-hue, 0));
+  --color-5: oklch(68% 0.19 var(--color-hue, 0));
+  --color-6: oklch(63% 0.2 var(--color-hue, 0));
+  --color-7: oklch(58% 0.21 var(--color-hue, 0));
+  --color-8: oklch(53% 0.2 var(--color-hue, 0));
+  --color-9: oklch(49% 0.19 var(--color-hue, 0));
+  --color-10: oklch(42% 0.17 var(--color-hue, 0));
+  --color-11: oklch(35% 0.15 var(--color-hue, 0));
+  --color-12: oklch(27% 0.12 var(--color-hue, 0));
+  --color-13: oklch(20% 0.09 var(--color-hue, 0));
+  --color-14: oklch(14% 0.07 var(--color-hue, 0));
+  --color-15: oklch(11% 0.05 var(--color-hue, 0));
+  --color-bright: oklch(65% 0.3 var(--color-hue, 0));
+
+  --to-color-0: oklch(99% 0.03 var(--to-color-hue, 0));
+  --to-color-1: oklch(95% 0.06 var(--to-color-hue, 0));
+  --to-color-2: oklch(88% 0.12 var(--to-color-hue, 0));
+  --to-color-3: oklch(80% 0.14 var(--to-color-hue, 0));
+  --to-color-4: oklch(74% 0.16 var(--to-color-hue, 0));
+  --to-color-5: oklch(68% 0.19 var(--to-color-hue, 0));
+  --to-color-6: oklch(63% 0.2 var(--to-color-hue, 0));
+  --to-color-7: oklch(58% 0.21 var(--to-color-hue, 0));
+  --to-color-8: oklch(53% 0.2 var(--to-color-hue, 0));
+  --to-color-9: oklch(49% 0.19 var(--to-color-hue, 0));
+  --to-color-10: oklch(42% 0.17 var(--to-color-hue, 0));
+  --to-color-11: oklch(35% 0.15 var(--to-color-hue, 0));
+  --to-color-12: oklch(27% 0.12 var(--to-color-hue, 0));
+  --to-color-13: oklch(20% 0.09 var(--to-color-hue, 0));
+  --to-color-14: oklch(14% 0.07 var(--to-color-hue, 0));
+  --to-color-15: oklch(11% 0.05 var(--to-color-hue, 0));
+  --to-color-bright: oklch(65% 0.3 var(--to-color-hue, 0));
+
+  --hue-pink: 350;
+  --hue-violet: 290;
+  --hue-teal: 185;
+  --hue-green: 145;
+  --hue-lime: 125;
+  --hue-yellow: 100;
+}

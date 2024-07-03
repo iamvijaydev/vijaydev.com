@@ -14,6 +14,9 @@ importers:
       '@mdx-js/esbuild':
         specifier: 3.0.1
         version: 3.0.1(esbuild@0.21.5)
+      '@mdx-js/react':
+        specifier: ^3.0.1
+        version: 3.0.1(@types/react@18.2.66)(react@18.2.0)
       '@rollup/plugin-terser':
         specifier: 0.4.4
         version: 0.4.4(rollup@4.18.0)
@@ -50,6 +53,9 @@ importers:
       glob:
         specifier: 10.4.2
         version: 10.4.2
+      lightningcss-cli:
+        specifier: 1.25.1
+        version: 1.25.1
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -402,6 +408,12 @@ packages:
 
   '@mdx-js/mdx@3.0.1':
     resolution: {integrity: sha512-eIQ4QTrOWyL3LWEe/bu6Taqzq2HQvHcyTMaOrI95P2/LmJE7AsfPfgJGuFLPVqBUE1BC1rik3VIhU+s9u72arA==}
+
+  '@mdx-js/react@3.0.1':
+    resolution: {integrity: sha512-9ZrPIU4MGf6et1m1ov3zKf+q9+deetI51zprKB1D/z3NOb+rUxxtEl3mCjW5wTGh6VhRdwPueh1oRzi6ezkA8A==}
+    peerDependencies:
+      '@types/react': '>=16'
+      react: '>=16'
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -764,6 +776,11 @@ packages:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
 
+  detect-libc@1.0.3:
+    resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
+    engines: {node: '>=0.10'}
+    hasBin: true
+
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
 
@@ -814,8 +831,8 @@ packages:
     resolution: {integrity: sha512-Y+ughcF9jSUJvncXwqRageavjrNPAI+1M/L3BI3PyLp1nmgYTGUXU6t5z1Y7OWuThoDdhPME07bQU+d5LxdJqw==}
     engines: {node: '>=12.0.0'}
 
-  estree-util-value-to-estree@3.1.1:
-    resolution: {integrity: sha512-5mvUrF2suuv5f5cGDnDphIy4/gW86z82kl5qG6mM9z04SEQI4FB5Apmaw/TGEf3l55nLtMs5s51dmhUzvAHQCA==}
+  estree-util-value-to-estree@3.1.2:
+    resolution: {integrity: sha512-S0gW2+XZkmsx00tU2uJ4L9hUT7IFabbml9pHh2WQqFmAbxit++YGZne0sKJbNwkj9Wvg9E4uqWl4nCIFQMmfag==}
 
   estree-util-visit@2.0.0:
     resolution: {integrity: sha512-m5KgiH85xAhhW8Wta0vShLcUvOsh3LLPI2YVwcbio1l7E09NTLL1EyMZFM1OyWowoH0skScNbhOPl4kcBgzTww==}
@@ -952,8 +969,9 @@ packages:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
 
-  is-core-module@2.13.1:
-    resolution: {integrity: sha512-hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==}
+  is-core-module@2.14.0:
+    resolution: {integrity: sha512-a5dFJih5ZLYlRtDc0dZWP7RiKr6xIKzmn/oAYCDvdLThadVgyJwlaoQPmRtMSpz+rk0OGAgIu+TcM9HUF0fk1A==}
+    engines: {node: '>= 0.4'}
 
   is-decimal@2.0.1:
     resolution: {integrity: sha512-AAB9hiomQs5DXWcRB1rqsxGUstbRroFOPPVAomNk/3XHR5JyEZChOyTWe2oayKnsSsr/kcGqF+z6yuH6HHpN0A==}
@@ -1021,6 +1039,65 @@ packages:
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
 
+  lightningcss-cli-darwin-arm64@1.25.1:
+    resolution: {integrity: sha512-T+8n8AtfRnNxI97dKLT3+FpYDyioH0KLkoAjBxnUZVdyScmgqsBGtqXsdObLxyiNpLCJUfrL4oSQbMI1Fq5KVw==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [darwin]
+
+  lightningcss-cli-darwin-x64@1.25.1:
+    resolution: {integrity: sha512-x0N9I4f4NXUesFQa03EmOb3kIg/4TPAGPNY/UZDMAEhGA8bDTOgesvMdQqD4dss1ADsbWA5kIMeUyPKS8A12SQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [darwin]
+
+  lightningcss-cli-freebsd-x64@1.25.1:
+    resolution: {integrity: sha512-uzEwexbRy/GkaPhW1GbTgXB6CKQhR7abVcp1uuMP1G9yICy8o6bCC941xCPtICDW6VfimPrAe9a9xt6UJwKI1A==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [freebsd]
+
+  lightningcss-cli-linux-arm-gnueabihf@1.25.1:
+    resolution: {integrity: sha512-Wgu0WoEPgGzdB4pSmfsiTnyQf2/nzz794R9YMa0tOReW/JP75pvTdv6vjUGvo0L9sasMKEehWAKoWi8s86YuMg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm]
+    os: [linux]
+
+  lightningcss-cli-linux-arm64-gnu@1.25.1:
+    resolution: {integrity: sha512-nwCPUmsbjtJaKfaqGc2Cbsc1An1e40wgWa1sWrIL6pjLGlCGAym37jbe54h9U9UuAjQAik14lRZ45n9jJgeojg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+
+  lightningcss-cli-linux-arm64-musl@1.25.1:
+    resolution: {integrity: sha512-Fj/XW+ahY5VXIWGjf4/GCMxVDn5W+qJKaa0V35qmjGmdGSeR/utCq7f4qDxzzPTgrAlQ/zxJ4M94eaQL3aac0w==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [arm64]
+    os: [linux]
+
+  lightningcss-cli-linux-x64-gnu@1.25.1:
+    resolution: {integrity: sha512-ax5XP0ZIoA7A8JVbVmgjsNdyKzzRKVllBASpAJZq6a7BJWceZ/QM9ScUdjs15J4Q4FSsz1Uvk5JKq5y3/lOzFA==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+
+  lightningcss-cli-linux-x64-musl@1.25.1:
+    resolution: {integrity: sha512-6OK8l3mNDStoAh6v1v5bZumfh4uGqu+8ZxrFVYplyKSKNZcGVvP3Vh5VlRfOIFyOHB0td8BOW/V3aOR8X//WxQ==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [linux]
+
+  lightningcss-cli-win32-x64-msvc@1.25.1:
+    resolution: {integrity: sha512-78SN/Yn2alLEQd/PF4TvcRzIGeu1EXLV6XZZs4M+aEqn4IMEY/k6JWXDvighXpHOM2KyIDfmUA72pARQKFeAAg==}
+    engines: {node: '>= 12.0.0'}
+    cpu: [x64]
+    os: [win32]
+
+  lightningcss-cli@1.25.1:
+    resolution: {integrity: sha512-rrAgDqDIcG3bPHG7a77jxqvLIXkm3nvMIFbfeD6GPjlIs+EtTMdKMKDR917RE5MGdLseRKf+3yu+1nsroMZHnQ==}
+    engines: {node: '>= 12.0.0'}
+    hasBin: true
+
   longest-streak@3.1.0:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
 
@@ -1028,8 +1105,8 @@ packages:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
 
-  lru-cache@10.2.2:
-    resolution: {integrity: sha512-9hp3Vp2/hFQUiIwKo8XCeFVnrg8Pk3TYNPIR7tJADKi5YfcF7vEaK7avFHTlSy3kOKYaJQaalfEo6YuXdceBOQ==}
+  lru-cache@10.3.0:
+    resolution: {integrity: sha512-CQl19J/g+Hbjbv4Y3mFNNXFEL/5t/KCg8POCuUqd4rMKjGG+j1ybER83hxV58zL+dFI1PTkt3GNFSHRt+d8qEQ==}
     engines: {node: 14 || >=16.14}
 
   markdown-extensions@2.0.0:
@@ -1179,8 +1256,8 @@ packages:
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
-  minimatch@9.0.4:
-    resolution: {integrity: sha512-KqWh+VchfxcMNRAJjj2tnsSJdNbHsVgnkBhTNrW7AjVo6OvLtxw8zfT9oLw1JSohlFzJ8jCoTgaoXvJ+kHt6fw==}
+  minimatch@9.0.5:
+    resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   minimist@1.2.8:
@@ -1778,6 +1855,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@mdx-js/react@3.0.1(@types/react@18.2.66)(react@18.2.0)':
+    dependencies:
+      '@types/mdx': 2.0.13
+      '@types/react': 18.2.66
+      react: 18.2.0
+
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
@@ -2102,6 +2185,8 @@ snapshots:
 
   dequal@2.0.3: {}
 
+  detect-libc@1.0.3: {}
+
   devlop@1.1.0:
     dependencies:
       dequal: 2.0.3
@@ -2196,10 +2281,9 @@ snapshots:
     dependencies:
       is-plain-obj: 3.0.0
 
-  estree-util-value-to-estree@3.1.1:
+  estree-util-value-to-estree@3.1.2:
     dependencies:
       '@types/estree': 1.0.5
-      is-plain-obj: 4.1.0
 
   estree-util-visit@2.0.0:
     dependencies:
@@ -2270,7 +2354,7 @@ snapshots:
     dependencies:
       foreground-child: 3.2.1
       jackspeak: 3.4.0
-      minimatch: 9.0.4
+      minimatch: 9.0.5
       minipass: 7.1.2
       package-json-from-dist: 1.0.0
       path-scurry: 1.11.1
@@ -2381,7 +2465,7 @@ snapshots:
     dependencies:
       binary-extensions: 2.3.0
 
-  is-core-module@2.13.1:
+  is-core-module@2.14.0:
     dependencies:
       hasown: 2.0.2
 
@@ -2435,13 +2519,54 @@ snapshots:
     optionalDependencies:
       graceful-fs: 4.2.11
 
+  lightningcss-cli-darwin-arm64@1.25.1:
+    optional: true
+
+  lightningcss-cli-darwin-x64@1.25.1:
+    optional: true
+
+  lightningcss-cli-freebsd-x64@1.25.1:
+    optional: true
+
+  lightningcss-cli-linux-arm-gnueabihf@1.25.1:
+    optional: true
+
+  lightningcss-cli-linux-arm64-gnu@1.25.1:
+    optional: true
+
+  lightningcss-cli-linux-arm64-musl@1.25.1:
+    optional: true
+
+  lightningcss-cli-linux-x64-gnu@1.25.1:
+    optional: true
+
+  lightningcss-cli-linux-x64-musl@1.25.1:
+    optional: true
+
+  lightningcss-cli-win32-x64-msvc@1.25.1:
+    optional: true
+
+  lightningcss-cli@1.25.1:
+    dependencies:
+      detect-libc: 1.0.3
+    optionalDependencies:
+      lightningcss-cli-darwin-arm64: 1.25.1
+      lightningcss-cli-darwin-x64: 1.25.1
+      lightningcss-cli-freebsd-x64: 1.25.1
+      lightningcss-cli-linux-arm-gnueabihf: 1.25.1
+      lightningcss-cli-linux-arm64-gnu: 1.25.1
+      lightningcss-cli-linux-arm64-musl: 1.25.1
+      lightningcss-cli-linux-x64-gnu: 1.25.1
+      lightningcss-cli-linux-x64-musl: 1.25.1
+      lightningcss-cli-win32-x64-msvc: 1.25.1
+
   longest-streak@3.1.0: {}
 
   loose-envify@1.4.0:
     dependencies:
       js-tokens: 4.0.0
 
-  lru-cache@10.2.2: {}
+  lru-cache@10.3.0: {}
 
   markdown-extensions@2.0.0: {}
 
@@ -2788,7 +2913,7 @@ snapshots:
     dependencies:
       brace-expansion: 1.1.11
 
-  minimatch@9.0.4:
+  minimatch@9.0.5:
     dependencies:
       brace-expansion: 2.0.1
 
@@ -2845,7 +2970,7 @@ snapshots:
 
   path-scurry@1.11.1:
     dependencies:
-      lru-cache: 10.2.2
+      lru-cache: 10.3.0
       minipass: 7.1.2
 
   path-to-regexp@2.2.1: {}
@@ -2927,7 +3052,7 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
       estree-util-is-identifier-name: 3.0.0
-      estree-util-value-to-estree: 3.1.1
+      estree-util-value-to-estree: 3.1.2
       toml: 3.0.0
       unified: 11.0.5
       yaml: 2.4.5
@@ -2960,7 +3085,7 @@ snapshots:
 
   resolve@1.22.8:
     dependencies:
-      is-core-module: 2.13.1
+      is-core-module: 2.14.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 

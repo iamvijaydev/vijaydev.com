@@ -18,7 +18,10 @@ export const getContentListingTemplate = ({
 export { links } from '${template}';
 
 export const meta = ([
-  { title: '${title}' },
+  {
+    name: "title",
+    content: '${title}',
+  },
   {
     name: "description",
     content: '${description}',

@@ -1,6 +1,6 @@
 import { PropsWithChildren, useRef, useState } from "react";
-import { Button } from "~components/core/Button";
-import { Link } from "~components/core/Link";
+import { Button } from "~components/core/button/Button";
+import { Link } from "~components/core/link/Link";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
 
 export interface Props {
@@ -82,7 +82,7 @@ export const Menu = (props: PropsWithChildren<Props>) => {
             {option.href ? (
               <Link
                 key={option.id}
-                to={option.href}
+                href={option.href}
                 className={option.id === props?.selectedId ? "active" : ""}
               >
                 {option.label}
@@ -101,3 +101,77 @@ export const Menu = (props: PropsWithChildren<Props>) => {
     </nav>
   );
 };
+
+
+/*
+<div class="dropdown">
+<!--   Each <a> tag is labeled with aria attributes to help define its purpose to assistive technologies -->
+  <a href="#" class="dropbtn" aria-haspopup="true" aria-expanded="false" role="button">Main Menu</a>
+  <div class="dropdown-content" role="menu">
+    <div class="submenu">
+<!--   Each <a> tag is labeled with aria attributes to help define its purpose to assistive technologies -->
+      <a href="#" aria-haspopup="true" aria-expanded="false" role="menuitem">Level 1 - Item 1</a>
+      <div class="submenu-content" role="menu">
+<!--   Each <a> tag is labeled with aria attributes to help define its purpose to assistive technologies -->
+        <a href="#" role="menuitem">Level 2 - Item 1</a>
+        <div class="submenu">
+<!--   Each <a> tag is labeled with aria attributes to help define its purpose to assistive technologies -->
+          <a href="#" aria-haspopup="true" aria-expanded="false" role="menuitem">Level 2 - Item 2</a>
+          <div class="submenu-content" role="menu">
+ <!--   Each <a> tag is labeled with aria attributes to help define its purpose to assistive technologies -->
+            <a href="#" role="menuitem">Level 3 - Item 1</a>
+            <a href="#" role="menuitem">Level 3 - Item 2</a>
+          </div>
+        </div>
+<!--   Each <a> tag is labeled with aria attributes to help define its purpose to assistive technologies -->
+        <a href="#" role="menuitem">Level 2 - Item 3</a>
+      </div>
+    </div>
+    <div class="submenu">
+<!--   Each <a> tag is labeled with aria attributes to help define its purpose to assistive technologies -->
+      <a href="#" aria-haspopup="true" aria-expanded="false" role="menuitem">Level 1 - Item 2</a>
+      <div class="submenu-content" role="menu">
+<!--   Each <a> tag is labeled with aria attributes to help define its purpose to assistive technologies -->
+        <a href="#" role="menuitem">Level 2 - Item 1</a>
+        <a href="#" role="menuitem">Level 2 - Item 2</a>
+      </div>
+    </div>
+<!--   Each <a> tag is labeled with aria attributes to help define its purpose to assistive technologies -->
+    <a href="#" role="menuitem">Level 1 - Item 3</a>
+  </div>
+</div>
+
+
+ /* Style dropdown menus and submenus 
+ .dropdown, .submenu {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the content dropdown list  
+.dropdown-content, .submenu-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Style the links within submenu list 
+.dropdown-content a, .submenu-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu-content {
+  left: 100%;
+  top: 0;
+}
+/* Show submenu content on focus 
+.dropdown:focus-within .dropdown-content,
+.submenu:focus-within .submenu-content {
+  display: block;
+}
+*/

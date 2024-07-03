@@ -4,6 +4,7 @@ import { useHeadingObserver } from "~hooks/useHeadingObserver";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
 import { useMemo, useRef, useState } from "react";
 import { makeTocNodes } from "../utils/makeTocNodes";
+import { Text } from "~components/core/text/Text";
 
 export type Props = {
   title?: string;
@@ -77,14 +78,13 @@ export const AsideToc = (props: Props) => {
   return (
     <div
       ref={asideRef}
-      className="none xl:inline-grid pl-m py-m relative"
+      className="pl-m py-m sticky t-100"
     >
-      <span className="text-label text-dim-color mb-2xs relative level-2">On this page</span>
-      <h3 className="text-title4 mb-m relative level-2">{props.title}</h3>
-      <nav className="toc-links flex f-column a-start gapy-s text-body height-normal relative level-2">
+      <Text as="span" dim className="mb-2xs">On this page</Text>
+      <Text as="h4" dim className="mb-m">{props.title}</Text>
+      <nav className="flex flex-column gapy-s">
         {elements}
       </nav>
-      <div className="toc-indicator" style={styles} />
     </div>
   );
 };

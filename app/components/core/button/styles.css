@@ -1,0 +1,182 @@
+.button {
+  --button-radius: var(--border-radius-full);
+
+  all: unset;
+  position: relative;
+  border-radius: var(--button-radius);
+}
+
+.button:not(:disabled) {
+  cursor: pointer;
+}
+
+.button:not(.with-icon) {
+  padding: var(--button-space-y) var(--button-space-x);
+}
+
+.button.with-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  padding: var(--button-space-y) var(--button-space-x) var(--button-space-y) var(--button-space-x);
+}
+
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--button-radius);
+  transition-property: opacity;
+  transition-duration: var(--standard-decelerate-duration);
+  transition-timing-function: var(--standard-decelerate-easing);
+}
+
+.button:before {
+  opacity: var(--button-bg-opacity);
+  background-color: var(--button-bg-color);
+  z-index: 1;
+}
+
+.button:after {
+  opacity: var(--button-state-opacity);
+  background-color: var(--button-state-color);
+  z-index: 2;
+}
+
+.button:disabled {
+  --button-bg-color: var(--md-sys-color-on-surface);
+  --button-bg-opacity: 0.12;
+
+  --button-text-color: var(--md-sys-color-on-surface);
+  --button-text-opacity: 0.38;
+}
+
+@media (hover:hover) {
+  .button:not(:disabled):hover:before,
+  .button:not(:disabled):hover:after {
+    transition-duration: var(--standard-accelerate-duration);
+    transition-timing-function: var(--standard-accelerate-easing);
+  }
+
+  .button:not(:disabled, .as-menu):hover,
+  .button:not(.as-menu).active {
+    --button-state-opacity: 0.2 !important;
+  }
+
+  .button.as-menu:hover,
+  .button.as-menu.active {
+    --button-state-opacity: 1 !important;
+  }
+}
+
+.button:not(:disabled):active,
+.button:not(:disabled):focus-visible {
+  --button-state-opacity: 0.3 !important;
+}
+
+.button:not(:disabled):focus-visible {
+  --offset-width: 2px;
+
+  outline: var(--offset-width) solid transparent;
+  outline-offset: var(--offset-width);
+  border-radius: var(--button-radius);
+  box-shadow: 0 0 0 var(--offset-width) var(--background-color), 0 0 0 calc(var(--offset-width) + var(--offset-width)) var(--md-sys-color-primary);
+}
+
+.button .txt,
+.button .icon {
+  opacity: var(--button-text-opacity);
+  color: var(--button-text-color);
+  fill: var(--button-text-color);
+  position: relative;
+  z-index: 3;
+}
+
+.button .txt {
+  font-size: var(--label-size);
+  font-weight: var(--label-weight);
+  line-height: 1;
+}
+
+.button.as-filled,
+.button.as-tonal,
+.button.as-text {
+  --button-space-y: var(--space-2xs);
+}
+
+.button.as-filled,
+.button.as-tonal {
+  --button-space-x: var(--space-s);
+}
+
+.button.as-text {
+  --button-space-x: var(--space-s);
+}
+
+.button.as-icon {
+  --button-space-x: var(--space-xs);
+  --button-space-y: var(--space-xs);
+}
+
+.button.as-menu {
+  --button-space-x: var(--space-2xs);
+  --button-space-y: var(--space-2xs);
+}
+
+.button.as-text-compact {
+  --button-space-y: var(--space-3xs);
+}
+
+.button:not(:disabled).as-filled,
+.button:not(:disabled).as-tonal,
+.button:not(:disabled).as-text,
+.button:not(:disabled).as-icon,
+.button:not(:disabled).as-menu {
+  --button-bg-opacity: 1;
+  --button-state-opacity: 0;
+  --button-text-opacity: 1;
+}
+
+.button:not(:disabled).as-filled {
+  --button-bg-color: var(--md-sys-color-primary);
+  --button-state-color: var(--md-sys-color-on-primary);
+
+  --button-text-color: var(--md-sys-color-on-primary);
+  --button-icon-color: var(--md-sys-color-on-primary);
+}
+
+.button:not(:disabled).as-tonal {
+  --button-bg-color: var(--md-sys-color-secondary-container);
+  --button-state-color: var(--md-sys-color-primary);
+
+  --button-text-color: var(--md-sys-color-on-secondary-container);
+  --button-icon-color: var(--md-sys-color-on-secondary-container);
+}
+
+.button:not(:disabled).as-icon,
+.button:not(:disabled).as-text {
+  --button-bg-color: transparent;
+  --button-state-color: var(--md-sys-color-primary);
+
+  --button-text-color: var(--md-sys-color-primary);
+  --button-icon-color: var(--md-sys-color-primary);
+}
+
+.button:not(:disabled).as-menu {
+  --button-radius: var(--border-radius-s);
+
+  --button-bg-color: transparent;
+  --button-state-color: var(--link-hover-bg-color);
+
+  --button-text-color: var(--link-color);
+}
+@media (hover:hover) {
+  .button.as-menu:hover,
+  .button.as-menu.active {
+    --button-text-color: var(--link-hover-color);
+  }
+}

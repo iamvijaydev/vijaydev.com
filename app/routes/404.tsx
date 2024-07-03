@@ -1,7 +1,10 @@
 import { Meta } from "~types";
 
 export const meta: Meta[] = [
-  { title: "Not found" },
+  {
+    name: "title",
+    content: "Not found",
+  },
   {
     name: "description",
     content: "The page your were looking for doesn't exist.",

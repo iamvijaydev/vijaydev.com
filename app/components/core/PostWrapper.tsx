@@ -1,12 +1,15 @@
 import { PropsWithChildren, useState } from "react";
+import { MDXProvider } from "@mdx-js/react";
 import type { TocEntry } from "@stefanprobst/rehype-extract-toc";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
-import { Toc } from "~components/core/toc/Toc";
+import { AsideToc } from "~components/core/toc/features/AsideToc";
 import { RelatedItemCard } from "~components/core/RelatedItemCard";
-import { Masthead } from "~components/core/Masthead";
+import { Masthead } from "~components/core/masthead/Masthead";
+import { Grid, Cell } from "~components/core/grid/Grid";
 import type { BreadcrumbNode } from "~components/core/Breadcrumb";
 import { getLocaleDateString } from "~utils/getLocalDateString";
 import { ContentItemDetailed } from "~types";
+import { mdxComponents } from "~components/core/mdxComponents";
 
 export type Props = {
   matter: ContentItemDetailed;
@@ -33,44 +36,60 @@ export const PostWrapper = ({
   }, [matter.published, matter.updated]);
 
   return (
-    <div id="article-layout">
-      <Masthead
-        breadcrumbNodes={breadcrumbNodes}
-        title={matter.title}
-        description={matter.description}
-        published={date.published}
-        updated={date.updated}
-        readTime={matter.readTime}
-      />
-      <article className="col-12 xl:col-7" id="article-content">
-        {children}
+    <Grid as="div">
+      <Cell size={12}>
+        <Masthead
+          breadcrumbNodes={breadcrumbNodes}
+          title={matter.title}
+          description={matter.description}
+          published={date.published}
+          updated={date.updated}
+          readTime={matter.readTime}
+        />
+      </Cell>
+      <Cell as="article" size={[{ size: 12 }, { screen: "md", size: 7 }]}id="article-content">
+        <MDXProvider components={mdxComponents}>{children}</MDXProvider>
 
         <footer className="mt-7">
           <nav className="flex f-column lg:f-row j-between gap-m">
             {matter.prev ? (
               <RelatedItemCard
                 type="⟵ Previous"
-                to={matter.prev.pathname}
+                href={matter.prev.pathname}
                 label={matter.prev.title}
               />
             ) : null}
             {matter.next ? (
               <RelatedItemCard
                 type="Up Next ⟶"
-                to={matter.next.pathname}
+                href={matter.next.pathname}
                 label={matter.next.title}
                 rightAlign
               />
             ) : null}
           </nav>
         </footer>
-      </article>
-      <Toc
+      </Cell>
+      <Cell
+        as="aside"
+        size={[
+          { screen: "md", size: 9, position: "start" },
+          { screen: "md", size: 13, position: "end" },
+        ]}
+        className="none md:inline-block"
+      >
+        <AsideToc
+          title={matter.title}
+          toc={toc}
+          contentSiblingId="#article-content"
+        />
+      </Cell>
+      {/* <Toc
         title={matter.title}
         toc={toc}
         contentSiblingId="#article-content"
         className="col-12 xl:col-start-9 xl:col-end-13 xl:a-self-start"
-      />
-    </div>
+      /> */}
+    </Grid>
   );
 };

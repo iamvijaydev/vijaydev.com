@@ -1,19 +1,16 @@
 import { useHtmlHeadContext } from "~store/htmlHead/context";
-import { MetaTitle, Meta as MetaType } from "~types";
-
-const isMetaTitle = (meta: MetaType): meta is MetaTitle =>
-  (meta as MetaTitle).title !== undefined;
+import { Meta as MetaType } from "~types";
 
 export const Meta = () => {
   const { state } = useHtmlHeadContext();
 
   return (
     <>
-      {state.meta.map((data) =>
-        isMetaTitle(data) ? (
-          <title key={data.title}>{data.title}</title>
+      {state.meta.map((meta) =>
+        meta.name === "title" ? (
+          <title key={meta.name}>{meta.content}</title>
         ) : (
-          <meta key={data.name} {...data} />
+          <meta key={meta.name} name={meta.name} content={meta.content} />
         )
       )}
     </>

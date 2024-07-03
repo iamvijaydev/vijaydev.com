@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import { Link } from "~components/core/Link";
+import { Link } from "~components/core/link/Link";
 
 export type LogoProps = {
   className?: string;
@@ -32,7 +32,7 @@ export const Logo = (props: LogoProps): JSX.Element => {
   }
 
   return (
-    <Link to="/" className={className}>
+    <Link href="/" className={className}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={size + 'px'}

@@ -2,6 +2,19 @@ import { MetaLink, Meta } from "~types";
 
 export type Imports = Record<string, string>;
 
+export const defaultLinks: MetaLink[] = [{
+  href: "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap",
+  rel: "stylesheet",
+}, { 
+  href: "/assets/styles.css",
+  rel: "stylesheet",
+}]
+
+export const defaultMeta: Meta[] = [{
+  name: "viewport",
+  content: "width=device-width, initial-scale=1.0",
+}];
+
 export type HtmlHeadState = {
   imports: Imports;
   links: MetaLink[];
@@ -14,6 +27,6 @@ export const getHtmlHeadState = (
   meta: Meta[] = []
 ): HtmlHeadState => ({
   imports: imports,
-  links: links,
-  meta: meta,
+  links: [...defaultLinks, ...links],
+  meta: [...defaultMeta, ...meta],
 });

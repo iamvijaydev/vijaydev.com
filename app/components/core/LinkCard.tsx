@@ -1,10 +1,10 @@
-import { Link, AnchorAttributes } from "~components/core/Link";
+import { Link, AnchorAttributes } from "~components/core/link/Link";
 
 export const LinkCard = (props: AnchorAttributes) => {
-  const { className = "", children, to, ...rest } = props;
+  const { className = "", children, href, ...rest } = props;
 
   return (
-    <Link {...rest} to={to} className={`link-card px-s-m py-s ${className}`}>
+    <Link {...rest} href={href} className={`link-card px-s-m py-s ${className}`}>
       {children}
     </Link>
   );

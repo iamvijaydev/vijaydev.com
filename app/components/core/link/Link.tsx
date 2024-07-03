@@ -5,6 +5,7 @@ import type {
   TouchEvent as ReactTouchEvent,
 } from "react";
 import { useLoadRouteCommand } from "~commands/useLoadRoute";
+import { type TextProps, getTextClassName, Text } from "~components/core/text/Text";
 
 export type ClickEvent =
   | ReactMouseEvent<HTMLAnchorElement, MouseEvent>
@@ -18,9 +19,11 @@ export interface AnchorAttributes
     >,
     "href"
   > {
-  to: string;
+  href: string;
   onClick?: (e: ClickEvent) => void;
   isActive?: boolean;
+  textProps?: Partial<TextProps>;
+  isAux?: boolean;
 }
 
 export const Link = (props: AnchorAttributes) => {
@@ -29,40 +32,61 @@ export const Link = (props: AnchorAttributes) => {
   const {
     isActive,
     onClick: propOnClick,
-    to,
+    href,
     children,
     className: propClassName,
+    textProps,
+    isAux,
     ...anchorProps
   } = props;
 
-  const className = `${propClassName}${isActive ? " active" : ""}`;
+  const className = [];
+
+  if (propClassName) {
+    className.push(propClassName);
+  }
+  if (textProps) {
+    className.push(getTextClassName(textProps));
+  }
+  className.push('link');
+  if (isActive) {
+    className.push('active');
+  }
+  if (isAux) {
+    className.push('aux');
+  }
 
   const onClick = (
     e:
       | ReactMouseEvent<HTMLAnchorElement, MouseEvent>
       | ReactTouchEvent<HTMLAnchorElement>
   ) => {
+    if (anchorProps.target === '_blank') {
+      propOnClick && propOnClick(e);
+      return;
+    }
+
     e.preventDefault();
 
     propOnClick && propOnClick(e);
 
-    if (to.indexOf(window.location.pathname) > -1 && to.indexOf("#") > -1) {
-      const element = document.querySelector(to)!;
+    if (href.indexOf(window.location.pathname) > -1 && href.indexOf("#") > -1) {
+      const element = document.querySelector(href)!;
 
       element && element.scrollIntoView({ behavior: "smooth" });
       return;
     }
 
-    if (to) {
-      void loadRoute(to);
+    if (href) {
+      void loadRoute(href);
     }
   };
 
   return (
     <a
-      className={className}
+      className={className.join(' ')}
       tabIndex={0}
-      href={to}
+      href={href}
       onClick={onClick}
       {...anchorProps}
     >

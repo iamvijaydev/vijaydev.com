@@ -15,13 +15,18 @@ export const getContentItemTemplate = ({
   pathname,
   parentPathname,
 }: ContentItemTemplateProps) =>
-  `import RouteContentComponent, { matter, tableOfContents as toc } from '${source}';
+  `import { MDXProvider } from '@mdx-js/react';
+import RouteContentComponent, { matter, tableOfContents as toc } from '${source}';
 import { RouteComponent as BaseRouteComponent } from '${template}';
+import { mdxComponents } from 'main';
 
 export { links } from '${template}';
 
 export const meta = ([
-  { title: matter.title },
+  {
+    name: "title",
+    content: matter.title,
+  },
   {
     name: "description",
     content: matter.description,
@@ -31,7 +36,7 @@ export const meta = ([
 export const RouteComponent = () => {
   return (
     <BaseRouteComponent pathname="${pathname}" parentPathname="${parentPathname}" toc={toc}>
-      <RouteContentComponent />
+      <RouteContentComponent components={mdxComponents} />
     </BaseRouteComponent>
   );
 };

@@ -1,5 +1,5 @@
 import { MetaLink, Meta } from "~types";
-import { Link, LinkCard, H3, H4, useLearnContext, Masthead } from "main";
+import { Link, LinkCard, useLearnContext, Masthead, Text } from "main";
 
 export const links: MetaLink[] = [
   {
@@ -9,7 +9,10 @@ export const links: MetaLink[] = [
 ];
 
 export const meta: Meta[] = [
-  { title: "Learn" },
+  {
+    name: "title",
+    content: "Learn des",
+  },
   {
     name: "description",
     content: "Learn des",
@@ -21,17 +24,21 @@ export const RouteComponent = () => {
 
   return (
     <div>
-      <Masthead title="Learn" description="Learn FE" />
-      <H3>Featured</H3>
+      <Masthead
+        title="Learn Fe"
+        description="I build world class web apps for enterprise products and services"
+        branding="secondary"
+      />
+      <Text as="h3">Featured</Text>
       {
         store.state.featured.map((topic) => (
-          <LinkCard key={topic.pathname} to={topic.pathname}>
-            <H3>{topic.title}</H3>
+          <LinkCard key={topic.pathname} href={topic.pathname}>
+            <Text as="h3">{topic.title}</Text>
             <p>{topic.description}</p>
             {
               topic.chapters.map((chapter) => (
                 <div key={chapter.pathname}>
-                  <H4>{chapter.title}</H4>
+                  <Text as="h4">{chapter.title}</Text>
                   <p>{chapter.description}</p>
                 </div>
               ))
@@ -40,15 +47,15 @@ export const RouteComponent = () => {
           </LinkCard>
         ))
       }
-      <H3>Topics</H3>
+      <Text as="h3">Topics</Text>
       {
         Array.from(store.state.list.entries()).map(([id, topic]) => (
           <div key={id}>
-            <H4>{topic.matter.title} <Link to={topic.matter.pathname}>View chapters</Link></H4>
+            <Text as="h4">{topic.matter.title} <Link href={topic.matter.pathname}>View chapters</Link></Text>
             {
               topic.chapters.map((chapter) => (
-                <LinkCard key={chapter.pathname} to={chapter.pathname}>
-                  <H3>{chapter.title}</H3>
+                <LinkCard key={chapter.pathname} href={chapter.pathname}>
+                  <Text as="h3">{chapter.title}</Text>
                   <p>{chapter.description}</p>
                 </LinkCard>
               ))

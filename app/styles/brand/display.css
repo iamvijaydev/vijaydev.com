@@ -1,0 +1,38 @@
+:where(.none) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  :where(.md\:block) {
+    display: block;
+  }
+  :where(.md\:inline-block) {
+    display: inline-block;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .xl\:flex {
+    display: flex;
+  }
+}

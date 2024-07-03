@@ -1,5 +1,5 @@
 import { PropsWithChildren, useMemo } from "react";
-import { useLearnContext, Masthead, LinkCard, H3 } from "main";
+import { useLearnContext, Masthead, LinkCard, Text } from "main";
 import { MetaLink } from "~types";
 
 export const links: MetaLink[] = [
@@ -35,14 +35,14 @@ export const RouteComponent = ({ pathname }: PropsWithChildren<Props>) => {
   return (
     <div>
       <Masthead
-        breadcrumbNodes={[{ href: "/learn", label: "Learn" }]}
+        breadcrumbNodes={[{ href: "/", label: "Home" }, { href: "/learn", label: "Learn" }]}
         title={matter.title}
         description={matter.description}
       />
       <ul>
         {chapters.map((chapter) => (
-          <LinkCard key={chapter.pathname} to={chapter.pathname}>
-            <H3>{chapter.title}</H3>
+          <LinkCard key={chapter.pathname} href={chapter.pathname}>
+            <Text as="h3">{chapter.title}</Text>
             <p>{chapter.description}</p>
           </LinkCard>
         ))}

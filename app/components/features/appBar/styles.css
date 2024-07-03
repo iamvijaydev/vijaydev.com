@@ -1,0 +1,36 @@
+.app-bar {
+  --_shadow: var(--shadow-4);
+  box-shadow: var(--_shadow);
+  background-color: var(--app-bar-bg-color);
+  color: var(--app-bar-text-color);
+  transition: box-shadow 0.2s ease;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+html[data-scroll="0"] .app-bar {
+  --_shadow: var(--shadow-0);
+}
+
+.app-bar__height {
+  height: var(--app-bar-height);
+}
+
+.logo {
+  font-size: var(--size-1);
+  text-transform: lowercase;
+  word-spacing: -0.3em;
+  letter-spacing: -0.05em;
+}
+
+.logo__fname {
+  font-weight: 800;
+  color: var(--md-sys-color-primary);
+}
+
+.logo__lname {
+  font-weight: 300;
+  color: var(--md-sys-color-secondary);
+}

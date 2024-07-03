@@ -1,0 +1,36 @@
+:root {
+  /* custom colors vars */
+  --bg-color: var(--md-sys-color-surface);
+  --text-color: var(--md-sys-color-on-surface);
+  --text-dim-color: var(--md-sys-color-on-surface-variant);
+
+  --link-bg-color: transparent;
+  --link-text-color: var(--md-sys-color-primary);
+
+  --link-bg-color-visited: transparent;
+  --link-text-color-visited: var(--md-sys-color-secondary);
+
+  --link-bg-color-hover: var(--md-sys-color-secondary-container);
+  --link-text-color-hover: var(--md-sys-color-on-secondary-container);
+
+  --link-aux-text-color: var(--text-dim-color);
+  --link-aux-bg-color-hover: var(--md-sys-color-surface-container);
+  --link-aux-text-color-hover: var(--md-sys-color-on-surface-container);
+
+  --app-bar-height: 60px;
+  --app-bar-bg-color: var(--md-sys-color-surface-container);
+  --app-bar-text-color: var(--md-sys-color-on-surface-container);
+
+  --card-bg-color: var(--app-bar-bg-color);
+  --card-text-color: var(--app-bar-text-color);
+  --card-bg-color-hover: var(--md-sys-color-secondary-container);
+  --card-text-color-hover: var(--md-sys-color-on-secondary-container);
+
+  --label-bg-color: var(--app-bar-bg-color);
+  --label-text-color: var(--md-sys-color-on-surface-variant);
+}
+
+.label-box {
+  background-color: var(--label-bg-color);
+  color: var(--label-text-color);
+}

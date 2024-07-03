@@ -1,4 +1,4 @@
-import type { AnchorAttributes } from "~components/core/Link";
+import type { AnchorAttributes } from "~components/core/link/Link";
 import { LinkCard } from "~components/core/LinkCard";
 
 export interface Props

@@ -4,7 +4,8 @@ import {
   DetailedHTMLProps,
   HTMLAttributes,
 } from "react";
-import { Link } from "~components/core/Link";
+import { Link } from "~components/core/link/Link";
+import { Text } from "~components/core/text/Text";
 
 export interface BreadcrumbNode {
   label: string;
@@ -20,28 +21,35 @@ export const Breadcrumb = (props: PropsWithChildren<Props>) => {
   const { nodes, className, ...rest } = props;
 
   return (
-    <div
-      {...rest}
+    <Text
+      as="div"
+      variant="label"
+      height="compact"
+      dim
+      className="none xl:flex align-center gap-3xs mb-2xs"
       title="Breadcrumb"
       aria-label="Breadcrumb"
-      className={`${
-        className ?? ""
-      } none height-tight xl:flex a-center gapx-3xs text-label text-dim-color mb-2xs`}
+      {...rest}
     >
       {nodes.reduce<ReactNode[]>((acc, item, index) => {
         const node = item.href ? (
-          <Link to={item.href} key={index + "-b"}>
+          <Link
+            href={item.href}
+            key={index + "-b"}
+            textProps={{ variant: "label" }}
+          >
             {item.label}
           </Link>
         ) : (
-          <span key={index + "-b"}>{item.label}</span>
+          <Text as="span">
+            {item.label}
+          </Text>
         );
 
         return index === 0
           ? acc.concat(node)
           : acc.concat(
               <svg
-                className="text-dim-color"
                 key={index + "-a"}
                 role="img"
                 aria-hidden="true"
@@ -59,6 +67,6 @@ export const Breadcrumb = (props: PropsWithChildren<Props>) => {
               node
             );
       }, [])}
-    </div>
+    </Text>
   );
 };

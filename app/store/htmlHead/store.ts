@@ -4,6 +4,8 @@ import {
   type HtmlHeadState,
   type Imports,
   getHtmlHeadState,
+  defaultLinks,
+  defaultMeta,
 } from "./state";
 
 export interface HtmlHeadStore {
@@ -23,11 +25,11 @@ export const useHtmlHeadStore = (
   );
 
   const replaceMetaLinks = (links: MetaLink[]) => {
-    setState((prev) => ({ ...prev, links }));
-  }
+    setState((prev) => ({ ...prev, links: [...defaultLinks, ...links] }));
+  };
 
   const replaceMeta = (meta: Meta[]) => {
-    setState((prev) => ({ ...prev, meta }));
+    setState((prev) => ({ ...prev, meta: [...defaultMeta, ...meta]}));
   };
 
   const addImpormap = (importmap: Record<string, string>) => {

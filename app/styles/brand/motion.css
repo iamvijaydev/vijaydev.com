@@ -1,0 +1,35 @@
+:root {
+  --standard-accelerate-duration: 200ms;
+  --standard-decelerate-duration: 250ms;
+  --standard-duration: 300ms;
+
+  --emphasized-accelerate-duration: 200ms;
+  --emphasized-decelerate-duration: 400ms;
+  --emphasized-duration: 500ms;
+
+  --standard-accelerate-easing: cubic-bezier(0.3, 0, 1, 1);
+  --standard-decelerate-easing: cubic-bezier(0, 0, 0, 1);
+  --standard-easing: cubic-bezier(0.2, 0.0, 0, 1.0);
+
+  --emphasized-accelerate-easing: cubic-bezier(0.3, 0.0, 0.8, 0.15);
+  --emphasized-decelerate-easing: cubic-bezier(0.05, 0.7, 0.1, 1.0);
+  --emphasized-easing: var(--standard-easing);
+
+  --elevation-shadow-0: 0px 1px 3px 1px rgba(0, 0, 0, 0), 0px 1px 2px 0px rgba(0, 0, 0, 0);
+  --elevation-shadow-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  --elevation-shadow-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  --elevation-shadow-3: 0px 1px 3px 0px rgba(0, 0, 0, 0.30), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+  --elevation-shadow-4: 0px 2px 3px 0px rgba(0, 0, 0, 0.30), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+  --elevation-shadow-5: 0px 4px 4px 0px rgba(0, 0, 0, 0.30), 0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+}
+
+@media (prefers-reduced-motion:reduce) {
+  :root {
+    --standard-accelerate-duration: 0ms;
+    --standard-decelerate-duration: 0ms;
+    --standard-duration: 0ms;
+    --emphasized-accelerate-duration: 0ms;
+    --emphasized-decelerate-duration: 0ms;
+    --emphasized-duration: 0ms;
+  }
+}
