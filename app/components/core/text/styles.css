@@ -16,14 +16,14 @@
 }
 
 :where(.text) {
+  --_color: var(--on-surface);
   font-size: var(--_size);
   font-weight: var(--_weight);
   letter-spacing: var(--_spacing);
   line-height: var(--_height);
   text-wrap: var(--_wrap);
   text-align: var(--_align, left);
-  color: var(--_color, var(--text-color));
-  fill: var(--_color, var(--text-color));
+  color: var(--_color);
 }
 
 .text:where(.display, .heading) {
@@ -78,7 +78,6 @@
 
 .text:where(.label) {
   --_size: var(--size-0);
-  --_height: var(--line-height-tight);
 }
 
 .text:where(.center) {
@@ -105,7 +104,7 @@
 }
 
 .text:where(.dim) {
-  --_color: var(--text-dim-color);
+  --_color: var(--on-surface-dim);
 }
 
 .text:where(.gradient) {

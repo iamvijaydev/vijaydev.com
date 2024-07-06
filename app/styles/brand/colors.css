@@ -1,12 +1,12 @@
 /* generated with https://material-foundation.github.io/material-theme-builder/ */
 
-:root {
+/* :root {
   --base-color: #63a002;
 
-  color-scheme: light;
+  color-scheme: light; */
 
   /* set defaults */
-  --md-sys-color-primary: rgb(63 105 0);
+  /* --md-sys-color-primary: rgb(63 105 0);
   --md-sys-color-surface-tint: rgb(63 105 0);
   --md-sys-color-on-primary: rgb(255 255 255);
   --md-sys-color-primary-container: rgb(111 174 25);
@@ -111,10 +111,10 @@
     --md-sys-color-surface-container-high: rgb(39 43 33);
     --md-sys-color-surface-container-highest: rgb(50 54 43);
   }
-}
+} */
 
 /* exact same as -< :root { >- from above */
-[color-scheme="light"] {
+/* [color-scheme="light"] {
   color-scheme: light;
 
   --md-sys-color-primary: rgb(63 105 0);
@@ -166,10 +166,10 @@
   --md-sys-color-surface-container: rgb(236 240 223);
   --md-sys-color-surface-container-high: rgb(230 234 218);
   --md-sys-color-surface-container-highest: rgb(224 228 212);
-}
+} */
 
 /* exact same as -< @media (prefers-color-scheme: dark) { >- from above */
-[color-scheme="dark"] {
+/* [color-scheme="dark"] {
   color-scheme: dark;
 
   --md-sys-color-primary: rgb(151 217 69);
@@ -221,4 +221,4 @@
   --md-sys-color-surface-container: rgb(29 33 23);
   --md-sys-color-surface-container-high: rgb(39 43 33);
   --md-sys-color-surface-container-highest: rgb(50 54 43);
-}
+} */

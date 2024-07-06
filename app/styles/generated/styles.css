@@ -16,6 +16,8 @@
   margin-bottom: var(--space-3xs);
 }.mt-xl {
   margin-top: var(--space-xl);
+}.mt-s {
+  margin-top: var(--space-s);
 }.mb-xs {
   margin-bottom: var(--space-xs);
 }.mb-2xs {

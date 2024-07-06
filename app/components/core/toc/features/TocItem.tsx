@@ -18,7 +18,6 @@ export const TocItem = ({ entry, activeId }: TocItemProps): JSX.Element => {
           height: "compact",
         }}
         isActive={activeId === entry.id}
-        isAux
         className={marginSpace[entry.depth]}
       >
         {entry.value}

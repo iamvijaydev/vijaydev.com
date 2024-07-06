@@ -12,13 +12,17 @@
 @import url(brand/position.css);
 @import url(brand/tokens.css);
 
+@import url(theme/colors.css);
+@import url(theme/tokens.css);
+@import url(theme/utils.css);
+
 @import url(generated/styles.css);
 
 @import url(../components/styles.css);
+@import url(theme/colors.css);
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--surface);
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;

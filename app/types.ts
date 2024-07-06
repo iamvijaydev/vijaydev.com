@@ -1,6 +1,7 @@
 export type MetaLink = {
   href: string;
   rel: string;
+  crossOrigin?: boolean
 };
 
 export type Meta = {

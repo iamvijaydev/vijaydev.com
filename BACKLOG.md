@@ -1,3 +1,6 @@
+## 1008
+  - Create a new theme based on oklch color
+
 ## 1007
   - Add styles, use material theme css variables
   - Create new components and add styles

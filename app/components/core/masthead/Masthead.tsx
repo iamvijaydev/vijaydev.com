@@ -24,6 +24,7 @@ export const Masthead = ({
   const center = branding !== undefined;
   let styles = branding ? "py-2xl" : "py-3xl";
   const descStyles = branding ? "w-40ch" : "";
+  const gradient = branding === "primary" || branding === "secondary";
 
   if (branding === "primary") {
     styles += " align-center";
@@ -39,7 +40,7 @@ export const Masthead = ({
       <Text
         as="h1"
         balance
-        gradient
+        gradient={gradient}
         branding={branding}
         center={center}
         className="mb-3xs"
@@ -50,7 +51,7 @@ export const Masthead = ({
         as="div"
         variant="description"
         balance
-        gradient
+        gradient={gradient}
         branding={branding}
         center={center}
         className={descStyles}
@@ -58,7 +59,7 @@ export const Masthead = ({
         {description}
       </Text>
       {published && readTime ? (
-        <div className="flex flex-wrap gap-xs mt-2xs">
+        <div className="flex flex-wrap gap-m mt-s">
           <Label title={`Last update on: ${published}`}>
             Published: {published}
           </Label>

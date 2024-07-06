@@ -1,5 +1,6 @@
 import { Grid, Cell } from "~components/core/grid/Grid";
 import { Link } from "~components/core/link/Link";
+import { Theming } from "./Theming";
 
 export const AppBar = () => {
   return (
@@ -7,9 +8,9 @@ export const AppBar = () => {
       <Grid>
         <Cell size={6} className="app-bar__height flex align-center">
           <Link href="/" className="logo">
-            <span className="logo__fname">Vijay</span>
+            <span className="logo__fname primary-color">Vijay</span>
             <span> </span>
-            <span className="logo__lname">Dev</span>
+            <span className="logo__lname secondary-color">Dev</span>
           </Link>
         </Cell>
         <Cell size={6}>
@@ -19,6 +20,7 @@ export const AppBar = () => {
             <Link href="/blog">Blog</Link>
             <Link href="/learn">Learn</Link>
           </nav>
+          <Theming />
         </Cell>
       </Grid>
     </header>

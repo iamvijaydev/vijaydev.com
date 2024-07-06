@@ -23,7 +23,6 @@ export interface AnchorAttributes
   onClick?: (e: ClickEvent) => void;
   isActive?: boolean;
   textProps?: Partial<TextProps>;
-  isAux?: boolean;
 }
 
 export const Link = (props: AnchorAttributes) => {
@@ -36,7 +35,6 @@ export const Link = (props: AnchorAttributes) => {
     children,
     className: propClassName,
     textProps,
-    isAux,
     ...anchorProps
   } = props;
 
@@ -49,11 +47,9 @@ export const Link = (props: AnchorAttributes) => {
     className.push(getTextClassName(textProps));
   }
   className.push('link');
+  className.push('secondary-color');
   if (isActive) {
     className.push('active');
-  }
-  if (isAux) {
-    className.push('aux');
   }
 
   const onClick = (

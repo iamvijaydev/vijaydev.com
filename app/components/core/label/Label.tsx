@@ -7,5 +7,5 @@ export interface Props {
 }
 
 export const Label = (props: PropsWithChildren<Props>) => {
-  return <Text as="div" variant="label" height="tight" className="label-box radius-m p-2xs flex gapx-2xs">{props.children}</Text>;
+  return <Text as="div" variant="label" height="tight" dim>{props.children}</Text>;
 };

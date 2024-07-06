@@ -9,7 +9,7 @@ import { Text } from "~components/core/text/Text";
 
 export interface BreadcrumbNode {
   label: string;
-  href?: string;
+  href: string;
 }
 
 export interface Props
@@ -21,18 +21,14 @@ export const Breadcrumb = (props: PropsWithChildren<Props>) => {
   const { nodes, className, ...rest } = props;
 
   return (
-    <Text
-      as="div"
-      variant="label"
-      height="compact"
-      dim
+    <div
       className="none xl:flex align-center gap-3xs mb-2xs"
       title="Breadcrumb"
       aria-label="Breadcrumb"
       {...rest}
     >
       {nodes.reduce<ReactNode[]>((acc, item, index) => {
-        const node = item.href ? (
+        const node = (
           <Link
             href={item.href}
             key={index + "-b"}
@@ -40,10 +36,6 @@ export const Breadcrumb = (props: PropsWithChildren<Props>) => {
           >
             {item.label}
           </Link>
-        ) : (
-          <Text as="span">
-            {item.label}
-          </Text>
         );
 
         return index === 0
@@ -57,6 +49,7 @@ export const Breadcrumb = (props: PropsWithChildren<Props>) => {
                 height="16"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
+                className="dim-fill"
               >
                 <path
                   fillRule="evenodd"
@@ -67,6 +60,6 @@ export const Breadcrumb = (props: PropsWithChildren<Props>) => {
               node
             );
       }, [])}
-    </Text>
+    </div>
   );
 };

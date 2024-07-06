@@ -6,6 +6,7 @@ export const margins = [
   'mb-2xs',
   'mb-3xs',
   'mt-xl',
+  'mt-s',
   'mb-xs',
   'mb-2xs',
   'mb-s',
