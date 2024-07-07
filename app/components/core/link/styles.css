@@ -3,11 +3,11 @@
 }
 
 :where(.link) {
-  --link-bg-color: transparent;
+  --link-bg-color: var(--current-bg-color);
+  --link-text-color: var(--current-text-color);
   --link-padding: 0 var(--space-3xs);
-  --link-border-color: var(--link-text-color);
+  --link-border-color: var(--outline);
   --link-border-radius: var(--border-radius-xs);
-  --link-border-width: 0.1em;
   --link-shadow-width: 0.2em;
   --link-transition-duration: var(--standard-decelerate-duration);
   --link-transition-easing: var(--standard-decelerate-easing);
@@ -25,9 +25,6 @@
 }
 
 :where(.link.active, .link:focus-visible) {
-  --link-bg-color: var(--secondary-color);
-  --link-text-color: var(--on-secondary-color);
-  --link-border-color: var(--secondary-color);
   --link-transition-duration: var(--standard-accelerate-duration);
   --link-transition-easing: var(--standard-accelerate-easing);
 
@@ -36,23 +33,19 @@
   box-shadow: var(--link-border);
 }
 
-:is(.link.logo:focus-visible) {
-  --link-bg-color: transparent;
-}
-
 :where(.link.active) {
-  --link-border: 0 0 0 var(--link-border-width) var(--link-border-color);
+  --link-border-width: 1px;
+  --link-border: 0 0 0 var(--link-border-width) var(--link-text-color);
 }
 
 :where(.link:focus-visible) {
-  --link-border: 0 0 0 var(--link-border-width) var(--current-bg-color),
-    0 0 0 var(--link-shadow-width) var(--link-border-color);
+  --link-border-width: 0.1em;
+  --link-border: 0 0 0 var(--link-border-width) var(--link-text-color),
+    0 0 0 var(--link-shadow-width) var(--link-bg-color);
 }
 
 @media (hover: hover) {
   :where(.link:not(.logo):hover) {
-    --link-bg-color: var(--secondary-color);
-    --link-text-color: var(--on-secondary-color);
     --link-transition-duration: var(--standard-accelerate-duration);
     --link-transition-easing: var(--standard-accelerate-easing);
   }

@@ -40,7 +40,7 @@ export const App = (props: AppProps = {}) => {
             <Links />
             <Meta />
           </head>
-          <body>
+          <body className="surface">
             <BlogContextProvider blogs={props.blogs || {}}>
               <LearnContextProvider learn={props.learn || {}}>
                 <RouteContextProvider

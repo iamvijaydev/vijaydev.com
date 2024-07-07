@@ -47,7 +47,7 @@ export const Link = (props: AnchorAttributes) => {
     className.push(getTextClassName(textProps));
   }
   className.push('link');
-  className.push('secondary-color');
+  className.push('hover:secondary-container');
   if (isActive) {
     className.push('active');
   }

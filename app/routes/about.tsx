@@ -1,5 +1,5 @@
 import { MetaLink, Meta } from "~types";
-import { Link, Button, Masthead } from "main";
+import { Link, Button, Masthead, Cell, Grid } from "main";
 
 export const links: MetaLink[] = [
   {
@@ -27,17 +27,22 @@ export const RouteComponent = () => {
         description="I build world class web apps for enterprise products and services"
         branding="secondary"
       />
-      <div className="my-l">
-        <Link href="/home">Home</Link>
-      </div>
-      <div className="my-l">
-        <Button label="Filled" as="Filled" />
-        <Button label="Filled" as="Filled" disabled />
-        <Button label="Tonal" as="Tonal" />
-        <Button label="Text" as="Text" />
-        <Button label="Icon" as="Icon" />
-        <Button label="Menu" as="Menu" />
-      </div>
+      <Grid as="div">
+        <Cell size={12}>
+          <div className="my-l">
+            <Link href="/home">Home</Link>
+          </div>
+          <a className="secondary-container" href="#">Menu</a>
+          <div className="my-l">
+            <Button label="Filled" as="Filled" />
+            <Button label="Filled" as="Filled" disabled />
+            <Button label="Tonal" as="Tonal" />
+            <Button label="Text" as="Text" />
+            <Button label="Icon" as="Icon" />
+            <Button label="Menu" as="Menu" />
+          </div>
+        </Cell>
+      </Grid>
     </div>
   );
 };

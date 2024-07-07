@@ -16,7 +16,7 @@
 }
 
 :where(.text) {
-  --text-color: var(--on-surface);
+  --text-color: var(--current-text-color);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   letter-spacing: var(--letter-spacing);
@@ -105,7 +105,7 @@
 }
 
 .text:where(.dim) {
-  --text-color: var(--on-surface-dim);
+  --text-color: var(--current-text-color-dim);
 }
 
 .text:where(.gradient) {

@@ -2,6 +2,7 @@
 
 @import url(theme/colors.css);
 @import url(theme/theme.css);
+@import url(theme/surface.css);
 @import url(theme/utils.css);
 
 @import url(brand/font.css);
@@ -17,13 +18,12 @@
 @import url(generated/styles.css);
 
 @import url(../components/styles.css);
-@import url(theme/colors.css);
 
 body {
   --app-bar-height: 60px;
-  --current-bg-color: var(--surface);
 
   background-color: var(--current-bg-color);
+  color: var(--current-text-color);
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
