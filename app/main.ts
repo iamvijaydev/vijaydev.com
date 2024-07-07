@@ -7,6 +7,7 @@ export { Layout } from '~components/core/Layout';
 export { Grid, Cell } from '~components/core/grid/Grid';
 export { type TextProps, Text } from '~components/core/text/Text';
 export { type AnchorAttributes, Link } from '~components/core/link/Link';
+export { LinkButton } from '~components/core/linkButton/LinkButton';
 export { Button } from '~components/core/button/Button';
 export { LinkCard } from '~components/core/LinkCard';
 export { PostWrapper } from '~components/core/PostWrapper';

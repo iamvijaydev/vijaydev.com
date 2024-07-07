@@ -5,7 +5,11 @@ import type {
   TouchEvent as ReactTouchEvent,
 } from "react";
 import { useLoadRouteCommand } from "~commands/useLoadRoute";
-import { type TextProps, getTextClassName, Text } from "~components/core/text/Text";
+import {
+  type TextProps,
+  getTextClassName,
+  Text,
+} from "~components/core/text/Text";
 
 export type ClickEvent =
   | ReactMouseEvent<HTMLAnchorElement, MouseEvent>
@@ -22,6 +26,7 @@ export interface AnchorAttributes
   href: string;
   onClick?: (e: ClickEvent) => void;
   isActive?: boolean;
+  isButton?: boolean;
   textProps?: Partial<TextProps>;
 }
 
@@ -30,6 +35,7 @@ export const Link = (props: AnchorAttributes) => {
 
   const {
     isActive,
+    isButton,
     onClick: propOnClick,
     href,
     children,
@@ -46,10 +52,14 @@ export const Link = (props: AnchorAttributes) => {
   if (textProps) {
     className.push(getTextClassName(textProps));
   }
-  className.push('link');
-  className.push('hover:secondary-container');
+  className.push("link");
+  if (isButton) {
+    className.push("secondary-container");
+  } else {
+    className.push("hover:secondary-container");
+  }
   if (isActive) {
-    className.push('active');
+    className.push("active");
   }
 
   const onClick = (
@@ -57,7 +67,7 @@ export const Link = (props: AnchorAttributes) => {
       | ReactMouseEvent<HTMLAnchorElement, MouseEvent>
       | ReactTouchEvent<HTMLAnchorElement>
   ) => {
-    if (anchorProps.target === '_blank') {
+    if (anchorProps.target === "_blank") {
       propOnClick && propOnClick(e);
       return;
     }
@@ -80,7 +90,7 @@ export const Link = (props: AnchorAttributes) => {
 
   return (
     <a
-      className={className.join(' ')}
+      className={className.join(" ")}
       tabIndex={0}
       href={href}
       onClick={onClick}

@@ -6,7 +6,6 @@
   --link-bg-color: var(--current-bg-color);
   --link-text-color: var(--current-text-color);
   --link-padding: 0 var(--space-3xs);
-  --link-border-color: var(--outline);
   --link-border-radius: var(--border-radius-xs);
   --link-shadow-width: 0.2em;
   --link-transition-duration: var(--standard-decelerate-duration);
@@ -22,6 +21,11 @@
   transition-property: var(--link-transition-properties);
   transition-duration: var(--link-transition-duration);
   transition-timing-function: var(--link-transition-easing);
+}
+
+:where(.link.secondary-container) {
+  --link-padding: var(--space-2xs) var(--space-s);
+  --link-border-radius: var(--border-radius-l);
 }
 
 :where(.link.active, .link:focus-visible) {
@@ -40,7 +44,7 @@
 
 :where(.link:focus-visible) {
   --link-border-width: 0.1em;
-  --link-border: 0 0 0 var(--link-border-width) var(--link-text-color),
+  --link-border: 0 0 0 var(--link-border-width) var(--current-parent-bg-color),
     0 0 0 var(--link-shadow-width) var(--link-bg-color);
 }
 

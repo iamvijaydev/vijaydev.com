@@ -1,5 +1,5 @@
 import { MetaLink, Meta } from "~types";
-import { Link, Button, Masthead, Cell, Grid } from "main";
+import { Link, LinkButton, Button, Masthead, Cell, Grid } from "main";
 
 export const links: MetaLink[] = [
   {
@@ -32,7 +32,7 @@ export const RouteComponent = () => {
           <div className="my-l">
             <Link href="/home">Home</Link>
           </div>
-          <a className="secondary-container" href="#">Menu</a>
+          <LinkButton href="#" textProps={{ variant: 'label' }}>Menu</LinkButton>
           <div className="my-l">
             <Button label="Filled" as="Filled" />
             <Button label="Filled" as="Filled" disabled />

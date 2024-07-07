@@ -1,12 +1,19 @@
 :where(*) {
   --primary-color-light: var(--color-6);
   --secondary-color-light: var(--color-10);
-  --on-secondary-color-light: var(--color-11);
   --accent-color-light: var(--color-8);
+
   --primary-color-dark: var(--color-3);
   --secondary-color-dark: var(--color-6);
-  --on-secondary-color-dark: var(--color-10);
   --accent-color-dark: var(--color-6);
+
+  --secondary-container-light: var(--color-2);
+  --secondary-container-high-light: var(--color-4);
+  --on-secondary-container-color-light: var(--color-11);
+
+  --secondary-container-dark: var(--color-12);
+  --secondary-container-high-dark: var(--color-10);
+  --on-secondary-container-color-dark: var(--color-1);
 }
 
 :root {
