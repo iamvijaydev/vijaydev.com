@@ -1,7 +1,9 @@
 @import url(reset.css);
 
-@import url(brand/colors.css);
-@import url(brand/gradients.css);
+@import url(theme/colors.css);
+@import url(theme/theme.css);
+@import url(theme/utils.css);
+
 @import url(brand/font.css);
 @import url(brand/space.css);
 @import url(brand/box.css);
@@ -12,24 +14,26 @@
 @import url(brand/position.css);
 @import url(brand/tokens.css);
 
-@import url(theme/colors.css);
-@import url(theme/tokens.css);
-@import url(theme/utils.css);
-
 @import url(generated/styles.css);
 
 @import url(../components/styles.css);
 @import url(theme/colors.css);
 
 body {
-  background-color: var(--surface);
+  --app-bar-height: 60px;
+  --current-bg-color: var(--surface);
+
+  background-color: var(--current-bg-color);
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "slnt" 0;
+  font-variation-settings: "slnt" -10;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: grid;
   grid-template-rows: min-content auto min-content;
   min-height: 100dvh;
+  transition: background-color var(--standard-duration) var(--standard-easing);
 }

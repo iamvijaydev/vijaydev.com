@@ -1,5 +1,6 @@
 import { Grid, Cell } from "~components/core/grid/Grid";
 import { Link } from "~components/core/link/Link";
+import { Separator } from "~components/core/Separator";
 import { Theming } from "./Theming";
 
 export const AppBar = () => {
@@ -15,10 +16,12 @@ export const AppBar = () => {
         </Cell>
         <Cell size={6}>
           <nav className="app-bar__height flex flex-end align-center gap-m">
-            <Link href="/about">About</Link>
-            <Link href="/featured">Featured</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/learn">Learn</Link>
+            <Link href="/about" textProps={{ variant: 'label' }}>About</Link>
+            <Link href="/featured" textProps={{ variant: 'label' }}>Featured</Link>
+            <Link href="/blog" textProps={{ variant: 'label' }}>Blog</Link>
+            <Link href="/learn" textProps={{ variant: 'label' }}>Learn</Link>
+            <span>|</span>
+            <button>Theme</button>
           </nav>
           <Theming />
         </Cell>

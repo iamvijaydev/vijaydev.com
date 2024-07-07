@@ -1,8 +1,13 @@
 .app-bar {
-  --_shadow: var(--shadow-2);
-  box-shadow: var(--_shadow);
-  background-color: var(--surface-container);
+  --current-bg-color: var(--surface-container);
+  --shadow-value: var(--shadow-2);
+  
+  background-color: var(--current-bg-color);
+  box-shadow: var(--shadow-value);
   transition: box-shadow 0.2s ease;
+  transition-property: box-shadow color;
+  transition-duration: var(--standard-duration);
+  transition-timing-function: var(--standard-easing);
   position: fixed;
   left: 0;
   right: 0;
@@ -10,7 +15,7 @@
 }
 
 html[data-scroll="0"] .app-bar {
-  --_shadow: var(--shadow-0);
+  --shadow-value: var(--shadow-0);
 }
 
 .app-bar__height {

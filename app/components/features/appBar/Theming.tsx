@@ -24,6 +24,10 @@ export const Theming = () => {
     const hue = localStorage.getItem(hueLsKey);
     if (hue) {
       setHue(hue);
+      if (hue === "none") {
+        document.documentElement.removeAttribute(hueAttrKey);
+        return;
+      }
       document.documentElement.setAttribute(hueAttrKey, hue);
     }
   }, []);
@@ -40,6 +44,11 @@ export const Theming = () => {
   };
   const onHueChange = (value: string) => () => {
     setHue(value);
+    if (value === "none") {
+      document.documentElement.removeAttribute(hueAttrKey);
+      localStorage.removeItem(hueLsKey);
+      return;
+    }
     document.documentElement.setAttribute(hueAttrKey, value);
     localStorage.setItem(hueLsKey, value);
   };
@@ -58,6 +67,9 @@ export const Theming = () => {
         </button>
       </div>
       <div>
+      <button onClick={onHueChange("none")} disabled={hue === "none"}>
+          none
+        </button>
         <button onClick={onHueChange("red")} disabled={hue === "red"}>
           red
         </button>

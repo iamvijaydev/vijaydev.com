@@ -10,7 +10,7 @@ export const defaultLinks: MetaLink[] = [{
   href: "https://fonts.gstatic.com",
   crossOrigin: true,
 }, {
-  href: "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap",
+  href: "https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10,100..900&display=swap",
   rel: "stylesheet",
 }, { 
   href: "/assets/styles.css",

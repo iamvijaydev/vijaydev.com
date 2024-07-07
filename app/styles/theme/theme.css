@@ -167,7 +167,7 @@ html {
   --primary-color: var(--color-6);
 }
 :where(.secondary-color) {
-  --secondary-color: var(--color-8);
+  --secondary-color: var(--color-9);
   --on-secondary-color: var(--color-0);
 }
 :where(.accent-color) {
@@ -187,7 +187,7 @@ html {
   }
 
   :where(.primary-color) {
-    --primary-color: var(--color-8);
+    --primary-color: var(--color-7);
   }
   :where(.secondary-color) {
     --secondary-color: var(--color-4);
@@ -212,7 +212,7 @@ html {
     --primary-color: var(--color-6);
   }
   :where(.secondary-color) {
-    --secondary-color: var(--color-8);
+    --secondary-color: var(--color-9);
     --on-secondary-color: var(--color-0);
   }
   :where(.accent-color) {
@@ -231,10 +231,10 @@ html {
   --outline: var(--outline-dark);
 
   :where(.primary-color) {
-    --primary-color: var(--color-8);
+    --primary-color: var(--color-5);
   }
   :where(.secondary-color) {
-    --secondary-color: var(--color-4);
+    --secondary-color: var(--color-3);
     --on-secondary-color: var(--color-15);
   }
   :where(.accent-color) {

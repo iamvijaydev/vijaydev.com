@@ -16,80 +16,81 @@
 }
 
 :where(.text) {
-  --_color: var(--on-surface);
-  font-size: var(--_size);
-  font-weight: var(--_weight);
-  letter-spacing: var(--_spacing);
-  line-height: var(--_height);
-  text-wrap: var(--_wrap);
-  text-align: var(--_align, left);
-  color: var(--_color);
+  --text-color: var(--on-surface);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  text-wrap: var(--text-wrap);
+  text-align: var(--text-align, left);
+  color: var(--text-color);
+  transition: color var(--standard-duration) var(--standard-easing);
 }
 
 .text:where(.display, .heading) {
-  --_height: var(--line-height-compact);
+  --line-height: var(--line-height-compact);
 }
 
 .text:where(.title, .body, .label) {
-  --_weight: 400;
+  --font-weight: 400;
 }
 
 .text:where(.title-4, .title-5) {
-  --_weight: 500;
+  --font-weight: 500;
 }
 
 .text:where(.display) {
-  --_size: var(--size-6);
-  --_weight: 600;
-  --_spacing: -0.025em;
+  --font-size: var(--size-6);
+  --font-weight: 600;
+  --letter-spacing: -0.025em;
 }
 
 .text:where(.description) {
-  --_size: var(--size-5);
-  --_weight: 200;
-  --_spacing: -0.015em;
-  --_height: var(--line-height-normal);
+  --font-size: var(--size-5);
+  --font-weight: 200;
+  --letter-spacing: -0.015em;
+  --line-height: var(--line-height-normal);
 }
 
 .text:where(.heading) {
-  --_size: var(--size-4);
-  --_weight: 300;
+  --font-size: var(--size-4);
+  --font-weight: 300;
 }
 
 .text:where(.title) {
-  --_size: var(--size-3);
-  --_weight: 400;
+  --font-size: var(--size-3);
+  --font-weight: 400;
 }
 
 .text:where(.title-4) {
-  --_size: var(--size-2);
-  --_weight: 500;
+  --font-size: var(--size-2);
+  --font-weight: 500;
 }
 
 .text:where(.title-5) {
-  --_size: var(--size-1);
-  --_weight: 500;
+  --font-size: var(--size-1);
+  --font-weight: 500;
 }
 
 .text:where(.body) {
-  --_size: var(--size-1);
-  --_height: var(--line-height-relax);
+  --font-size: var(--size-1);
+  --line-height: var(--line-height-relax);
 }
 
 .text:where(.label) {
-  --_size: var(--size-0);
+  --font-size: var(--size-0);
 }
 
 .text:where(.center) {
-  --_align: center;
+  --text-align: center;
 }
 
 .text:where(.right) {
-  --_align: right;
+  --text-align: right;
 }
 
 .text:where(.balance) {
-  --_wrap: balance;
+  --text-wrap: balance;
 }
 
 .text:where(.w-40ch) {
@@ -104,7 +105,7 @@
 }
 
 .text:where(.dim) {
-  --_color: var(--on-surface-dim);
+  --text-color: var(--on-surface-dim);
 }
 
 .text:where(.gradient) {

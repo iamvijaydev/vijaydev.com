@@ -20,7 +20,7 @@
   display: inline-block;
   padding: var(--link-padding);
   transition-property: var(--link-transition-properties);
-  transition-duration: var(--link-transition-duration)var(--link-transition-easing);
+  transition-duration: var(--link-transition-duration);
   transition-timing-function: var(--link-transition-easing);
 }
 
@@ -41,12 +41,11 @@
 }
 
 :where(.link.active) {
-  --link-border-width: 1px;
   --link-border: 0 0 0 var(--link-border-width) var(--link-border-color);
 }
 
 :where(.link:focus-visible) {
-  --link-border: 0 0 0 var(--link-border-width) var(--surface),
+  --link-border: 0 0 0 var(--link-border-width) var(--current-bg-color),
     0 0 0 var(--link-shadow-width) var(--link-border-color);
 }
 
