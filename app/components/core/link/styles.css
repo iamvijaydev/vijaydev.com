@@ -5,8 +5,8 @@
 :where(.link) {
   --link-bg-color: var(--current-bg-color);
   --link-text-color: var(--current-text-color);
-  --link-padding: 0 var(--space-3xs);
-  --link-border-radius: var(--border-radius-xs);
+  --link-padding: 0 var(--space-2xs);
+  --link-border-radius: var(--border-radius-s);
   --link-shadow-width: 0.2em;
   --link-transition-duration: var(--standard-decelerate-duration);
   --link-transition-easing: var(--standard-decelerate-easing);
@@ -24,7 +24,7 @@
 }
 
 :where(.link.secondary-container) {
-  --link-padding: var(--space-2xs) var(--space-s);
+  --link-padding: var(--space-3xs-2xs) var(--space-xs-s);
   --link-border-radius: var(--border-radius-l);
 }
 
@@ -35,11 +35,6 @@
   outline: 1px solid transparent;
   outline-offset: var(--link-border-width);
   box-shadow: var(--link-border);
-}
-
-:where(.link.active) {
-  --link-border-width: 1px;
-  --link-border: 0 0 0 var(--link-border-width) var(--link-text-color);
 }
 
 :where(.link:focus-visible) {

@@ -1,4 +1,14 @@
 .button {
+  padding: var(--space-2xs) var(--space-2xs);
+  background: none;
+  border: none;
+  line-height: var(--line-height-tight);
+  border-radius: var(--border-radius-s);
+  box-shadow: 0 0 0 1px var(--current-text-color) inset;
+  outline: 1px solid transparent;
+}
+
+/* .button {
   --button-radius: var(--border-radius-full);
 
   all: unset;
@@ -179,4 +189,4 @@
   .button.as-menu.active {
     --button-text-color: var(--link-hover-color);
   }
-}
+} */

@@ -16,7 +16,7 @@
   4. Improve text rendering
 */
 body {
-  line-height: 1.5;
+  line-height: var(--line-height-relax);
   -webkit-font-smoothing: antialiased;
 }
 /*

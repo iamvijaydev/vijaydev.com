@@ -14,7 +14,7 @@ export interface Props
 
 export const getButtonClassName = (props: Pick<Props, "as" | "icon" | "postIcon">) => {
   const { as, icon, postIcon } = props;
-  let className = "height-tight button ";
+  let className = "height-tight button secondary-color";
 
   if (as === "Filled") {
     className += "as-filled";
@@ -54,7 +54,7 @@ export const Button = (props: Props) => {
   return (
     <button type={type} {...rest} className={className}>
       {icon ? <span className="icon">{icon}</span> : null}
-      <span className={`txt${ellipsis ? ' ellipsis' : ''}`}>{label}</span>
+      <span className={`text label${ellipsis ? ' ellipsis' : ''}`}>{label}</span>
       {postIcon ? <span className="icon post-icon">{postIcon}</span> : null}
     </button>
   );

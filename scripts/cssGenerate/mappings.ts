@@ -22,14 +22,14 @@ export const valueMap = new Map([
   ["2xl", "--space-2xl"],
   ["3xl", "--space-3xl"],
 
-  ["-3sx-2xs", "--space-3sx-2xs"],
-  ["-2sx-xs", "--space-2sx-xs"],
-  ["-sx-sm=", "--space-sx-s"],
-  ["-s-m", "--space-s-m"],
-  ["-m-l", "--space-m-l"],
-  ["-lg-xl", "--space-lg-xl"],
-  ["-xl-2xl", "--space-xl-2xl"],
-  ["-2xl-3xl", "--space-2xl-3xl"],
+  ["3xs-2xs", "--space-3xs-2xs"],
+  ["2xs-xs", "--space-2xs-xs"],
+  ["xs-s", "--space-xs-s"],
+  ["s-m", "--space-s-m"],
+  ["m-l", "--space-m-l"],
+  ["lg-xl", "--space-lg-xl"],
+  ["xl-2xl", "--space-xl-2xl"],
+  ["2xl-3xl", "--space-2xl-3xl"],
 
   ["xs-lg", "--space-xs-l"],
 ]);

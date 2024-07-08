@@ -10,7 +10,8 @@ const getSpacing = (propertyName: string) => (name: string) => {
 
   if (className === undefined) className = breakpoint;
 
-  const [propDirection, value] = className.split("-");
+  let [propDirection, ...value] = className.split("-") as any;
+  value = value.join("-") as string;
   const direction = propDirection.replace(shortNameMap.get(propertyName)!, "");
 
   let properties = [propertyName];

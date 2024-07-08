@@ -17,11 +17,13 @@ export const paddings = [
   'p-2xs',
   'p-s',
   'lg:px-xl',
+  'pl-m',
   'py-2xl',
   'py-3xl',
   'pt-xs',
-  'pl-m',
-  'py-m'
+  'py-3xs-2xs',
+  'py-m',
+  'px-xs-s'
 ];
 
 export const gaps = [

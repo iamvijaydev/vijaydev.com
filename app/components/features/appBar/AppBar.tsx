@@ -1,6 +1,6 @@
 import { Grid, Cell } from "~components/core/grid/Grid";
 import { Link } from "~components/core/link/Link";
-import { Separator } from "~components/core/Separator";
+import { Button } from "~components/core/button/Button";
 import { Theming } from "./Theming";
 
 export const AppBar = () => {
@@ -21,7 +21,7 @@ export const AppBar = () => {
             <Link href="/blog" textProps={{ variant: 'label' }}>Blog</Link>
             <Link href="/learn" textProps={{ variant: 'label' }}>Learn</Link>
             <span>|</span>
-            <button>Theme</button>
+            <Button label="Theme" />
           </nav>
           <Theming />
         </Cell>

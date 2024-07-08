@@ -50,7 +50,7 @@ html {
   --current-text-color: var(--secondary-color-light);
 }
 
-:where(.hover\:secondary-container:focus-visible) {
+:where(.hover\:secondary-container:focus-visible, .hover\:secondary-container.active) {
   --current-bg-color: var(--hover-secondary-container-light);
   --current-text-color: var(--on-hover-secondary-container-color-light);
 }
@@ -99,7 +99,7 @@ html {
     --current-text-color: var(--secondary-color-dark);
   }
   
-  :where(.hover\:secondary-container:focus-visible) {
+  :where(.hover\:secondary-container:focus-visible, .hover\:secondary-container.active) {
     --current-bg-color: var(--hover-secondary-container-dark);
     --current-text-color: var(--on-hover-secondary-container-color-dark);
   }
@@ -149,7 +149,7 @@ html {
     --current-text-color: var(--secondary-color-light);
   }
   
-  :where(.hover\:secondary-container:focus-visible) {
+  :where(.hover\:secondary-container:focus-visible, .hover\:secondary-container.active) {
     --current-bg-color: var(--hover-secondary-container-light);
     --current-text-color: var(--on-hover-secondary-container-color-light);
   }
@@ -199,7 +199,7 @@ html {
     --current-text-color: var(--secondary-color-dark);
   }
   
-  :where(.hover\:secondary-container:focus-visible) {
+  :where(.hover\:secondary-container:focus-visible, .hover\:secondary-container.active) {
     --current-bg-color: var(--hover-secondary-container-light);
     --current-text-color: var(--on-hover-secondary-container-color-light);
   }
