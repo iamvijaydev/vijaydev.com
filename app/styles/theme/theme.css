@@ -11,18 +11,18 @@
   /* secondary container */
 
   --secondary-container-light: var(--color-2);
-  --on-secondary-container-light: var(--color-10);
+  --on-secondary-container-light: var(--color-11);
 
   --secondary-container-dark: var(--color-11);
-  --on-secondary-container-dark: var(--color-3);
+  --on-secondary-container-dark: var(--color-2);
 
   /* hover secondary container */
 
   --hover-secondary-container-light: var(--color-2);
-  --on-hover-secondary-container-light: var(--color-10);
+  --on-hover-secondary-container-light: var(--color-11);
 
   --hover-secondary-container-dark: var(--color-11);
-  --on-hover-secondary-container-dark: var(--color-3);
+  --on-hover-secondary-container-dark: var(--color-2);
 
   /* shared focus visible state for containers */
   --focus-visible-container-light: var(--color-5);
