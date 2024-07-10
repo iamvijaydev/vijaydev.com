@@ -1,6 +1,6 @@
 html {
-  --gray-hue: var(--hue-green);
-  --gray-chroma: 0.01;
+  /* --gray-hue: var(--hue-green);
+  --gray-chroma: 0.01; */
 
   --surface-light: var(--gray-0);
   --on-surface-light: var(--gray-15);
