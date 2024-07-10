@@ -24,25 +24,10 @@
   transition-timing-function: var(--link-transition-easing);
 }
 
-:where(.link.secondary-container) {
-  --link-padding: var(--space-3xs-2xs) var(--space-xs-s);
-  --link-border-radius: var(--border-radius-l);
-}
-
-:where(.link.active, .link:focus-visible) {
+:where(.link.active) {
   --link-transition-duration: var(--standard-accelerate-duration);
   --link-transition-easing: var(--standard-accelerate-easing);
-
-  outline: 1px solid transparent;
-  outline-offset: var(--link-border-width);
-  box-shadow: var(--link-border);
 }
-
-:where(.link:focus-visible) {
-  --link-border: 0 0 0 var(--link-border-width) var(--current-parent-bg-color),
-    0 0 0 var(--link-shadow-width) var(--link-bg-color);
-}
-
 @media (hover: hover) {
   :where(.link:hover) {
     --link-transition-duration: var(--standard-accelerate-duration);
@@ -53,4 +38,11 @@
     --link-bg-color: transparent;
     --link-border: 0 0 0 var(--link-border-width) var(--current-text-color);
   }
+}
+
+:where(.focus-visible:is(:focus-visible)) {
+  outline: 1px solid transparent;
+  outline-offset: var(--link-border-width);
+  box-shadow: 0 0 0 0.1em var(--current-parent-bg-color),
+    0 0 0 0.2em var(--current-bg-color);
 }

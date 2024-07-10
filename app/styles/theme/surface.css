@@ -124,6 +124,16 @@ html {
       --current-text-color: var(--on-hover-secondary-container-dark);
     }
   }
+
+  /* shared focus visible container state */
+
+  :where(
+    .secondary-container:focus-visible,
+    .hover\:secondary-container:focus-visible
+  ) {
+    --current-bg-color: var(--focus-visible-container-dark);
+    --current-text-color: var(--on-focus-visible-container-color-dark);
+  }
 }
 
 [color-scheme="light"] {
@@ -176,6 +186,16 @@ html {
       --current-text-color: var(--on-hover-secondary-container-light);
     }
   }
+
+  /* shared focus visible container state */
+
+  :where(
+    .secondary-container:focus-visible,
+    .hover\:secondary-container:focus-visible
+  ) {
+    --current-bg-color: var(--focus-visible-container-light);
+    --current-text-color: var(--on-focus-visible-container-color-light);
+  }
 }
 
 [color-scheme="dark"] {
@@ -227,5 +247,13 @@ html {
       --current-bg-color: var(--hover-secondary-container-dark);
       --current-text-color: var(--on-hover-secondary-container-dark);
     }
+  }
+
+  :where(
+    .secondary-container:focus-visible,
+    .hover\:secondary-container:focus-visible
+  ) {
+    --current-bg-color: var(--focus-visible-container-dark);
+    --current-text-color: var(--on-focus-visible-container-color-dark);
   }
 }

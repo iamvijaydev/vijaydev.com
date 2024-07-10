@@ -8,7 +8,6 @@ import { useLoadRouteCommand } from "~commands/useLoadRoute";
 import {
   type TextProps,
   getTextClassName,
-  Text,
 } from "~components/core/text/Text";
 
 export type ClickEvent =
@@ -27,6 +26,7 @@ export interface AnchorAttributes
   onClick?: (e: ClickEvent) => void;
   isActive?: boolean;
   isButton?: boolean;
+  isFocusVisible?: boolean;
   textProps?: Partial<TextProps>;
 }
 
@@ -36,6 +36,7 @@ export const Link = (props: AnchorAttributes) => {
   const {
     isActive,
     isButton,
+    isFocusVisible = true,
     onClick: propOnClick,
     href,
     children,
@@ -53,13 +54,12 @@ export const Link = (props: AnchorAttributes) => {
     className.push(getTextClassName(textProps));
   }
   className.push("link");
-  if (isButton) {
-    className.push("secondary-container");
-  } else {
-    className.push("hover:secondary-container");
-  }
+  className.push("hover:secondary-container");
   if (isActive) {
     className.push("active");
+  }
+  if (isFocusVisible) {
+    className.push("focus-visible");
   }
 
   const onClick = (

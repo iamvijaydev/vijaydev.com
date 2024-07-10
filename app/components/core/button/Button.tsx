@@ -10,11 +10,12 @@ export interface Props
   postIcon?: ReactNode | undefined;
   as?: "Filled" | "Tonal" | "Text" | "Icon" | "Menu";
   ellipsis?: boolean;
+  isFocusVisible?: boolean;
 }
 
 export const getButtonClassName = (props: Pick<Props, "as" | "icon" | "postIcon">) => {
   const { as, icon, postIcon } = props;
-  let className = "button secondary-container";
+  let className = "button secondary-container focus-visible";
 
   if (as === "Filled") {
     className += "as-filled";
