@@ -31,7 +31,7 @@ html[data-scroll="0"] .app-bar {
 
 .logo__fname {
   font-weight: 800;
-  color: var(--primary-color);
+  color: var(--current-text-color);
 }
 
 .logo__lname {

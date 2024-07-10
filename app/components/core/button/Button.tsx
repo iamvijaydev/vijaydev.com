@@ -14,7 +14,7 @@ export interface Props
 
 export const getButtonClassName = (props: Pick<Props, "as" | "icon" | "postIcon">) => {
   const { as, icon, postIcon } = props;
-  let className = "height-tight button secondary-color";
+  let className = "button secondary-container";
 
   if (as === "Filled") {
     className += "as-filled";

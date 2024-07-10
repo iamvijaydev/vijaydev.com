@@ -29,18 +29,20 @@ html {
 /* .secondary-container */
 
 :where(.secondary-container) {
-  --current-bg-color: var(--secondary-container-light);
-  --current-text-color: var(--on-secondary-container-color-light);
-}
-
-:where(.secondary-container:focus-visible) {
-  --current-bg-color: var(--secondary-container-high-light);
+  --current-bg-color: transparent;
+  --current-text-color: var(--secondary-color-light);
 }
 
 @media (hover: hover) {
   :where(.secondary-container:hover) {
-    --current-bg-color: var(--secondary-container-high-light);
+    --current-bg-color: var(--secondary-container-light);
+    --current-text-color: var(--on-secondary-container-light);
   }
+}
+
+:where(.secondary-container.active) {
+  --current-bg-color: var(--secondary-container-light);
+  --current-text-color: var(--on-secondary-container-light);
 }
 
 /* .hover:secondary-container */
@@ -50,16 +52,26 @@ html {
   --current-text-color: var(--secondary-color-light);
 }
 
-:where(.hover\:secondary-container:focus-visible, .hover\:secondary-container.active) {
+:where(.hover\:secondary-container.active) {
   --current-bg-color: var(--hover-secondary-container-light);
-  --current-text-color: var(--on-hover-secondary-container-color-light);
+  --current-text-color: var(--on-hover-secondary-container-light);
 }
 
 @media (hover: hover) {
   :where(.hover\:secondary-container:hover) {
     --current-bg-color: var(--hover-secondary-container-light);
-    --current-text-color: var(--on-hover-secondary-container-color-light);
+    --current-text-color: var(--on-hover-secondary-container-light);
   }
+}
+
+/* shared focus visible container state */
+
+:where(
+    .secondary-container:focus-visible,
+    .hover\:secondary-container:focus-visible
+  ) {
+  --current-bg-color: var(--focus-visible-container-light);
+  --current-text-color: var(--on-focus-visible-container-color-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -78,18 +90,20 @@ html {
   /* .secondary-container */
 
   :where(.secondary-container) {
-    --current-bg-color: var(--secondary-container-dark);
-    --current-text-color: var(--on-secondary-container-color-dark);
-  }
-
-  :where(.secondary-container:focus-visible) {
-    --current-bg-color: var(--secondary-container-high-dark);
+    --current-bg-color: transparent;
+    --current-text-color: var(--secondary-color-dark);
   }
 
   @media (hover: hover) {
     :where(.secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-high-dark);
+      --current-bg-color: var(--secondary-container-dark);
+      --current-text-color: var(--on-secondary-container-dark);
     }
+  }
+
+  :where(.secondary-container.active) {
+    --current-bg-color: var(--secondary-container-dark);
+    --current-text-color: var(--on-secondary-container-dark);
   }
 
   /* .hover:secondary-container */
@@ -98,16 +112,16 @@ html {
     --current-bg-color: transparent;
     --current-text-color: var(--secondary-color-dark);
   }
-  
-  :where(.hover\:secondary-container:focus-visible, .hover\:secondary-container.active) {
+
+  :where(.hover\:secondary-container.active) {
     --current-bg-color: var(--hover-secondary-container-dark);
-    --current-text-color: var(--on-hover-secondary-container-color-dark);
+    --current-text-color: var(--on-hover-secondary-container-dark);
   }
-  
+
   @media (hover: hover) {
     :where(.hover\:secondary-container:hover) {
       --current-bg-color: var(--hover-secondary-container-dark);
-      --current-text-color: var(--on-hover-secondary-container-color-dark);
+      --current-text-color: var(--on-hover-secondary-container-dark);
     }
   }
 }
@@ -128,18 +142,20 @@ html {
   /* .secondary-container */
 
   :where(.secondary-container) {
-    --current-bg-color: var(--secondary-container-light);
-    --current-text-color: var(--on-secondary-container-color-light);
-  }
-
-  :where(.secondary-container:focus-visible) {
-    --current-bg-color: var(--secondary-container-high-light);
+    --current-bg-color: transparent;
+    --current-text-color: var(--secondary-color-light);
   }
 
   @media (hover: hover) {
     :where(.secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-high-light);
+      --current-bg-color: var(--secondary-container-light);
+      --current-text-color: var(--on-secondary-container-light);
     }
+  }
+
+  :where(.secondary-container.active) {
+    --current-bg-color: var(--secondary-container-light);
+    --current-text-color: var(--on-secondary-container-light);
   }
 
   /* .hover:secondary-container */
@@ -148,16 +164,16 @@ html {
     --current-bg-color: transparent;
     --current-text-color: var(--secondary-color-light);
   }
-  
-  :where(.hover\:secondary-container:focus-visible, .hover\:secondary-container.active) {
+
+  :where(.hover\:secondary-container.active) {
     --current-bg-color: var(--hover-secondary-container-light);
-    --current-text-color: var(--on-hover-secondary-container-color-light);
+    --current-text-color: var(--on-hover-secondary-container-light);
   }
-  
+
   @media (hover: hover) {
     :where(.hover\:secondary-container:hover) {
       --current-bg-color: var(--hover-secondary-container-light);
-      --current-text-color: var(--on-hover-secondary-container-color-light);
+      --current-text-color: var(--on-hover-secondary-container-light);
     }
   }
 }
@@ -178,18 +194,20 @@ html {
   /* .secondary-container */
 
   :where(.secondary-container) {
-    --current-bg-color: var(--secondary-container-dark);
-    --current-text-color: var(--on-secondary-container-color-dark);
-  }
-
-  :where(.secondary-container:focus-visible) {
-    --current-bg-color: var(--secondary-container-high-dark);
+    --current-bg-color: transparent;
+    --current-text-color: var(--secondary-color-dark);
   }
 
   @media (hover: hover) {
     :where(.secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-high-dark);
+      --current-bg-color: var(--secondary-container-dark);
+      --current-text-color: var(--on-secondary-container-dark);
     }
+  }
+
+  :where(.secondary-container.active) {
+    --current-bg-color: var(--secondary-container-dark);
+    --current-text-color: var(--on-secondary-container-dark);
   }
 
   /* .hover:secondary-container */
@@ -198,16 +216,16 @@ html {
     --current-bg-color: transparent;
     --current-text-color: var(--secondary-color-dark);
   }
-  
-  :where(.hover\:secondary-container:focus-visible, .hover\:secondary-container.active) {
-    --current-bg-color: var(--hover-secondary-container-light);
-    --current-text-color: var(--on-hover-secondary-container-color-light);
+
+  :where(.hover\:secondary-container.active) {
+    --current-bg-color: var(--hover-secondary-container-dark);
+    --current-text-color: var(--on-hover-secondary-container-dark);
   }
-  
+
   @media (hover: hover) {
     :where(.hover\:secondary-container:hover) {
-      --current-bg-color: var(--hover-secondary-container-light);
-      --current-text-color: var(--on-hover-secondary-container-color-light);
+      --current-bg-color: var(--hover-secondary-container-dark);
+      --current-text-color: var(--on-hover-secondary-container-dark);
     }
   }
 }

@@ -7,6 +7,7 @@
   --link-text-color: var(--current-text-color);
   --link-padding: 0 var(--space-2xs);
   --link-border-radius: var(--border-radius-s);
+  --link-border-width: 0.1em;
   --link-shadow-width: 0.2em;
   --link-transition-duration: var(--standard-decelerate-duration);
   --link-transition-easing: var(--standard-decelerate-easing);
@@ -38,14 +39,18 @@
 }
 
 :where(.link:focus-visible) {
-  --link-border-width: 0.1em;
   --link-border: 0 0 0 var(--link-border-width) var(--current-parent-bg-color),
     0 0 0 var(--link-shadow-width) var(--link-bg-color);
 }
 
 @media (hover: hover) {
-  :where(.link:not(.logo):hover) {
+  :where(.link:hover) {
     --link-transition-duration: var(--standard-accelerate-duration);
     --link-transition-easing: var(--standard-accelerate-easing);
+  }
+
+  :where(.link.logo:hover) {
+    --link-bg-color: transparent;
+    --link-border: 0 0 0 var(--link-border-width) var(--current-text-color);
   }
 }

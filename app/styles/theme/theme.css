@@ -3,27 +3,32 @@
   --secondary-color-light: var(--color-10);
   --accent-color-light: var(--color-8);
 
-  --primary-color-dark: var(--color-3);
+  --primary-color-dark: var(--color-4);
   --secondary-color-dark: var(--color-6);
   --accent-color-dark: var(--color-6);
+
 
   /* secondary container */
 
   --secondary-container-light: var(--color-2);
-  --secondary-container-high-light: var(--color-4);
-  --on-secondary-container-color-light: var(--color-12);
+  --on-secondary-container-light: var(--color-10);
 
-  --secondary-container-dark: var(--color-12);
-  --secondary-container-high-dark: var(--color-10);
-  --on-secondary-container-color-dark: var(--color-1);
+  --secondary-container-dark: var(--color-11);
+  --on-secondary-container-dark: var(--color-3);
 
   /* hover secondary container */
 
-  --hover-secondary-container-light: var(--color-5);
-  --on-hover-secondary-container-color-light: var(--color-13);
+  --hover-secondary-container-light: var(--color-2);
+  --on-hover-secondary-container-light: var(--color-10);
 
-  --hover-secondary-container-dark: var(--color-10);
-  --on-hover-secondary-container-color-dark: var(--color-2);
+  --hover-secondary-container-dark: var(--color-11);
+  --on-hover-secondary-container-dark: var(--color-3);
+
+  /* shared focus visible state for containers */
+  --focus-visible-container-light: var(--color-5);
+  --on-focus-visible-container-color-light: var(--color-13);
+  --focus-visible-container-dark: var(--color-10);
+  --on-focus-visible-container-color-dark: var(--color-2);
 }
 
 :root {
