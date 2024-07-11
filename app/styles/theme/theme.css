@@ -10,17 +10,10 @@
 
   /* secondary container */
 
-  --secondary-container-light: var(--color-1);
-    --on-secondary-container-light: var(--color-9);
-    --secondary-container-dark: var(--color-2);
-    --on-secondary-container-dark: var(--color-11);
-
-  /* hover secondary container */
-
-  --hover-secondary-container-light: var(--color-1);
-    --on-hover-secondary-container-light: var(--color-9);
-    --hover-secondary-container-dark: var(--color-2);
-    --on-hover-secondary-container-dark: var(--color-11);
+  --secondary-container-light: var(--color-2);
+    --on-secondary-container-light: var(--color-10);
+    --secondary-container-dark: var(--color-12);
+    --on-secondary-container-dark: var(--color-4);
 
   /* shared focus visible state for containers */
   --focus-visible-container-light: var(--color-5);
@@ -31,6 +24,8 @@
 
 :root {
   color-scheme: light;
+  --gray-hue: var(--hue-green);
+  --gray-chroma: 0.01;
 }
 
 :where(.primary-color, .secondary-color) {
