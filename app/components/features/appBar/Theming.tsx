@@ -12,24 +12,8 @@ export const Theming = () => {
   const [hue, setHue] = useState("green");
 
   useIsomorphicEffect(() => {
-    const scheme = localStorage.getItem(schemeLsKey);
-    if (scheme) {
-      setScheme(scheme);
-      if (scheme === "auto") {
-        document.documentElement.removeAttribute(schemeAttrKey);
-        return;
-      }
-      document.documentElement.setAttribute(schemeAttrKey, scheme);
-    }
-    const hue = localStorage.getItem(hueLsKey);
-    if (hue) {
-      setHue(hue);
-      if (hue === "none") {
-        document.documentElement.removeAttribute(hueAttrKey);
-        return;
-      }
-      document.documentElement.setAttribute(hueAttrKey, hue);
-    }
+    setScheme(localStorage.getItem(schemeLsKey) ?? "auto");
+    setHue(localStorage.getItem(schemeLsKey) ?? "green");
   }, []);
 
   const onSchemeChange = (value: string) => () => {
