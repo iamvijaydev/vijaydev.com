@@ -13,6 +13,9 @@ export const defaultLinks: MetaLink[] = [{
   href: "https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10,100..900&display=swap",
   rel: "stylesheet",
 }, { 
+  href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0",
+  rel: "stylesheet",
+}, { 
   href: "/assets/styles.css",
   rel: "stylesheet",
 }]

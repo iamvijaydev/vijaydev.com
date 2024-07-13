@@ -29,12 +29,15 @@ html[data-scroll="0"] .app-bar {
   letter-spacing: -0.05em;
 }
 
+.logo__fname,
+.logo__lname {
+  color: var(--current-text-color);
+}
+
 .logo__fname {
   font-weight: 800;
-  color: var(--current-text-color);
 }
 
 .logo__lname {
   font-weight: 300;
-  color: var(--secondary-color);
 }

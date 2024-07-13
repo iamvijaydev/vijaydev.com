@@ -29,38 +29,36 @@ html {
 /* .secondary-container */
 
 :where(.secondary-container) {
-  --current-bg-color: transparent;
-  --current-text-color: var(--secondary-color-light);
+  --current-bg-color: var(--secondary-container-light);
+  --current-text-color: var(--on-secondary-container-light);
 }
 
 @media (hover: hover) {
   :where(.secondary-container:hover) {
-    --current-bg-color: var(--secondary-container-light);
-    --current-text-color: var(--on-secondary-container-light);
+    --current-bg-color: var(--secondary-container-high-light);
+    --current-text-color: var(--on-secondary-container-high-light);
   }
 }
 
 :where(.secondary-container.active) {
-  --current-bg-color: var(--secondary-container-light);
-  --current-text-color: var(--on-secondary-container-light);
+  --current-bg-color: var(--secondary-container-high-light);
+  --current-text-color: var(--on-secondary-container-high-light);
 }
 
 /* .hover:secondary-container */
 
 :where(.hover\:secondary-container) {
   --current-bg-color: transparent;
-  --current-text-color: var(--secondary-color-light);
+  --current-text-color: var(--on-hover-secondary-container-light);
 }
 
 :where(.hover\:secondary-container.active) {
-  --current-bg-color: var(--secondary-container-light);
-  --current-text-color: var(--on-secondary-container-light);
+  --current-bg-color: var(--hover-secondary-container-light);
 }
 
 @media (hover: hover) {
   :where(.hover\:secondary-container:hover) {
-    --current-bg-color: var(--secondary-container-light);
-    --current-text-color: var(--on-secondary-container-light);
+    --current-bg-color: var(--hover-secondary-container-light);
   }
 }
 
@@ -90,38 +88,36 @@ html {
   /* .secondary-container */
 
   :where(.secondary-container) {
-    --current-bg-color: transparent;
-    --current-text-color: var(--secondary-color-dark);
-  }
-
-  @media (hover: hover) {
-    :where(.secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-dark);
-      --current-text-color: var(--on-secondary-container-dark);
-    }
-  }
-
-  :where(.secondary-container.active) {
     --current-bg-color: var(--secondary-container-dark);
     --current-text-color: var(--on-secondary-container-dark);
+  }
+  
+  @media (hover: hover) {
+    :where(.secondary-container:hover) {
+      --current-bg-color: var(--secondary-container-high-dark);
+      --current-text-color: var(--on-secondary-container-high-dark);
+    }
+  }
+  
+  :where(.secondary-container.active) {
+    --current-bg-color: var(--secondary-container-high-dark);
+    --current-text-color: var(--on-secondary-container-high-dark);
   }
 
   /* .hover:secondary-container */
 
   :where(.hover\:secondary-container) {
     --current-bg-color: transparent;
-    --current-text-color: var(--secondary-color-dark);
+    --current-text-color: var(--on-hover-secondary-container-dark);
   }
 
   :where(.hover\:secondary-container.active) {
-    --current-bg-color: var(--secondary-container-dark);
-    --current-text-color: var(--on-secondary-container-dark);
+    --current-bg-color: var(--hover-secondary-container-dark);
   }
 
   @media (hover: hover) {
     :where(.hover\:secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-dark);
-      --current-text-color: var(--on-secondary-container-dark);
+      --current-bg-color: var(--hover-secondary-container-dark);
     }
   }
 
@@ -152,38 +148,36 @@ html {
   /* .secondary-container */
 
   :where(.secondary-container) {
-    --current-bg-color: transparent;
-    --current-text-color: var(--secondary-color-light);
-  }
-
-  @media (hover: hover) {
-    :where(.secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-light);
-      --current-text-color: var(--on-secondary-container-light);
-    }
-  }
-
-  :where(.secondary-container.active) {
     --current-bg-color: var(--secondary-container-light);
     --current-text-color: var(--on-secondary-container-light);
+  }
+  
+  @media (hover: hover) {
+    :where(.secondary-container:hover) {
+      --current-bg-color: var(--secondary-container-high-light);
+      --current-text-color: var(--on-secondary-container-high-light);
+    }
+  }
+  
+  :where(.secondary-container.active) {
+    --current-bg-color: var(--secondary-container-high-light);
+    --current-text-color: var(--on-secondary-container-high-light);
   }
 
   /* .hover:secondary-container */
 
   :where(.hover\:secondary-container) {
     --current-bg-color: transparent;
-    --current-text-color: var(--secondary-color-light);
+    --current-text-color: var(--on-hover-secondary-container-light);
   }
-
+  
   :where(.hover\:secondary-container.active) {
-    --current-bg-color: var(--secondary-container-light);
-    --current-text-color: var(--on-secondary-container-light);
+    --current-bg-color: var(--hover-secondary-container-light);
   }
-
+  
   @media (hover: hover) {
     :where(.hover\:secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-light);
-      --current-text-color: var(--on-secondary-container-light);
+      --current-bg-color: var(--hover-secondary-container-light);
     }
   }
 
@@ -214,38 +208,36 @@ html {
   /* .secondary-container */
 
   :where(.secondary-container) {
-    --current-bg-color: transparent;
-    --current-text-color: var(--secondary-color-dark);
-  }
-
-  @media (hover: hover) {
-    :where(.secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-dark);
-      --current-text-color: var(--on-secondary-container-dark);
-    }
-  }
-
-  :where(.secondary-container.active) {
     --current-bg-color: var(--secondary-container-dark);
     --current-text-color: var(--on-secondary-container-dark);
+  }
+  
+  @media (hover: hover) {
+    :where(.secondary-container:hover) {
+      --current-bg-color: var(--secondary-container-high-dark);
+      --current-text-color: var(--on-secondary-container-high-dark);
+    }
+  }
+  
+  :where(.secondary-container.active) {
+    --current-bg-color: var(--secondary-container-high-dark);
+    --current-text-color: var(--on-secondary-container-high-dark);
   }
 
   /* .hover:secondary-container */
 
   :where(.hover\:secondary-container) {
     --current-bg-color: transparent;
-    --current-text-color: var(--secondary-color-dark);
+    --current-text-color: var(--on-hover-secondary-container-dark);
   }
 
   :where(.hover\:secondary-container.active) {
-    --current-bg-color: var(--secondary-container-dark);
-    --current-text-color: var(--on-secondary-container-dark);
+    --current-bg-color: var(--hover-secondary-container-dark);
   }
 
   @media (hover: hover) {
     :where(.hover\:secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-dark);
-      --current-text-color: var(--on-secondary-container-dark);
+      --current-bg-color: var(--hover-secondary-container-dark);
     }
   }
 

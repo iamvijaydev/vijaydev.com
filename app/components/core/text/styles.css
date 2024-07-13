@@ -154,6 +154,10 @@
   --_desc-to-color: var(--to-color-8);
 }
 
+.text:is(.material-symbols-outlined) {
+  font-size: var(--font-size);
+}
+
 /* exact same as "default version above" from above */
 [color-scheme="light"] {
   .text:is(.primary) {

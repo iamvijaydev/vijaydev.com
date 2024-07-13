@@ -1,19 +1,33 @@
 :where(*) {
-  --primary-color-light: var(--color-6);
-  --secondary-color-light: var(--color-10);
+  --primary-color-light: var(--color-10);
+  --secondary-color-light: var(--color-9);
   --accent-color-light: var(--color-8);
 
-  --primary-color-dark: var(--color-4);
+  --primary-color-dark: var(--color-5);
   --secondary-color-dark: var(--color-6);
   --accent-color-dark: var(--color-6);
 
 
   /* secondary container */
 
-  --secondary-container-light: var(--color-2);
-    --on-secondary-container-light: var(--color-10);
-    --secondary-container-dark: var(--color-12);
+  --secondary-container-light: var(--gray-2);
+  --on-secondary-container-light: var(--color-10);
+
+  --secondary-container-high-light: var(--color-3);
+  --on-secondary-container-high-light: var(--color-10);
+
+    --secondary-container-dark: var(--gray-12);
     --on-secondary-container-dark: var(--color-4);
+
+    --secondary-container-high-dark: var(--color-2);
+    --on-secondary-container-high-dark: var(--color-10);
+
+    /* hover secondary container */
+
+    --hover-secondary-container-light: var(--gray-2);
+    --on-hover-secondary-container-light: var(--secondary-color-light);
+    --hover-secondary-container-dark: var(--gray-13);
+    --on-hover-secondary-container-dark: var(--secondary-color-dark);
 
   /* shared focus visible state for containers */
   --focus-visible-container-light: var(--color-5);

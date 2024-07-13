@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
+import { Button } from "~components/core/button/Button";
 
 export const Theming = () => {
   const schemeLsKey = "__vj_theme_scheme";
-  const schemeAttrKey = "color-scheme";
-
   const hueLsKey = "__vj_theme_hue";
-  const hueAttrKey = "color-hue";
 
   const [scheme, setScheme] = useState("auto");
   const [hue, setHue] = useState("green");
@@ -18,32 +16,36 @@ export const Theming = () => {
 
   const onSchemeChange = (value: string) => () => {
     setScheme(value);
-    if (value === "auto") {
-      document.documentElement.removeAttribute(schemeAttrKey);
-      localStorage.removeItem(schemeLsKey);
-      return;
-    }
-    document.documentElement.setAttribute(schemeAttrKey, value);
+    document.documentElement.setAttribute("color-scheme", value);
     localStorage.setItem(schemeLsKey, value);
   };
   const onHueChange = (value: string) => () => {
     setHue(value);
-    document.documentElement.setAttribute(hueAttrKey, value);
+    document.documentElement.setAttribute("color-hue", value);
     localStorage.setItem(hueLsKey, value);
   };
 
   return (
     <div>
-      <div>
-        <button onClick={onSchemeChange("auto")} disabled={scheme === "auto"}>
-          auto
-        </button>
-        <button onClick={onSchemeChange("light")} disabled={scheme === "light"}>
-          light
-        </button>
-        <button onClick={onSchemeChange("dark")} disabled={scheme === "dark"}>
-          dark
-        </button>
+      <div className="flex gap-s mb-s">
+        <Button
+          onClick={onSchemeChange("auto")}
+          isActive={scheme === "auto"}
+          label="Auto"
+          icon="routine"
+        />
+        <Button
+          onClick={onSchemeChange("light")}
+          isActive={scheme === "light"}
+          label="Light"
+          icon="light_mode"
+        />
+        <Button
+          onClick={onSchemeChange("dark")}
+          isActive={scheme === "dark"}
+          label="Dark"
+          icon="dark_mode"
+        />
       </div>
       <div>
         <button onClick={onHueChange("red")} disabled={hue === "red"}>

@@ -21,7 +21,8 @@ export const AppBar = () => {
             <Link href="/blog" textProps={{ variant: 'label' }}>Blog</Link>
             <Link href="/learn" textProps={{ variant: 'label' }}>Learn</Link>
             <span>|</span>
-            <Button label="Theme" />
+            <Button label="Theme" icon="palette" postIcon="arrow_drop_down" />
+            {/* arrow_drop_up */}
           </nav>
           <Theming />
         </Cell>

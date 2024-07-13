@@ -11,11 +11,16 @@ export interface Props
   as?: "Filled" | "Tonal" | "Text" | "Icon" | "Menu";
   ellipsis?: boolean;
   isFocusVisible?: boolean;
+  isActive?: boolean;
 }
 
-export const getButtonClassName = (props: Pick<Props, "as" | "icon" | "postIcon">) => {
-  const { as, icon, postIcon } = props;
-  let className = "button secondary-container focus-visible";
+export const getButtonClassName = (props: Pick<Props, "as" | "icon" | "postIcon" | "isActive">) => {
+  const { as, icon, postIcon, isActive } = props;
+  let className = "button secondary-container focus-visible flex align-center gap-2xs";
+
+  if (isActive) {
+    className += " active";
+  }
 
   if (as === "Filled") {
     className += "as-filled";
@@ -48,15 +53,16 @@ export const Button = (props: Props) => {
     className: baseClassName = "",
     type = "button",
     ellipsis = false,
+    isActive,
     ...rest
   } = props;
   const className = baseClassName + " " + getButtonClassName(props);
 
   return (
     <button type={type} {...rest} className={className}>
-      {icon ? <span className="icon">{icon}</span> : null}
+      {icon ? <span className="icon text label material-symbols-outlined">{icon}</span> : null}
       <span className={`text label${ellipsis ? ' ellipsis' : ''}`}>{label}</span>
-      {postIcon ? <span className="icon post-icon">{postIcon}</span> : null}
+      {postIcon ? <span className="icon text label material-symbols-outlined">{postIcon}</span> : null}
     </button>
   );
 };
