@@ -9,6 +9,7 @@ export { type TextProps, Text } from '~components/core/text/Text';
 export { type AnchorAttributes, Link } from '~components/core/link/Link';
 export { LinkButton } from '~components/core/linkButton/LinkButton';
 export { Button } from '~components/core/button/Button';
+export { ButtonGroup } from '~components/core/button/ButtonGroup';
 export { LinkCard } from '~components/core/LinkCard';
 export { PostWrapper } from '~components/core/PostWrapper';
 export { Masthead } from '~components/core/masthead/Masthead';

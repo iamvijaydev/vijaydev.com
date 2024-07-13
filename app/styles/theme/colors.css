@@ -15,9 +15,7 @@
   --gray-13: oklch(25% var(--gray-chroma, none) var(--gray-hue, none));
   --gray-14: oklch(18% var(--gray-chroma, none) var(--gray-hue, none));
   --gray-15: oklch(10% var(--gray-chroma, none) var(--gray-hue, none));
-}
 
-:where(*) {
   --color-0: oklch(99% .03 var(--color-hue, 0));
   --color-1: oklch(95% .06 var(--color-hue, 0));
   --color-2: oklch(88% .12 var(--color-hue, 0));
@@ -35,9 +33,7 @@
   --color-14: oklch(14% .07 var(--color-hue, 0));
   --color-15: oklch(11% .05 var(--color-hue, 0));
   --color-bright: oklch(65% .3 var(--color-hue, 0));
-}
 
-:where(*) {
   --to-color-0: oklch(99% .03 var(--to-color-hue, 0));
   --to-color-1: oklch(95% .06 var(--to-color-hue, 0));
   --to-color-2: oklch(88% .12 var(--to-color-hue, 0));

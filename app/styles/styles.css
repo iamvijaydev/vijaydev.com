@@ -2,7 +2,8 @@
 
 @import url(theme/colors.css);
 @import url(theme/theme.css);
-@import url(theme/surface.css);
+@import url(surface/light.css);
+@import url(surface/dark.css);
 @import url(theme/utils.css);
 
 @import url(brand/font.css);
@@ -35,5 +36,5 @@ body {
   display: grid;
   grid-template-rows: min-content auto min-content;
   min-height: 100dvh;
-  transition: background-color var(--standard-duration) var(--standard-easing);
+  transition: background-color 50ms var(--standard-easing);
 }

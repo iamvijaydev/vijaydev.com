@@ -1,44 +1,65 @@
 :where(.button) {
-  --button-bg-color: var(--current-bg-color);
-  --button-text-color: var(--current-text-color);
-  --link-transition-duration: var(--standard-decelerate-duration);
-  --link-transition-easing: var(--standard-decelerate-easing);
-  --link-transition-properties: color, background-color, box-shadow;
+  --bg-color: var(--current-bg-color);
+  --text-color: var(--current-text-color);
+  --border-radius: var(--border-radius-m);
+  --transition-duration: var(--standard-decelerate-duration);
+  --transition-easing: var(--standard-decelerate-easing);
+  --transition-properties: color, background-color, box-shadow;
 
   border: none;
-  background-color: var(--button-bg-color);
+  background-color: var(--bg-color);
   padding: 0 var(--space-2xs-xs);
-  border-radius: var(--border-radius-m);
+  border-radius: var(--border-radius);
   cursor: pointer;
-  transition-property: var(--link-transition-properties);
-  transition-duration: var(--link-transition-duration);
-  transition-timing-function: var(--link-transition-easing);
+  transition-property: var(--transition-properties);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);
 }
 
 :where(.button) :where(.icon, .text) {
-  color: var(--button-text-color);
+  color: var(--text-color);
   line-height: var(--line-height-relax);
 }
 
 @media (hover: hover) {
   :where(.button:hover) {
-    --link-transition-duration: var(--standard-accelerate-duration);
-    --link-transition-easing: var(--standard-accelerate-easing);
+    --transition-duration: var(--standard-accelerate-duration);
+    --transition-easing: var(--standard-accelerate-easing);
   }
 }
 
 :where(.button:disabled) {
-  --button-bg-color: var(--md-sys-color-on-surface);
-  --button-text-color: var(--md-sys-color-on-surface);
+  --bg-color: var(--md-sys-color-on-surface);
+  --text-color: var(--md-sys-color-on-surface);
   cursor: not-allowed;
 }
 
+:where(.button-group) {
+  display: flex;
+  gap: 1px;
+  border-radius: var(--border-radius-m);
+  background-color: var(--current-border-color);
+  box-shadow: 0 0 0 1px var(--current-border-color)
+}
+
+:where(.button-group .button:not(:first-child, :last-child)) {
+  border-radius: 0;
+}
+
+:where(.button-group .button:is(:first-child)) {
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+:where(.button-group .button:is(:last-child)) {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
 /* .button {
-  --button-radius: var(--border-radius-full);
+  --radius: var(--border-radius-full);
 
   all: unset;
   position: relative;
-  border-radius: var(--button-radius);
+  border-radius: var(--radius);
 }
 
 .button:not(:disabled) {
@@ -46,14 +67,14 @@
 }
 
 .button:not(.with-icon) {
-  padding: var(--button-space-y) var(--button-space-x);
+  padding: var(--space-y) var(--space-x);
 }
 
 .button.with-icon {
   display: flex;
   align-items: center;
   gap: var(--space-2xs);
-  padding: var(--button-space-y) var(--button-space-x) var(--button-space-y) var(--button-space-x);
+  padding: var(--space-y) var(--space-x) var(--space-y) var(--space-x);
 }
 
 .button::before,
@@ -64,30 +85,30 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: var(--button-radius);
+  border-radius: var(--radius);
   transition-property: opacity;
   transition-duration: var(--standard-decelerate-duration);
   transition-timing-function: var(--standard-decelerate-easing);
 }
 
 .button:before {
-  opacity: var(--button-bg-opacity);
-  background-color: var(--button-bg-color);
+  opacity: var(--bg-opacity);
+  background-color: var(--bg-color);
   z-index: 1;
 }
 
 .button:after {
-  opacity: var(--button-state-opacity);
-  background-color: var(--button-state-color);
+  opacity: var(--state-opacity);
+  background-color: var(--state-color);
   z-index: 2;
 }
 
 .button:disabled {
-  --button-bg-color: var(--md-sys-color-on-surface);
-  --button-bg-opacity: 0.12;
+  --bg-color: var(--md-sys-color-on-surface);
+  --bg-opacity: 0.12;
 
-  --button-text-color: var(--md-sys-color-on-surface);
-  --button-text-opacity: 0.38;
+  --text-color: var(--md-sys-color-on-surface);
+  --text-opacity: 0.38;
 }
 
 @media (hover:hover) {
@@ -99,18 +120,18 @@
 
   .button:not(:disabled, .as-menu):hover,
   .button:not(.as-menu).active {
-    --button-state-opacity: 0.2 !important;
+    --state-opacity: 0.2 !important;
   }
 
   .button.as-menu:hover,
   .button.as-menu.active {
-    --button-state-opacity: 1 !important;
+    --state-opacity: 1 !important;
   }
 }
 
 .button:not(:disabled):active,
 .button:not(:disabled):focus-visible {
-  --button-state-opacity: 0.3 !important;
+  --state-opacity: 0.3 !important;
 }
 
 .button:not(:disabled):focus-visible {
@@ -118,15 +139,15 @@
 
   outline: var(--offset-width) solid transparent;
   outline-offset: var(--offset-width);
-  border-radius: var(--button-radius);
+  border-radius: var(--radius);
   box-shadow: 0 0 0 var(--offset-width) var(--background-color), 0 0 0 calc(var(--offset-width) + var(--offset-width)) var(--md-sys-color-primary);
 }
 
 .button .txt,
 .button .icon {
-  opacity: var(--button-text-opacity);
-  color: var(--button-text-color);
-  fill: var(--button-text-color);
+  opacity: var(--text-opacity);
+  color: var(--text-color);
+  fill: var(--text-color);
   position: relative;
   z-index: 3;
 }
@@ -140,30 +161,30 @@
 .button.as-filled,
 .button.as-tonal,
 .button.as-text {
-  --button-space-y: var(--space-2xs);
+  --space-y: var(--space-2xs);
 }
 
 .button.as-filled,
 .button.as-tonal {
-  --button-space-x: var(--space-s);
+  --space-x: var(--space-s);
 }
 
 .button.as-text {
-  --button-space-x: var(--space-s);
+  --space-x: var(--space-s);
 }
 
 .button.as-icon {
-  --button-space-x: var(--space-xs);
-  --button-space-y: var(--space-xs);
+  --space-x: var(--space-xs);
+  --space-y: var(--space-xs);
 }
 
 .button.as-menu {
-  --button-space-x: var(--space-2xs);
-  --button-space-y: var(--space-2xs);
+  --space-x: var(--space-2xs);
+  --space-y: var(--space-2xs);
 }
 
 .button.as-text-compact {
-  --button-space-y: var(--space-3xs);
+  --space-y: var(--space-3xs);
 }
 
 .button:not(:disabled).as-filled,
@@ -171,47 +192,47 @@
 .button:not(:disabled).as-text,
 .button:not(:disabled).as-icon,
 .button:not(:disabled).as-menu {
-  --button-bg-opacity: 1;
-  --button-state-opacity: 0;
-  --button-text-opacity: 1;
+  --bg-opacity: 1;
+  --state-opacity: 0;
+  --text-opacity: 1;
 }
 
 .button:not(:disabled).as-filled {
-  --button-bg-color: var(--md-sys-color-primary);
-  --button-state-color: var(--md-sys-color-on-primary);
+  --bg-color: var(--md-sys-color-primary);
+  --state-color: var(--md-sys-color-on-primary);
 
-  --button-text-color: var(--md-sys-color-on-primary);
-  --button-icon-color: var(--md-sys-color-on-primary);
+  --text-color: var(--md-sys-color-on-primary);
+  --icon-color: var(--md-sys-color-on-primary);
 }
 
 .button:not(:disabled).as-tonal {
-  --button-bg-color: var(--md-sys-color-secondary-container);
-  --button-state-color: var(--md-sys-color-primary);
+  --bg-color: var(--md-sys-color-secondary-container);
+  --state-color: var(--md-sys-color-primary);
 
-  --button-text-color: var(--md-sys-color-on-secondary-container);
-  --button-icon-color: var(--md-sys-color-on-secondary-container);
+  --text-color: var(--md-sys-color-on-secondary-container);
+  --icon-color: var(--md-sys-color-on-secondary-container);
 }
 
 .button:not(:disabled).as-icon,
 .button:not(:disabled).as-text {
-  --button-bg-color: transparent;
-  --button-state-color: var(--md-sys-color-primary);
+  --bg-color: transparent;
+  --state-color: var(--md-sys-color-primary);
 
-  --button-text-color: var(--md-sys-color-primary);
-  --button-icon-color: var(--md-sys-color-primary);
+  --text-color: var(--md-sys-color-primary);
+  --icon-color: var(--md-sys-color-primary);
 }
 
 .button:not(:disabled).as-menu {
-  --button-radius: var(--border-radius-s);
+  --radius: var(--border-radius-s);
 
-  --button-bg-color: transparent;
-  --button-state-color: var(--link-hover-bg-color);
+  --bg-color: transparent;
+  --state-color: var(--hover-bg-color);
 
-  --button-text-color: var(--link-color);
+  --text-color: var(--color);
 }
 @media (hover:hover) {
   .button.as-menu:hover,
   .button.as-menu.active {
-    --button-text-color: var(--link-hover-color);
+    --text-color: var(--hover-color);
   }
 } */

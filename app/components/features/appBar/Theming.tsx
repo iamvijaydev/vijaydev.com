@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
-import { Button } from "~components/core/button/Button";
+import { ButtonGroup } from "~components/core/button/ButtonGroup";
 
 export const Theming = () => {
   const schemeLsKey = "__vj_theme_scheme";
@@ -10,8 +10,15 @@ export const Theming = () => {
   const [hue, setHue] = useState("green");
 
   useIsomorphicEffect(() => {
-    setScheme(localStorage.getItem(schemeLsKey) ?? "auto");
-    setHue(localStorage.getItem(schemeLsKey) ?? "green");
+    const savedScheme = localStorage.getItem(schemeLsKey);
+    const savedHue = localStorage.getItem(hueLsKey);
+
+    if (savedScheme !== null) {
+      setScheme(savedScheme);
+    }
+    if (savedHue !== null) {
+      setHue(savedHue);
+    }
   }, []);
 
   const onSchemeChange = (value: string) => () => {
@@ -28,7 +35,27 @@ export const Theming = () => {
   return (
     <div>
       <div className="flex gap-s mb-s">
-        <Button
+        <ButtonGroup buttons={[
+          {
+            label: "Auto",
+            icon: "routine",
+            isActive: scheme === "auto",
+            onClick: onSchemeChange("auto"),
+          },
+          {
+            label: "Light",
+            icon: "light_mode",
+            isActive: scheme === "light",
+            onClick: onSchemeChange("light"),
+          },
+          {
+            label: "Dark",
+            icon: "dark_mode",
+            isActive: scheme === "dark",
+            onClick: onSchemeChange("dark"),
+          },
+        ]} />
+        {/* <Button
           onClick={onSchemeChange("auto")}
           isActive={scheme === "auto"}
           label="Auto"
@@ -45,7 +72,7 @@ export const Theming = () => {
           isActive={scheme === "dark"}
           label="Dark"
           icon="dark_mode"
-        />
+        /> */}
       </div>
       <div>
         <button onClick={onHueChange("red")} disabled={hue === "red"}>

@@ -1,0 +1,119 @@
+@media (prefers-color-scheme: dark) {
+  :where(.surface) {
+    --current-bg-color: var(--surface-dark);
+    --current-text-color: var(--on-surface-dark);
+    --current-text-color-dim: var(--on-surface-dim-dark);
+  }
+
+  :where(.surface-container) {
+    --current-bg-color: var(--surface-container-dark);
+    --current-text-color: var(--on-surface-dark);
+    --current-text-color-dim: var(--on-surface-dim-dark);
+  }
+
+  /* .secondary-container */
+
+  :where(.secondary-container) {
+    --current-bg-color: var(--secondary-container-dark);
+    --current-text-color: var(--on-secondary-container-dark);
+    --current-border-color: var(--secondary-container-outline-dark);
+  }
+  
+  @media (hover: hover) {
+    :where(.secondary-container:hover) {
+      --current-bg-color: var(--secondary-container-high-dark);
+      --current-text-color: var(--on-secondary-container-high-dark);
+    }
+  }
+  
+  :where(.secondary-container.active) {
+    --current-bg-color: var(--secondary-container-low-dark);
+    --current-text-color: var(--on-secondary-container-low-dark);
+  }
+
+  /* .hover:secondary-container */
+
+  :where(.hover\:secondary-container) {
+    --current-bg-color: transparent;
+    --current-text-color: var(--on-hover-secondary-container-dark);
+  }
+
+  :where(.hover\:secondary-container.active) {
+    --current-bg-color: var(--hover-secondary-container-dark);
+  }
+
+  @media (hover: hover) {
+    :where(.hover\:secondary-container:hover) {
+      --current-bg-color: var(--hover-secondary-container-dark);
+    }
+  }
+
+  /* shared focus visible container state */
+
+  :where(
+    .secondary-container:focus-visible,
+    .hover\:secondary-container:focus-visible
+  ) {
+    --current-bg-color: var(--focus-visible-container-dark);
+    --current-text-color: var(--on-focus-visible-container-color-dark);
+  }
+}
+
+[color-scheme="dark"] {
+  :where(.surface) {
+    --current-bg-color: var(--surface-dark);
+    --current-text-color: var(--on-surface-dark);
+    --current-text-color-dim: var(--on-surface-dim-dark);
+  }
+
+  :where(.surface-container) {
+    --current-bg-color: var(--surface-container-dark);
+    --current-text-color: var(--on-surface-dark);
+    --current-text-color-dim: var(--on-surface-dim-dark);
+  }
+
+  /* .secondary-container */
+
+  :where(.secondary-container) {
+    --current-bg-color: var(--secondary-container-dark);
+    --current-text-color: var(--on-secondary-container-dark);
+    --current-border-color: var(--secondary-container-outline-dark);
+  }
+  
+  @media (hover: hover) {
+    :where(.secondary-container:hover) {
+      --current-bg-color: var(--secondary-container-high-dark);
+      --current-text-color: var(--on-secondary-container-high-dark);
+    }
+  }
+  
+  :where(.secondary-container.active) {
+    --current-bg-color: var(--secondary-container-low-dark);
+    --current-text-color: var(--on-secondary-container-low-dark);
+  }
+
+  /* .hover:secondary-container */
+
+  :where(.hover\:secondary-container) {
+    --current-bg-color: transparent;
+    --current-text-color: var(--on-hover-secondary-container-dark);
+  }
+
+  :where(.hover\:secondary-container.active) {
+    --current-bg-color: var(--hover-secondary-container-dark);
+  }
+
+  @media (hover: hover) {
+    :where(.hover\:secondary-container:hover) {
+      --current-bg-color: var(--hover-secondary-container-dark);
+    }
+  }
+
+  :where(
+    .secondary-container:focus-visible,
+    .hover\:secondary-container:focus-visible
+  ) {
+    --current-bg-color: var(--focus-visible-container-dark);
+    --current-text-color: var(--on-focus-visible-container-color-dark);
+  }
+}

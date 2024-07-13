@@ -3,8 +3,8 @@ const scripts = [
   'hydrate()',
   'const scheme = localStorage.getItem("__vj_theme_scheme")',
   'const hue = localStorage.getItem("__vj_theme_hue")',
-  'if (scheme !== "auto") document.documentElement.setAttribute("color-scheme", scheme)',
-  'document.documentElement.setAttribute("color-hue", hue ?? "green")',
+  'if (scheme !== null) document.documentElement.setAttribute("color-scheme", scheme)',
+  'if (hue !== null) document.documentElement.setAttribute("color-hue", hue)',
 ];
 
 export const Script = () => {
