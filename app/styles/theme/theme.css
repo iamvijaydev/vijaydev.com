@@ -16,7 +16,7 @@
   --on-secondary-container-low-light: var(--color-15);
   --secondary-container-high-light: var(--color-3);
   --on-secondary-container-high-light: var(--color-10);
-  --secondary-container-outline-light: var(--gray-13);
+  --secondary-container-outline-light: var(--gray-10);
 
   --secondary-container-dark: var(--gray-12);
   --on-secondary-container-dark: var(--color-4);
@@ -24,7 +24,7 @@
   --on-secondary-container-low-dark: var(--color-15);
   --secondary-container-high-dark: var(--color-2);
   --on-secondary-container-high-dark: var(--color-10);
-  --secondary-container-outline-dark: var(--gray-2);
+  --secondary-container-outline-dark: var(--gray-3);
 
   /* hover secondary container */
 
