@@ -33,7 +33,7 @@ export const Theming = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-column">
       <div className="flex gap-s mb-s">
         <ButtonGroup buttons={[
           {
@@ -55,24 +55,6 @@ export const Theming = () => {
             onClick: onSchemeChange("dark"),
           },
         ]} />
-        {/* <Button
-          onClick={onSchemeChange("auto")}
-          isActive={scheme === "auto"}
-          label="Auto"
-          icon="routine"
-        />
-        <Button
-          onClick={onSchemeChange("light")}
-          isActive={scheme === "light"}
-          label="Light"
-          icon="light_mode"
-        />
-        <Button
-          onClick={onSchemeChange("dark")}
-          isActive={scheme === "dark"}
-          label="Dark"
-          icon="dark_mode"
-        /> */}
       </div>
       <div>
         <button onClick={onHueChange("red")} disabled={hue === "red"}>

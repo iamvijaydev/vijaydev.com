@@ -1,14 +1,12 @@
 @media (prefers-color-scheme: dark) {
   :where(.surface) {
-    --current-bg-color: var(--surface-dark);
-    --current-text-color: var(--on-surface-dark);
-    --current-text-color-dim: var(--on-surface-dim-dark);
+    --current-bg-color: var(--bg-dark);
+    --current-text-color: var(--text-dark);
+    --current-text-color-dim: var(--text-dim-dark);
   }
 
-  :where(.surface-container) {
-    --current-bg-color: var(--surface-container-dark);
-    --current-text-color: var(--on-surface-dark);
-    --current-text-color-dim: var(--on-surface-dim-dark);
+  :where(.surface-container, .surface-frost-container) {
+    --current-bg-color: var(--bg-dark);
   }
 
   /* .secondary-container */
@@ -61,15 +59,13 @@
 
 [color-scheme="dark"] {
   :where(.surface) {
-    --current-bg-color: var(--surface-dark);
-    --current-text-color: var(--on-surface-dark);
-    --current-text-color-dim: var(--on-surface-dim-dark);
+    --current-bg-color: var(--bg-dark);
+    --current-text-color: var(--text-dark);
+    --current-text-color-dim: var(--text-dim-dark);
   }
 
-  :where(.surface-container) {
-    --current-bg-color: var(--surface-container-dark);
-    --current-text-color: var(--on-surface-dark);
-    --current-text-color-dim: var(--on-surface-dim-dark);
+  :where(.surface-container, .surface-frost-container) {
+    --current-bg-color: var(--bg-dark);
   }
 
   /* .secondary-container */

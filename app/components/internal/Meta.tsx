@@ -6,6 +6,10 @@ export const Meta = () => {
 
   return (
     <>
+      <meta name="robots" content="noindex, nofollow" />
+      <meta charSet="utf-8" />
+      <meta name="theme-color" content="#226DAA" />
+      {/* content="index, follow" */}
       {state.meta.map((meta) =>
         meta.name === "title" ? (
           <title key={meta.name}>{meta.content}</title>

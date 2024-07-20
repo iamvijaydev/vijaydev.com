@@ -36,60 +36,86 @@ export const PostWrapper = ({
   }, [matter.published, matter.updated]);
 
   return (
-    <Grid as="div">
-      <Cell size={12}>
-        <Masthead
-          breadcrumbNodes={breadcrumbNodes}
-          title={matter.title}
-          description={matter.description}
-          published={date.published}
-          updated={date.updated}
-          readTime={matter.readTime}
-        />
-      </Cell>
-      <Cell as="article" size={[{ size: 12 }, { screen: "md", size: 7 }]}id="article-content">
-        <MDXProvider components={mdxComponents}>{children}</MDXProvider>
+    <>
+      <Grid as="div">
+        <Cell size={12}>
+          <Masthead
+            breadcrumbNodes={breadcrumbNodes}
+            title={matter.title}
+            description={matter.description}
+            published={date.published}
+            updated={date.updated}
+            readTime={matter.readTime}
+          />
+        </Cell>
+      </Grid>
+      <Grid as="div">
+        <Cell
+          as="article"
+          size={[{ size: 12 }, { screen: "md", size: 7 }]}
+          id="article-content"
+        >
+          <MDXProvider components={mdxComponents}>{children}</MDXProvider>
 
-        <footer className="mt-7">
-          <nav className="flex f-column lg:f-row j-between gap-m">
-            {matter.prev ? (
-              <RelatedItemCard
-                type="⟵ Previous"
-                href={matter.prev.pathname}
-                label={matter.prev.title}
-              />
-            ) : null}
-            {matter.next ? (
-              <RelatedItemCard
-                type="Up Next ⟶"
-                href={matter.next.pathname}
-                label={matter.next.title}
-                rightAlign
-              />
-            ) : null}
-          </nav>
-        </footer>
-      </Cell>
-      <Cell
-        as="aside"
-        size={[
-          { screen: "md", size: 9, position: "start" },
-          { screen: "md", size: 13, position: "end" },
-        ]}
-        className="none md:inline-block"
-      >
-        <AsideToc
-          title={matter.title}
-          toc={toc}
-          contentSiblingId="#article-content"
-        />
-      </Cell>
-      {/* <Toc
+          <footer className="mt-7">
+            <nav className="flex f-column lg:f-row j-between gap-m">
+              {matter.prev ? (
+                <RelatedItemCard
+                  type="⟵ Previous"
+                  href={matter.prev.pathname}
+                  label={matter.prev.title}
+                />
+              ) : null}
+              {matter.next ? (
+                <RelatedItemCard
+                  type="Up Next ⟶"
+                  href={matter.next.pathname}
+                  label={matter.next.title}
+                  rightAlign
+                />
+              ) : null}
+            </nav>
+          </footer>
+        </Cell>
+        <Cell
+          as="aside"
+          size={[
+            { screen: "md", size: 9, position: "start" },
+            { screen: "md", size: 13, position: "end" },
+          ]}
+          className="none md:inline-block"
+        >
+          <AsideToc
+            title={matter.title}
+            toc={toc}
+            contentSiblingId="#article-content"
+          />
+        </Cell>
+        {/* <Toc
         title={matter.title}
         toc={toc}
         contentSiblingId="#article-content"
         className="col-12 xl:col-start-9 xl:col-end-13 xl:a-self-start"
       /> */}
-    </Grid>
+      </Grid>
+    </>
+
+// #container>.a {
+//   grid-column: 1;
+// }
+
+// #container>.b {
+//   grid-column: 2;
+//   grid-row: 1; /* NEW */
+// }
+
+// #container.reverse>.a {
+//   grid-column: 2;
+// }
+
+// #container.reverse>.b {
+//   grid-row: 1;
+//   grid-column: 1;
+// }
   );
 };

@@ -1,26 +1,33 @@
-html {
-  --surface-light: var(--gray-0);
-  --on-surface-light: var(--gray-15);
-  --on-surface-dim-light: var(--gray-8);
-  --surface-container-light: var(--gray-1);
-  --surface-dark: var(--gray-15);
-  --on-surface-dark: var(--gray-0);
-  --on-surface-dim-dark: var(--gray-5);
-  --surface-container-dark: var(--gray-14);
-}
-
 :where(.surface) {
-  --current-bg-color: var(--surface-light);
+  --bg-light: var(--gray-0);
+  --bg-dark: var(--gray-15);
+  --text-light: var(--gray-15);
+  --text-dark: var(--gray-0);
+  --text-dim-light: var(--gray-8);
+  --text-dim-dark: var(--gray-5);
+
+  --current-bg-color: var(--bg-light);
   --current-parent-bg-color: var(--current-bg-color);
-  --current-text-color: var(--on-surface-light);
-  --current-text-color-dim: var(--on-surface-dim-light);
+  --current-text-color: var(--text-light);
+  --current-text-color-dim: var(--text-dim-light);
 }
 
 :where(.surface-container) {
-  --current-bg-color: var(--surface-container-light);
+  --bg-light: var(--gray-1);
+  --bg-dark: var(--gray-14);
+
+  --current-bg-color: var(--bg-light);
   --current-parent-bg-color: var(--current-bg-color);
-  --current-text-color: var(--on-surface-light);
-  --current-text-color-dim: var(--on-surface-dim-light);
+}
+
+:where(.surface-frost-container) {
+  --gray-alpha: 0.6;
+  --bg-light: var(--gray-1);
+  --bg-dark: var(--gray-14);
+
+  --current-bg-color: var(--bg-light);
+  --current-parent-bg-color: var(--current-bg-color);
+  backdrop-filter: blur(10px);
 }
 
 /* .secondary-container */
@@ -72,15 +79,13 @@ html {
 
 [color-scheme="light"] {
   :where(.surface) {
-    --current-bg-color: var(--surface-light);
-    --current-text-color: var(--on-surface-light);
-    --current-text-color-dim: var(--on-surface-dim-light);
+    --current-bg-color: var(--bg-light);
+    --current-text-color: var(--text-light);
+    --current-text-color-dim: var(--text-dim-light);
   }
 
-  :where(.surface-container) {
-    --current-bg-color: var(--surface-container-light);
-    --current-text-color: var(--on-surface-light);
-    --current-text-color-dim: var(--on-surface-dim-light);
+  :where(.surface-container, .surface-frost-container) {
+    --current-bg-color: var(--bg-light);
   }
 
   /* .secondary-container */

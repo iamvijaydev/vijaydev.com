@@ -21,6 +21,10 @@
   line-height: var(--line-height-relax);
 }
 
+:where(.button) :where(.icon) {
+  user-select: none;
+}
+
 @media (hover: hover) {
   :where(.button:hover) {
     --transition-duration: var(--standard-accelerate-duration);

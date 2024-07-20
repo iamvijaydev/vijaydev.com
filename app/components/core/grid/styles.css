@@ -25,3 +25,11 @@
   grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
   column-gap: var(--grid-gutter);
 }
+
+.self-center {
+  align-self: center;
+}
+
+.self-end {
+  justify-self: end;
+}

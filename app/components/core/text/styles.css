@@ -41,7 +41,7 @@
 
 .text:where(.display) {
   --font-size: var(--size-6);
-  --font-weight: 600;
+  --font-weight: 500;
   --letter-spacing: -0.025em;
 }
 

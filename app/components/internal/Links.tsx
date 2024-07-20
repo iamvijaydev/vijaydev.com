@@ -40,6 +40,8 @@ export const Links = () => {
 
   return (
     <>
+      <link rel="canonical" href="https://www.vijaydev.com" />
+      <link rel="icon" type="image/png" href="/assets/favicon.png" />
       {state.links.map((data) => (
         <link key={data.href} {...transformProps(data)} crossOrigin="" />
       ))}
