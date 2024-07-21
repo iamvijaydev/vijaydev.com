@@ -35,20 +35,22 @@
   .lg\:px-xl {
     padding-left: var(--space-xl);padding-right: var(--space-xl);
   }
-}.pl-m {
-  padding-left: var(--space-m);
 }.py-2xl {
   padding-top: var(--space-2xl);padding-bottom: var(--space-2xl);
 }.py-3xl {
   padding-top: var(--space-3xl);padding-bottom: var(--space-3xl);
-}.pt-xs {
-  padding-top: var(--space-xs);
+}.px-2xs {
+  padding-left: var(--space-2xs);padding-right: var(--space-2xs);
 }.py-3xs-2xs {
   padding-top: var(--space-3xs-2xs);padding-bottom: var(--space-3xs-2xs);
 }.py-m {
   padding-top: var(--space-m);padding-bottom: var(--space-m);
 }.px-xs-s {
   padding-left: var(--space-xs-s);padding-right: var(--space-xs-s);
+}.pl-m {
+  padding-left: var(--space-m);
+}.pt-xs {
+  padding-top: var(--space-xs);
 }
 .gap-3xs {
   gap: var(--space-3xs);

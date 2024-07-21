@@ -6,9 +6,9 @@
   --transition-easing: var(--standard-decelerate-easing);
   --transition-properties: color, background-color, box-shadow;
 
+  user-select: none;
   border: none;
   background-color: var(--bg-color);
-  padding: 0 var(--space-2xs-xs);
   border-radius: var(--border-radius);
   cursor: pointer;
   transition-property: var(--transition-properties);
@@ -19,10 +19,6 @@
 :where(.button) :where(.icon, .text) {
   color: var(--text-color);
   line-height: var(--line-height-relax);
-}
-
-:where(.button) :where(.icon) {
-  user-select: none;
 }
 
 @media (hover: hover) {

@@ -16,7 +16,7 @@ export interface Props
 
 export const getButtonClassName = (props: Pick<Props, "as" | "icon" | "postIcon" | "isActive">) => {
   const { as, icon, postIcon, isActive } = props;
-  let className = "button secondary-container focus-visible flex align-center gap-2xs";
+  let className = "button secondary-container focus-visible px-2xs flex align-center gap-3xs";
 
   if (isActive) {
     className += " active";

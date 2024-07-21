@@ -75,6 +75,17 @@
 .text:where(.body) {
   --font-size: var(--size-1);
   --line-height: var(--line-height-relax);
+
+  strong {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  em {
+    font-variation-settings: "slnt" -10;
+    font-weight: 300;
+    text-decoration: underline;
+  }
 }
 
 .text:where(.label) {
