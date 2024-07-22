@@ -30,6 +30,7 @@ export const buildServerFiles = async () => {
           blogs: getBlogData(),
           learn: getLearnData(),
           outputHtml: route.output.html,
+          pathname: route.route.pathname,
         }),
         resolveDir: ".",
         loader: "tsx",

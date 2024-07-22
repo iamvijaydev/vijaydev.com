@@ -11,15 +11,16 @@ export interface RouteStore {
   state: RouteState;
   setLoading: (loading: boolean) => void;
   setLayout: (layoutType: RouteLayoutType) => void;
-  replaceOutlet: (outlet: RouteOutLet) => void;
+  replaceOutlet: (pathname: string, outlet: RouteOutLet) => void;
 }
 
 export const useRouteStore = (
+  pathname: string,
   layoutType?: RouteLayoutType,
   Outlet?: RouteOutLet
 ): RouteStore => {
   const [state, setState] = useState<RouteState>(
-    getRouteState(layoutType, Outlet)
+    getRouteState(pathname, layoutType, Outlet)
   );
 
   const setLayout = (layoutType: RouteLayoutType) => {
@@ -29,8 +30,8 @@ export const useRouteStore = (
     }));
   };
 
-  const replaceOutlet = (outlet: RouteOutLet) => {
-    setState((prev) => ({ ...prev, outlet, loading: false }));
+  const replaceOutlet = (pathname: string, outlet: RouteOutLet) => {
+    setState((prev) => ({ ...prev, pathname, outlet, loading: false }));
   };
 
   const setLoading = (loading: boolean) => {

@@ -1,25 +1,14 @@
-import { Link } from "~components/core/link/Link";
 import { Button } from "~components/core/button/Button";
 import { Theming } from "../Theming";
 import { useState } from "react";
+import { MenuItems } from "./MenuItems";
 
 export const DefaultRichMenu = () => {
   const [isToggle, setIsToggle] = useState(false);
 
   return (
     <nav className="app-bar__height flex flex-end align-center gap-m">
-      <Link href="/about" textProps={{ variant: "label" }}>
-        About
-      </Link>
-      <Link href="/featured" textProps={{ variant: "label" }}>
-        Featured
-      </Link>
-      <Link href="/blog" textProps={{ variant: "label" }}>
-        Blog
-      </Link>
-      <Link href="/learn" textProps={{ variant: "label" }}>
-        Learn
-      </Link>
+      <MenuItems />
       <span className="text label dim">|</span>
       <Button
         label="Theme"

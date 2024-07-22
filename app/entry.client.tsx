@@ -14,6 +14,7 @@ export const makeHydrate = (data: AppProps) => async () => {
       imports: data.imports,
       blogs: data.blogs,
       learn: data.learn,
+      pathname
     };
 
     if (links) props.links = links;

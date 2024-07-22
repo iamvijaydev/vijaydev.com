@@ -34,7 +34,7 @@ export const useLoadRouteCommand = (): LoadRouteCommand => {
       if (layoutType) {
         routerStore.setLayout(layoutType);
       }
-      routerStore.replaceOutlet(RouteComponent);
+      routerStore.replaceOutlet(historyPath, RouteComponent);
 
     } catch (error) {
       routerStore.setLoading(false);

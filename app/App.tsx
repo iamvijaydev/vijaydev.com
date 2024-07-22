@@ -22,6 +22,7 @@ export type AppProps = {
   meta?: MetaType[];
   blogs?: Partial<BlogState>;
   learn?: Partial<LearnState>;
+  pathname?: string;
   layoutType?: RouteLayoutType;
   Outlet?: RouteOutLet;
 };
@@ -44,6 +45,7 @@ export const App = (props: AppProps = {}) => {
             <BlogContextProvider blogs={props.blogs || {}}>
               <LearnContextProvider learn={props.learn || {}}>
                 <RouteContextProvider
+                  pathname={props.pathname || "/"}
                   layoutType={props.layoutType}
                   Outlet={props.Outlet}
                 >

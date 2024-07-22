@@ -6,6 +6,7 @@ export type ServerAppTemplateProps = {
   blogs: BlogData;
   learn: LearnData;
   outputHtml: string;
+  pathname: string;
 };
 
 export const getServerAppTemplate = ({
@@ -14,6 +15,7 @@ export const getServerAppTemplate = ({
   blogs,
   learn,
   outputHtml,
+  pathname,
 }: ServerAppTemplateProps) => {
   function replacer(key: string, value: unknown) {
     if (value instanceof Map) {
@@ -51,7 +53,8 @@ const appData = {
   learn: JSON.parse('${learnStr}', reviver),
   meta: route.meta || [],
   links: route.links || [],
-  Outlet: route.RouteComponent
+  Outlet: route.RouteComponent,
+  pathname: '${pathname}',
 };
 
 if (route.layoutType) appData.layoutType = route.layoutType;

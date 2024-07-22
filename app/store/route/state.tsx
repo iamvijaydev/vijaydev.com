@@ -11,15 +11,18 @@ export type RouteOutLet = {
 };
 
 export interface RouteState {
+  pathname: string;
   layout: RouteLayout;
   outlet: RouteOutLet;
   loading: boolean;
 }
 
 export const getRouteState = (
+  pathname: string,
   layoutType?: RouteLayoutType,
   Outlet?: RouteOutLet
 ): RouteState => ({
+  pathname,
   layout: layoutType === "DEFAULT_LAYOUT" ? DefaultLayout : DefaultLayout,
   outlet: Outlet || (() => <div />),
   loading: false,

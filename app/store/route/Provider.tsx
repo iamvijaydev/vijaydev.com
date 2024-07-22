@@ -4,12 +4,13 @@ import { useRouteStore } from "./store";
 import type { RouteLayoutType, RouteOutLet } from "./state";
 
 export type Props = {
+  pathname: string;
   layoutType?: RouteLayoutType;
   Outlet?: RouteOutLet;
 };
 
 export const RouteContextProvider = (props: PropsWithChildren<Props>) => {
-  const store = useRouteStore(props.layoutType, props.Outlet);
+  const store = useRouteStore(props.pathname, props.layoutType, props.Outlet);
 
   const value = useMemo(() => store, [store]);
 
