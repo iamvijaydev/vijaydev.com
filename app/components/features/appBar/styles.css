@@ -41,3 +41,71 @@ html[data-scroll="0"] .app-bar {
 .logo__lname {
   font-weight: 300;
 }
+
+.theme-options {
+  width: 20em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--current-bg-color);
+  padding: var(--space-m);
+  border-radius: var(--border-radius-m);
+  box-shadow: var(--shadow-1);
+}
+
+.theme-options :where(.red, .pink, .purple, .violet, .indigo, .blue, .cyan, .teal, .green, .lime, .yellow, .orange) {
+  background-color: var(--color-4);
+  color: var(--color-4);
+  width: 3em;
+  flex-basis: 3em;
+  height: 3em;
+  flex-grow: 0;
+  border: none;
+  border-radius: var(--border-radius-full);
+  cursor: pointer;
+}
+
+.theme-options :where(.red, .pink, .purple, .violet, .indigo, .blue, .cyan, .teal, .green, .lime, .yellow, .orange):is(:disabled) {
+  background-color: var(--color-8);
+  cursor: default;
+
+  .material-symbols-outlined {
+    color: #fff;
+  }  
+}
+.theme-options :where(.red) {
+  --color-hue: var(--hue-red);
+}
+.theme-options :where(.pink) {
+  --color-hue: var(--hue-pink);
+}
+.theme-options :where(.purple) {
+  --color-hue: var(--hue-purple);
+}
+.theme-options :where(.violet) {
+  --color-hue: var(--hue-violet);
+}
+.theme-options :where(.indigo) {
+  --color-hue: var(--hue-indigo);
+}
+.theme-options :where(.blue) {
+  --color-hue: var(--hue-blue);
+}
+.theme-options :where(.cyan) {
+  --color-hue: var(--hue-cyan);
+}
+.theme-options :where(.teal) {
+  --color-hue: var(--hue-teal);
+}
+.theme-options :where(.green) {
+  --color-hue: var(--hue-green);
+}
+.theme-options :where(.lime) {
+  --color-hue: var(--hue-lime);
+}
+.theme-options :where(.yellow) {
+  --color-hue: var(--hue-yellow);
+}
+.theme-options :where(.orange) {
+  --color-hue: var(--hue-orange);
+}

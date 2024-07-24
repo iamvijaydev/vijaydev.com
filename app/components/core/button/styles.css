@@ -54,6 +54,10 @@
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
+:where(.button-group .button:is(.active)) {
+  box-shadow: 0 0 0 1px var(--bg-color);
+}
+
 /* .button {
   --radius: var(--border-radius-full);
 
