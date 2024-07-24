@@ -5,7 +5,7 @@ const devImports: Imports = {
   "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime?dev",
   "react-dom": "https://esm.sh/react-dom@18.3.1?dev",
   "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?dev",
-  "@floating-ui/react": "https://esm.sh/@floating-ui/react@0.26.19?dev",
+  "@floating-ui/dom": "https://esm.sh/@floating-ui/dom@0.26.19?dev",
   "main": "/assets/main.mjs",
 };
 
@@ -14,7 +14,7 @@ const prodImports: Imports = {
   "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
   "react-dom": "https://esm.sh/react-dom@18.3.1",
   "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
-  "@floating-ui/react": "https://esm.sh/@floating-ui/react@0.26.19",
+  "@floating-ui/dom": "https://esm.sh/@floating-ui/dom@0.26.19",
   "main": "/assets/main.mjs",
 };
 

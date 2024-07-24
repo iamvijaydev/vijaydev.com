@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@code-hike/mdx": "0.9.0",
+    "@floating-ui/dom": "^1.6.8",
     "@floating-ui/react": "^0.26.19",
     "@mdx-js/esbuild": "3.0.1",
     "@mdx-js/react": "^3.0.1",

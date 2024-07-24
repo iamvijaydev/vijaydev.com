@@ -43,7 +43,7 @@ html[data-scroll="0"] .app-bar {
 }
 
 .theme-options {
-  width: 20em;
+  width: 19em;
   position: absolute;
   top: 0;
   left: 0;
@@ -54,19 +54,27 @@ html[data-scroll="0"] .app-bar {
 }
 
 .theme-options :where(.red, .pink, .purple, .violet, .indigo, .blue, .cyan, .teal, .green, .lime, .yellow, .orange) {
-  background-color: var(--color-4);
-  color: var(--color-4);
+  --bg-color: var(--color-3);
+
+  background-color: var(--bg-color);
+  color: var(--bg-color);
   width: 3em;
   flex-basis: 3em;
   height: 3em;
   flex-grow: 0;
   border: none;
-  border-radius: var(--border-radius-full);
+  border-radius: var(--border-radius-s);
   cursor: pointer;
 }
 
+@media (hover: hover) {
+  .theme-options :where(.red, .pink, .purple, .violet, .indigo, .blue, .cyan, .teal, .green, .lime, .yellow, .orange):hover {
+    --bg-color: var(--color-5);
+  }
+}
+
 .theme-options :where(.red, .pink, .purple, .violet, .indigo, .blue, .cyan, .teal, .green, .lime, .yellow, .orange):is(:disabled) {
-  background-color: var(--color-8);
+  --bg-color: var(--color-7);
   cursor: default;
 
   .material-symbols-outlined {

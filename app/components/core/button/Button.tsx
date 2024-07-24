@@ -1,4 +1,4 @@
-import type { DetailedHTMLProps, ButtonHTMLAttributes, ReactNode } from "react";
+import { type DetailedHTMLProps, type ButtonHTMLAttributes, type ReactNode, forwardRef } from "react";
 
 export interface Props
   extends DetailedHTMLProps<
@@ -45,7 +45,7 @@ export const getButtonClassName = (props: Pick<Props, "as" | "icon" | "postIcon"
   return className;
 };
 
-export const Button = (props: Props) => {
+export const Button = forwardRef(function Button(props: Props, ref: any) {
   const {
     label,
     icon,
@@ -56,13 +56,15 @@ export const Button = (props: Props) => {
     isActive,
     ...rest
   } = props;
+
   const className = baseClassName + " " + getButtonClassName(props);
 
   return (
-    <button type={type} {...rest} className={className}>
+    <button ref={ref} type={type} {...rest} className={className}>
       {icon ? <span className="icon text label material-symbols-outlined">{icon}</span> : null}
       <span className={`text label${ellipsis ? ' ellipsis' : ''}`}>{label}</span>
       {postIcon ? <span className="icon text label material-symbols-outlined">{postIcon}</span> : null}
     </button>
   );
-};
+});
+

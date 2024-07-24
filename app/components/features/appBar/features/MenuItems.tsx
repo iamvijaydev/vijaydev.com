@@ -25,6 +25,7 @@ export const MenuItems = () => {
         },
       ].map(({ path, text }) => (
         <Link
+          key={path}
           href={path}
           textProps={{ variant: "label" }}
           isActive={isActive(path)}

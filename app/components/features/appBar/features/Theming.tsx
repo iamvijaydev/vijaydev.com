@@ -58,7 +58,7 @@ export const Theming = () => {
           ]}
         />
       </div>
-      <div className="flex flex-wrap gap-3xs">
+      <div className="flex flex-wrap gap-s">
         {[
           "red",
           "pink",
@@ -78,6 +78,8 @@ export const Theming = () => {
             className={color}
             onClick={onHueChange(color)}
             disabled={hue === color}
+            aria-label={`Change to ${color} hue`}
+            title={`Change to ${color} hue`}
           >
             <span className="material-symbols-outlined">check</span>
           </button>
