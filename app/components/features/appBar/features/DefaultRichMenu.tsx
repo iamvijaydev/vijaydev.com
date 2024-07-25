@@ -14,8 +14,6 @@ export const DefaultRichMenu = () => {
   const infoRef = useRef<HTMLDivElement>(null);
 
   const update = () => {
-    console.log(buttonRef.current, infoRef.current);
-
     if (buttonRef.current && infoRef.current) {
       computePosition(buttonRef.current, infoRef.current, {
         placement: "bottom",
@@ -33,62 +31,76 @@ export const DefaultRichMenu = () => {
 
   const close = () => {
     setIsOpen(false);
+    buttonRef.current && buttonRef.current.focus();
   };
 
-  const toggle = () => {
-    setIsOpen((value) => !value);
-    infoRef.current && infoRef.current.focus();
+  const open = () => {
+    setIsOpen(true);
+    buttonRef.current && buttonRef.current.focus();
     update();
   };
 
   useIsomorphicEffect(() => {
     const controller = new AbortController();
+    const signal = {
+      signal: controller.signal,
+    };
 
-    window.addEventListener("resize", update, {
+    buttonRef.current?.addEventListener("click", open, {
       signal: controller.signal,
     });
-    window.addEventListener(
-      "scroll",
-      () => {
-        console.log("scroll");
-        close();
-      },
-      {
-        signal: controller.signal,
-      }
-    );
-    window.addEventListener(
-      "keydown",
-      (event) => {
-        if (event.key === "Escape") {
-          close();
-        }
-      },
-      {
-        signal: controller.signal,
-      }
-    );
-    window.addEventListener(
-      "click",
-      (event) => {
-        if (
-          buttonRef.current &&
-          infoRef.current &&
-          !buttonRef.current.contains(event.target as Node) &&
-          !infoRef.current.contains(event.target as Node)
-        ) {
-          close();
-        }
-      },
-      {
-        signal: controller.signal,
-      }
-    );
+
+    if (isOpen) {
+      const allButtons = infoRef.current!.querySelectorAll("button");
+      const firstButton = allButtons[0];
+      const lastButton = allButtons[allButtons.length - 1];
+
+      firstButton.focus();
+
+      window.addEventListener("resize", close, signal);
+      window.addEventListener("scroll", close, signal);
+      window.addEventListener(
+        "keydown",
+        (event) => {
+          if (event.key === "Escape") {
+            close();
+            return;
+          }
+
+          if (event.key === "Tab") {
+            if (event.shiftKey) {
+              if (document.activeElement === firstButton) {
+                lastButton.focus();
+                event.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastButton) {
+                firstButton.focus();
+                event.preventDefault();
+              }
+            }
+          }
+        },
+        signal
+      );
+      window.addEventListener(
+        "click",
+        (event) => {
+          if (
+            !buttonRef.current?.contains(event.target as Node) &&
+            !infoRef.current?.contains(event.target as Node)
+          ) {
+            close();
+          }
+        },
+        signal
+      );
+    }
 
     return () => {
       controller.abort();
     };
-  }, []);
+  }, [buttonRef.current, isOpen]);
 
   return (
     <nav className="app-bar__height flex flex-end align-center gap-m">
@@ -100,7 +112,6 @@ export const DefaultRichMenu = () => {
         isActive={isOpen}
         postIcon={isOpen ? "arrow_drop_up" : "arrow_drop_down"}
         ref={buttonRef}
-        onClick={toggle}
       />
       {createPortal(
         <div

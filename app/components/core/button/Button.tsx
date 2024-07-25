@@ -16,7 +16,7 @@ export interface Props
 
 export const getButtonClassName = (props: Pick<Props, "as" | "icon" | "postIcon" | "isActive">) => {
   const { as, icon, postIcon, isActive } = props;
-  let className = "button secondary-container focus-visible px-2xs flex align-center gap-3xs";
+  let className = "button secondary-container focus-visible";
 
   if (isActive) {
     className += " active";
@@ -61,9 +61,9 @@ export const Button = forwardRef(function Button(props: Props, ref: any) {
 
   return (
     <button ref={ref} type={type} {...rest} className={className}>
-      {icon ? <span className="icon text label material-symbols-outlined">{icon}</span> : null}
-      <span className={`text label${ellipsis ? ' ellipsis' : ''}`}>{label}</span>
-      {postIcon ? <span className="icon text label material-symbols-outlined">{postIcon}</span> : null}
+      {icon ? <span className="btn-icon text label material-symbols-outlined">{icon}</span> : null}
+      <span className={`btn-text text label${ellipsis ? ' ellipsis' : ''}`}>{label}</span>
+      {postIcon ? <span className="btn-icon text label material-symbols-outlined">{postIcon}</span> : null}
     </button>
   );
 });

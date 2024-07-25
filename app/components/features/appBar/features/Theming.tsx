@@ -34,7 +34,8 @@ export const Theming = () => {
 
   return (
     <div className="flex flex-column">
-      <div className="flex gap-s mb-s">
+      <label>Change color scheme</label>
+      <div className="theme-options__scheme">
         <ButtonGroup
           buttons={[
             {
@@ -58,7 +59,8 @@ export const Theming = () => {
           ]}
         />
       </div>
-      <div className="flex flex-wrap gap-s">
+      <label>Change color hue</label>
+      <div className="theme-options__hues">
         {[
           "red",
           "pink",

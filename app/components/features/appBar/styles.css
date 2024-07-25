@@ -43,7 +43,7 @@ html[data-scroll="0"] .app-bar {
 }
 
 .theme-options {
-  width: 19em;
+  width: max-content;
   position: absolute;
   top: 0;
   left: 0;
@@ -51,6 +51,17 @@ html[data-scroll="0"] .app-bar {
   padding: var(--space-m);
   border-radius: var(--border-radius-m);
   box-shadow: var(--shadow-1);
+}
+
+.theme-options__scheme {
+  display: flex;
+}
+
+.theme-options__hues {
+  width: 23em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
 .theme-options :where(.red, .pink, .purple, .violet, .indigo, .blue, .cyan, .teal, .green, .lime, .yellow, .orange) {
@@ -63,7 +74,7 @@ html[data-scroll="0"] .app-bar {
   height: 3em;
   flex-grow: 0;
   border: none;
-  border-radius: var(--border-radius-s);
+  border-radius: var(--border-radius-full);
   cursor: pointer;
 }
 
