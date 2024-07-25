@@ -2,13 +2,13 @@
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers */
 
 :where(*) {
-  --primary-color-light: var(--color-10);
-  --secondary-color-light: var(--color-9);
-  --accent-color-light: var(--color-8);
+  --primary-color-light: var(--color-8);
+  --secondary-color-light: var(--color-11);
+  --accent-color-light: var(--color-11);
 
-  --primary-color-dark: var(--color-5);
-  --secondary-color-dark: var(--color-6);
-  --accent-color-dark: var(--color-6);
+  --primary-color-dark: var(--color-6);
+  --secondary-color-dark: var(--color-9);
+  --accent-color-dark: var(--color-9);
 
 
   /* secondary container */
@@ -31,10 +31,12 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 
   /* hover secondary container */
 
-  --hover-secondary-container-light: var(--gray-2);
+  --hover-secondary-container-light: var(--gray-1);
   --on-hover-secondary-container-light: var(--secondary-color-light);
-  --hover-secondary-container-dark: var(--gray-13);
+  --hover-secondary-container-outline-light: var(--gray-2);
+  --hover-secondary-container-dark: var(--gray-14);
   --on-hover-secondary-container-dark: var(--secondary-color-dark);
+  --hover-secondary-container-outline-dark: var(--gray-13);
 
   /* shared focus visible state for containers */
   --focus-visible-container-light: var(--color-5);

@@ -59,6 +59,7 @@
 
 :where(.hover\:secondary-container.active) {
   --current-bg-color: var(--hover-secondary-container-light);
+  --current-border-color: var(--hover-secondary-container-outline-light);
 }
 
 @media (hover: hover) {
@@ -117,6 +118,7 @@
   
   :where(.hover\:secondary-container.active) {
     --current-bg-color: var(--hover-secondary-container-light);
+    --current-border-color: var(--hover-secondary-container-outline-light);
   }
   
   @media (hover: hover) {

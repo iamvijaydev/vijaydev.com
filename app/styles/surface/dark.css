@@ -38,6 +38,7 @@
 
   :where(.hover\:secondary-container.active) {
     --current-bg-color: var(--hover-secondary-container-dark);
+    --current-border-color: var(--hover-secondary-container-outline-dark);
   }
 
   @media (hover: hover) {
@@ -97,6 +98,7 @@
 
   :where(.hover\:secondary-container.active) {
     --current-bg-color: var(--hover-secondary-container-dark);
+    --current-border-color: var(--hover-secondary-container-outline-dark);
   }
 
   @media (hover: hover) {
