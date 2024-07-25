@@ -24,6 +24,7 @@
   text-wrap: var(--text-wrap);
   text-align: var(--text-align, left);
   color: var(--text-color);
+  fill: var(--text-color);
   transition: color var(--standard-duration) var(--standard-easing);
 }
 
@@ -117,6 +118,10 @@
 
 .text:where(.dim) {
   --text-color: var(--current-text-color-dim);
+}
+
+.text:where(.tight) {
+  line-height: var(--line-height-tight);
 }
 
 .text:where(.gradient) {

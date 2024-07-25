@@ -17,7 +17,7 @@ export const DefaultRichMenu = () => {
     if (buttonRef.current && infoRef.current) {
       computePosition(buttonRef.current, infoRef.current, {
         placement: "bottom",
-        middleware: [offset(10), flip(), shift({ padding: 0 })],
+        middleware: [offset(20), flip(), shift({ padding: 0 })],
       }).then(({ x, y }) => {
         if (infoRef.current) {
           Object.assign(infoRef.current.style, {
@@ -34,9 +34,9 @@ export const DefaultRichMenu = () => {
     buttonRef.current && buttonRef.current.focus();
   };
 
-  const open = () => {
-    setIsOpen(true);
-    buttonRef.current && buttonRef.current.focus();
+  const toggle = () => {
+    if(isOpen && buttonRef.current) buttonRef.current.focus();
+    setIsOpen(value => !value);
     update();
   };
 
@@ -46,9 +46,7 @@ export const DefaultRichMenu = () => {
       signal: controller.signal,
     };
 
-    buttonRef.current?.addEventListener("click", open, {
-      signal: controller.signal,
-    });
+    buttonRef.current?.addEventListener("click", toggle, signal);
 
     if (isOpen) {
       const allButtons = infoRef.current!.querySelectorAll("button");
@@ -117,7 +115,7 @@ export const DefaultRichMenu = () => {
         <div
           ref={infoRef}
           style={{ display: isOpen ? "block" : "none" }}
-          className="theme-options surface-container"
+          className="theming surface-container"
         >
           <Theming />
         </div>,

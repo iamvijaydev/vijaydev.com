@@ -34,8 +34,8 @@ export const Theming = () => {
 
   return (
     <div className="flex flex-column">
-      <label>Change color scheme</label>
-      <div className="theme-options__scheme">
+      <label className="text label tight theming__label">Change color scheme</label>
+      <div className="theming__scheme">
         <ButtonGroup
           buttons={[
             {
@@ -59,8 +59,8 @@ export const Theming = () => {
           ]}
         />
       </div>
-      <label>Change color hue</label>
-      <div className="theme-options__hues">
+      <label className="text label tight theming__label">Change color hue</label>
+      <div className="theming__hues">
         {[
           "red",
           "pink",

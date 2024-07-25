@@ -5,7 +5,7 @@ import { DefaultMenu } from "./features/DefaultMenu";
 
 export const AppBar = () => {
   return (
-    <header className="app-bar surface-frost-container">
+    <header className="app-bar surface-container">
       <Grid>
         <Cell size={6} className="app-bar__height flex align-center">
           <Link href="/" className="logo">

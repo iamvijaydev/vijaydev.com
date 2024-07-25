@@ -8,10 +8,6 @@
   transition-property: box-shadow color;
   transition-duration: var(--standard-duration);
   transition-timing-function: var(--standard-easing);
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
 }
 
 html[data-scroll="0"] .app-bar {
@@ -42,29 +38,39 @@ html[data-scroll="0"] .app-bar {
   font-weight: 300;
 }
 
-.theme-options {
+.theming {
   width: max-content;
   position: absolute;
   top: 0;
   left: 0;
   background-color: var(--current-bg-color);
-  padding: var(--space-m);
+  padding: var(--space-s);
   border-radius: var(--border-radius-m);
   box-shadow: var(--shadow-1);
 }
 
-.theme-options__scheme {
-  display: flex;
+.theming__label {
+  display: block;
+  margin-bottom: var(--space-xs);
 }
 
-.theme-options__hues {
+.theming__scheme {
+  display: flex;
+  margin-bottom: var(--space-l);
+}
+
+.theming__hues {
   width: 23em;
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
 }
 
-.theme-options :where(.red, .pink, .purple, .violet, .indigo, .blue, .cyan, .teal, .green, .lime, .yellow, .orange) {
+.theming__hues > * {
+  flex-grow: 1;
+}
+
+.theming__hues button {
   --bg-color: var(--color-3);
 
   background-color: var(--bg-color);
@@ -79,12 +85,12 @@ html[data-scroll="0"] .app-bar {
 }
 
 @media (hover: hover) {
-  .theme-options :where(.red, .pink, .purple, .violet, .indigo, .blue, .cyan, .teal, .green, .lime, .yellow, .orange):hover {
+  .theming__hues button:hover {
     --bg-color: var(--color-5);
   }
 }
 
-.theme-options :where(.red, .pink, .purple, .violet, .indigo, .blue, .cyan, .teal, .green, .lime, .yellow, .orange):is(:disabled) {
+.theming__hues button:disabled {
   --bg-color: var(--color-7);
   cursor: default;
 
@@ -92,39 +98,39 @@ html[data-scroll="0"] .app-bar {
     color: #fff;
   }  
 }
-.theme-options :where(.red) {
+.theming__hues .red {
   --color-hue: var(--hue-red);
 }
-.theme-options :where(.pink) {
+.theming__hues .pink {
   --color-hue: var(--hue-pink);
 }
-.theme-options :where(.purple) {
+.theming__hues .purple {
   --color-hue: var(--hue-purple);
 }
-.theme-options :where(.violet) {
+.theming__hues .violet {
   --color-hue: var(--hue-violet);
 }
-.theme-options :where(.indigo) {
+.theming__hues .indigo {
   --color-hue: var(--hue-indigo);
 }
-.theme-options :where(.blue) {
+.theming__hues .blue {
   --color-hue: var(--hue-blue);
 }
-.theme-options :where(.cyan) {
+.theming__hues .cyan {
   --color-hue: var(--hue-cyan);
 }
-.theme-options :where(.teal) {
+.theming__hues .teal {
   --color-hue: var(--hue-teal);
 }
-.theme-options :where(.green) {
+.theming__hues .green {
   --color-hue: var(--hue-green);
 }
-.theme-options :where(.lime) {
+.theming__hues .lime {
   --color-hue: var(--hue-lime);
 }
-.theme-options :where(.yellow) {
+.theming__hues .yellow {
   --color-hue: var(--hue-yellow);
 }
-.theme-options :where(.orange) {
+.theming__hues .orange {
   --color-hue: var(--hue-orange);
 }

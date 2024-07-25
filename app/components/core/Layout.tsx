@@ -5,7 +5,7 @@ import { AppBar } from '~components/features/appBar/AppBar';
 export const Layout = ({ children }: PropsWithChildren) => (
   <>
     <AppBar />
-    <main style={{ paddingTop: '60px' }}>{children}</main>
+    <main>{children}</main>
     <footer>
       <div><Link href="/">Vijay Dev</Link></div>
       <nav>
