@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { computePosition, flip, shift, offset } from "@floating-ui/dom";
+import { computePosition, autoPlacement, shift, offset } from "@floating-ui/dom";
 
 import { Button } from "~components/core/button/Button";
 import { Theming } from "./Theming";
@@ -16,8 +16,11 @@ export const DefaultRichMenu = () => {
   const update = () => {
     if (buttonRef.current && infoRef.current) {
       computePosition(buttonRef.current, infoRef.current, {
-        placement: "bottom",
-        middleware: [offset(20), flip(), shift({ padding: 0 })],
+        middleware: [offset(20), autoPlacement({
+          crossAxis: true,
+          alignment: 'end',
+          allowedPlacements: ['bottom-end'],
+        })],
       }).then(({ x, y }) => {
         if (infoRef.current) {
           Object.assign(infoRef.current.style, {
@@ -56,7 +59,7 @@ export const DefaultRichMenu = () => {
       firstButton.focus();
 
       window.addEventListener("resize", close, signal);
-      window.addEventListener("scroll", close, signal);
+      // window.addEventListener("scroll", close, signal);
       window.addEventListener(
         "keydown",
         (event) => {

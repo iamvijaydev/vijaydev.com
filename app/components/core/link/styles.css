@@ -27,7 +27,7 @@
 :where(.link.active) {
   --link-transition-duration: var(--standard-accelerate-duration);
   --link-transition-easing: var(--standard-accelerate-easing);
-  box-shadow: 0 0 0 0.1em var(--current-border-color);
+  box-shadow: 0 0 0 1px var(--current-border-color) inset;
 }
 @media (hover: hover) {
   :where(.link:hover) {
