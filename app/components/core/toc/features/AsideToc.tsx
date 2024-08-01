@@ -81,7 +81,7 @@ export const AsideToc = (props: Props) => {
       className="pl-m py-m sticky t-100"
     >
       <Text as="span" dim className="mb-2xs">On this page</Text>
-      <Text as="h4" dim className="mb-m">{props.title}</Text>
+      <Text as="h5" dim className="mb-m">{props.title}</Text>
       <nav className="flex flex-column gapy-s">
         {elements}
       </nav>

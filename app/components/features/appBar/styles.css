@@ -18,31 +18,34 @@ html[data-scroll="0"] .app-bar {
   height: var(--app-bar-height);
 }
 
-.logo {
+.logo {}
+
+.name {
   font-size: var(--size-1);
   text-transform: lowercase;
   word-spacing: -0.3em;
   letter-spacing: -0.05em;
 }
 
-.logo__fname,
-.logo__lname {
+.name__fname,
+.name__lname {
   color: var(--current-text-color);
 }
 
-.logo__fname {
+.name__fname {
   font-weight: 800;
 }
 
-.logo__lname {
+.name__lname {
   font-weight: 300;
 }
 
 .spinner {
   width: 19.2px;
   height: 19.2px;
-  animation: logo-spinner 2s infinite ease;
   transform-style: preserve-3d;
+  /* transform: rotate(45deg) rotateX(-25deg) rotateY(25deg); */
+  animation: name-spinner 3s infinite ease;
 }
 
 .spinner > div {
@@ -84,7 +87,7 @@ html[data-scroll="0"] .app-bar {
   transform: translateZ(9.6px);
 }
 
-@keyframes logo-spinner {
+@keyframes name-spinner {
   0% {
      transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
   }

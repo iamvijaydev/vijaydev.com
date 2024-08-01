@@ -14,7 +14,7 @@
 
 :where(.surface-container) {
   --bg-light: var(--gray-1);
-  --bg-dark: var(--gray-14);
+  --bg-dark: var(--gray-13);
 
   --current-bg-color: var(--bg-light);
   --current-parent-bg-color: var(--current-bg-color);
