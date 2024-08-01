@@ -1,0 +1,93 @@
+---
+title: Stack Data Structure
+description: A stack is a linear data structure that follows the Last In First Out (LIFO) principle. It is similar to a stack of plates in a cafeteria, where the last plate added is the first one to be removed.
+published: [2023, 8, 6]
+updated: [2023, 8, 10]
+order: 3
+categories: [Category1, Category2]
+---
+
+## Introduction
+In the previous tutorial, we learned about queues and their operations. In this tutorial, we will explore another fundamental data structure called a stack. A stack is a linear data structure that follows the Last In First Out (LIFO) principle. It is similar to a stack of plates in a cafeteria, where the last plate added is the first one to be removed. In this tutorial, we will discuss the properties, operations, and applications of stacks in programming. Let's get started!
+
+A stack is a collection of elements that supports two main operations:
+
+1. **Push**: Adding an element to the top of the stack.
+2. **Pop**: Removing an element from the top of the stack.
+
+The elements in a stack are processed in the reverse order they were added, with the most recently added element being removed first. Stacks are commonly used in algorithms and applications that require processing elements in a specific order, such as function calls, expression evaluation, and backtracking. Let's explore the properties and operations of stacks in more detail.
+
+## Properties of Stacks
+Stacks have the following properties:
+
+1. **LIFO (Last In First Out)**: The element that is added last is the one that is removed first.
+2. **Linear Structure**: Elements are stored in a linear sequence.
+3. **Dynamic Size**: The size of the stack can grow or shrink during the execution of a program.
+4. **Efficient Insertion and Deletion**: Adding and removing elements from the stack is efficient.
+
+Stacks are commonly implemented using arrays or linked lists. In this tutorial, we will focus on implementing a stack using an array. Let's look at the operations supported by a stack. 
+
+## Operations on Stacks
+Stacks support the following operations:
+
+1. **Push**: Adding an element to the top of the stack.
+2. **Pop**: Removing an element from the top of the stack.
+3. **Peek**: Viewing the element at the top of the stack without removing it.
+4. **isEmpty**: Checking if the stack is empty.
+5. **isFull**: Checking if the stack is full (for fixed-size stacks).
+
+These operations are essential for working with stacks and are used in many algorithms and applications. Let's look at each operation in more detail. We will implement a stack using an array and demonstrate how each operation works. Let's get started!
+
+## Implementing a Stack using an Array
+We can implement a stack using an array in JavaScript. Here is an example of a simple stack implementation:
+
+```javascript
+class Stack {
+  constructor() {
+    this.items = [];
+  }
+
+  push(element) {
+    this.items.push(element);
+  }
+
+  pop() {
+    if (this.isEmpty()) {
+      return "Underflow";
+    }
+    return this.items.pop();
+  }
+
+  peek() {
+    return this.items[this.items.length - 1];
+  }
+
+  isEmpty() {
+    return this.items.length === 0;
+  }
+}
+```
+
+In this example, we define a `Stack` class that represents a stack data structure. The `items` array is used to store the elements of the stack. We implement the `push` method to add elements to the top of the stack and the `pop` method to remove elements from the top of the stack. The `isEmpty` method is used to check if the stack is empty. We will add more operations to this class to complete
+
+## Conclusion
+In this tutorial, we explored the stack data structure and its properties, operations, and applications in programming. Stacks are a fundamental data structure that follows the Last In First Out (LIFO) principle and are commonly used in algorithms and applications that require processing elements in a specific order. We implemented a stack using an array and demonstrated the `push` and `pop` operations. In the next tutorial, we will explore another data structure called a queue. Stay tuned!
+```
+
+## Quiz
+1. What is a stack data structure?
+2. What is the main principle that a stack follows?
+3. What are the two main operations supported by a stack?
+4. How are elements processed in a stack?
+5. What are some common applications of stacks in programming?
+6. How can you implement a stack using an array?
+7. What is the purpose of the `push` operation in a stack?
+8. What is the purpose of the `pop` operation in a stack?
+9. How can you check if a stack is empty?
+10. What are some other operations that can be supported by a stack?
+11. Why are stacks commonly used in algorithms and applications?
+12. What will be covered in the next tutorial on queues?
+13. How can you implement a stack using a linked list?
+14. What are some advantages of using a stack data structure?
+15. How can you visualize a stack data structure in real life?
+```

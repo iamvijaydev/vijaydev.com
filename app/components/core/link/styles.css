@@ -41,7 +41,7 @@
   }
 }
 
-:where(.focus-visible:is(:focus-visible)) {
+:where(.focus-visible):is(:focus-visible) {
   outline: 1px solid transparent;
   outline-offset: var(--link-border-width);
   box-shadow: 0 0 0 0.1em var(--current-parent-bg-color),

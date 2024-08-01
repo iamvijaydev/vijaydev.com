@@ -44,8 +44,8 @@ html[data-scroll="0"] .app-bar {
   top: 0;
   left: 0;
   background-color: var(--current-bg-color);
-  padding: var(--space-s);
-  border-radius: var(--border-radius-m);
+  padding: var(--space-m);
+  border-radius: var(--border-radius-l);
   box-shadow: var(--shadow-1);
 }
 
@@ -66,15 +66,12 @@ html[data-scroll="0"] .app-bar {
   gap: 1em;
 }
 
-.theming__hues > * {
-  flex-grow: 1;
-}
-
 .theming__hues button {
-  --bg-color: var(--color-3);
+  --current-bg-color: var(--color-6);
+  --text-color: var(--color-6);
 
-  background-color: var(--bg-color);
-  color: var(--bg-color);
+  background-color: var(--current-bg-color);
+  color: var(--text-color);
   width: 3em;
   flex-basis: 3em;
   height: 3em;
@@ -86,12 +83,16 @@ html[data-scroll="0"] .app-bar {
 
 @media (hover: hover) {
   .theming__hues button:hover {
-    --bg-color: var(--color-5);
+    --text-color: var(--color-4);
   }
 }
 
+.theming__hues button:focus-visible {
+  --text-color: var(--color-4);
+}
+
 .theming__hues button:disabled {
-  --bg-color: var(--color-7);
+  --current-bg-color: var(--color-8);
   cursor: default;
 
   .material-symbols-outlined {

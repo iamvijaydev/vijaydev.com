@@ -77,7 +77,7 @@ export const Theming = () => {
         ].map((color) => (
           <button
             key={color}
-            className={color}
+            className={`focus-visible ${color}`}
             onClick={onHueChange(color)}
             disabled={hue === color}
             aria-label={`Change to ${color} hue`}
