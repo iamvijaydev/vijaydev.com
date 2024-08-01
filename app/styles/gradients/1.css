@@ -1,8 +1,6 @@
 /* https://10015.io/tools/css-background-pattern-generator */
 
 .one {
-
-
   background-image: linear-gradient(
       30deg,
       var(--color-0) 12%,
@@ -54,4 +52,26 @@
   background-size: 38px 66.5px;
   background-position: 0 0, 0 0, 19px 33.25px, 19px 33.25px, 0 0, 19px 33.25px;
   background-color: var(--color-2);
+}
+
+.two {
+  background: conic-gradient(at 10% 50%, #0000 75%, var(--gray-1) 0),
+    conic-gradient(at 10% 50%, #0000 75%, var(--gray-1) 0) calc(1 * 32px)
+      calc(3 * 32px),
+    conic-gradient(at 10% 50%, #0000 75%, var(--gray-1) 0) calc(2 * 32px)
+      calc(1 * 32px),
+    conic-gradient(at 10% 50%, #0000 75%, var(--gray-1) 0) calc(3 * 32px)
+      calc(4 * 32px),
+    conic-gradient(at 10% 50%, #0000 75%, var(--gray-1) 0) calc(4 * 32px)
+      calc(2 * 32px),
+    conic-gradient(at 50% 10%, #0000 75%, var(--gray-1) 0) 0 calc(4 * 32px),
+    conic-gradient(at 50% 10%, #0000 75%, var(--gray-1) 0) calc(1 * 32px)
+      calc(2 * 32px),
+    conic-gradient(at 50% 10%, #0000 75%, var(--gray-1) 0) calc(2 * 32px) 0,
+    conic-gradient(at 50% 10%, #0000 75%, var(--gray-1) 0) calc(3 * 32px)
+      calc(3 * 32px),
+    conic-gradient(at 50% 10%, #0000 75%, var(--gray-1) 0) calc(4 * 32px)
+      calc(1 * 32px),
+    var(--gray-0);
+  background-size: 160px 160px;
 }

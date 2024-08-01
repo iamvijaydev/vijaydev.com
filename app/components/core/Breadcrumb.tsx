@@ -22,7 +22,7 @@ export const Breadcrumb = (props: PropsWithChildren<Props>) => {
 
   return (
     <div
-      className="none xl:flex align-center gap-3xs mb-2xs"
+      className="hidden md:flex align-center gap-3xs mb-2xs"
       title="Breadcrumb"
       aria-label="Breadcrumb"
       {...rest}
