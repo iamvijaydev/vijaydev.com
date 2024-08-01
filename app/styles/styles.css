@@ -14,6 +14,7 @@
 @import url(brand/shadow.css);
 @import url(brand/position.css);
 @import url(brand/tokens.css);
+@import url(gradients/1.css);
 
 @import url(generated/styles.css);
 
