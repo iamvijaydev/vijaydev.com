@@ -49,6 +49,8 @@
   padding-left: var(--space-xs-s);padding-right: var(--space-xs-s);
 }.pl-m {
   padding-left: var(--space-m);
+}.pl-xs {
+  padding-left: var(--space-xs);
 }.pt-xs {
   padding-top: var(--space-xs);
 }
