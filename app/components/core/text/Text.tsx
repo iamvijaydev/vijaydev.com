@@ -1,6 +1,24 @@
 import { PropsWithChildren } from "react";
 
-export type TextProps = {
+export type BaseTextProps =
+  React.DetailedHTMLProps<
+      React.HTMLAttributes<HTMLParagraphElement>,
+      HTMLParagraphElement
+    > &
+    React.DetailedHTMLProps<
+      React.HTMLAttributes<HTMLHeadingElement>,
+      HTMLHeadingElement
+    > &
+    React.DetailedHTMLProps<
+      React.HTMLAttributes<HTMLSpanElement>,
+      HTMLSpanElement
+    > &
+    React.DetailedHTMLProps<
+      React.HTMLAttributes<HTMLDivElement>,
+      HTMLDivElement
+    >;
+
+export interface TextProps extends BaseTextProps {
   as: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "span" | "div";
   variant?:
     | "display"
@@ -14,14 +32,14 @@ export type TextProps = {
   className?: string;
   center?: boolean;
   right?: boolean;
-  height?: 'tight' | 'compact' | 'normal' | 'relaxed';
+  height?: "tight" | "compact" | "normal" | "relaxed";
   balance?: boolean;
   ellipsis?: boolean;
   smaller?: boolean;
   dim?: boolean;
   gradient?: boolean;
   branding?: "primary" | "secondary";
-};
+}
 
 const classSet = new Map<string, string>([
   ["h1", "display"],
@@ -47,7 +65,8 @@ export const getTextClassName = (props: Partial<TextProps>) => {
   className += `text ${props.variant ?? classSet.get(props.as!)!}`;
   if (props.height) className += ` ${height.get(props.height)}`;
   if (props.gradient) className += " gradient";
-  if (props.gradient && props.branding) className += ` ${String(props.branding)}`;
+  if (props.gradient && props.branding)
+    className += ` ${String(props.branding)}`;
   if (props.ellipsis) className += " ellipsis";
   if (props.balance) className += " balance";
   if (props.dim) className += " dim";

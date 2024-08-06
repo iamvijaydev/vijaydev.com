@@ -23,7 +23,7 @@ export const RouteComponent = () => {
   const store = useBlogContext();
 
   return (
-    <div>
+    <div className="bg-linear-grad theme-hue">
       <Masthead
         title="Blogs"
         description="I build world class web apps for enterprise products and services"

@@ -63,10 +63,14 @@ export const Masthead = ({
           <Label title={`Last update on: ${published}`}>
             Published: {published}
           </Label>
+          <Label aria-hidden="true">•</Label>
           {updated ? (
-            <Label title={`Last update on: ${updated}`}>
-              Updated: {updated}
-            </Label>
+            <>
+              <Label title={`Last update on: ${updated}`}>
+                Updated: {updated}
+              </Label>
+              <Label aria-hidden="true">•</Label>
+            </>
           ) : null}
           <Label title={`${readTime}ing time`}>{readTime}</Label>
         </div>

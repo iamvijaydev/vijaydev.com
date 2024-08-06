@@ -7,6 +7,10 @@
     --current-bg-two-color: var(--bg-two-dark);
   }
 
+  :where(.surface-container) {
+    --current-border-color: var(--border-dark);
+  }
+
   :where(.surface-container, .surface-frost-container) {
     --current-bg-color: var(--bg-dark);
   }
@@ -67,6 +71,10 @@
     --current-text-color-dim: var(--text-dim-dark);
     --current-bg-one-color: var(--bg-one-dark);
     --current-bg-two-color: var(--bg-two-dark);
+  }
+
+  :where(.surface-container) {
+    --current-border-color: var(--border-dark);
   }
 
   :where(.surface-container, .surface-frost-container) {

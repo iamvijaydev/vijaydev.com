@@ -55,6 +55,7 @@ export const Link = (props: AnchorAttributes) => {
   }
   className.push("link");
   className.push("hover:secondary-container");
+  className.push("theme-hue");
   if (isActive) {
     className.push("active");
   }
@@ -76,7 +77,7 @@ export const Link = (props: AnchorAttributes) => {
 
     propOnClick && propOnClick(e);
 
-    if (href.indexOf(window.location.pathname) > -1 && href.indexOf("#") > -1) {
+    if (href.indexOf("#") > -1) {
       const element = document.querySelector(href)!;
 
       element && element.scrollIntoView({ behavior: "smooth" });

@@ -22,7 +22,7 @@ export interface Props
 
 export const ButtonGroup = (props: Props) => {
   return (
-    <div className="button-group secondary-container">
+    <div className="button-group secondary-container theme-hue">
       {props.buttons.map((button, index) => (
         <Button
           key={index}

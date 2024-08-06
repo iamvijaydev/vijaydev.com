@@ -23,7 +23,7 @@ export const RouteComponent = () => {
   const store = useLearnContext();
 
   return (
-    <div>
+    <div className="bg-linear-grad theme-hue">
       <Masthead
         title="Learn Fe"
         description="I build world class web apps for enterprise products and services"

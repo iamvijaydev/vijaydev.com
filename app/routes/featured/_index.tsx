@@ -21,7 +21,7 @@ export const meta: Meta[] = [
 
 export const RouteComponent = () => {
   return (
-    <div>
+    <div className="bg-linear-grad theme-hue">
       <Masthead
         title="Featured projects"
         description="I build world class web apps for enterprise products and services"

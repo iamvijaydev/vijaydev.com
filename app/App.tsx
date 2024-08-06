@@ -52,11 +52,11 @@ export const App = (props: AppProps = {}) => {
                   <GlobalLoader />
                   <Outlet />
                   <PopState />
+                  <ScrollManager />
                 </RouteContextProvider>
               </LearnContextProvider>
             </BlogContextProvider>
             <Script />
-            <ScrollManager />
           </body>
         </HtmlHeadContextProvider>
       </html>

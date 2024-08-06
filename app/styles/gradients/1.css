@@ -1,8 +1,6 @@
 /* https://10015.io/tools/css-background-pattern-generator */
 
 .one {
-
-
   background-image: linear-gradient(
       30deg,
       var(--color-0) 12%,
@@ -54,4 +52,45 @@
   background-size: 38px 66.5px;
   background-position: 0 0, 0 0, 19px 33.25px, 19px 33.25px, 0 0, 19px 33.25px;
   background-color: var(--color-2);
+}
+
+.bg-linear-grad {
+  --grad-radial-from-color: var(--color-10);
+  --grad-linear-from-color: var(--color-1);
+  --grad-linear-to-color: var(--current-bg-color);
+  background: radial-gradient(
+      circle at center top,
+      var(--grad-radial-from-color),
+      transparent
+    ),
+    linear-gradient(
+      180deg,
+      var(--grad-linear-from-color),
+      var(--grad-linear-to-color)
+    );
+  background-blend-mode: overlay;
+}
+
+[color-scheme="light"] {
+  .bg-linear-grad {
+    --grad-radial-from-color: var(--color-10);
+    --grad-linear-from-color: var(--color-1);
+    background-blend-mode: overlay;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .bg-linear-grad {
+    --grad-radial-from-color: var(--color-5);
+    --grad-linear-from-color: var(--color-14);
+    background-blend-mode: hue;
+  }
+}
+
+[color-scheme="dark"] {
+  .bg-linear-grad {
+    --grad-radial-from-color: var(--color-5);
+    --grad-linear-from-color: var(--color-14);
+    background-blend-mode: hue;
+  }
 }

@@ -4,7 +4,7 @@ export const MobileBasicMenu = () => {
   return (
     <details>
       <summary className="flex flex-end focus-visible">
-        <div className="button secondary-container focus-visible flex align-center gap-2xs">
+        <div className="button secondary-container theme-hue focus-visible flex align-center gap-2xs">
           <span className="icon text label material-symbols-outlined">
             menu
           </span>

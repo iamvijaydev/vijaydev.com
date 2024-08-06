@@ -124,7 +124,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="none"] {
   --gray-hue: "none";
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-green);
   }
 
@@ -136,7 +136,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="red"] {
   --gray-hue: var(--hue-red);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-red);
   }
 
@@ -148,7 +148,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="pink"] {
   --gray-hue: var(--hue-pink);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-pink);
   }
 
@@ -160,7 +160,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="purple"] {
   --gray-hue: var(--hue-purple);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-purple);
   }
 
@@ -172,7 +172,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="violet"] {
   --gray-hue: var(--hue-violet);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-violet);
   }
 
@@ -184,7 +184,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="indigo"] {
   --gray-hue: var(--hue-indigo);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-indigo);
   }
 
@@ -196,7 +196,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="blue"] {
   --gray-hue: var(--hue-blue);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-blue);
   }
 
@@ -208,7 +208,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="cyan"] {
   --gray-hue: var(--hue-cyan);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-cyan);
   }
 
@@ -220,7 +220,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="teal"] {
   --gray-hue: var(--hue-teal);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-teal);
   }
 
@@ -232,7 +232,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="green"] {
   --gray-hue: var(--hue-green);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-green);
   }
 
@@ -244,7 +244,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="lime"] {
   --gray-hue: var(--hue-lime);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-lime);
   }
 
@@ -256,7 +256,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="yellow"] {
   --gray-hue: var(--hue-yellow);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-yellow);
   }
 
@@ -268,7 +268,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 [color-hue="orange"] {
   --gray-hue: var(--hue-orange);
 
-  :is(.primary-color, .secondary-color, .secondary-container, .hover\:secondary-container) {
+  :is(.theme-hue) {
     --color-hue: var(--hue-orange);
   }
 

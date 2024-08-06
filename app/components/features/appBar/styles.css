@@ -138,6 +138,8 @@ html[data-scroll="0"] .app-bar {
 .theming__scheme {
   display: flex;
   margin-bottom: var(--space-l);
+  padding-bottom: var(--space-l);
+  border-bottom: 1px dotted var(--current-border-color);
 }
 
 .theming__hues {

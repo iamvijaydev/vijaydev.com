@@ -30,7 +30,7 @@ export const meta: Meta[] = [
 export const RouteComponent = () => {
   return (
     <div>
-      <section>
+      <section className="bg-linear-grad theme-hue">
         <Masthead
           title="Web Architect"
           description="Vijay Dev builds world class web apps for enterprise products and services"

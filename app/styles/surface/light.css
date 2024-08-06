@@ -6,9 +6,9 @@
   --bg-one-dark: var(--gray-12);
   --bg-two-dark: var(--gray-11);
   --text-light: var(--gray-15);
-  --text-dark: var(--gray-1);
+  --text-dark: var(--gray-0);
   --text-dim-light: var(--gray-8);
-  --text-dim-dark: var(--gray-8);
+  --text-dim-dark: var(--gray-6);
 
   --current-bg-color: var(--bg-light);
   --current-parent-bg-color: var(--current-bg-color);
@@ -21,8 +21,11 @@
 :where(.surface-container) {
   --bg-light: var(--gray-1);
   --bg-dark: var(--gray-14);
+  --border-light: var(--gray-2);
+  --border-dark: var(--gray-13);
 
   --current-bg-color: var(--bg-light);
+  --current-border-color: var(--border-light);
   --current-parent-bg-color: var(--current-bg-color);
 }
 
@@ -91,6 +94,10 @@
     --current-text-color-dim: var(--text-dim-light);
     --current-bg-one-color: var(--bg-one-light);
     --current-bg-two-color: var(--bg-two-light);
+  }
+
+  :where(.surface-container) {
+    --current-border-color: var(--border-light);
   }
 
   :where(.surface-container, .surface-frost-container) {

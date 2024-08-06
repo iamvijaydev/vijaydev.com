@@ -1,11 +1,18 @@
 import { PropsWithChildren, ReactNode } from "react";
 import { Text } from "~components/core/text/Text";
 
-export interface Props {
+export interface Props
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   title?: string;
-  nodes?: ReactNode[];
 }
 
 export const Label = (props: PropsWithChildren<Props>) => {
-  return <Text as="div" variant="label" height="tight" dim>{props.children}</Text>;
+  const { title, ...rest } = props;
+
+  return (
+    <Text as="div" variant="label" height="tight" dim title={title} {...rest} />
+  );
 };
