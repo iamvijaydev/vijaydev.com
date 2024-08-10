@@ -59,7 +59,7 @@
   --grad-linear-from-color: var(--color-1);
   --grad-linear-to-color: var(--current-bg-color);
   background: radial-gradient(
-      circle at center top,
+      closest-corner circle at center top,
       var(--grad-radial-from-color),
       transparent
     ),
@@ -83,7 +83,7 @@
   .bg-linear-grad {
     --grad-radial-from-color: var(--color-5);
     --grad-linear-from-color: var(--color-14);
-    background-blend-mode: hue;
+    /* background-blend-mode: hue; */
   }
 }
 
@@ -91,6 +91,6 @@
   .bg-linear-grad {
     --grad-radial-from-color: var(--color-5);
     --grad-linear-from-color: var(--color-14);
-    background-blend-mode: hue;
+    /* background-blend-mode: hue; */
   }
 }
