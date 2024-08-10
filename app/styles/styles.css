@@ -20,6 +20,9 @@
 
 @import url(../components/styles.css);
 
+@import url(../../node_modules/@code-hike/mdx/dist/index.css);
+@import url(./material-from-css.css);
+
 body {
   --app-bar-height: 60px;
 
