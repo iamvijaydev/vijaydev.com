@@ -59,7 +59,7 @@
   --grad-linear-from-color: var(--color-1);
   --grad-linear-to-color: var(--current-bg-color);
   background: radial-gradient(
-      closest-corner circle at center top,
+      ellipse farthest-side at 50% 0%,
       var(--grad-radial-from-color),
       transparent
     ),
@@ -68,14 +68,13 @@
       var(--grad-linear-from-color),
       var(--grad-linear-to-color)
     );
-  background-blend-mode: overlay;
+  background-blend-mode: overlay, normal;
 }
 
 [color-scheme="light"] {
   .bg-linear-grad {
     --grad-radial-from-color: var(--color-10);
     --grad-linear-from-color: var(--color-1);
-    background-blend-mode: overlay;
   }
 }
 
@@ -83,7 +82,6 @@
   .bg-linear-grad {
     --grad-radial-from-color: var(--color-5);
     --grad-linear-from-color: var(--color-14);
-    /* background-blend-mode: hue; */
   }
 }
 
@@ -91,6 +89,5 @@
   .bg-linear-grad {
     --grad-radial-from-color: var(--color-5);
     --grad-linear-from-color: var(--color-14);
-    /* background-blend-mode: hue; */
   }
 }

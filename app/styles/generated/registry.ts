@@ -23,6 +23,7 @@ export const paddings = [
   'py-3xs-2xs',
   'py-m',
   'px-xs-s',
+  'pl-xl',
   'pl-m',
   'pl-xs',
   'pt-xs',

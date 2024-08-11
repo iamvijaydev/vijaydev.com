@@ -142,18 +142,20 @@
 }
 
 .text:where(.display, .description) {
-  --color-hue: var(--hue-violet);
-  --to-color-hue: var(--hue-green);
+  --to-color-hue: calc(var(--color-hue) + 60);
 
   --_display-from-color: var(--color-12);
   --_display-to-color: var(--to-color-11);
   --_desc-from-color: var(--color-12);
   --_desc-to-color: var(--to-color-12);
+
+  --text-shadow: hsl(0deg 0% 0% / 25%) 1px 0 0.1em;
+
+  text-shadow: var(--text-shadow);
 }
 
 .text:is(.primary) {
-  --color-hue: var(--hue-violet);
-  --to-color-hue: var(--hue-pink);
+  --to-color-hue: calc(var(--color-hue) + 120);
 }
 
 .text:is(.primary) {
@@ -181,6 +183,7 @@
     --_display-to-color: var(--to-color-7);
     --_desc-from-color: var(--color-12);
     --_desc-to-color: var(--to-color-7);
+    --text-shadow: hsl(0deg 0% 0% / 25%) 1px 0 0.1em;
   }
 
   .text:is(.secondary) {
@@ -197,6 +200,7 @@
     --_display-to-color: var(--to-color-1);
     --_desc-from-color: var(--color-2);
     --_desc-to-color: var(--to-color-1);
+    --text-shadow: hsl(0deg 0% 100% / 15%) 1px 0 0.1em;
   }
 
   .text:is(.primary) {
@@ -220,6 +224,7 @@
     --_display-to-color: var(--to-color-1);
     --_desc-from-color: var(--color-2);
     --_desc-to-color: var(--to-color-1);
+    --text-shadow: hsl(0deg 0% 100% / 15%) 1px 0 0.1em;
   }
 
   .text:is(.primary) {
