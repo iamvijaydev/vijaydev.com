@@ -63,16 +63,18 @@ export interface GridProps
   as?: "section" | "article" | "header" | "footer" | "div";
   size?: CellProps["size"];
   className?: string;
+  layoutClassName?: string;
 }
 
 export const Grid = ({
   as: Component = "div",
   size,
   className,
+  layoutClassName,
   children,
 }: PropsWithChildren<GridProps>) => {
   return (
-    <Component className="layout">
+    <Component className={`layout${layoutClassName ? ' ' + layoutClassName : ''}`}>
       <div className={className ? `${className} grid` : "grid"}>
         {size !== undefined ? <Cell size={size}>{children}</Cell> : children}
       </div>

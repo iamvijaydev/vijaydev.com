@@ -127,7 +127,7 @@ html[data-scroll="0"] .app-bar {
   background-color: var(--current-bg-color);
   padding: var(--space-m);
   border-radius: var(--border-radius-l);
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-2);
 }
 
 .theming__label {

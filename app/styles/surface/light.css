@@ -19,14 +19,14 @@
 }
 
 :where(.surface-container) {
-  --bg-light: var(--gray-1);
-  --bg-dark: var(--gray-14);
-  --border-light: var(--gray-2);
-  --border-dark: var(--gray-13);
+  --bg-light: var(--color-0);
+  --bg-dark: var(--color-14);
+  --border-light: var(--color-2);
+  --border-dark: var(--color-13);
 
+  --current-parent-bg-color: var(--current-bg-color);
   --current-bg-color: var(--bg-light);
   --current-border-color: var(--border-light);
-  --current-parent-bg-color: var(--current-bg-color);
 }
 
 :where(.surface-frost-container) {

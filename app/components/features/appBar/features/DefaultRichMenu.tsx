@@ -118,7 +118,7 @@ export const DefaultRichMenu = () => {
         <div
           ref={infoRef}
           style={{ display: isOpen ? "block" : "none" }}
-          className="theming surface-container"
+          className="theming surface-container theme-hue"
         >
           <Theming />
         </div>,

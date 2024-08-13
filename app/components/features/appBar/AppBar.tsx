@@ -6,7 +6,7 @@ import { Logo } from "./features/Logo";
 
 export const AppBar = () => {
   return (
-    <header className="app-bar surface-container">
+    <header className="app-bar surface-container theme-hue">
       <Grid>
         <Cell size={6} className="app-bar__height flex align-center">
           <Logo />

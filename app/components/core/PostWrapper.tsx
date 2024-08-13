@@ -37,7 +37,7 @@ export const PostWrapper = ({
 
   return (
     <>
-      <Grid as="div">
+      <Grid as="div" layoutClassName="bg-lg theme-hue">
         <Cell size={12}>
           <Masthead
             breadcrumbNodes={breadcrumbNodes}
