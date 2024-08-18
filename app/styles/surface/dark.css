@@ -16,23 +16,10 @@
   }
 
   /* .secondary-container */
-
   :where(.secondary-container) {
-    --current-bg-color: var(--secondary-container-dark);
-    --current-text-color: var(--on-secondary-container-dark);
-    --current-border-color: var(--secondary-container-outline-dark);
-  }
-  
-  @media (hover: hover) {
-    :where(.secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-high-dark);
-      --current-text-color: var(--on-secondary-container-high-dark);
-    }
-  }
-  
-  :where(.secondary-container.active) {
-    --current-bg-color: var(--secondary-container-low-dark);
-    --current-text-color: var(--on-secondary-container-low-dark);
+    --current-bg-color: var(--bg-dark);
+    --current-text-color: var(--text-dark);
+    --current-border-color: var(--border-dark);
   }
 
   /* .hover:secondary-container */
@@ -82,21 +69,9 @@
   /* .secondary-container */
 
   :where(.secondary-container) {
-    --current-bg-color: var(--secondary-container-dark);
-    --current-text-color: var(--on-secondary-container-dark);
-    --current-border-color: var(--secondary-container-outline-dark);
-  }
-  
-  @media (hover: hover) {
-    :where(.secondary-container:hover) {
-      --current-bg-color: var(--secondary-container-high-dark);
-      --current-text-color: var(--on-secondary-container-high-dark);
-    }
-  }
-  
-  :where(.secondary-container.active) {
-    --current-bg-color: var(--secondary-container-low-dark);
-    --current-text-color: var(--on-secondary-container-low-dark);
+    --current-bg-color: var(--bg-dark);
+    --current-text-color: var(--text-dark);
+    --current-border-color: var(--border-dark);
   }
 
   /* .hover:secondary-container */
