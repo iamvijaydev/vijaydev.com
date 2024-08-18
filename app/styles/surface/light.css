@@ -1,28 +1,22 @@
 :where(.surface) {
   --bg-light: var(--gray-0);
-  --bg-one-light: var(--gray-1);
-  --bg-two-light: var(--gray-2);
-  --bg-dark: var(--gray-13);
-  --bg-one-dark: var(--gray-12);
-  --bg-two-dark: var(--gray-11);
-  --text-light: var(--gray-15);
+  --bg-dark: var(--gray-14);
+  --text-light: var(--gray-12);
   --text-dark: var(--gray-0);
-  --text-dim-light: var(--gray-8);
-  --text-dim-dark: var(--gray-6);
+  --text-dim-light: var(--gray-10);
+  --text-dim-dark: var(--gray-2);
 
   --current-bg-color: var(--bg-light);
   --current-parent-bg-color: var(--current-bg-color);
   --current-text-color: var(--text-light);
   --current-text-color-dim: var(--text-dim-light);
-  --current-bg-one-color: var(--bg-one-light);
-  --current-bg-two-color: var(--bg-two-light);
 }
 
 :where(.surface-container) {
-  --bg-light: var(--color-0);
-  --bg-dark: var(--color-14);
-  --border-light: var(--color-2);
-  --border-dark: var(--color-13);
+  --bg-light: var(--gray-0);
+  --bg-dark: var(--gray-15);
+  --border-light: var(--gray-2);
+  --border-dark: var(--gray-14);
 
   --current-parent-bg-color: var(--current-bg-color);
   --current-bg-color: var(--bg-light);
@@ -42,9 +36,18 @@
 /* .secondary-container */
 
 :where(.secondary-container) {
-  --current-bg-color: var(--secondary-container-light);
-  --current-text-color: var(--on-secondary-container-light);
-  --current-border-color: var(--secondary-container-outline-light);
+  --text-light: var(--color-9);
+  --text-dark: var(--color-6);
+  --bg-light: var(--color-2);
+  --bg-dark: var(--color-14);
+  --bg-hover-light: var(--color-1);
+  --bg-hover-dark: var(--color-14);
+
+  --current-bg-color: transparent;
+  --current-text-color: var(--text-light);
+
+  --current-bg-color: var(--bg-light);
+  --current-border-color: var(--bg-light);
 }
 
 @media (hover: hover) {
@@ -62,18 +65,29 @@
 /* .hover:secondary-container */
 
 :where(.hover\:secondary-container) {
+  --text-light: var(--color-10);
+  --text-dark: var(--color-4);
+
   --current-bg-color: transparent;
-  --current-text-color: var(--on-hover-secondary-container-light);
+  --current-text-color: var(--text-light);
 }
 
 :where(.hover\:secondary-container.active) {
-  --current-bg-color: var(--hover-secondary-container-light);
-  --current-border-color: var(--hover-secondary-container-outline-light);
+  --text-dark: var(--color-2);
+  --bg-light: var(--color-1);
+  --bg-dark: var(--gray-12);
+
+  --current-bg-color: var(--bg-light);
+  --current-border-color: var(--current-text-color);
 }
 
 @media (hover: hover) {
   :where(.hover\:secondary-container:hover) {
-    --current-bg-color: var(--hover-secondary-container-light);
+    --text-dark: var(--color-2);
+    --bg-light: var(--color-1);
+    --bg-dark: var(--gray-12);
+
+    --current-bg-color: var(--bg-light);
   }
 }
 
@@ -127,18 +141,16 @@
   /* .hover:secondary-container */
 
   :where(.hover\:secondary-container) {
-    --current-bg-color: transparent;
-    --current-text-color: var(--on-hover-secondary-container-light);
+    --current-text-color: var(--text-light);
   }
   
   :where(.hover\:secondary-container.active) {
-    --current-bg-color: var(--hover-secondary-container-light);
-    --current-border-color: var(--hover-secondary-container-outline-light);
+    --current-bg-color: var(--bg-light);
   }
   
   @media (hover: hover) {
     :where(.hover\:secondary-container:hover) {
-      --current-bg-color: var(--hover-secondary-container-light);
+      --current-bg-color: var(--bg-light);
     }
   }
 

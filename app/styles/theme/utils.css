@@ -1,0 +1,53 @@
+/* :where(.surface) {
+  --bg-color-light: var(--gray-0);
+  --bg-color-dark: var(--gray-14);
+  --border-color-light: var(--gray-2);
+  --border-color-dark: var(--gray-13);
+  --text-color-light: var(--gray-10);
+  --text-color-dark: var(--gray-2);
+  --text-dim-color-light: var(--gray-6);
+  --text-dim-color-dark: var(--gray-6);
+
+  --current-bg-color: var(--bg-color-light);
+  --current-border-color: var(--border-color-light);
+  --current-text-color: var(--text-color-light);
+  --current-text-color-dim: var(--text-dim-color-light);
+}
+
+[color-scheme="light"] {
+  :where(.surface) {
+    --current-bg-color: var(--bg-color-light);
+    --current-border-color: var(--border-color-light);
+    --current-text-color: var(--text-color-light);
+    --current-text-color-dim: var(--text-dim-color-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :where(.surface) {
+    --current-bg-color: var(--bg-color-dark);
+    --current-border-color: var(--border-color-dark);
+    --current-text-color: var(--text-color-dark);
+    --current-text-color-dim: var(--text-dim-color-dark);
+  }
+}
+
+[color-scheme="dark"] {
+  :where(.surface) {
+    --current-bg-color: var(--bg-color-dark);
+    --current-border-color: var(--border-color-dark);
+    --current-text-color: var(--text-color-dark);
+    --current-text-color-dim: var(--text-dim-color-dark);
+  }
+}
+
+:where(.surface-container) {
+  --bg-color-light: var(--gray-1);
+  --bg-color-dark: var(--gray-13);
+  --border-color-light: var(--gray-3);
+  --border-color-dark: var(--gray-12);
+  --text-color-light: var(--gray-12);
+  --text-color-dark: var(--gray-3);
+  --text-dim-color-light: var(--gray-6);
+  --text-dim-color-dark: var(--gray-6);
+} */

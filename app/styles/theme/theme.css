@@ -2,14 +2,6 @@
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers */
 
 :where(*) {
-  --primary-color-light: var(--color-9);
-  --secondary-color-light: var(--color-11);
-  --accent-color-light: var(--color-11);
-
-  --primary-color-dark: var(--color-6);
-  --secondary-color-dark: var(--color-2);
-  --accent-color-dark: var(--color-2);
-
 
   /* secondary container */
 
@@ -60,15 +52,25 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 }
 
 :where(.primary-color) {
-  --current-text-color: var(--primary-color-light);
-}
-
-:where(.secondary-color) {
-  --current-text-color: var(--secondary-color-light);
+  --text-light: var(--color-9);
+  --text-dark: var(--color-5);
 }
 
 :where(.accent-color) {
-  --current-text-color: var(--accent-color-light);
+  --text-light: var(--color-11);
+  --text-dark: var(--color-2);
+}
+
+:where(.primary-color, .accent-color) {
+  --current-text-color: var(--text-light);
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+
+  :where(.primary-color, .accent-color) {
+    --current-text-color: var(--text-light);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -76,48 +78,16 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
     color-scheme: dark;
   }
 
-  :where(.primary-color) {
-    --current-text-color: var(--primary-color-dark);
-  }
-
-  :where(.secondary-color) {
-    --current-text-color: var(--secondary-color-dark);
-  }
-
-  :where(.accent-color) {
-    --current-text-color: var(--accent-color-dark);
-  }
-}
-
-[color-scheme="light"] {
-  color-scheme: light;
-
-  :where(.primary-color) {
-    --current-text-color: var(--primary-color-light);
-  }
-
-  :where(.secondary-color) {
-    --current-text-color: var(--secondary-color-light);
-  }
-
-  :where(.accent-color) {
-    --current-text-color: var(--accent-color-light);
+  :where(.primary-color, .accent-color) {
+    --current-text-color: var(--text-dark);
   }
 }
 
 [color-scheme="dark"] {
   color-scheme: dark;
 
-  :where(.primary-color) {
-    --current-text-color: var(--primary-color-dark);
-  }
-
-  :where(.secondary-color) {
-    --current-text-color: var(--secondary-color-dark);
-  }
-
-  :where(.accent-color) {
-    --current-text-color: var(--accent-color-dark);
+  :where(.primary-color, .accent-color) {
+    --current-text-color: var(--text-dark);
   }
 }
 
