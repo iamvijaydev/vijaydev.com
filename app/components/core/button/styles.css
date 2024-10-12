@@ -43,15 +43,13 @@
   display: flex;
   gap: 1px;
   border-radius: var(--border-radius-m);
-  background-color: var(--current-border-color);
-  box-shadow: 0 0 0 1px var(--current-border-color);
+  background-color: var(--current-parent-bg-color);
   width: 100%;
 }
 
 :where(.button-group .button) {
   --border-color: transparent;
 
-  box-shadow: 0 0 0 1px var(--border-color);
   flex-grow: 1;
 }
 

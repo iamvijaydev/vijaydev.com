@@ -35,9 +35,14 @@ export const valueMap = new Map([
 ]);
 
 export const breakpointMap = new Map([
-  ["sm", "@media (min-width: 576px)"],
-  ["md", "@media (min-width: 768px)"],
-  ["lg", "@media (min-width: 992px)"],
-  ["xl", "@media (min-width: 1200px)"],
-  ["max-xl", "@media (max-width: 1200px)"],
+  ["md", "@media (min-width: 608px)"],
+  ["lg", "@media (min-width: 800px)"],
+  ["xl", "@media (min-width: 1184px)"],
+  ["max-xl", "@media (max-width: 1184px)"],
 ]);
+
+export const gridColumnBreakpointMap = new Map([
+  [6, "@media (min-width: 608px)"],
+  [8, "@media (min-width: 800px)"],
+  [12, "@media (min-width: 1184px)"],
+])

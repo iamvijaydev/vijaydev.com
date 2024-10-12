@@ -1,29 +1,50 @@
-/* @link https://utopia.fyi/grid/calculator?c=420,16,1.2,1480,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=xs,l,2xl,12 */
-
+/* @link https://utopia.fyi/grid/calculator?c=364,16,1.2,416,16,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,2xl,4 */
 :root {
-  --grid-max-width: 92.50rem;
-  --grid-max-width: 82.50rem;
-  /* above needs tweaks */
-  --grid-gutter: var(--space-xs-l, clamp(0.75rem, 0.0566rem + 2.6415vw, 2.5rem));
-  --grid-columns: 12;
+  --grid-max-width: 26.00rem;
+  --grid-gutter: var(--space-s-l, clamp(1rem, -6rem + 30.7692vw, 2rem));
+  --grid-columns: 4;
+}
+
+/* md */
+@media screen and (min-width: 608px) {
+  /* @link https://utopia.fyi/grid/calculator?c=364,16,1.2,608,16,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,2xl,6 */
+  :root {
+    --grid-max-width: 38.00rem;
+    --grid-gutter: var(--space-s-l, clamp(1rem, -0.4918rem + 6.5574vw, 2rem));
+    --grid-columns: 6;
+  }
+}
+
+/* lg */
+@media screen and (min-width: 800px) {
+  /* @link https://utopia.fyi/grid/calculator?c=364,16,1.2,800,16,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=xs,l,2xl,8 */
+  :root {
+    --grid-max-width: 50.00rem;
+    --grid-gutter: var(--space-xs-l, clamp(0.75rem, -0.2936rem + 4.5872vw, 2rem));
+    --grid-columns: 8;
+  }
+}
+
+/* xl */
+@media screen and (min-width: 1184px) {
+  /* @link https://utopia.fyi/grid/calculator?c=364,16,1.2,1184,16,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,2xl,12 */
+  :root {
+    --grid-max-width: 74.00rem;
+    --grid-gutter: var(--space-s-l, clamp(1rem, 0.5561rem + 1.9512vw, 2rem));
+    --grid-columns: 12;
+  }
 }
 
 .layout {
-  display: grid;
-  grid-template-columns: [full-width-start] minmax(var(--space-m), 1fr) [content-start] minmax(
-      min-content,
-      var(--grid-max-width)
-    ) [content-end] minmax(var(--space-m), 1fr) [full-width-end];
+    max-width: var(--grid-max-width);
+    padding-inline: var(--grid-gutter);
+    margin-inline: auto;
 }
 
 .grid {
-  grid-column: content;
-  max-width: var(--grid-max-width);
-  /* padding-inline: var(--grid-gutter); */
-  /**/
   display: grid;
-  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
-  column-gap: var(--grid-gutter);
+  gap: var(--grid-gutter);
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
 }
 
 .self-center {

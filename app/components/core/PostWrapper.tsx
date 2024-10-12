@@ -5,7 +5,7 @@ import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
 import { AsideToc } from "~components/core/toc/features/AsideToc";
 import { RelatedItemCard } from "~components/core/RelatedItemCard";
 import { Masthead } from "~components/core/masthead/Masthead";
-import { Grid, Cell } from "~components/core/grid/Grid";
+import { Grid, Cell, SizeType } from "~components/core/grid/Grid";
 import type { BreadcrumbNode } from "~components/core/Breadcrumb";
 import { getLocaleDateString } from "~utils/getLocalDateString";
 import { ContentItemDetailed } from "~types";
@@ -35,10 +35,12 @@ export const PostWrapper = ({
     });
   }, [matter.published, matter.updated]);
 
+  const cellSize: SizeType = [{ size: 12 }, { position: "start", screen: "md", size: 3 }, { position: "end", screen: "md", size: 11 }]
+
   return (
     <>
-      <Grid as="div" layoutClassName="bg-lg theme-hue">
-        <Cell size={12}>
+      <Grid as="div" layoutClassName="theme-hue">
+        <Cell size={cellSize}>
           <Masthead
             breadcrumbNodes={breadcrumbNodes}
             title={matter.title}
@@ -52,7 +54,7 @@ export const PostWrapper = ({
       <Grid as="div">
         <Cell
           as="article"
-          size={[{ size: 12 }, { screen: "md", size: 7 }]}
+          size={cellSize}
           id="article-content"
         >
           <MDXProvider components={mdxComponents}>{children}</MDXProvider>
@@ -77,7 +79,7 @@ export const PostWrapper = ({
             </nav>
           </footer>
         </Cell>
-        <Cell
+        {/* <Cell
           as="aside"
           size={[
             { screen: "md", size: 9, position: "start" },
@@ -90,7 +92,7 @@ export const PostWrapper = ({
             toc={toc}
             contentSiblingId="#article-content"
           />
-        </Cell>
+        </Cell> */}
         {/* <Toc
         title={matter.title}
         toc={toc}
@@ -100,22 +102,22 @@ export const PostWrapper = ({
       </Grid>
     </>
 
-// #container>.a {
-//   grid-column: 1;
-// }
+    // #container>.a {
+    //   grid-column: 1;
+    // }
 
-// #container>.b {
-//   grid-column: 2;
-//   grid-row: 1; /* NEW */
-// }
+    // #container>.b {
+    //   grid-column: 2;
+    //   grid-row: 1; /* NEW */
+    // }
 
-// #container.reverse>.a {
-//   grid-column: 2;
-// }
+    // #container.reverse>.a {
+    //   grid-column: 2;
+    // }
 
-// #container.reverse>.b {
-//   grid-row: 1;
-//   grid-column: 1;
-// }
+    // #container.reverse>.b {
+    //   grid-row: 1;
+    //   grid-column: 1;
+    // }
   );
 };

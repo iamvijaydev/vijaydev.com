@@ -39,7 +39,7 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layer
 
 :root {
   color-scheme: light;
-  --gray-hue: var(--hue-green);
+  /* --gray-hue: var(--hue-green); */
   --gray-chroma: 0.01;
 }
 

@@ -30,7 +30,7 @@ export type AppProps = {
 export const App = (props: AppProps = {}) => {
   return (
     <React.StrictMode>
-      <html lang="en-US" data-scroll="0" color-scheme="auto" color-hue="green">
+      <html lang="en-US" data-scroll="0" color-scheme="auto" color-hue="">
         <HtmlHeadContextProvider
           imports={props.imports}
           links={props.links}

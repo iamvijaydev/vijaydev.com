@@ -41,9 +41,12 @@ export const gaps = [
 ];
 
 export const grid = [
-  'col-6',
+  'col-2',
+  'md:col-3',
+  'lg:col-4',
+  'xl:col-6',
   'col-12',
-  'md:col-7',
-  'md:col-start-9',
-  'md:col-end-13',
+  'col-7',
+  'md:col-start-3',
+  'md:col-end-11'
 ]
