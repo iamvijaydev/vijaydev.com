@@ -72,7 +72,7 @@ export const parseDynamicLevel = async (split: string[]) => {
 
       matter.pathname = route.pathname;
       matter.readTime = readingTime(String(content)).text;
-      matter.excerpt = await getExcerpt(String(content));
+      matter.excerpt = getExcerpt(String(content));
 
       addRoute(route.pathname, {
         route,

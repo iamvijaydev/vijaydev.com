@@ -11,8 +11,8 @@ import shelljs from 'shelljs';
 import {
   getRoutes,
   getImports,
-  getBlogData,
-  getLearnData,
+  getTechnicalData,
+  getFictionData,
 } from "../store/store";
 import { baseServerBuildConfig } from "./build.config";
 import { getServerAppTemplate } from '../templates/getServerAppTemplate';
@@ -27,8 +27,8 @@ export const buildServerFiles = async () => {
         contents: getServerAppTemplate({
           clientInputMjs: route.output.mjs,
           imports: getImports(),
-          blogs: getBlogData(),
-          learn: getLearnData(),
+          technical: getTechnicalData(),
+          fiction: getFictionData(),
           outputHtml: route.output.html,
           pathname: route.route.pathname,
         }),

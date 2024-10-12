@@ -40,35 +40,35 @@ export interface ContentItemDetailed extends ContentItem {
   prev?: RelatedContent;
 }
 
-export type { BlogState as BlogData } from './store/blog/state';
+export type { PostState as PostData } from './store/post/state';
 
 /* */
 
-export interface ChapterItem extends ContentItemDetailed {
-  order: number;
-  topic: RelatedContent;
-}
+// export interface ChapterItem extends ContentItemDetailed {
+//   order: number;
+//   topic: RelatedContent;
+// }
 
-export interface TopicItem {
-  pathname: string;
-  title: string;
-  description: string;
-  image?: string;
-  isFeatured?: boolean;
-  isRetired?: boolean;
-}
+// export interface TopicItem {
+//   pathname: string;
+//   title: string;
+//   description: string;
+//   image?: string;
+//   isFeatured?: boolean;
+//   isRetired?: boolean;
+// }
 
-export interface TopicItemFeatured extends TopicItem {
-  chapterCount: number;
-  chapters: ChapterItem[];
-}
+// export interface TopicItemFeatured extends TopicItem {
+//   chapterCount: number;
+//   chapters: ChapterItem[];
+// }
 
-export type TopicList = {
-  matter: TopicItem;
-  chapters: ChapterItem[];
-}
+// export type TopicList = {
+//   matter: TopicItem;
+//   chapters: ChapterItem[];
+// }
 
-export type { LearnState as LearnData } from './store/learn/state';
+// export type { LearnState as LearnData } from './store/learn/state';
 
 /* */
 

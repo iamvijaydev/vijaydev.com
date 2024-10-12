@@ -10,18 +10,17 @@ export const MenuItems = () => {
   return (
     <>
       {[
-        { path: "/about", text: "About" },
         {
           path: "/featured",
           text: "Featured",
         },
         {
-          path: "/blog",
-          text: "Blog",
+          path: "/technical",
+          text: "Technical",
         },
         {
-          path: "/learn",
-          text: "Learn",
+          path: "/fiction",
+          text: "Fiction",
         },
       ].map(({ path, text }) => (
         <Link

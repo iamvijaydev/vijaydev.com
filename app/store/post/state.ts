@@ -1,14 +1,14 @@
 import type { ContentItem, ContentItemDetailed } from '~types';
 
-export interface BlogState {
+export interface PostState {
   featured: ContentItem[];
   list: ContentItemDetailed[];
 }
 
-export const getBlogState = ({
+export const getPostState = ({
   featured,
   list,
-}: Partial<BlogState>): BlogState => ({
+}: Partial<PostState>): PostState => ({
   featured: featured || [],
   list: list || [],
 });

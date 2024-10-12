@@ -7,21 +7,20 @@ import { Outlet } from "~components/internal/Outlet";
 import { PopState } from "~components/internal/PopState";
 import { Script } from "~components/internal/Script";
 import { ScrollManager } from "~components/internal/ScrollManager";
-import { BlogContextProvider } from "~store/blog/Provider";
+import { PostContextProvider } from "~store/post/Provider";
 import { HtmlHeadContextProvider } from "~store/htmlHead/Provider";
 import { LearnContextProvider } from "~store/learn/Provider";
 import { RouteContextProvider } from "~store/route/Provider";
 import { Imports, MetaLink, Meta as MetaType } from "~types";
-import type { BlogState } from "~store/blog/state";
-import type { LearnState } from "~store/learn/state";
+import type { PostState } from "~store/post/state";
 import type { RouteLayoutType, RouteOutLet } from "~store/route/state";
 
 export type AppProps = {
   imports?: Imports;
   links?: MetaLink[];
   meta?: MetaType[];
-  blogs?: Partial<BlogState>;
-  learn?: Partial<LearnState>;
+  technical?: Partial<PostState>;
+  fiction?: Partial<PostState>;
   pathname?: string;
   layoutType?: RouteLayoutType;
   Outlet?: RouteOutLet;
@@ -42,8 +41,7 @@ export const App = (props: AppProps = {}) => {
             <Meta />
           </head>
           <body className="surface">
-            <BlogContextProvider blogs={props.blogs || {}}>
-              <LearnContextProvider learn={props.learn || {}}>
+            <PostContextProvider technical={props.technical || {}} fiction={props.fiction || {}}>
                 <RouteContextProvider
                   pathname={props.pathname || "/"}
                   layoutType={props.layoutType}
@@ -54,8 +52,7 @@ export const App = (props: AppProps = {}) => {
                   <PopState />
                   <ScrollManager />
                 </RouteContextProvider>
-              </LearnContextProvider>
-            </BlogContextProvider>
+            </PostContextProvider>
             <Script />
           </body>
         </HtmlHeadContextProvider>

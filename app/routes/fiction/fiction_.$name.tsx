@@ -1,12 +1,12 @@
 import { PropsWithChildren, useMemo } from "react";
 import type { TocEntry } from "@stefanprobst/rehype-extract-toc";
-import { useBlogContext, PostWrapper } from "main";
+import { usePostContext, PostWrapper } from "main";
 import { MetaLink } from "~types";
 
 export const links: MetaLink[] = [
   {
     rel: "prefetch",
-    href: "/blog",
+    href: "/fiction",
   },
 ];
 
@@ -16,23 +16,23 @@ export type Props = {
 };
 
 export const RouteComponent = (props: PropsWithChildren<Props>) => {
-  const blogStore = useBlogContext();
+  const store = usePostContext();
 
   const matter = useMemo(
     () =>
-      blogStore.state.list.find((post) => post.pathname === props.pathname)!,
-    [props.pathname, blogStore.state.list]
+      store.technical.state.list.find((post) => post.pathname === props.pathname)!,
+    [props.pathname, store.technical.state.list]
   );
 
   return (
     <PostWrapper
       matter={matter}
       toc={props.toc}
-      breadcrumbNodes={[{ href: "/", label: "Home" }, { href: "/blog", label: "Blog" }]}
+      breadcrumbNodes={[{ href: "/", label: "Home" }, { href: "/fiction", label: "Fiction" }]}
     >
       {props.children}
     </PostWrapper>
   );
 }
 
-RouteComponent.displayName = "BlogItemRoute";
+RouteComponent.displayName = "FictionItemRoute";

@@ -1,7 +1,7 @@
 // @see https://www.tutorialspoint.com/rss/rss2.0-tag-syntax.htm
 
 import { createWriteStream } from "node:fs";
-import { getBlogData, getLearnData } from "../store/store";
+import { getTechnicalData, getFictionData } from "../store/store";
 import { sortByPublished } from "../utils/sortByPublished";
 import { getUtcDateString } from "../utils/getUtcDateString";
 import { ContentItemDetailed } from "../types";
@@ -9,11 +9,7 @@ import { ContentItemDetailed } from "../types";
 export const buildRssFeed = async () => {
   console.time('RSS feed built');
 
-  let allContent: ContentItemDetailed[] = [...getBlogData().list.values()];
-
-  for (const [, matter] of getLearnData().list.entries()) {
-    allContent = [...allContent, ...matter.chapters];
-  }
+  let allContent: ContentItemDetailed[] = [...getTechnicalData().list.values(), ...getFictionData().list.values()];
 
   allContent = allContent.sort(sortByPublished);
 

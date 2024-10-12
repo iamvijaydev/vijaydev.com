@@ -1,4 +1,4 @@
-import { ParsedStore, Imports, BlogData, LearnData } from "../types";
+import { ParsedStore, Imports, PostData } from "../types";
 
 const devImports: Imports = {
   react: "https://esm.sh/react@18.3.1?dev",
@@ -22,13 +22,13 @@ const store: ParsedStore = {
   imports: {
     ...(process.env.NODE_ENV === "development" ? devImports : prodImports),
   },
-  blogs: {
+  technical: {
     featured: [],
     list: [],
   },
-  learn: {
+  fiction: {
     featured: [],
-    list: new Map(),
+    list: [],
   },
 };
 
@@ -36,16 +36,16 @@ export const addImports = (pathname: string, chunkPath: string) => {
   store.imports[pathname] = chunkPath;
 };
 
-export const setBlogs = (blogs: BlogData) => {
-  store.blogs = blogs;
+export const setTechnical = (data: PostData) => {
+  store.technical = data;
 };
 
-export const setLearn = (learn: LearnData) => {
-  store.learn = learn;
+export const setFiction = (data: PostData) => {
+  store.fiction = data;
 };
 
 export const getImports = () => store.imports;
 
-export const getBlogData = () => store.blogs;
+export const getTechnicalData = () => store.technical;
 
-export const getLearnData = () => store.learn;
+export const getFictionData = () => store.fiction;

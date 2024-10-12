@@ -35,7 +35,11 @@ export const PostWrapper = ({
     });
   }, [matter.published, matter.updated]);
 
-  const cellSize: SizeType = [{ size: 12 }, { position: "start", screen: "md", size: 3 }, { position: "end", screen: "md", size: 11 }]
+  const cellSize: SizeType = [
+    { size: 12 },
+    { position: "start", screen: "xl", size: 3 },
+    { position: "end", screen: "xl", size: 11 },
+  ];
 
   return (
     <>
@@ -52,11 +56,7 @@ export const PostWrapper = ({
         </Cell>
       </Grid>
       <Grid as="div">
-        <Cell
-          as="article"
-          size={cellSize}
-          id="article-content"
-        >
+        <Cell as="article" size={cellSize} id="article-content">
           <MDXProvider components={mdxComponents}>{children}</MDXProvider>
 
           <footer className="mt-7">

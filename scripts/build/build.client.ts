@@ -6,8 +6,8 @@ import { baseClientBuildConfig, mdxPlugins } from "./build.config";
 import {
   getRoutes,
   getImports,
-  getBlogData,
-  getLearnData,
+  getTechnicalData,
+  getFictionData,
 } from "../store/store";
 import { getMainTemplate } from "../templates/getMainTemplate";
 import { getContentItemTemplate } from "../templates/getContentItemTemplate";
@@ -18,8 +18,8 @@ export const buildClientFiles = async () => {
 
   const appData: AppProps = {
     imports: getImports(),
-    blogs: getBlogData(),
-    learn: getLearnData(),
+    technical: getTechnicalData(),
+    fiction: getFictionData(),
   };
   function replacer(key: string, value: unknown) {
     if (value instanceof Map) {

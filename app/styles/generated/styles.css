@@ -130,13 +130,13 @@
     grid-column: span 7;
   }
 }
-@media (min-width: 608px) {
-  .grid .md\:col-start-3 {
+@media (min-width: 1184px) {
+  .grid .xl\:col-start-3 {
     grid-column-start: 3;
   }
 }
-@media (min-width: 608px) {
-  .grid .md\:col-end-11 {
+@media (min-width: 1184px) {
+  .grid .xl\:col-end-11 {
     grid-column-end: 11;
   }
 }

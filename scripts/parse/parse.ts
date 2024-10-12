@@ -7,9 +7,11 @@ import { parseGroupedDynamicLevel } from './parse.groupedDynamicLevel';
 export const parseRoutes = async () => {
   const files = new Glob("app/routes/**/*", {
     nodir: true,
+    ignore: '**/learn/**'
   });
 
   for await (const fullPath of files) {
+    console.log(fullPath);
     if (fullPath.indexOf("_.") > -1) {
       continue;
     }
@@ -17,13 +19,13 @@ export const parseRoutes = async () => {
     const inner = fullPath.replace("app/routes/", "");
 
     const split = inner.split("/");
-    const [fileOrFolder, innerFileOrFolder, file] = split;
+    const [fileOrFolder, innerFileOrFolder, /*file*/] = split;
 
     // third level routes
-    if (file) {
-      await parseGroupedDynamicLevel(split);
-      continue;
-    }
+    // if (file) {
+    //   await parseGroupedDynamicLevel(split);
+    //   continue;
+    // }
 
     // 1) top level routes with _index inside folder
     // 2) second level or artificial multi level routes inside folder
@@ -38,6 +40,4 @@ export const parseRoutes = async () => {
       continue;
     }
   }
-
-  // console.log(getRoutes().get('/about'));
 };

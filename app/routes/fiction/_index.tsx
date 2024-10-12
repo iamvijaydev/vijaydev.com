@@ -1,4 +1,4 @@
-import { useBlogContext, LinkCard, Text, Masthead } from "main";
+import { usePostContext, LinkCard, Text, Masthead } from "main";
 import { MetaLink, Meta } from "~types";
 
 export const links: MetaLink[] = [
@@ -11,27 +11,27 @@ export const links: MetaLink[] = [
 export const meta: Meta[] = [
   {
     name: "title",
-    content: "Blog posts",
+    content: "Frivolous fiction",
   },
   {
     name: "description",
-    content: "Blog posts",
+    content: "Frivolous fiction posts",
   },
 ]
 
 export const RouteComponent = () => {
-  const store = useBlogContext();
+  const store = usePostContext();
 
   return (
     <div className="bg-linear-grad theme-hue">
       <Masthead
-        title="Blogs"
-        description="I build world class web apps for enterprise products and services"
+        title="Frivolous fiction"
+        description="Some something"
         branding="secondary"
       />
       <h3>List</h3>
       {
-        store.state.list.map((item) => (
+        store.fiction.state.list.map((item) => (
           <LinkCard key={item.pathname} href={item.pathname}>
             <Text as="h3">{item.title}</Text>
             <p>{item.description}</p>
@@ -42,4 +42,4 @@ export const RouteComponent = () => {
   );
 }
 
-RouteComponent.displayName = "BlogRoute";
+RouteComponent.displayName = "FictionRoute";

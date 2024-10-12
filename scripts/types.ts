@@ -1,7 +1,6 @@
 import {
   Imports,
-  BlogData,
-  LearnData,
+  PostData,
   ContentItemDetailed,
 } from "../app/types";
 export * from '../app/types';
@@ -33,6 +32,6 @@ export type InternalRouteData<MatterType> = {
 
 export type ParsedStore = {
   imports: Imports;
-  blogs: BlogData;
-  learn: LearnData;
+  technical: PostData;
+  fiction: PostData;
 };

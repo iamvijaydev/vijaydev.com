@@ -1,10 +1,10 @@
-import { Imports, BlogData, LearnData } from "../types";
+import { Imports, PostData } from "../types";
 
 export type ServerAppTemplateProps = {
   clientInputMjs: string;
   imports: Imports;
-  blogs: BlogData;
-  learn: LearnData;
+  technical: PostData;
+  fiction: PostData;
   outputHtml: string;
   pathname: string;
 };
@@ -12,8 +12,8 @@ export type ServerAppTemplateProps = {
 export const getServerAppTemplate = ({
   clientInputMjs,
   imports,
-  blogs,
-  learn,
+  technical,
+  fiction,
   outputHtml,
   pathname,
 }: ServerAppTemplateProps) => {
@@ -28,8 +28,8 @@ export const getServerAppTemplate = ({
     }
   }
   const importsStr = JSON.stringify(imports, replacer);
-  const blogsStr = JSON.stringify(blogs, replacer);
-  const learnStr = JSON.stringify(learn, replacer);
+  const technicalStr = JSON.stringify(technical, replacer);
+  const fictionStr = JSON.stringify(fiction, replacer);
 
   return `import { outputFile } from 'fs-extra';
 import { resolve } from 'node:path';
@@ -49,8 +49,8 @@ function reviver(key: string, value) {
 
 const appData = {
   imports: JSON.parse('${importsStr}', reviver),
-  blogs: JSON.parse('${blogsStr}', reviver),
-  learn: JSON.parse('${learnStr}', reviver),
+  technical: JSON.parse('${technicalStr}', reviver),
+  fiction: JSON.parse('${fictionStr}', reviver),
   meta: route.meta || [],
   links: route.links || [],
   Outlet: route.RouteComponent,

@@ -47,6 +47,6 @@ export const grid = [
   'xl:col-6',
   'col-12',
   'col-7',
-  'md:col-start-3',
-  'md:col-end-11'
+  'xl:col-start-3',
+  'xl:col-end-11'
 ]

@@ -7,6 +7,6 @@ export {
 export {
   addImports,
   getImports,
-  getBlogData,
-  getLearnData,
+  getTechnicalData,
+  getFictionData
 } from "./store.dataMap";

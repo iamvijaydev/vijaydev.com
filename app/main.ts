@@ -1,6 +1,6 @@
 export { useHtmlHeadContext } from "~store/htmlHead/context";
 export { useRouteContext } from "~store/route/context";
-export { useBlogContext } from "~store/blog/context";
+export { usePostContext } from "~store/post/context";
 export { useLearnContext } from "~store/learn/context";
 
 export { Layout } from '~components/core/Layout';

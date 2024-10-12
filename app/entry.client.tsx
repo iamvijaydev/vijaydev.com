@@ -12,8 +12,8 @@ export const makeHydrate = (data: AppProps) => async () => {
 
     const props: AppProps = {
       imports: data.imports,
-      blogs: data.blogs,
-      learn: data.learn,
+      technical: data.technical,
+      fiction: data.fiction,
       pathname
     };
 
