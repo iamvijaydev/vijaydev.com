@@ -69,8 +69,8 @@
 :where(.hover\:secondary-container) {
   --text-light: var(--color-10);
   --text-dark: var(--color-4);
-  --border-spread-light: var(--color-0);
-  --border-sharp-light: var(--color-1);
+  --border-spread-light: var(--color-1);
+  --border-sharp-light: var(--color-2);
   --border-spread-dark: var(--gray-11);
   --border-sharp-dark: var(--gray-12);
 
@@ -92,8 +92,8 @@
 
 @media (hover: hover) {
   :where(.hover\:secondary-container:hover) {
-    --text-dark: var(--color-2);
-    --bg-light: var(--color-1);
+    --text-dark: var(--color-3);
+    --bg-light: var(--color-2);
     --bg-dark: var(--gray-12);
 
     --current-bg-color: var(--bg-light);

@@ -15,12 +15,14 @@ export type Props = {
   matter: ContentItemDetailed;
   toc: TocEntry[];
   breadcrumbNodes: BreadcrumbNode[];
+  isFiction?: boolean;
 };
 
 export const PostWrapper = ({
   matter,
   toc,
   breadcrumbNodes,
+  isFiction = false,
   children,
 }: PropsWithChildren<Props>) => {
   const [date, setDate] = useState({
@@ -42,7 +44,7 @@ export const PostWrapper = ({
   ];
 
   return (
-    <>
+    <div className={isFiction ? 'fiction-font' : ''}>
       <Grid as="div" layoutClassName="theme-hue">
         <Cell size={cellSize}>
           <Masthead
@@ -100,7 +102,7 @@ export const PostWrapper = ({
         className="col-12 xl:col-start-9 xl:col-end-13 xl:a-self-start"
       /> */}
       </Grid>
-    </>
+    </div>
 
     // #container>.a {
     //   grid-column: 1;

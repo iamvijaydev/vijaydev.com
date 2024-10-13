@@ -30,7 +30,11 @@
   transition: color var(--standard-duration) var(--standard-easing);
 }
 
-.text:where(.display, .heading) {
+.fiction-font .text:where(.display, .description, .heading, .title, .title-4, .title-5, .body) {
+  font-family: "Merriweather", serif;
+}
+
+.text:where(.display, .heading, .title) {
   --line-height: var(--line-height-compact);
 }
 
@@ -39,6 +43,7 @@
 }
 
 .text:where(.title-4, .title-5) {
+  --line-height: var(--line-height-normal);
   --font-weight: 500;
 }
 
@@ -62,17 +67,14 @@
 
 .text:where(.title) {
   --font-size: var(--size-3);
-  --font-weight: 400;
 }
 
 .text:where(.title-4) {
   --font-size: var(--size-2);
-  --font-weight: 500;
 }
 
 .text:where(.title-5) {
   --font-size: var(--size-1);
-  --font-weight: 500;
 }
 
 .text:where(.body) {

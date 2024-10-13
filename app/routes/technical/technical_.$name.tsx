@@ -16,11 +16,14 @@ export type Props = {
 };
 
 export const RouteComponent = (props: PropsWithChildren<Props>) => {
-  const { technical: { state: { list }} } = usePostContext();
+  const {
+    technical: {
+      state: { list },
+    },
+  } = usePostContext();
 
   const matter = useMemo(
-    () =>
-      list.find((post) => post.pathname === props.pathname)!,
+    () => list.find((post) => post.pathname === props.pathname)!,
     [props.pathname, list]
   );
 
@@ -28,11 +31,14 @@ export const RouteComponent = (props: PropsWithChildren<Props>) => {
     <PostWrapper
       matter={matter}
       toc={props.toc}
-      breadcrumbNodes={[{ href: "/", label: "Home" }, { href: "/technical", label: "Technical" }]}
+      breadcrumbNodes={[
+        { href: "/", label: "Home" },
+        { href: "/technical", label: "Technical" },
+      ]}
     >
       {props.children}
     </PostWrapper>
   );
-}
+};
 
 RouteComponent.displayName = "TechnicalItemRoute";
