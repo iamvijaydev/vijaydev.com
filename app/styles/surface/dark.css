@@ -26,6 +26,8 @@
 
   :where(.hover\:secondary-container) {
     --current-text-color: var(--text-dark);
+    --border-spread: var(--border-spread-dark);
+    --border-sharp: var(--border-sharp-dark);
   }
   
   :where(.hover\:secondary-container.active) {
@@ -78,6 +80,8 @@
 
   :where(.hover\:secondary-container) {
     --current-text-color: var(--text-dark);
+    --border-spread: var(--border-spread-dark);
+    --border-sharp: var(--border-sharp-dark);
   }
   
   :where(.hover\:secondary-container.active) {

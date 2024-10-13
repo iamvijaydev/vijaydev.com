@@ -24,7 +24,8 @@ export const Masthead = ({
   const center = branding !== undefined;
   let styles = branding ? "py-2xl" : "py-3xl";
   const descStyles = branding ? "w-40ch" : "";
-  const gradient = branding === "primary" || branding === "secondary";
+  // const gradient = branding === "primary" || branding === "secondary";
+  const gradient = false;
 
   if (branding === "primary") {
     styles += " align-center";

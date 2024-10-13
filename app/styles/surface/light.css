@@ -69,9 +69,16 @@
 :where(.hover\:secondary-container) {
   --text-light: var(--color-10);
   --text-dark: var(--color-4);
+  --border-spread-light: var(--color-0);
+  --border-sharp-light: var(--color-1);
+  --border-spread-dark: var(--gray-11);
+  --border-sharp-dark: var(--gray-12);
 
   --current-bg-color: transparent;
   --current-text-color: var(--text-light);
+
+  --border-spread: var(--border-spread-light);
+  --border-sharp: var(--border-sharp-light);
 }
 
 :where(.hover\:secondary-container.active) {
@@ -128,32 +135,12 @@
     --current-border-color: var(--border-light);
   }
 
-  /* :where(.secondary-container) {
-    --text-light: var(--gray-12);
-    --text-dark: var(--color-6);
-    --bg-light: var(--gray-2);
-    --bg-dark: var(--gray-12);
-    --border-color: var(--gray-3);
-  }
-  
-  @media (hover: hover) {
-    :where(.secondary-container:hover) {
-      --bg-light: var(--color-2);
-      --bg-dark: var(--color-14);
-      --text-light: var(--color-12);
-    }
-  }
-  
-  :where(.secondary-container.active) {
-    --bg-light: var(--color-4);
-    --bg-dark: var(--color-14);
-    --text-light: var(--color-14);
-  } */
-
   /* .hover:secondary-container */
 
   :where(.hover\:secondary-container) {
     --current-text-color: var(--text-light);
+    --border-spread: var(--border-spread-light);
+    --border-sharp: var(--border-sharp-light);
   }
   
   :where(.hover\:secondary-container.active) {

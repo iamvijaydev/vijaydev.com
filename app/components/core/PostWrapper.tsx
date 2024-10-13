@@ -2,7 +2,7 @@ import { PropsWithChildren, useState } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import type { TocEntry } from "@stefanprobst/rehype-extract-toc";
 import { useIsomorphicEffect } from "~hooks/useIsomorphicEffect";
-import { AsideToc } from "~components/core/toc/features/AsideToc";
+// import { AsideToc } from "~components/core/toc/features/AsideToc";
 import { RelatedItemCard } from "~components/core/RelatedItemCard";
 import { Masthead } from "~components/core/masthead/Masthead";
 import { Grid, Cell, SizeType } from "~components/core/grid/Grid";

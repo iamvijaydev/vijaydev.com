@@ -16,12 +16,12 @@ export type Props = {
 };
 
 export const RouteComponent = (props: PropsWithChildren<Props>) => {
-  const store = usePostContext();
+  const { technical: { state: { list }} } = usePostContext();
 
   const matter = useMemo(
     () =>
-      store.technical.state.list.find((post) => post.pathname === props.pathname)!,
-    [props.pathname, store.technical.state.list]
+      list.find((post) => post.pathname === props.pathname)!,
+    [props.pathname, list]
   );
 
   return (

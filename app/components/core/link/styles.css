@@ -24,6 +24,10 @@
   transition-timing-function: var(--link-transition-easing);
 }
 
+:where(.link):not(.logo) {
+  box-shadow: var(--border-spread) 0px 0px 1px 0px,var(--border-sharp) 0px 0px 0px 1px;
+}
+
 :where(.link.active) {
   --link-transition-duration: var(--standard-accelerate-duration);
   --link-transition-easing: var(--standard-accelerate-easing);
