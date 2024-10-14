@@ -27,7 +27,7 @@ export const RouteComponent = () => {
       <Masthead
         title="Frivolous fiction"
         description="Some something"
-        branding="secondary"
+        isTopLevel
       />
       <h3>List</h3>
       {

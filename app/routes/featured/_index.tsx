@@ -25,7 +25,7 @@ export const RouteComponent = () => {
       <Masthead
         title="Featured projects"
         description="I build world class web apps for enterprise products and services"
-        branding="secondary"
+        isTopLevel
       />
       <p>list</p>
     </div>

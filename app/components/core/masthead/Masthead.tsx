@@ -6,32 +6,27 @@ export interface Props {
   breadcrumbNodes?: BreadcrumbNode[];
   title: string;
   description: string;
-  branding?: "primary" | "secondary";
   published?: string;
   updated?: string;
   readTime?: string;
+  isTopLevel?: boolean;
 }
 
 export const Masthead = ({
   breadcrumbNodes,
   title,
   description,
-  branding,
   published,
   updated,
   readTime,
+  isTopLevel = false,
 }: Props) => {
-  const center = branding !== undefined;
   let styles = "py-3xl";
-  const gradient = branding === "primary" || branding === "secondary";
-  const headStyles = branding ? "pt-s mb-3xs" : "mb-3xs";
-  const descStyles = branding ? "w-40ch pb-s" : "";
+  const gradient = isTopLevel;
+  const headStyles = isTopLevel ? "pt-s mb-3xs" : "mb-3xs";
+  const descStyles = isTopLevel ? "w-40ch pb-s" : "";
 
-  if (branding === "primary") {
-    styles += " align-center";
-  }
-
-  if (branding === "secondary") {
+  if (isTopLevel) {
     styles += " align-center";
   }
 
@@ -42,8 +37,8 @@ export const Masthead = ({
         as="h1"
         balance
         gradient={gradient}
-        branding={branding}
-        center={center}
+        branding="vertical"
+        center={isTopLevel}
         className={headStyles}
       >
         {title}
@@ -53,8 +48,8 @@ export const Masthead = ({
         variant="description"
         balance
         gradient={gradient}
-        branding={branding}
-        center={center}
+        branding="slant"
+        center={isTopLevel}
         className={descStyles}
       >
         {description}

@@ -28,7 +28,12 @@ export const meta: Meta[] = [
   },
 ];
 
-const cellSize: SizeType = [{ size: 4 }, { screen: "md", size: 3 }, { screen: "lg", size: 2 }, { screen: "xl", size: 3 }];
+const cellSize: SizeType = [
+  { size: 4 },
+  { screen: "md", size: 3 },
+  { screen: "lg", size: 4 },
+  { screen: "xl", size: 3 },
+];
 
 export const RouteComponent = () => (
   <div>
@@ -36,25 +41,72 @@ export const RouteComponent = () => (
       <Masthead
         title="Web Architect"
         description="Vijay Dev builds world class web apps for enterprise products and services"
-        branding="primary" />
+        isTopLevel
+      />
       <div>
-        <Text as="h2" variant="title-5" center className="mb-m">Roles</Text>
+        <Text as="h2" variant="label" height="tight" dim center className="mb-m">
+          Roles
+        </Text>
         <Grid>
-          <Cell size={cellSize} className="p-s radius-m surface-container2 bg">
-            <Text as="h3" variant="title-4" className="mb-s">Estimate & Plot</Text>
-            <Text as="p" variant="label">Understand the requirements, budget, and, timeline to create a well balanced estimate and strategy.</Text>
+          <Cell
+            size={cellSize}
+            className="px-m py-s radius-m surface-container2 bg"
+          >
+            <Text gradient branding="slant-flip" as="h3" variant="title-4" className="mb-s">
+              Estimate
+            </Text>
+            <Text as="p" variant="label">
+              Understand the requirements, budget, and, timeline to create a
+              well balanced estimate and strategy.
+            </Text>
+            <span className="material-symbols-outlined card-icon">
+              conversion_path
+            </span>
           </Cell>
-          <Cell size={cellSize} className="p-s radius-m surface-container2 bg">
-            <Text as="h3" variant="title-4" className="mb-s">Plan & Design</Text>
-            <Text as="p" variant="label">Set the application architecture with best industry practices, tools, and, pipelines.</Text>
+          <Cell
+            size={cellSize}
+            className="px-m py-s radius-m surface-container2 bg"
+          >
+            <Text gradient branding="slant-flip" as="h3" variant="title-4" className="mb-s">
+              Design
+            </Text>
+            <Text as="p" variant="label">
+              Set the application architecture with best industry practices,
+              tools, and, pipelines.
+            </Text>
+            <span className="material-symbols-outlined card-icon">
+              stylus_note
+            </span>
           </Cell>
-          <Cell size={cellSize} className="p-s radius-m surface-container2 bg">
-            <Text as="h3" variant="title-4" className="mb-s">Review & Approve</Text>
-            <Text as="p" variant="label">Closely review each components as it's built and get integrated. Realign any divergent patterns.</Text>
+          <Cell
+            size={cellSize}
+            className="px-m py-s radius-m surface-container2 bg"
+          >
+            <Text gradient branding="slant-flip" as="h3" variant="title-4" className="mb-s">
+              Review
+            </Text>
+            <Text as="p" variant="label">
+              Closely review each components as it's built and get integrated.
+              Realign any divergent patterns.
+            </Text>
+            <span className="material-symbols-outlined card-icon">
+              data_check
+            </span>
           </Cell>
-          <Cell size={cellSize} className="p-s radius-m surface-container2 bg">
-            <Text as="h3" variant="title-4" className="mb-s">Deploy & Scale</Text>
-            <Text as="p" variant="label">Launch to cloud with consideration to scalability, cost, security, and, governance.</Text>
+          <Cell
+            size={cellSize}
+            className="px-m py-s radius-m surface-container2 bg"
+          >
+            <Text gradient branding="slant-flip" as="h3" variant="title-4" className="mb-s">
+              Deploy
+            </Text>
+            <Text as="p" variant="label">
+              Launch to cloud with consideration to scalability, cost, security,
+              and, governance.
+            </Text>
+            <span className="material-symbols-outlined card-icon">
+              cloud_upload
+            </span>
           </Cell>
         </Grid>
       </div>

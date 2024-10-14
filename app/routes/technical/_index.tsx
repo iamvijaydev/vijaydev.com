@@ -29,7 +29,7 @@ export const RouteComponent = () => {
       <Masthead
         title="Blogs"
         description="I build world class web apps for enterprise products and services"
-        branding="secondary"
+        isTopLevel
       />
       <h3>List</h3>
       {

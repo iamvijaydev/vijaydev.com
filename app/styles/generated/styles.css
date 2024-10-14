@@ -27,8 +27,6 @@
 }
 .p-2xs {
   padding: var(--space-2xs);
-}.p-s {
-  padding: var(--space-s);
 }@media (min-width: 800px) {
   .lg\:px-xl {
     padding-left: var(--space-xl);padding-right: var(--space-xl);
@@ -39,8 +37,12 @@
   padding-top: var(--space-3xl);padding-bottom: var(--space-3xl);
 }.px-2xs {
   padding-left: var(--space-2xs);padding-right: var(--space-2xs);
+}.px-m {
+  padding-left: var(--space-m);padding-right: var(--space-m);
 }.py-3xs-2xs {
   padding-top: var(--space-3xs-2xs);padding-bottom: var(--space-3xs-2xs);
+}.py-s {
+  padding-top: var(--space-s);padding-bottom: var(--space-s);
 }.py-m {
   padding-top: var(--space-m);padding-bottom: var(--space-m);
 }.px-xs-s {

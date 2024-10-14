@@ -15,6 +15,7 @@
 
   :where(.surface-container2) {
     --current-bg-color: var(--bg-dark);
+    --current-bg-darker-color: var(--bg-darker-dark);
   }
 
   /* .secondary-container */
@@ -70,6 +71,7 @@
 
   :where(.surface-container2) {
     --current-bg-color: var(--bg-dark);
+    --current-bg-darker-color: var(--bg-darker-dark);
   }
 
   /* .secondary-container */

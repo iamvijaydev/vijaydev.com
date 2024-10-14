@@ -14,12 +14,13 @@ export const margins = [
 
 export const paddings = [
   'p-2xs',
-  'p-s',
   'lg:px-xl',
   'py-2xl',
   'py-3xl',
   'px-2xs',
+  'px-m',
   'py-3xs-2xs',
+  'py-s',
   'py-m',
   'px-xs-s',
   'pl-xl',

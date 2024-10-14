@@ -38,7 +38,7 @@ export interface TextProps extends BaseTextProps {
   smaller?: boolean;
   dim?: boolean;
   gradient?: boolean;
-  branding?: "primary" | "secondary";
+  branding?: "vertical" | "slant" | "slant-flip";
 }
 
 const classSet = new Map<string, string>([

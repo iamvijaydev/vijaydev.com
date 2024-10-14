@@ -10,7 +10,7 @@ export const defaultLinks: MetaLink[] = [{
   href: "https://fonts.gstatic.com",
   crossOrigin: true,
 }, {
-  href: "https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=JetBrains+Mono&display=swap&",
+  href: "https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10,100..900&family=PT+Serif:ital,wght@1,400;1,700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=JetBrains+Mono&display=swap&",
   rel: "stylesheet",
 }, { 
   href: "/assets/styles.css",
