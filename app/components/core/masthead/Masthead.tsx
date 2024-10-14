@@ -22,10 +22,10 @@ export const Masthead = ({
   readTime,
 }: Props) => {
   const center = branding !== undefined;
-  let styles = branding ? "py-2xl" : "py-3xl";
-  const descStyles = branding ? "w-40ch" : "";
-  // const gradient = branding === "primary" || branding === "secondary";
-  const gradient = false;
+  let styles = "py-3xl";
+  const gradient = branding === "primary" || branding === "secondary";
+  const headStyles = branding ? "pt-s mb-3xs" : "mb-3xs";
+  const descStyles = branding ? "w-40ch pb-s" : "";
 
   if (branding === "primary") {
     styles += " align-center";
@@ -44,7 +44,7 @@ export const Masthead = ({
         gradient={gradient}
         branding={branding}
         center={center}
-        className="mb-3xs"
+        className={headStyles}
       >
         {title}
       </Text>

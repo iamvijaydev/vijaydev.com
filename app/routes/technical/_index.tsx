@@ -25,7 +25,7 @@ export const RouteComponent = () => {
   console.log(store);
 
   return (
-    <div className="bg-linear-grad theme-hue">
+    <div className="bg-linear-grad1 theme-hue">
       <Masthead
         title="Blogs"
         description="I build world class web apps for enterprise products and services"

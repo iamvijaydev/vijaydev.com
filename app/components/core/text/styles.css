@@ -146,20 +146,16 @@
 }
 
 .text:where(.display, .description) {
-  --to-color-hue: calc(var(--color-hue) + 60);
+  --to-color-hue: calc(var(--color-hue) + 40);
 
   --_display-from-color: var(--color-12);
   --_display-to-color: var(--to-color-11);
   --_desc-from-color: var(--color-12);
   --_desc-to-color: var(--to-color-12);
-
-  --text-shadow: hsl(0deg 0% 0% / 25%) 1px 0 0.1em;
-
-  text-shadow: var(--text-shadow);
 }
 
 .text:is(.primary) {
-  --to-color-hue: calc(var(--color-hue) + 120);
+  --to-color-hue: calc(var(--color-hue) + 60);
 }
 
 .text:is(.primary) {

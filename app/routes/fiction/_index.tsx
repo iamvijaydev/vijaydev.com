@@ -23,7 +23,7 @@ export const RouteComponent = () => {
   const store = usePostContext();
 
   return (
-    <div className="bg-linear-grad theme-hue">
+    <div className="bg-linear-grad1 theme-hue">
       <Masthead
         title="Frivolous fiction"
         description="Some something"

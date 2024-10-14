@@ -5,7 +5,7 @@
 :where(.link) {
   --link-bg-color: var(--current-bg-color);
   --link-text-color: var(--current-text-color);
-  --link-padding: 0 var(--space-2xs);
+  --link-padding: 0 var(--space-xs);
   --link-border-radius: var(--border-radius-m);
   --link-border-width: 0.1em;
   --link-shadow-width: 0.2em;

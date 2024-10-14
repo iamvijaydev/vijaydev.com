@@ -45,7 +45,7 @@ export const PostWrapper = ({
 
   return (
     <div className={isFiction ? 'fiction-font' : ''}>
-      <Grid as="div" layoutClassName="theme-hue">
+      <Grid layoutClassName="theme-hue">
         <Cell size={cellSize}>
           <Masthead
             breadcrumbNodes={breadcrumbNodes}
@@ -57,7 +57,7 @@ export const PostWrapper = ({
           />
         </Cell>
       </Grid>
-      <Grid as="div">
+      <Grid>
         <Cell as="article" size={cellSize} id="article-content">
           <MDXProvider components={mdxComponents}>{children}</MDXProvider>
 

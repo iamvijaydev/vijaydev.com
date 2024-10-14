@@ -1,15 +1,18 @@
 :where(.surface) {
   --bg-light: var(--gray-0);
   --bg-dark: var(--gray-14);
-  --text-light: var(--gray-12);
-  --text-dark: var(--gray-0);
-  --text-dim-light: var(--gray-10);
-  --text-dim-dark: var(--gray-2);
+  --text-light: var(--gray-10);
+  --text-dark: var(--gray-2);
+  --text-dim-light: var(--gray-8);
+  --text-dim-dark: var(--gray-5);
+  --border-light: var(--gray-2);
+  --border-dark: var(--gray-13);
 
   --current-bg-color: var(--bg-light);
   --current-parent-bg-color: var(--current-bg-color);
   --current-text-color: var(--text-light);
   --current-text-color-dim: var(--text-dim-light);
+  --current-border-color: var(--border-light);
 }
 
 :where(.surface-container) {
@@ -23,10 +26,9 @@
   --current-border-color: var(--border-light);
 }
 
-:where(.surface-frost-container) {
-  --gray-alpha: 0.6;
+:where(.surface-container2) {
   --bg-light: var(--gray-1);
-  --bg-dark: var(--gray-14);
+  --bg-dark: var(--gray-13);
 
   --current-bg-color: var(--bg-light);
   --current-parent-bg-color: var(--current-bg-color);
@@ -117,13 +119,15 @@
     --current-text-color-dim: var(--text-dim-light);
     --current-bg-one-color: var(--bg-one-light);
     --current-bg-two-color: var(--bg-two-light);
-  }
-
-  :where(.surface-container) {
     --current-border-color: var(--border-light);
   }
 
-  :where(.surface-container, .surface-frost-container) {
+  :where(.surface-container) {
+    --current-bg-color: var(--bg-light);
+    --current-border-color: var(--border-light);
+  }
+
+  :where(.surface-container2) {
     --current-bg-color: var(--bg-light);
   }
 

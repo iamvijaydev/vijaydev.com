@@ -2,15 +2,14 @@ export const margins = [
   'my-l',
   'mt-2xs',
   'mt-s',
-  'lg:mb-xl',
-  'mb-2xs',
-  'mb-3xs',
   'mt-xl',
   'mt-s',
-  'mb-xs',
+  'mb-3xs',
   'mb-2xs',
+  'mb-xs',
   'mb-s',
   'mb-m',
+  'lg:mb-xl',
 ];
 
 export const paddings = [
@@ -27,6 +26,8 @@ export const paddings = [
   'pl-m',
   'pl-xs',
   'pt-xs',
+  'pt-s',
+  'pb-s',
 ];
 
 export const gaps = [
@@ -42,11 +43,14 @@ export const gaps = [
 
 export const grid = [
   'col-2',
-  'md:col-3',
-  'lg:col-4',
-  'xl:col-6',
-  'col-12',
+  'col-4',
   'col-7',
+  'col-12',
+  'md:col-3',
+  'lg:col-2',
+  'lg:col-4',
+  'xl:col-3',
+  'xl:col-6',
   'xl:col-start-3',
   'xl:col-end-11'
 ]

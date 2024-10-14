@@ -5,13 +5,15 @@
     --current-text-color-dim: var(--text-dim-dark);
     --current-bg-one-color: var(--bg-one-dark);
     --current-bg-two-color: var(--bg-two-dark);
+    --current-border-color: var(--border-dark);
   }
 
   :where(.surface-container) {
     --current-border-color: var(--border-dark);
+    --current-bg-color: var(--bg-dark);
   }
 
-  :where(.surface-container, .surface-frost-container) {
+  :where(.surface-container2) {
     --current-bg-color: var(--bg-dark);
   }
 
@@ -58,13 +60,15 @@
     --current-text-color-dim: var(--text-dim-dark);
     --current-bg-one-color: var(--bg-one-dark);
     --current-bg-two-color: var(--bg-two-dark);
+    --current-border-color: var(--border-dark);
   }
 
   :where(.surface-container) {
     --current-border-color: var(--border-dark);
+    --current-bg-color: var(--bg-dark);
   }
 
-  :where(.surface-container, .surface-frost-container) {
+  :where(.surface-container2) {
     --current-bg-color: var(--bg-dark);
   }
 

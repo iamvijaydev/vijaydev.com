@@ -6,26 +6,24 @@
   margin-top: var(--space-2xs);
 }.mt-s {
   margin-top: var(--space-s);
-}@media (min-width: 800px) {
-  .lg\:mb-xl {
-    margin-bottom: var(--space-xl);
-  }
-}.mb-2xs {
-  margin-bottom: var(--space-2xs);
-}.mb-3xs {
-  margin-bottom: var(--space-3xs);
 }.mt-xl {
   margin-top: var(--space-xl);
 }.mt-s {
   margin-top: var(--space-s);
-}.mb-xs {
-  margin-bottom: var(--space-xs);
+}.mb-3xs {
+  margin-bottom: var(--space-3xs);
 }.mb-2xs {
   margin-bottom: var(--space-2xs);
+}.mb-xs {
+  margin-bottom: var(--space-xs);
 }.mb-s {
   margin-bottom: var(--space-s);
 }.mb-m {
   margin-bottom: var(--space-m);
+}@media (min-width: 800px) {
+  .lg\:mb-xl {
+    margin-bottom: var(--space-xl);
+  }
 }
 .p-2xs {
   padding: var(--space-2xs);
@@ -55,6 +53,10 @@
   padding-left: var(--space-xs);
 }.pt-xs {
   padding-top: var(--space-xs);
+}.pt-s {
+  padding-top: var(--space-s);
+}.pb-s {
+  padding-bottom: var(--space-s);
 }
 .gap-3xs {
   gap: var(--space-3xs);
@@ -79,19 +81,25 @@
 .grid .col-2 {
   grid-column: span 2;
 }
+.grid .col-4 {
+  grid-column: span 4;
+}
+.grid .col-7 {
+  grid-column: span 4;
+}
 @media (min-width: 608px) {
-  .grid .md\:col-3 {
-    grid-column: span 3;
+  .grid .col-7 {
+    grid-column: span 6;
   }
 }
 @media (min-width: 800px) {
-  .grid .lg\:col-4 {
-    grid-column: span 4;
+  .grid .col-7 {
+    grid-column: span 7;
   }
 }
 @media (min-width: 1184px) {
-  .grid .xl\:col-6 {
-    grid-column: span 6;
+  .grid .col-7 {
+    grid-column: span 7;
   }
 }
 .grid .col-12 {
@@ -112,22 +120,29 @@
     grid-column: span 12;
   }
 }
-.grid .col-7 {
-  grid-column: span 4;
-}
 @media (min-width: 608px) {
-  .grid .col-7 {
-    grid-column: span 6;
+  .grid .md\:col-3 {
+    grid-column: span 3;
   }
 }
 @media (min-width: 800px) {
-  .grid .col-7 {
-    grid-column: span 7;
+  .grid .lg\:col-2 {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 800px) {
+  .grid .lg\:col-4 {
+    grid-column: span 4;
   }
 }
 @media (min-width: 1184px) {
-  .grid .col-7 {
-    grid-column: span 7;
+  .grid .xl\:col-3 {
+    grid-column: span 3;
+  }
+}
+@media (min-width: 1184px) {
+  .grid .xl\:col-6 {
+    grid-column: span 6;
   }
 }
 @media (min-width: 1184px) {
