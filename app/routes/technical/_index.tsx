@@ -27,7 +27,7 @@ export const RouteComponent = () => {
   return (
     <div className="bg-linear-grad1 theme-hue">
       <Masthead
-        title="Blogs"
+        title="Succinctly Technical"
         description="I build world class web apps for enterprise products and services"
         isTopLevel
       />

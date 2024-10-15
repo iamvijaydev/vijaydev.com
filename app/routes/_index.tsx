@@ -44,7 +44,7 @@ export const RouteComponent = () => (
         isTopLevel
       />
       <div>
-        <Text as="h2" variant="label" height="tight" dim center className="mb-m">
+        <Text as="h2" variant="label" height="tight" dim center className="mb-m" aria-label="Professional roles">
           Roles
         </Text>
         <Grid>
@@ -59,7 +59,7 @@ export const RouteComponent = () => (
               Understand the requirements, budget, and, timeline to create a
               well balanced estimate and strategy.
             </Text>
-            <span className="material-symbols-outlined card-icon">
+            <span aria-hidden="true" className="material-symbols-outlined card-icon">
               conversion_path
             </span>
           </Cell>
@@ -74,7 +74,7 @@ export const RouteComponent = () => (
               Set the application architecture with best industry practices,
               tools, and, pipelines.
             </Text>
-            <span className="material-symbols-outlined card-icon">
+            <span aria-hidden="true" className="material-symbols-outlined card-icon">
               stylus_note
             </span>
           </Cell>
@@ -89,7 +89,7 @@ export const RouteComponent = () => (
               Closely review each components as it's built and get integrated.
               Realign any divergent patterns.
             </Text>
-            <span className="material-symbols-outlined card-icon">
+            <span aria-hidden="true" className="material-symbols-outlined card-icon">
               data_check
             </span>
           </Cell>
@@ -104,14 +104,14 @@ export const RouteComponent = () => (
               Launch to cloud with consideration to scalability, cost, security,
               and, governance.
             </Text>
-            <span className="material-symbols-outlined card-icon">
+            <span aria-hidden="true" className="material-symbols-outlined card-icon">
               cloud_upload
             </span>
           </Cell>
         </Grid>
       </div>
       <div>
-        <h2>Noted clients</h2>
+        <h2 aria-label="Worked with teams at">Teams</h2>
         <ol>
           <li>Google</li>
           <li>Microsoft</li>
