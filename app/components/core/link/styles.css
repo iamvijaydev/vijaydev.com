@@ -50,12 +50,3 @@
   box-shadow: 0 0 0 0.1em var(--current-parent-bg-color),
     0 0 0 0.2em var(--current-bg-color);
 }
-
-.card-icon {
-  position: absolute;
-  font-size: var(--size-7);
-  color: var(--current-bg-darker-color);
-  top: var(--space-xs);
-  right: var(--space-s);
-  opacity: 0.45;
-}

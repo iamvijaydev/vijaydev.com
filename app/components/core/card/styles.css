@@ -1,3 +1,13 @@
-:root {
-  
+.card-bg {
+  background-color: var(--current-bg-color);
+}
+
+.card-icon {
+  position: absolute;
+  font-size: var(--size-7);
+  color: var(--current-bg-darker-color);
+  top: var(--space-xs);
+  right: var(--space-s);
+  opacity: 0.55;
+  user-select: none;
 }

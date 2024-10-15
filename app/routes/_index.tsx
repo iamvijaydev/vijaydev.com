@@ -1,6 +1,6 @@
 import { MetaLink, Meta } from "~types";
-import { Grid, Masthead, Text } from "main";
-import { Cell, SizeType } from "~components/core/grid/Grid";
+import { Grid, Masthead, Text, Card } from "main";
+import { Cell, type CellProps } from "~components/core/grid/Grid";
 
 export const links: MetaLink[] = [
   {
@@ -28,12 +28,14 @@ export const meta: Meta[] = [
   },
 ];
 
-const cellSize: SizeType = [
-  { size: 4 },
-  { screen: "md", size: 3 },
-  { screen: "lg", size: 4 },
-  { screen: "xl", size: 3 },
-];
+const cellProps: CellProps = {
+  size: [
+    { size: 4 },
+    { screen: "md", size: 3 },
+    { screen: "lg", size: 4 },
+    { screen: "xl", size: 3 },
+  ],
+};
 
 export const RouteComponent = () => (
   <div>
@@ -44,70 +46,46 @@ export const RouteComponent = () => (
         isTopLevel
       />
       <div>
-        <Text as="h2" variant="label" height="tight" dim center className="mb-m" aria-label="Professional roles">
+        <Text
+          as="h2"
+          variant="label"
+          height="tight"
+          dim
+          center
+          className="mb-m"
+          aria-label="Professional roles"
+        >
           Roles
         </Text>
         <Grid>
-          <Cell
-            size={cellSize}
-            className="px-m py-s radius-m surface-container2 bg"
-          >
-            <Text gradient branding="slant-flip" as="h3" variant="title-4" className="mb-s">
-              Estimate
-            </Text>
-            <Text as="p" variant="label">
-              Understand the requirements, budget, and, timeline to create a
-              well balanced estimate and strategy.
-            </Text>
-            <span aria-hidden="true" className="material-symbols-outlined card-icon">
-              conversion_path
-            </span>
-          </Cell>
-          <Cell
-            size={cellSize}
-            className="px-m py-s radius-m surface-container2 bg"
-          >
-            <Text gradient branding="slant-flip" as="h3" variant="title-4" className="mb-s">
-              Design
-            </Text>
-            <Text as="p" variant="label">
-              Set the application architecture with best industry practices,
-              tools, and, pipelines.
-            </Text>
-            <span aria-hidden="true" className="material-symbols-outlined card-icon">
-              stylus_note
-            </span>
-          </Cell>
-          <Cell
-            size={cellSize}
-            className="px-m py-s radius-m surface-container2 bg"
-          >
-            <Text gradient branding="slant-flip" as="h3" variant="title-4" className="mb-s">
-              Review
-            </Text>
-            <Text as="p" variant="label">
-              Closely review each components as it's built and get integrated.
-              Realign any divergent patterns.
-            </Text>
-            <span aria-hidden="true" className="material-symbols-outlined card-icon">
-              data_check
-            </span>
-          </Cell>
-          <Cell
-            size={cellSize}
-            className="px-m py-s radius-m surface-container2 bg"
-          >
-            <Text gradient branding="slant-flip" as="h3" variant="title-4" className="mb-s">
-              Deploy
-            </Text>
-            <Text as="p" variant="label">
-              Launch to cloud with consideration to scalability, cost, security,
-              and, governance.
-            </Text>
-            <span aria-hidden="true" className="material-symbols-outlined card-icon">
-              cloud_upload
-            </span>
-          </Cell>
+          <Card
+            cellProps={cellProps}
+            heading="Estimate"
+            description="Understand the requirements, budget, and, timeline to create a
+              well balanced estimate and strategy."
+            icon="conversion_path"
+          />
+          <Card
+            cellProps={cellProps}
+            heading="Design"
+            description="Set the application architecture with best industry practices,
+              tools, and, pipelines."
+            icon="stylus_note"
+          />
+          <Card
+            cellProps={cellProps}
+            heading="Review"
+            description="Closely review each components as it's built and get integrated.
+              Realign any divergent patterns."
+            icon="data_check"
+          />
+          <Card
+            cellProps={cellProps}
+            heading="Deploy"
+            description="Launch to cloud with consideration to scalability, cost, security,
+              and, governance."
+            icon="cloud_upload"
+          />
         </Grid>
       </div>
       <div>
