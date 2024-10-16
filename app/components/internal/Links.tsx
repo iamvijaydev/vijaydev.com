@@ -14,7 +14,7 @@ export const Links = () => {
     HTMLLinkElement
   > = {};
 
-  const { href, rel, crossOrigin } = props;
+  const { href, rel } = props;
 
   if (rel === "prefetch") {
     props.href = state.imports?.[href!] || "";
@@ -23,7 +23,7 @@ export const Links = () => {
   const transformProps = (
     data: MetaLink
   ): LinkType => {
-    let { href, crossOrigin: co, ...rest } = data;
+    let { href, crossOrigin, ...rest } = data;
     const props: LinkType = { ...rest };
 
     if (rest.rel === "prefetch") {
@@ -31,7 +31,7 @@ export const Links = () => {
     } else {
       props.href = href;
     }
-    if (co) {
+    if (crossOrigin) {
       props.crossOrigin = "";
     }
 
@@ -43,7 +43,7 @@ export const Links = () => {
       <link rel="canonical" href="https://www.vijaydev.com" />
       <link rel="icon" type="image/png" href="/assets/favicon.png" />
       {state.links.map((data) => (
-        <link key={data.href} {...transformProps(data)} crossOrigin="" />
+        <link key={data.href} {...transformProps(data)} />
       ))}
     </>
   );

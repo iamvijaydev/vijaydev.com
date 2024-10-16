@@ -9,6 +9,7 @@ export const margins = [
   'mb-xs',
   'mb-s',
   'mb-m',
+  'mb-3xl',
   'lg:mb-xl',
 ];
 
