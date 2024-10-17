@@ -22,8 +22,6 @@ export const meta: Meta[] = [
 export const RouteComponent = () => {
   const store = usePostContext();
 
-  console.log(store);
-
   return (
     <div className="bg-linear-grad1 theme-hue">
       <Masthead

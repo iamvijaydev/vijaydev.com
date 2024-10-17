@@ -75,7 +75,7 @@ export const Grid = ({
 }: PropsWithChildren<GridProps>) => {
   return (
     <Component className={`layout${layoutClassName ? ' ' + layoutClassName : ''}`}>
-      <div className={className ? `${className} grid` : "grid"}>
+      <div className={className ? `${className} page-grid` : "page-grid"}>
         {size !== undefined ? <Cell size={size}>{children}</Cell> : children}
       </div>
     </Component>

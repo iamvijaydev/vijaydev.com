@@ -27,32 +27,32 @@ export const generateGridClassNames = (name: string) => {
 
   if (breakpointMap.has(breakpoint)) {
     return `\n${breakpointMap.get(breakpoint)} {
-  .grid .${breakpoint}\\:${className} {
+  .page-grid .${breakpoint}\\:${className} {
     ${propertyName}: ${propertyValue};
   }
 }`;
   }
 
   if (value < 6) {
-    return `\n.grid .${className} {
+    return `\n.page-grid .${className} {
   ${propertyName}: ${propertyValue};
 }`;
   }
 
-  let allClasses = `\n.grid .${className} {
+  let allClasses = `\n.page-grid .${className} {
   ${propertyName}: ${startOrEnd ? 4 : `span ${4}`};
 }`;
 
   gridColumnBreakpointMap.forEach((breakMatch, breakValue) => {
     if (breakValue < value) {
       allClasses += `\n${breakMatch} {
-  .grid .${className} {
+  .page-grid .${className} {
     ${propertyName}: ${startOrEnd ? breakValue : `span ${breakValue}`};
   }
 }`;
     } else {
       allClasses += `\n${breakMatch} {
-  .grid .${className} {
+  .page-grid .${className} {
     ${propertyName}: ${startOrEnd ? value : `span ${value}`};
   }
 }`;

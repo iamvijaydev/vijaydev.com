@@ -17,5 +17,11 @@ export { mdxComponents } from '~components/core/mdxComponents';
 export { Card } from '~components/core/card/Card';
 
 export { AppBar } from '~components/features/appBar/AppBar';
+export { ShijiLogo } from '~components/features/logos/ShijiLogo';
+export { AbcFitnessLogo } from '~components/features/logos/AbcFitnessLogo';
+export { ConsensysLogo } from '~components/features/logos/ConsensysLogo';
+export { TstreetLogo } from '~components/features/logos/TstreetLogo';
+export { StayntouchLogo } from '~components/features/logos/StayntouchLogo';
+export { AolLogo } from '~components/features/logos/AolLogo';
 
 export { makeHydrate } from './entry.client';

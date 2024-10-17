@@ -51,6 +51,7 @@ export const grid = [
   'md:col-3',
   'lg:col-2',
   'lg:col-4',
+  'xl:col-2',
   'xl:col-3',
   'xl:col-6',
   'xl:col-start-3',

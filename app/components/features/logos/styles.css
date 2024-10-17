@@ -1,0 +1,41 @@
+.teams-logo {
+  --fill-light: var(--gray-3);
+  --fill-dark: var(--gray-12);
+  --fill-hover-light: var(--gray-5);
+  --fill-hover-dark: var(--gray-10);
+  --fill-value: var(--fill-light);
+  --fill-hover-value: var(--fill-hover-light);
+  --fill: var(--fill-value);
+}
+
+.teams-logo :where(path) {
+  fill: var(--fill);
+  transition: fill 0.2s ease;
+}
+
+@media (hover: hover) {
+  .teams-logo:hover {
+    --fill: var(--fill-hover-value);
+  }
+}
+
+[color-scheme="light"] {
+  .teams-logo {
+    --fill-value: var(--fill-light);
+    --fill-hover-value: var(--fill-hover-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .teams-logo {
+    --fill-value: var(--fill-dark);
+    --fill-hover-value: var(--fill-hover-dark);
+  }
+}
+
+[color-scheme="dark"] {
+  .teams-logo {
+    --fill-value: var(--fill-dark);
+    --fill-hover-value: var(--fill-hover-dark);
+  }
+}

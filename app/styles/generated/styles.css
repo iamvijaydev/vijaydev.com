@@ -82,80 +82,80 @@
   row-gap: var(--space-s);
 }
 
-.grid .col-2 {
+.page-grid .col-2 {
   grid-column: span 2;
 }
-.grid .col-4 {
+.page-grid .col-4 {
   grid-column: span 4;
 }
-.grid .col-7 {
+.page-grid .col-7 {
   grid-column: span 4;
 }
 @media (min-width: 608px) {
-  .grid .col-7 {
+  .page-grid .col-7 {
     grid-column: span 6;
   }
 }
 @media (min-width: 800px) {
-  .grid .col-7 {
+  .page-grid .col-7 {
     grid-column: span 7;
   }
 }
 @media (min-width: 1184px) {
-  .grid .col-7 {
+  .page-grid .col-7 {
     grid-column: span 7;
   }
 }
-.grid .col-12 {
+.page-grid .col-12 {
   grid-column: span 4;
 }
 @media (min-width: 608px) {
-  .grid .col-12 {
+  .page-grid .col-12 {
     grid-column: span 6;
   }
 }
 @media (min-width: 800px) {
-  .grid .col-12 {
+  .page-grid .col-12 {
     grid-column: span 8;
   }
 }
 @media (min-width: 1184px) {
-  .grid .col-12 {
+  .page-grid .col-12 {
     grid-column: span 12;
   }
 }
 @media (min-width: 608px) {
-  .grid .md\:col-3 {
+  .page-grid .md\:col-3 {
     grid-column: span 3;
   }
 }
 @media (min-width: 800px) {
-  .grid .lg\:col-2 {
+  .page-grid .lg\:col-2 {
     grid-column: span 2;
   }
 }
 @media (min-width: 800px) {
-  .grid .lg\:col-4 {
+  .page-grid .lg\:col-4 {
     grid-column: span 4;
   }
 }
 @media (min-width: 1184px) {
-  .grid .xl\:col-3 {
+  .page-grid .xl\:col-3 {
     grid-column: span 3;
   }
 }
 @media (min-width: 1184px) {
-  .grid .xl\:col-6 {
+  .page-grid .xl\:col-6 {
     grid-column: span 6;
   }
 }
 @media (min-width: 1184px) {
-  .grid .xl\:col-start-3 {
+  .page-grid .xl\:col-start-3 {
     grid-column-start: 3;
   }
 }
 @media (min-width: 1184px) {
-  .grid .xl\:col-end-11 {
+  .page-grid .xl\:col-end-11 {
     grid-column-end: 11;
   }
 }
