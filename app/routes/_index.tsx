@@ -52,11 +52,30 @@ const rolesCellProps: CellProps = {
   ],
 };
 const teamsCellSize: SizeType = [
-  { size: 4 },
+  { size: 2 },
   { screen: "md", size: 3 },
   { screen: "lg", size: 4 },
-  { screen: "xl", size: 2 },
+  { screen: "xl", size: 3 },
 ];
+const featuredCellSize: SizeType = [
+  { size: 2 },
+  { screen: "md", size: 3 },
+  { screen: "lg", size: 4 },
+];
+const firstFeaturedCellSize: CellProps = {
+  size: [
+    ...featuredCellSize,
+    { screen: "xl", position: "start", size: 3 },
+    { screen: "xl", position: "end", size: 7 },
+  ],
+};
+const lastFeaturedCellSize: CellProps = {
+  size: [
+    ...featuredCellSize,
+    { screen: "xl", position: "start", size: 7 },
+    { screen: "xl", position: "end", size: 11 },
+  ],
+};
 
 export const RouteComponent = () => (
   <div>
@@ -66,20 +85,22 @@ export const RouteComponent = () => (
         description="Vijay Dev builds world class web apps for enterprise products and services"
         isTopLevel
       />
-      <div className="mb-3xl">
+      <div className="pb-3xl">
         <Text
           as="h2"
           variant="label"
           height="tight"
           dim
           center
+          lineThrough
           className="mb-m"
           aria-label="Professional roles"
         >
-          Roles
+          Active roles
         </Text>
         <Grid>
           <Card
+            isHeadingGradient
             cellProps={rolesCellProps}
             heading="Estimate"
             description="Understand the requirements, budget, and, timeline to create a
@@ -87,6 +108,7 @@ export const RouteComponent = () => (
             icon="conversion_path"
           />
           <Card
+            isHeadingGradient
             cellProps={rolesCellProps}
             heading="Design"
             description="Set the application architecture with best industry practices,
@@ -94,6 +116,7 @@ export const RouteComponent = () => (
             icon="stylus_note"
           />
           <Card
+            isHeadingGradient
             cellProps={rolesCellProps}
             heading="Review"
             description="Closely review each components as it's built and get integrated.
@@ -101,6 +124,7 @@ export const RouteComponent = () => (
             icon="data_check"
           />
           <Card
+            isHeadingGradient
             cellProps={rolesCellProps}
             heading="Deploy"
             description="Launch to cloud with consideration to scalability, cost, security,
@@ -109,30 +133,25 @@ export const RouteComponent = () => (
           />
         </Grid>
       </div>
-      <div>
+      <div className="py-3xl">
         <Text
           as="h2"
           variant="label"
           height="tight"
           dim
           center
+          lineThrough
           className="mb-m"
           aria-label="Worked with teams in the past"
         >
-          Teams
+          Past teams
         </Text>
         <Grid>
           <Cell size={teamsCellSize} className="grid content-center teams-logo">
             <ShijiLogo />
           </Cell>
           <Cell size={teamsCellSize} className="grid content-center teams-logo">
-            <AbcFitnessLogo />
-          </Cell>
-          <Cell size={teamsCellSize} className="grid content-center teams-logo">
             <ConsensysLogo />
-          </Cell>
-          <Cell size={teamsCellSize} className="grid content-center teams-logo">
-            <TstreetLogo />
           </Cell>
           <Cell size={teamsCellSize} className="grid content-center teams-logo">
             <StayntouchLogo />
@@ -143,39 +162,76 @@ export const RouteComponent = () => (
         </Grid>
       </div>
     </section>
-    <section>
-      <h2>Featured Works</h2>
-      <div>
-        <div>
-          <h3>Project 1</h3>
-          <p>Project 1</p>
-        </div>
-        <div>
-          <h3>Project 2</h3>
-          <p>Project 2</p>
-        </div>
-        <div>
-          <h3>Project 3</h3>
-          <p>Project 3</p>
-        </div>
-      </div>
+    <section className="py-3xl">
+      <Text
+        as="h2"
+        variant="label"
+        height="tight"
+        dim
+        center
+        lineThrough
+        className="mb-m"
+        aria-label="Professional roles"
+      >
+        Featured works
+      </Text>
+      <Grid>
+        <Card
+          cellProps={firstFeaturedCellSize}
+          heading="Custom text layout engine"
+          description="A translated document, rendered in a multi layered texts, representing each facets of the translation."
+        />
+        <Card
+          cellProps={lastFeaturedCellSize}
+          heading="Canvas document editor"
+          description="Set the application architecture with best industry practices,
+              tools, and, pipelines."
+        />
+      </Grid>
     </section>
-    <section>
-      <h2>Learn fff</h2>
-      <div>
-        <div>
-          <h3>Learn 1</h3>
-          <p>Learn 1</p>
-        </div>
-        <div>
-          <h3>Learn 1</h3>
-          <p>Learn 1</p>
-        </div>
-        <div>
-          <h3>Learn 1</h3>
-          <p>Learn 1</p>
-        </div>
-      </div>
+    <section className="py-3xl">
+      <Text
+        as="h2"
+        variant="label"
+        height="tight"
+        dim
+        center
+        lineThrough
+        className="mb-m"
+        aria-label="Professional roles"
+      >
+        Posts
+      </Text>
+      <Grid>
+        <Card
+          cellProps={rolesCellProps}
+          heading="Mutable React Context store"
+          description="Understand the requirements, budget, and, timeline to create a
+              well balanced estimate and strategy."
+          icon="outbound"
+        />
+        <Card
+          cellProps={rolesCellProps}
+          heading="Folder based routing with import map supported build system"
+          description="Set the application architecture with best industry practices,
+              tools, and, pipelines."
+          icon="outbound"
+        />
+        <Card
+          cellProps={rolesCellProps}
+          heading="A sleepy little village"
+          description="Closely review each components as it's built and get integrated.
+              Realign any divergent patterns."
+          icon="outbound"
+        />
+        <Card
+          cellProps={rolesCellProps}
+          heading="Deploy"
+          description="Launch to cloud with consideration to scalability, cost, security,
+              and, governance."
+          icon="outbound"
+        />
+      </Grid>
     </section>
   </div>
 );

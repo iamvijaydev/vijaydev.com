@@ -61,6 +61,8 @@
   padding-top: var(--space-s);
 }.pb-s {
   padding-bottom: var(--space-s);
+}.pb-3xl {
+  padding-bottom: var(--space-3xl);
 }
 .gap-3xs {
   gap: var(--space-3xs);
@@ -140,6 +142,11 @@
   }
 }
 @media (min-width: 1184px) {
+  .page-grid .xl\:col-2 {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 1184px) {
   .page-grid .xl\:col-3 {
     grid-column: span 3;
   }
@@ -152,6 +159,26 @@
 @media (min-width: 1184px) {
   .page-grid .xl\:col-start-3 {
     grid-column-start: 3;
+  }
+}
+@media (min-width: 1184px) {
+  .page-grid .xl\:col-start-4 {
+    grid-column-start: 4;
+  }
+}
+@media (min-width: 1184px) {
+  .page-grid .xl\:col-start-7 {
+    grid-column-start: 7;
+  }
+}
+@media (min-width: 1184px) {
+  .page-grid .xl\:col-end-6 {
+    grid-column-end: 6;
+  }
+}
+@media (min-width: 1184px) {
+  .page-grid .xl\:col-end-7 {
+    grid-column-end: 7;
   }
 }
 @media (min-width: 1184px) {

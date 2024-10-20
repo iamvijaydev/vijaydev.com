@@ -39,6 +39,7 @@ export interface TextProps extends BaseTextProps {
   dim?: boolean;
   gradient?: boolean;
   branding?: "vertical" | "slant" | "slant-flip";
+  lineThrough?: boolean;
 }
 
 const classSet = new Map<string, string>([
@@ -92,6 +93,7 @@ export const Text = (props: PropsWithChildren<TextProps>) => {
     center,
     height,
     children,
+    lineThrough,
     ...rest
   } = props;
 
@@ -112,7 +114,7 @@ export const Text = (props: PropsWithChildren<TextProps>) => {
 
   return (
     <Component className={className} {...rest}>
-      {children}
+      {lineThrough ? <span className="line-through">{children}</span> : children}
     </Component>
   );
 };

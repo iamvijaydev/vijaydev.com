@@ -16,6 +16,7 @@
 @media (hover: hover) {
   .teams-logo:hover {
     --fill: var(--fill-hover-value);
+    fill: url(#Gradient1);
   }
 }
 

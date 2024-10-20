@@ -27,15 +27,14 @@
 }
 
 :where(.surface-container2) {
-  --bg-light: var(--gray-1);
-  --bg-darker-light: var(--gray-2);
+  --bg-light: var(--gray-0);
+  --bg-darker-light: var(--gray-1);
   --bg-dark: var(--gray-13);
   --bg-darker-dark: var(--gray-12);
 
   --current-bg-color: var(--bg-light);
   --current-bg-darker-color: var(--bg-darker-light);
   --current-parent-bg-color: var(--current-bg-color);
-  backdrop-filter: blur(10px);
 }
 
 /* .secondary-container */

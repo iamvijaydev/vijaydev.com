@@ -30,6 +30,7 @@ export const paddings = [
   'pt-xs',
   'pt-s',
   'pb-s',
+  'pb-3xl',
 ];
 
 export const gaps = [
@@ -55,5 +56,9 @@ export const grid = [
   'xl:col-3',
   'xl:col-6',
   'xl:col-start-3',
-  'xl:col-end-11'
+  'xl:col-start-4', 
+  'xl:col-start-7',
+  'xl:col-end-6',
+  'xl:col-end-7',
+  'xl:col-end-11',
 ]

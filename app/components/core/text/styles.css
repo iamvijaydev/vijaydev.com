@@ -198,3 +198,26 @@
     --_slant-to-color: var(--to-color-2);
   }
 }
+
+.text .line-through {
+  position: relative;
+}
+
+.text .line-through:before,
+.text .line-through:after {
+    content: '';
+    position: absolute;
+    background-color: var(--current-text-color);
+    width: 20%;
+    height: 1px;
+    top: calc(50% + 1px);
+    opacity: 0.1;
+}
+
+.text .line-through:before {
+  left: -25%;
+}
+
+.text .line-through:after {
+  right: -25%;
+}

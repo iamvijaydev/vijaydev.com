@@ -6,13 +6,14 @@ export interface Props {
   description: string;
   icon?: string;
   link?: string;
+  isHeadingGradient?: boolean;
 }
 
-export const Card = ({ cellProps, heading, description, icon }: Props) => {
+export const Card = ({ cellProps, heading, description, icon, isHeadingGradient = false }: Props) => {
   const content = (
     <>
       <Text
-        gradient
+        gradient={isHeadingGradient}
         branding="slant-flip"
         as="h3"
         variant="title-4"
