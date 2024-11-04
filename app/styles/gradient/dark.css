@@ -1,0 +1,22 @@
+@media (prefers-color-scheme: dark) {
+  :where(.gradient) {
+    --to-color-hue: calc(var(--color-hue) + 170);
+
+    --_vertical-from-color: var(--color-11);
+    --_vertical-to-color: var(--to-color-3);
+    --_slant-from-color: var(--color-6);
+    --_slant-to-color: var(--to-color-2);
+  }
+}
+
+
+[color-scheme="dark"] {
+  :where(.gradient) {
+    --to-color-hue: calc(var(--color-hue) + 170);
+
+    --_vertical-from-color: var(--color-11);
+    --_vertical-to-color: var(--to-color-3);
+    --_slant-from-color: var(--color-6);
+    --_slant-to-color: var(--to-color-2);
+  }
+}

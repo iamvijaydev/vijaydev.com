@@ -79,7 +79,7 @@ const lastFeaturedCellSize: CellProps = {
 
 export const RouteComponent = () => (
   <div>
-    <section className="bg-linear-grad1 theme-hue">
+    <section className="theme-hue">
       <Masthead
         title="Web Architect"
         description="Vijay Dev builds world class web apps for enterprise products and services"
@@ -133,7 +133,7 @@ export const RouteComponent = () => (
           />
         </Grid>
       </div>
-      <div className="py-3xl">
+      <div className="py-3xl theme-hue">
         <Text
           as="h2"
           variant="label"
@@ -162,7 +162,7 @@ export const RouteComponent = () => (
         </Grid>
       </div>
     </section>
-    <section className="py-3xl">
+    <section className="py-3xl theme-hue">
       <Text
         as="h2"
         variant="label"
@@ -189,7 +189,7 @@ export const RouteComponent = () => (
         />
       </Grid>
     </section>
-    <section className="py-3xl">
+    <section className="py-3xl theme-hue">
       <Text
         as="h2"
         variant="label"

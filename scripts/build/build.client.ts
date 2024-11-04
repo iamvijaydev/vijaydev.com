@@ -21,7 +21,7 @@ export const buildClientFiles = async () => {
     technical: getTechnicalData(),
     fiction: getFictionData(),
   };
-  function replacer(key: string, value: unknown) {
+  function replacer(_: any, value: unknown) {
     if (value instanceof Map) {
       return {
         dataType: "Map",
@@ -43,6 +43,8 @@ export const buildClientFiles = async () => {
     outfile: "dist/client/assets/main.mjs",
   });
 
+  console.log(getRoutes<ContentItemDetailed>().values());
+
   for await (const route of getRoutes<ContentItemDetailed>().values()) {
     if (!route.input.template) {
       await esbuild.build({
@@ -54,23 +56,25 @@ export const buildClientFiles = async () => {
       continue;
     }
 
-    if (route.input.source === "" && route.input.template) {
-      await esbuild.build({
-        ...baseClientBuildConfig,
-        stdin: {
-          contents: getContentListingTemplate({
-            template: route.input.template,
-            title: route.matter!.title,
-            description: route.matter!.description,
-            pathname: route.route.pathname,
-          }),
-          resolveDir: "./app",
-          loader: "tsx",
-        },
-        outfile: route.output.mjs,
-      });
-      continue;
-    }
+    // console.log(route);
+
+    // if (route.input.source === "" && route.input.template) {
+    //   await esbuild.build({
+    //     ...baseClientBuildConfig,
+    //     stdin: {
+    //       contents: getContentListingTemplate({
+    //         template: route.input.template,
+    //         title: route.matter!.title,
+    //         description: route.matter!.description,
+    //         pathname: route.route.pathname,
+    //       }),
+    //       resolveDir: "./",
+    //       loader: "tsx",
+    //     },
+    //     outfile: route.output.mjs,
+    //   });
+    //   continue;
+    // }
 
     await esbuild.build({
       ...baseClientBuildConfig,
@@ -82,7 +86,7 @@ export const buildClientFiles = async () => {
           pathname: route.route.pathname,
           parentPathname: route.route.parentPathname!,
         }),
-        resolveDir: "./app",
+        resolveDir: "./",
         loader: "tsx",
       },
       outfile: route.output.mjs,

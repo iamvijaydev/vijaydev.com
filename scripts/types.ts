@@ -11,7 +11,7 @@ export type MatterContentItem = {
   };
 };
 
-export type InternalRouteData<MatterType> = {
+export type InternalRouteData<MatterType = undefined> = {
   route: {
     pathname: string;
     chunkPath: string;

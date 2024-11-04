@@ -4,6 +4,8 @@
 @import url(theme/theme.css);
 @import url(surface/light.css);
 @import url(surface/dark.css);
+@import url(gradient/light.css);
+@import url(gradient/dark.css);
 @import url(theme/utils.css);
 
 @import url(brand/space.css);
@@ -14,7 +16,6 @@
 @import url(brand/shadow.css);
 @import url(brand/position.css);
 @import url(brand/tokens.css);
-@import url(gradients/1.css);
 
 @import url(generated/styles.css);
 

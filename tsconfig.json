@@ -21,6 +21,7 @@
       ],
       "~*": ["./app/*"],
     },
+    "sourceMap": true,
   },
   "include": ["app"],
 }

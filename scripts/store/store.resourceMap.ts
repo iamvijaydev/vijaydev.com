@@ -23,6 +23,8 @@ export const addRoute = <MatterType>(
   pathname: string,
   data: InternalRouteData<MatterType>
 ) => {
+  // console.log(pathname, data.input.source);
+
   if (store.has(pathname)) {
     return updateRoute<MatterType>(pathname, data);
   }
@@ -31,6 +33,8 @@ export const addRoute = <MatterType>(
 };
 
 export const addChildPath = <MatterType>(pathname: string, childPath: string) => {
+  // console.log('addChildPath', pathname);
+
   let found = store.get(pathname);
 
   if (!found) {
