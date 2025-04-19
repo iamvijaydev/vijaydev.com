@@ -9,6 +9,12 @@
   --size-4: clamp(2.0736rem, 1.8784rem + 0.7435vi, 3.0518rem);
   --size-5: clamp(2.4883rem, 2.2237rem + 1.0082vi, 3.8147rem);
 
+  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+
   --line-height-tight: 1;
   --line-height-compact: 1.2;
   --line-height-normal: 1.3;
